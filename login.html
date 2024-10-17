@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-image: url("https://i.pinimg.com/564x/6d/bb/7b/6dbb7b606164ec79a70847f93a8f3594.jpg");
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            height: 100vh; 
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center; 
+            color: #fff; 
+        }
+
+        .login-container {
+            background: rgba(0, 0, 0, 0.5); 
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.5);
+            width: 400px; 
+            text-align: center; 
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            color: #f3efef; 
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 14px; 
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px; 
+            margin-bottom: 15px;
+            border: 1px solid #ecc0c0; 
+            border-radius: 25px; 
+        }
+
+        button {
+            width: 100%; 
+            padding: 10px; 
+            background-color: #4CAF50; 
+            color: white; 
+            border: none; 
+            border-radius: 25px; 
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049; 
+        }
+
+        .register-link {
+            margin-top: 10px;
+        }
+
+        .success-message {
+            display: none;
+            text-align: center;
+            margin-top: 20px;
+            color: #f3f0f0;
+        }
+
+        .success-message img {
+            width: 100px;
+            height: 100px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+
+<div class="login-container">
+    <form id="loginForm" onsubmit="return handleLogin(event);">
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" required>
+
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required>
+
+        <button type="submit">Login</button>
+    </form>
+
+    <div class="register-link" id="registerLink">
+        <p>Don't have an account? <a href="register.html">Create a new account</a></p>
+    </div>
+  
+    <div class="success-message" id="successMessage">
+        <p>Registration Successful!</p>
+        <img src="https://i.pinimg.com/originals/a1/05/7d/a1057dcb644d8729f4f76b2032f21743.gif" alt="Success">
+    </div>
+</div>
+
+<script>
+    function handleLogin(event) {
+        event.preventDefault(); 
+
+   
+        document.getElementById('loginForm').style.display = 'none';
+
+  
+        document.getElementById('registerLink').style.display = 'none';
+
+
+        document.getElementById('successMessage').style.display = 'block';
+
+
+        setTimeout(() => {
+            window.location.href = 'home.html'; 
+        }, 2000); 
+    }
+</script>
+
+</body>
+</html>

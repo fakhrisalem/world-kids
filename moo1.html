@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+  
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <style>
+           body {
+    margin: 0;
+    padding-top: 40px; 
+}
+
+header {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #d9f7f5;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 30px;
+    z-index: 10;
+    font-size: 15px;
+  
+}
+
+header a {
+    color: rgb(17, 16, 16);
+    text-decoration: none;
+    margin: 0 50px;
+    position: relative; 
+    padding: 1px; 
+    transition: background-color 0.3s, color 0.3s; 
+}
+
+header a::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  
+    transition: border-color 0.3s; 
+}
+
+header a:hover::after, 
+header a:focus::after, 
+header a:active::after { 
+    border-color: rgba(255, 255, 255, 0.8); 
+}
+
+header a:hover {
+    background-color: rgba(247, 13, 13, 0.2); 
+    border-radius: 25px;
+    color: white; 
+  padding: 10px;
+}
+
+.search-input {
+    padding: 5px;
+    margin-right: 10px;
+    border-radius: 50px;
+}
+
+.icon {
+    width: 20px; 
+    height: 20px; 
+}
+      
+h5{
+            color: #022105;
+            font-size: 40px;
+            text-align: center;
+            margin: 20px;
+        }
+        p{
+            color: #000;
+            font-size: 18px;
+        }
+        .product {
+    display: inline-block;
+    width: 250px; 
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    text-align: center;
+    background-color: #f9f9f9; 
+    transition: transform 0.3s ease; 
+}
+
+.product img {
+    width: 100%; 
+    height: 200px;
+    transition: transform 0.3s ease; 
+}
+
+.product:hover {
+    transform: scale(1.05); 
+}
+
+.product img:hover {
+    transform: scale(1.2); 
+}
+.search{
+        color: #f8f6f6;
+        border-radius: 25px;
+        background-color: #5e3e06;
+       }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="left-links">
+            <a href="home.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="products.html">Products</a>
+        </div>
+        <div class="center-link">
+            <form action="search.html" method="get">
+                <input type="text" name="search" class="search-input" placeholder="Search...">
+                <button type="submit" class="search">Search</button>
+            </form>
+        </div>
+        <div class="right-links">
+            <a href="login.html"><img src="login_logo.png" alt="Login" class="icon" width="20px"></a>
+            <a href="cart.html"><img src="cart_logo.png" alt="Cart" class="icon" width="20px"></a>
+        </div>
+    </header>
+ 
+    <main>
+        <section>
+            <h5>Boys Tops Tees and Shirts</h5>
+            <div class="product">
+            
+                <img src="https://m.media-amazon.com/images/I/510FlvQVyML._AC_SX342_.jpg" alt="Product 1" width="200px">
+                <p>Carrot Boys Printed T-Shirt</p>
+                <p>EGP 110</p>
+                <button onclick="addToCart({
+                    id: 1,
+                    name: '2410123-02-30-Carrot Boys Printed T-Shirt',
+                    price: 110,
+                    image_url: 'https://m.media-amazon.com/images/I/510FlvQVyML._AC_SX342_.jpg',
+                })">Add to Cart</button>
+            </div>
+            <div class="product">
+            
+                <img src="https://i.pinimg.com/564x/9b/86/c8/9b86c8453d30ba1b09726a060b8d1ee5.jpg" alt="Product 1" width="200px">
+                <p> T-Shirt Baby Boy Solid Color Knitted Soft 
+                </p>
+                <p>EGP 210</p>
+                <button onclick="addToCart({
+                    id: 1,
+                    name: 'Baby Boy Solid Color Knitted Soft Polo Collar Short Sleeve Pullover Top ',
+                    price: 210,
+                    image_url: 'https://i.pinimg.com/564x/9b/86/c8/9b86c8453d30ba1b09726a060b8d1ee5.jpg',
+                })">Add to Cart</button>
+            </div>
+            <div class="product">
+            
+                <img src="https://i.pinimg.com/564x/4a/17/31/4a1731b3e5eb4277953ad26cc5bc1f09.jpg" alt="Product 1" width="200px">
+                <p>T-shirt For Spring And Summer</p>
+                <p>EGP 110</p>
+                <button onclick="addToCart({
+                    id: 1,
+                    name: 'Tween Boy Casual Simple Letter Print Short Sleeve T-shirt For Spring And Summer',
+                    price: 110,
+                    image_url: 'https://i.pinimg.com/564x/4a/17/31/4a1731b3e5eb4277953ad26cc5bc1f09.jpg',
+                })">Add to Cart</button>
+            </div>
+            <div class="product">
+            
+                <img src="https://i.pinimg.com/564x/50/21/68/502168aed338ca25ede55afb603e77e9.jpg" alt="Product 1" width="200px">
+                <p>Boy's Casual Loose Fit Striped</p>
+                <p>EGP 310</p>
+                <button onclick="addToCart({
+                    id: 1,
+                    name: 'Tween Boys Casual Loose Fit Striped Knit Round Neck Pullover T-Shirt With Patches & Color Block Pocket',
+                    price: 310,
+                    image_url: 'https://i.pinimg.com/564x/50/21/68/502168aed338ca25ede55afb603e77e9.jpg',
+                })">Add to Cart</button>
+            </div>
+            <div class="product">
+            
+                <img src="https://i.pinimg.com/564x/f9/66/88/f96688706fb032ec09257eaa2585b605.jpg" alt="Product 1" width="200px">
+                <p>Tween Boys' Striped Pocket Patchwork</p>
+                <p>EGP 210</p>
+                <button onclick="addToCart({
+                    id: 1,
+                    name: 'Tween Boys Striped Pocket Patchwork Trim T-Shirt With Simple Casual Style, Suitable For Daily Wear In Summer',
+                    price: 210,
+                    image_url: 'https://i.pinimg.com/564x/f9/66/88/f96688706fb032ec09257eaa2585b605.jpg',
+                })">Add to Cart</button>
+            </div>
+        <div class="product">
+            
+            <img src="https://i.pinimg.com/564x/f4/d6/9d/f4d69d8851fe0f64b4e4372489f979d8.jpg" alt="Product 1" width="200px">
+            <p>Carrot Boys Printed T-Shirt</p>
+            <p>EGP 110</p>
+            <button onclick="addToCart({
+                id: 1,
+                name: '2410123-02-30-Carrot Boys Printed T-Shirt',
+                price: 110,
+                image_url: 'https://i.pinimg.com/564x/f4/d6/9d/f4d69d8851fe0f64b4e4372489f979d8.jpg',
+            })">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="https://i.pinimg.com/564x/eb/6c/64/eb6c648b961f7ceb543eb8c1f19fa71c.jpg" alt="Product 2">
+            <p> Tween Boy Summer</p>
+            <p>EGP 280</p>
+            <button onclick="addToCart({
+                id: 1,
+                name: 'Camiseta De Bloques De Color Gráfico De Letra De Chico Joven Visit site',
+                price:2800,
+                image_url: 'https://i.pinimg.com/564x/eb/6c/64/eb6c648b961f7ceb543eb8c1f19fa71c.jpg',
+            })">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="https://i.pinimg.com/564x/37/6f/68/376f680cbcd2fcf3bdc34e67b5c7d636.jpg" alt="Product 2">
+            <p> Tween Boy Summer</p>
+            <p>EGP 250</p>
+            <button onclick="addToCart({
+                id: 1,
+                name: 'Tween Boy Summer Leisure Knitted Short Sleeve Round Neck Tie-Dye Patchwork Detail T-Shirt',
+                price:250,
+                image_url: 'https://i.pinimg.com/564x/37/6f/68/376f680cbcd2fcf3bdc34e67b5c7d636.jpg',
+            })">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="https://i.pinimg.com/564x/af/34/dc/af34dc05a2c37f7a6c9d98e887fc078b.jpg" alt="Product 2">
+            <p> Tween Boy Summer</p>
+            <p>EGP 210</p>
+            <button onclick="addToCart({
+                id: 1,
+                name: 'Carrot Boys Printed T-Shirt',
+                price:210,
+                image_url: 'https://i.pinimg.com/564x/af/34/dc/af34dc05a2c37f7a6c9d98e887fc078b.jpg',
+            })">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="https://m.media-amazon.com/images/I/71Kml9X6waL._AC_SY550_.jpg" alt="Product 2">
+            <p>DeFacto Boys Woven Top Regular Fit Stand</p>
+            <p>EGP 279</p>
+            <button onclick="addToCart({
+                id: 1,
+                name: 'DeFacto Boys Woven Top Regular Fit Stand- Up Collar Long Sleeve Long Sleeve Shirt Z1035A6 Long Sleeve Shirt',
+                price:279,
+                image_url: 'https://m.media-amazon.com/images/I/71Kml9X6waL._AC_SY550_.jpg',
+            })">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="https://m.media-amazon.com/images/I/71n4QXXwTgL._AC_SX466_.jpg" alt="Product 2">
+            <p> T-Shirt</p>
+            <p>EGP 110</p>
+            <button onclick="addToCart({
+                id: 1,
+                name: 'Elsayaad Kids Monkey Long Sleeve Shirt T-Shirt',
+                price:110,
+                image_url: 'https://m.media-amazon.com/images/I/71n4QXXwTgL._AC_SX466_.jpg',
+            })">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="https://m.media-amazon.com/images/I/71IqmnRCaiL._AC_SX385_.jpg" alt="Product 2">
+            <p>T-Shirt</p>
+            <p>EGP 129</p>
+            <button onclick="addToCart({
+                id: 1,
+                name: 'Andora Boys 33S22B30324-1 T-Shirt',
+                price:129,
+                image_url: 'https://m.media-amazon.com/images/I/71IqmnRCaiL._AC_SX385_.jpg',
+            })">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="https://m.media-amazon.com/images/I/719IP6zR7lL._AC_SX385_.jpg" alt="Product 2">
+            <p>Andora boys</p>
+            <p>EGP 299</p>
+            <button onclick="addToCart({
+                id: 1,
+                name: 'Andora boys Striped Full Sleeves Shirt',
+                price:299,
+                image_url: 'https://m.media-amazon.com/images/I/719IP6zR7lL._AC_SX385_.jpg',
+            })">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="https://m.media-amazon.com/images/I/618oAQVkKbL._AC_SX385_.jpg" alt="Product 2">
+            <p> Boys Cotton T-Shirt</p>
+            <p>EGP 155</p>
+            <button onclick="addToCart({
+                id: 1,
+                name: 'Noise Kids Boys Cotton T-Shirt',
+                price:155,
+                image_url: 'https://m.media-amazon.com/images/I/618oAQVkKbL._AC_SX385_.jpg',
+            })">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="https://m.media-amazon.com/images/I/418JvyjV8-L._AC_SX385_.jpg" alt="Product 2">
+            <p>Mobaco Kids </p>
+            <p>EGP 190</p>
+            <button onclick="addToCart({
+                id: 1,
+                name: 'Mobaco Kids Regular Fit Round Neck T-Shirt JT100',
+                price:190,
+                image_url: 'https://m.media-amazon.com/images/I/418JvyjV8-L._AC_SX385_.jpg',
+            })">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="https://i.pinimg.com/564x/ce/ba/80/ceba80c778b6e8baa938914119fce74a.jpg" alt="Product 2">
+            <p>Cottonil Derby Tank for Boys </p>
+            <p>EGP 190</p>
+            <button onclick="addToCart({
+                id: 1,
+                name: 'Toddler Boys Letter & Tree Print Tank Top',
+            
+                price:190,
+                image_url: 'https://i.pinimg.com/564x/ce/ba/80/ceba80c778b6e8baa938914119fce74a.jpg',
+            })">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="https://m.media-amazon.com/images/I/61DYYJsOxVL._AC_SY741_.jpg" alt="Product 2">
+            <p> DeFacto Boys Regular Fit Polo Neck Long Sleeve </p>
+            <p>EGP 279</p>
+            <button onclick="addToCart({
+                id: 1,
+                name: 'DeFacto Boys Regular Fit Polo Neck Long Sleeve Woven Top Long Sleeve Shirt W3215A6 SHIRT',
+                price:279,
+                image_url: 'https://m.media-amazon.com/images/I/61DYYJsOxVL._AC_SY741_.jpg',
+            })">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="https://m.media-amazon.com/images/I/61XSBLselXL._AC_SY606_.jpg" alt="Product 2">
+            <p>DeFacto Boys Regular  </p>
+            <p>EGP 289</p>
+            <button onclick="addToCart({
+                id: 1,
+                name: 'DeFacto Boys Regular Fit Stand- Up Collar Z1035A6 Long Sleeve Long Sleeve Shirt ',
+                price:289,
+                image_url: 'https://m.media-amazon.com/images/I/61XSBLselXL._AC_SY606_.jpg',
+            })">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="https://m.media-amazon.com/images/I/71XoBR3BQBL._AC_SX466_.jpg" alt="Product 2">
+            <p> Elsayaad Boys Tiger</p>
+            <p>EGP 90</p>
+            <button onclick="addToCart({
+                id: 1,
+                name: 'Elsayaad Boys Tiger Long Sleeve Shirt T-Shirt',
+                price:90,
+                image_url: 'https://m.media-amazon.com/images/I/71XoBR3BQBL._AC_SX466_.jpg',
+            })">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="https://m.media-amazon.com/images/I/61s22B5qguL._AC_SX569_.jpg" alt="Product 2">
+            <p>Boys T-Shirt </p>
+            <p>EGP 150</p>
+            <button onclick="addToCart({
+                id: 1,
+                name: 'Carrot 2415119-06-25 Boys T-Shirt',
+                price:150,
+                image_url: 'https://m.media-amazon.com/images/I/61s22B5qguL._AC_SX569_.jpg',
+            })">Add to Cart</button>
+        </div>
+        <!-- Add more product divs as needed -->
+        <h5>Boys Pants</h5>
+        <div class="product">
+            <img src="https://i.pinimg.com/enabled_lo/564x/cc/b4/e9/ccb4e992c12ef060aaee295075525c53.jpg" alt="Product 2">
+            <p>DeFacto Boys Regular</p>
+            <p>EGP 799</p>
+            <button onclick="addToCart({
+                id: 1,
+                name: 'DeFacto Boys Regular Fit Knitted Bottom Trousers C2093A8 Trousers',
+                price: 799,
+                image_url: 'https://i.pinimg.com/enabled_lo/564x/cc/b4/e9/ccb4e992c12ef060aaee295075525c53.jpg',
+            })">Add to Cart</button>
+        </div>
+      
+        <div class="product">
+            <img src="https://m.media-amazon.com/images/I/61jGQFYZsmL._AC_SY550_.jpg" alt="Product 2">
+            <p>DeFacto Boys Knitted </p>
+            <p>EGP 349</p>
+            <button onclick="addToCart({
+                id: 1,
+                name: 'DeFacto Boys Knitted Bottom Regular Fit R5970A6 Pants',
+                price: 349,
+                image_url: 'https://m.media-amazon.com/images/I/61jGQFYZsmL._AC_SY550_.jpg',
+            })">Add to Cart</button>
+        </div>
+        <div class="product">
+            
+            <img src="https://m.media-amazon.com/images/I/710goA3mh6L._AC_SY550_.jpg" alt="Product 1" width="200px">
+            <p>plain kids sweetpants</p>
+            <p>EGP 179</p>
+            <button onclick="addToCart({
+                id: 1,
+                name: 'plain kids sweetpants',
+                price: 179,
+                image_url: 'https://m.media-amazon.com/images/I/710goA3mh6L._AC_SY550_.jpg',
+            })">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="https://m.media-amazon.com/images/I/51OmMWFCIPL._AC_SX679_.jpg" alt="Product 2">
+            <p>Andora Boys Elastic Waist</p>
+            <p>EGP 299</p>
+            <button onclick="addToCart({
+                id: 1,
+                name: 'Andora Boys Waist With Drawstring 36W24B30311 Casual Pants',
+                price: 299,
+                image_url: 'https://m.media-amazon.com/images/I/51OmMWFCIPL._AC_SX679_.jpg',
+            })">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="https://m.media-amazon.com/images/I/61W1+64SXHL._AC_SX385_.jpg" alt="Product 2">
+            <p>Elsayaad Boys Chino Pants Pants</p>
+            <p>EGP 155</p>
+            <button onclick="addToCart({
+                id: 1,
+                name: 'Elsayaad Boys Chino Pants Pants',
+                price: 155,
+                image_url: 'https://m.media-amazon.com/images/I/61W1+64SXHL._AC_SX385_.jpg',
+            })">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="https://m.media-amazon.com/images/I/61JhJ9Jjl-L._AC_SY679_.jpg" alt="Product 2">
+            <p>KOTON Boy's Canvas Pants</p>
+            <p>EGP 769</p>
+            <button onclick="addToCart({
+                id: 1,
+                name: 'KOTON Boys Canvas Pants Pockets Normal Leg Cotton Trousers',
+                price: 769,
+                image_url: 'https://m.media-amazon.com/images/I/61JhJ9Jjl-L._AC_SY679_.jpg',
+            })">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="https://m.media-amazon.com/images/I/51uj+Sd350L._AC_SX522_.jpg" alt="Product 2">
+            <p>Andora Boys Elastic Waist</p>
+            <p>EGP 299</p>
+            <button onclick="addToCart({
+                id: 1,
+                name: 'Andora Boys Elastic Waist & Hem-33S22B30313 Sweatpants',
+                price: 299,
+                image_url: 'https://m.media-amazon.com/images/I/51uj+Sd350L._AC_SX522_.jpg',
+            })">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="https://m.media-amazon.com/images/I/615qGP5oy0L._AC_SY679_.jpg" alt="Product 2">
+            <p>Bloaizone Boys</p>
+            <p>EGP 460</p>
+            <button onclick="addToCart({
+                id: 1,
+                name: 'Bloaizone Boys Gabardine Pants (456-R24-3530/2/L)',
+                price: 460,
+                image_url: 'https://m.media-amazon.com/images/I/615qGP5oy0L._AC_SY679_.jpg',
+            })">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="https://m.media-amazon.com/images/I/51iL03rXwsL._AC_SX679_.jpg" alt="Product 2">
+            <p>Boy Sweatpants 2 Years Black</p>
+            <p>EGP 295</p>
+            <button onclick="addToCart({
+                id: 1,
+                name: 'Carrot 2310901-02-30 Boy Sweatpants 2 Years Black',
+                price: 295,
+                image_url: 'https://m.media-amazon.com/images/I/51iL03rXwsL._AC_SX679_.jpg',
+            })">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="https://m.media-amazon.com/images/I/71R8EuIBmSL._AC_SX679_.jpg" alt="Product 2">
+            <p>Okaidi Boys Pants 3 Years</p>
+            <p>EGP 399</p>
+            <button onclick="addToCart({
+                id: 1,
+                name: 'Okaidi Boys Pants 3 Years',
+                price: 399,
+                image_url: 'https://m.media-amazon.com/images/I/71R8EuIBmSL._AC_SX679_.jpg',
+            })">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="https://i.pinimg.com/enabled_lo/564x/7e/3f/21/7e3f212350d42e37062b7416bd353aac.jpg" alt="Product 2">
+            <p>Mizah Boys </p>
+            <p>EGP 179</p>
+            <button onclick="addToCart({
+                id: 1,
+                name: 'Mizah Boys & Girls Solid Elastic Pants - Zipper Pockets, Elastic Waist and Leg - Perfect for School, Going Out, and Daily Activities',
+                price: 179,
+                image_url: 'https://i.pinimg.com/enabled_lo/564x/7e/3f/21/7e3f212350d42e37062b7416bd353aac.jpg',
+            })">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="https://i.pinimg.com/564x/92/38/02/923802c340be683e9656076d7e5854f7.jpg" alt="Product 2">
+            <p>Andora Boys Boys Black Basic</p>
+            <p>EGP 399</p>
+            <button onclick="addToCart({
+                id: 1,
+                name: 'Andora Boys Boys Black Basic Everyday Joggers with Elastic Hem Casual Pants',
+                price: 399,
+                image_url: 'https://i.pinimg.com/564x/92/38/02/923802c340be683e9656076d7e5854f7.jpg',
+            })">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="https://i.pinimg.com/564x/88/82/e2/8882e239d00fb3a22a019614ad3cd96f.jpg" alt="Product 2">
+            <p>Okaidi Boys Pants 3 Years</p>
+            <p>EGP 329</p>
+            <button onclick="addToCart({
+                id: 1,
+                name: 'Okaidi Boys Pants 3 Years',
+                price: 329,
+                image_url: 'https://i.pinimg.com/564x/88/82/e2/8882e239d00fb3a22a019614ad3cd96f.jpg',
+            })">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="https://i.pinimg.com/enabled_lo/564x/d2/ed/3e/d2ed3ed23f426915ac74de34a52fe927.jpg" alt="Product 2">
+            <p>Stylish and practical pants for boys</p>
+            <p>EGP 269</p>
+            <button onclick="addToCart({
+                id: 1,
+                name: 'Stylish and practical pants for boys',
+                price: 269,
+                image_url: 'https://i.pinimg.com/enabled_lo/564x/d2/ed/3e/d2ed3ed23f426915ac74de34a52fe927.jpg',
+            })">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="https://i.pinimg.com/enabled_lo/564x/f8/f4/fb/f8f4fb65f0642ca2a655f5adaef3dc40.jpg" alt="Product 2">
+            <p>Okaidi Boys Pants </p>
+            <p>EGP 399</p>
+            <button onclick="addToCart({
+                id: 1,
+                name: 'Okaidi Boys Pants ',
+                price: 399,
+                image_url: 'https://i.pinimg.com/enabled_lo/564x/f8/f4/fb/f8f4fb65f0642ca2a655f5adaef3dc40.jpg',
+            })">Add to Cart</button>
+        </div>
+        <!-- Add more product divs as needed -->
+        <div class="product">
+            <img src="https://i.pinimg.com/564x/c5/26/03/c52603aa0797e2e3322b702f5357d00c.jpg" alt="Product 2">
+            <p>Boys Cartoon Dinosaur Embroidered </p>
+            <p>EGP 399</p>
+            <button onclick="addToCart({
+                id: 1,
+                name: 'Boys Cartoon Dinosaur Embroidered Comfortable Creative Shorts, Casual Quick-drying Shorts For Summer Outdoor',
+           
+                price: 399,
+                image_url: 'https://i.pinimg.com/564x/c5/26/03/c52603aa0797e2e3322b702f5357d00c.jpg',
+            })">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="https://i.pinimg.com/564x/69/71/6a/69716ae9aafcc4e97d111250707e7cc4.jpg" alt="Product 2">
+            <p>Okaidi Boys Pants </p>
+            <p>EGP 599</p>
+            <button onclick="addToCart({
+                id: 1,
+                name: 'Okaidi Boys Pants ',
+                price: 599,
+                image_url: 'https://i.pinimg.com/564x/69/71/6a/69716ae9aafcc4e97d111250707e7cc4.jpg',
+            })">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="https://i.pinimg.com/564x/4b/6e/94/4b6e949fb1f28a79e3c84a2ecf936167.jpg" alt="Product 2">
+            <p>Tween Boy Casual Sports Outdoor Trousers </p>
+            <p>EGP 499</p>
+            <button onclick="addToCart({
+                id: 1,
+                name: 'Tween Boy Casual Sports Outdoor Trousers With Large Pockets And Weaved Belt, Spring & Autumn ',
+                price: 499,
+                image_url: 'https://i.pinimg.com/564x/4b/6e/94/4b6e949fb1f28a79e3c84a2ecf936167.jpg',
+            })">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="https://i.pinimg.com/736x/6e/19/e1/6e19e1575c364af87ab9be8396f2d57d.jpg" alt="Product 2">
+            <p>Tween Boys Loose Plaid Casual Pants </p>
+            <p>EGP 399</p>
+            <button onclick="addToCart({
+                id: 1,
+                name: 'Tween Boys Loose Plaid Casual Pants ',
+                price: 399,
+                image_url: 'https://i.pinimg.com/736x/6e/19/e1/6e19e1575c364af87ab9be8396f2d57d.jpg',
+            })">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="https://i.pinimg.com/564x/2e/17/4c/2e174cbdd1f307d9eea363eef1810400.jpg" alt="Product 2">
+            <p>Stylish and practical pants for boys </p>
+            <p>EGP 399</p>
+            <button onclick="addToCart({
+                id: 1,
+                name: 'Boys Clothes' ,
+            
+                price: 399,
+                image_url: 'https://i.pinimg.com/564x/2e/17/4c/2e174cbdd1f307d9eea363eef1810400.jpg',
+            })">Add to Cart</button>
+        </div>
+       
+    </main>
+
+    <script>
+      function addToCart(product) {
+    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+    cart.push({
+        id: product.id,
+        name: product.name,
+        price: product.price,
+        image: product.image_url || product.url 
+    });
+
+    localStorage.setItem('cart', JSON.stringify(cart));
+}
+function addToCart(product) {
+            const button = event.target;
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            if (button.innerHTML === 'Add to Cart') {
+           
+                button.innerHTML = 'Added to Cart';
+                button.style.backgroundColor = 'green';
+                button.style.color = 'white';
+
+              
+                console.log('Product added to cart:', product);
+            }
+            cart.push({
+        id: product.id,
+        name: product.name,
+        price: product.price,
+        image: product.image_url || product.url 
+    });
+
+    localStorage.setItem('cart', JSON.stringify(cart));
+        }
+    </script>
+</body>
+</html>

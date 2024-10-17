@@ -1,0 +1,83 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+    overflow: hidden; 
+    background-image: url("https://i.pinimg.com/originals/35/76/f1/3576f1df24e20af5bc43777b9a5ddc98.gif");
+}
+
+.chat-container {
+    max-width: 400px;
+    width: 100%;
+    margin: 20px auto;
+    border-radius: 10px;
+    background-color: rgb(235, 210, 210);
+    background-image: url("https://i.pinimg.com/564x/e9/b4/a8/e9b4a86c0d951fa183584ba5cd05dbd3.jpg");
+    padding: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transform: translateY(100px); 
+    opacity: 0; 
+    transition: transform 0.5s ease-out, opacity 0.5s ease-out; 
+}
+
+.message-container {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0;
+}
+
+.message {
+    padding: 10px;
+    border-radius: 10px;
+    max-width: 80%;
+    display: flex;
+    align-items: center;
+    background-color: aqua;
+}
+
+.message.user {
+    background-color:rgb(54, 24, 30);
+    align-self: flex-end;
+    margin-left: auto;
+    color: #f6f2f2;
+}
+
+.message.bot {
+    background-color: #19fd0d;
+    align-self: flex-start;
+    margin-right: auto;
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+p {
+    font-size: 20px;
+    color: #000;
+}
+
+.login-container {
+    display: inline-block;
+    padding: 1px 20px;
+    border-top-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    background-color: rgb(255, 238, 0);
+    transition: all 0.3s;
+    cursor: pointer; 
+}
+
+.login-container:hover {
+    transform: scale(1.1);
+    background-color: coral;
+}
+
+.login-container.clicked {
+    background-color: coral;
+}

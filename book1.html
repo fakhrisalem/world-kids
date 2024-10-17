@@ -1,0 +1,890 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+   
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <style>
+           body {
+    margin: 0;
+    padding-top: 40px; 
+}
+
+header {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #d9f7f5;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 30px;
+    z-index: 10;
+    font-size: 15px;
+  
+}
+
+header a {
+    color: rgb(17, 16, 16);
+    text-decoration: none;
+    margin: 0 50px;
+    position: relative; 
+    padding: 1px; 
+    transition: background-color 0.3s, color 0.3s; 
+}
+
+header a::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  
+    transition: border-color 0.3s; 
+}
+
+header a:hover::after, 
+header a:focus::after, 
+header a:active::after { 
+    border-color: rgba(255, 255, 255, 0.8); 
+}
+
+header a:hover {
+    background-color: rgba(247, 13, 13, 0.2); 
+    border-radius: 25px;
+    color: white; 
+  padding: 10px;
+}
+
+.search-input {
+    padding: 5px;
+    margin-right: 10px;
+    border-radius: 50px;
+}
+
+.icon {
+    width: 20px; 
+    height: 20px; 
+}
+      
+       
+h5{
+            color: #022105;
+            font-size: 40px;
+            text-align: center;
+            margin: 20px;
+        }
+        p{
+            color: #000;
+            font-size: 18px;
+        }
+        .product {
+    display: inline-block;
+    width: 250px; 
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    text-align: center;
+    background-color: #f9f9f9; 
+    transition: transform 0.3s ease; 
+}
+
+.product img {
+    width: 100%; 
+    height: 200px;
+    transition: transform 0.3s ease; 
+}
+
+.product:hover {
+    transform: scale(1.05); 
+}
+
+.product img:hover {
+    transform: scale(1.2); 
+}
+
+       
+        
+    </style>
+</head>
+<body>
+    <header>
+        <div class="left-links">
+            <a href="home.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="products.html">Products</a>
+        </div>
+        <div class="center-link">
+            <form action="search.html" method="get">
+                <input type="text" name="search" class="search-input" placeholder="Search...">
+                <button type="submit">Search</button>
+            </form>
+        </div>
+        <div class="right-links">
+            <a href="login.html"><img src="login_logo.png" alt="Login" class="icon" width="20px"></a>
+            <a href="cart.html"><img src="cart_logo.png" alt="Cart" class="icon" width="20px"></a>
+        </div>
+    </header>
+ 
+    <main>
+       
+        <section>
+            <h5>Baby Hair Care</h5>
+        <div class="product">
+            <img src="https://m.media-amazon.com/images/I/514E62p-C2L._AC._SR240,240.jpg" alt="Product 1" >
+            <p>Little B baby</p>
+            <p>EGP 180</p>
+            <button onclick="addToCart({
+                id: 1,
+                name: 'Little B baby Headband Bows set of 4 multicolor Neutral Colors',
+                price: 180,
+                image_url: 'https://m.media-amazon.com/images/I/514E62p-C2L._AC._SR240,240.jpg',
+            })">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="https://m.media-amazon.com/images/I/61+PLeO4btL._AC_SY355_.jpg" alt="Product 2">
+            <p>Cetaphil shampoo</p>
+            <p>EGP1,570</p>
+            <button onclick="addToCart({
+                id: 1,
+                name: 'Cetaphil shampoo and wash protection for children 339 ml',
+                price: 1.570,
+                image_url: 'https://m.media-amazon.com/images/I/61+PLeO4btL._AC_SY355_.jpg',
+            })">Add to Cart</button>
+        </div>
+
+<div class="product">
+    <img src="https://m.media-amazon.com/images/I/61A7EAwTFfL._AC_SY355_.jpg" alt="Product 2">
+    <p>HUAYINGMEI Baby</p>
+    <p>EGP 129</p>
+    <button onclick="addToCart({
+        id: 1,
+        name: 'HUAYINGMEI Baby Hair Brush and Comb Set, Baby Brush with Soft Natural Bristles, Shower Gift',
+        price: 129,
+        image_url: 'https://m.media-amazon.com/images/I/61A7EAwTFfL._AC_SY355_.jpg',
+    })">Add to Cart</button>
+</div>
+
+<div class="product">
+    <img src="https://m.media-amazon.com/images/I/71vaqHyR+KL._AC_SY741_.jpg" alt="Product 2">
+    <p>Brush and comb set</p>
+    <p>EGP 225</p>
+    <button onclick="addToCart({
+        id: 1,
+        name: 'Brush and comb set',
+        price: 225,
+        image_url: 'https://m.media-amazon.com/images/I/71vaqHyR+KL._AC_SY741_.jpg',
+    })">Add to Cart</button>
+</div>
+
+<div class="product">
+    <img src="https://m.media-amazon.com/images/I/51bOc1Wc5CL._AC_SX425_.jpg" alt="Product 2">
+    <p>Divol Shampoo</p>
+    <p>EGP 140</p>
+    <button onclick="addToCart({
+        id: 1,
+        name: 'Divol Shampoo Safe From Day One for Newborn babies 450ml',
+        price: 140,
+        image_url: 'https://m.media-amazon.com/images/I/51bOc1Wc5CL._AC_SX425_.jpg',
+    })">Add to Cart</button>
+</div>
+
+<div class="product">
+    <img src="https://m.media-amazon.com/images/I/61ht0gGP7TL._AC_SY679_.jpg" alt="Product 2">
+    <p>Passion Baby Hair Cream </p>
+    <p>EGP 120</p>
+    <button onclick="addToCart({
+        id: 1,
+        name: 'Passion Baby Hair Cream 120Gm',
+        price: 120,
+        image_url: 'https://m.media-amazon.com/images/I/61ht0gGP7TL._AC_SY679_.jpg',
+    })">Add to Cart</button>
+</div>
+<div class="product">
+    <img src="https://m.media-amazon.com/images/I/61wG6oThdcL._AC_SX425_.jpg" alt="Product 2">
+    <p>Penduline Hair Mask with Shea Butter </p>
+    <p>EGP 96</p>
+    <button onclick="addToCart({
+        id: 1,
+        name: 'Penduline Hair Mask with Shea Butter - 300g',
+        price: 96,
+        image_url: 'https://m.media-amazon.com/images/I/61wG6oThdcL._AC_SX425_.jpg',
+    })">Add to Cart</button>
+</div>
+<div class="product">
+    <img src="https://m.media-amazon.com/images/I/41U6dm-yKmL._AC_SX679_.jpg" alt="Product 2">
+    <p>Dermactive Baby Head to Toe Wash  </p>
+    <p>EGP 220</p>
+    <button onclick="addToCart({
+        id: 1,
+        name: 'Dermactive Baby Head to Toe Wash 250 ml',
+        price: 220,
+        image_url: 'https://m.media-amazon.com/images/I/41U6dm-yKmL._AC_SX679_.jpg',
+    })">Add to Cart</button>
+</div>
+<div class="product">
+    <img src="https://m.media-amazon.com/images/I/51JqVAYuIUL._AC_SX425_.jpg" alt="Product 2">
+    <p>TRESemmé Botanix Conditioner Nourish & Relenish  </p>
+    <p>EGP 120</p>
+    <button onclick="addToCart({
+        id: 1,
+        name: 'TRESemmé Botanix Conditioner Nourish & Relenish 600ML',
+        price: 120,
+        image_url: 'https://m.media-amazon.com/images/I/51JqVAYuIUL._AC_SX425_.jpg',
+    })">Add to Cart</button>
+</div>
+<div class="product">
+    <img src="https://m.media-amazon.com/images/I/41JPTMaOPoL._AC_SY879_.jpg" alt="Product 2">
+    <p>Bunny Bound Baby Hair Oil </p>
+    <p>EGP 80</p>
+    <button onclick="addToCart({
+        id: 1,
+        name: 'Bunny Bound Baby Hair Oil, Advanced Formula with Almond Oil, Vitamin E and Coconut oil for the healthy growth of your childs hair -100ML by Elevana.',
+        price: 80,
+        image_url: 'https://m.media-amazon.com/images/I/41JPTMaOPoL._AC_SY879_.jpg',
+    })">Add to Cart</button>
+</div>
+        </section>
+        <section>
+            <h5>Baby Bathing</h5>
+            <div class="product">
+                <img src="https://m.media-amazon.com/images/I/61miS3E2yXL.__AC_SX300_SY300_QL70_ML2_.jpg" alt="Product 1" >
+                <p>Johnson's Baby</p>
+                <p>EGP 69</p>
+                <button onclick="addToCart({
+                    id: 1,
+                    name: 'Johnsons Baby Shampoo, Sleep Time, 200ml',
+                    price: 69,
+                    image_url: 'https://m.media-amazon.com/images/I/61miS3E2yXL.__AC_SX300_SY300_QL70_ML2_.jpg',
+                })">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="https://m.media-amazon.com/images/I/41FYwG1UFXL.__AC_SY300_SX300_QL70_ML2_.jpg" alt="Product 1" >
+                <p>ORA Lines Hyalo-Fem Feminine Douche</p>
+                <p>EGP 120</p>
+                <button onclick="addToCart({
+                    id: 1,
+                    name: 'ORA Lines Hyalo-Fem Feminine Douche - Soothing, Hydrating Anti-itching Solution for Feminine Hygiene',
+                    price: 120,
+                    image_url: 'https://m.media-amazon.com/images/I/41FYwG1UFXL.__AC_SY300_SX300_QL70_ML2_.jpg',
+                })">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="https://m.media-amazon.com/images/I/61P53yuKmmL.__AC_SX300_SY300_QL70_ML2_.jpg" alt="Product 1" >
+                <p>Chicco Baby Moments Sponge Bath Glove</p>
+                <p>EGP 242</p>
+                <button onclick="addToCart({
+                    id: 1,
+                    name: 'Chicco Baby Moments Sponge Bath Glove',
+                    price: 242,
+                    image_url: 'https://m.media-amazon.com/images/I/61P53yuKmmL.__AC_SX300_SY300_QL70_ML2_.jpg',
+                })">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="https://m.media-amazon.com/images/I/41FRe9xSciL.__AC_SX300_SY300_QL70_ML2_.jpg" alt="Product 1" >
+                <p>Nunu Baby Special Offer Shampoo 1L </p>
+                <p>EGP 169</p>
+                <button onclick="addToCart({
+                    id: 1,
+                    name: 'Nunu Baby Special Offer Shampoo 1L + Nunu Baby Shampoo Plus 200ML',
+                    price: 169,
+                    image_url: 'https://m.media-amazon.com/images/I/41FRe9xSciL.__AC_SX300_SY300_QL70_ML2_.jpg',
+                })">Add to Cart</button>
+            </div>
+        <div class="product">
+            <img src="https://m.media-amazon.com/images/I/51cq9lBpbiL.__AC_SX300_SY300_QL70_ML2_.jpg" alt="Product 1" >
+            <p>Penduline Shower Gel Banana</p>
+            <p>EGP 69</p>
+            <button onclick="addToCart({
+                id: 1,
+                name: 'Penduline Shower Gel Banana 300 ml',
+                price: 69,
+                image_url: 'https://m.media-amazon.com/images/I/51cq9lBpbiL.__AC_SX300_SY300_QL70_ML2_.jpg',
+            })">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="https://m.media-amazon.com/images/I/61exF84FrEL.__AC_SX300_SY300_QL70_ML2_.jpg" alt="Product 2">
+            <p>Sanosan baby</p>
+            <p>EGP 139</p>
+            <button onclick="addToCart({
+                id: 1,
+                name: 'Sanosan baby soap, 100 gm',
+                price: 139,
+                image_url: 'https://m.media-amazon.com/images/I/61exF84FrEL.__AC_SX300_SY300_QL70_ML2_.jpg',
+            })">Add to Cart</button>
+        </div>
+
+<div class="product">
+    <img src="https://m.media-amazon.com/images/I/61yLSmn330L.__AC_SX300_SY300_QL70_ML2_.jpg" alt="Product 2">
+    <p>Primabobo Folding Baby</p>
+    <p>EGP1,650</p>
+    <button onclick="addToCart({
+        id: 1,
+        name: 'Primabobo Folding Baby Bathtub 85cm with Cushion, Thermometer, Silicone Travel Bathtub for Kids, Foldable Newborn Bathtub (White)',
+        price: 1.650,
+        image_url: 'https://m.media-amazon.com/images/I/61yLSmn330L.__AC_SX300_SY300_QL70_ML2_.jpg',
+    })">Add to Cart</button>
+</div>
+
+<div class="product">
+    <img src="https://m.media-amazon.com/images/I/71vIt4JEZFL.__AC_SY300_SX300_QL70_ML2_.jpg" alt="Product 2">
+    <p>Candy baby</p>
+    <p>EGP 206</p>
+    <button onclick="addToCart({
+        id: 1,
+        name: 'Candy baby bathtub sponge 4 pieces for unisex',
+        price: 206,
+        image_url: 'https://m.media-amazon.com/images/I/71vIt4JEZFL.__AC_SY300_SX300_QL70_ML2_.jpg',
+    })">Add to Cart</button>
+</div>
+        
+<div class="product">
+    <img src="https://m.media-amazon.com/images/I/41YupKZ4vDL._AC_SX425_.jpg" alt="Product 2">
+    <p>Moro Moro 3 Icome Foldable</p>
+    <p>EGP 250</p>
+    <button onclick="addToCart({
+        id: 1,
+        name: 'Moro Moro 3 Icome Foldable Toddler Soft Petal Bath Tub Foam Blooming Flower Shower for Baby (Pink)',
+        price: 250,
+        image_url: 'https://m.media-amazon.com/images/I/41YupKZ4vDL._AC_SX425_.jpg',
+    })">Add to Cart</button>
+</div>
+        
+           <div class="product">
+            <img src="https://m.media-amazon.com/images/I/61gh-92qTgL.__AC_SX300_SY300_QL70_ML2_.jpg" alt="Product 2">
+            <p>Ynanimery Rubber Ducks</p>
+            <p>EGP 100</p>
+            <button onclick="addToCart({
+                id: 1,
+                name: 'Ynanimery Rubber Ducks, Bath Toys for Toddlers 1-3, Baby Floating Bathtub Squirt Duck Set for Bathroom, Pool Games',
+                price: 100,
+                image_url: 'https://m.media-amazon.com/images/I/61gh-92qTgL.__AC_SX300_SY300_QL70_ML2_.jpg',
+            })">Add to Cart</button>
+        </div>
+        </section>
+            <!-- Add more product divs as needed3 -->
+            <section>
+                <h5>Baby Skin Care</h5>
+            <div class="product">
+                <img src="https://m.media-amazon.com/images/I/61AMjgAkffL.__AC_SX300_SY300_QL70_ML2_.jpg" alt="Product 1" >
+                <p>EvaClinic Bébé - Diaper Rash Cream</p>
+                <p>EGP 94</p>
+                <button onclick="addToCart({
+                    id: 1,
+                    name: 'EvaClinic Bébé - Diaper Rash Cream, 100gm',
+                    price: 94,
+                    image_url: 'https://m.media-amazon.com/images/I/61AMjgAkffL.__AC_SX300_SY300_QL70_ML2_.jpg',
+                })">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="https://m.media-amazon.com/images/I/61vawraWgEL.__AC_SX300_SY300_QL70_ML2_.jpg" alt="Product 1" >
+                <p>sanosan Nappy Rash cream</p>
+                <p>EGP 330</p>
+                <button onclick="addToCart({
+                    id: 1,
+                    name: 'sanosan Nappy Rash cream 150 ml',
+                    price: 330,
+                    image_url: 'https://m.media-amazon.com/images/I/61vawraWgEL.__AC_SX300_SY300_QL70_ML2_.jpg',
+                })">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="https://m.media-amazon.com/images/I/51mwmuxWdhL.__AC_SX300_SY300_QL70_ML2_.jpg" alt="Product 1" >
+                <p>Chicco Baby Moments Rich Cream for Baby Skin 0m</p>
+                <p>EGP 420</p>
+                <button onclick="addToCart({
+                    id: 1,
+                    name: 'Chicco Baby Moments Rich Cream for Baby Skin 0m+ 100ml',
+                    price: 420,
+                    image_url: 'https://m.media-amazon.com/images/I/51mwmuxWdhL.__AC_SX300_SY300_QL70_ML2_.jpg',
+                })">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="https://m.media-amazon.com/images/I/61cTo7rxw6L.__AC_SY300_SX300_QL70_ML2_.jpg" alt="Product 1" >
+                <p>Skinzza</p>
+                <p>EGP 94</p>
+                <button onclick="addToCart({
+                    id: 1,
+                    name: 'Skinzza Dr. Zinc: Natural, Effective Relief Soothing Diaper Rash Cream with antibacterial properties (Alternative Sudocrem, But Better!) 60 g',
+                    price: 94,
+                    image_url: 'https://m.media-amazon.com/images/I/61cTo7rxw6L.__AC_SY300_SX300_QL70_ML2_.jpg',
+                })">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="https://m.media-amazon.com/images/I/21LUOyu94aL.__AC_QL70_ML2_.jpg" alt="Product 1" >
+                <p>Penduline Baby Body Lotion 200 ml لوشن للجسم للأطفال من بيندولين </p>
+                <p>EGP 159</p>
+                <button onclick="addToCart({
+                    id: 1,
+                    name: 'Penduline Baby Body Lotion 200 ml لوشن للجسم للأطفال من بيندولين ',
+                    price: 159,
+                    image_url: 'https://m.media-amazon.com/images/I/21LUOyu94aL.__AC_QL70_ML2_.jpg',
+                })">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="https://m.media-amazon.com/images/I/710jYOwI2ML.__AC_SX300_SY300_QL70_ML2_.jpg" alt="Product 2">
+                <p>Icare baby oil </p>
+                <p>EGP 67</p>
+                <button onclick="addToCart({
+                    id: 1,
+                    name: 'Icare baby oil - 250 ml',
+                    price: 67,
+                    image_url: 'https://m.media-amazon.com/images/I/710jYOwI2ML.__AC_SX300_SY300_QL70_ML2_.jpg',
+                })">Add to Cart</button>
+            </div>
+
+    <div class="product">
+        <img src="https://m.media-amazon.com/images/I/611fbFxjq0L.__AC_SX300_SY300_QL70_ML2_.jpg" alt="Product 2">
+        <p>Five Fives Talcum</p>
+        <p>EGP13</p>
+        <button onclick="addToCart({
+            id: 1,
+            name: 'Five Fives Talcum Powder for Kids with Rose Scent, +6 Months - 100 gm',
+            price: 13,
+            image_url: 'https://m.media-amazon.com/images/I/611fbFxjq0L.__AC_SX300_SY300_QL70_ML2_.jpg',
+        })">Add to Cart</button>
+    </div>
+ 
+    <div class="product">
+        <img src="https://m.media-amazon.com/images/I/714Wy0R+nkL._AC_SY300_SX300_.jpg" alt="Product 2">
+        <p>Five Fives Baby Mary</p>
+        <p>EGP 23</p>
+        <button onclick="addToCart({
+            id: 1,
+            name: 'Five Fives Baby Mary Talcum Fragrance-Free Powder - 200 gm',
+            price: 23,
+            image_url: 'https://m.media-amazon.com/images/I/714Wy0R+nkL._AC_SY300_SX300_.jpg',
+        })">Add to Cart</button>
+    </div>
+
+    <div class="product">
+        <img src="https://m.media-amazon.com/images/I/61F+JrpUlnL._AC_SY300_SX300_.jpg" alt="Product 2">
+        <p>Fresh Kiddo Baby</p>
+        <p>EGP 100</p>
+        <button onclick="addToCart({
+            id: 1,
+            name: 'Fresh Kiddo Baby Lotion 200 ml',
+            price: 100,
+            image_url: 'https://m.media-amazon.com/images/I/61F+JrpUlnL._AC_SY300_SX300_.jpg',
+        })">Add to Cart</button>
+    </div>
+
+    <div class="product">
+        <img src="https://m.media-amazon.com/images/I/51oEWfiWKrL._AC_SX425_.jpg" alt="Product 2">
+        <p>Vatika Naturals Baby</p>
+        <p>EGP 48</p>
+        <button onclick="addToCart({
+            id: 1,
+            name: 'Vatika Naturals Baby Moisturizing Lotion 100ml | Olive | Gentle Mositurizing | Dermatologically Tested | Baby Skin Care',
+            price: 48,
+            image_url: 'https://m.media-amazon.com/images/I/51oEWfiWKrL._AC_SX425_.jpg',
+        })">Add to Cart</button>
+    </div>
+            </section>
+
+            <section>
+                <h5>Baby Nail Care</h5>
+                <div class="product">
+                    <img src="https://m.media-amazon.com/images/I/618reQid5kL.__AC_SX300_SY300_QL70_ML2_.jpg" alt="Product 1" >
+                    <p>Baby Manicure Set </p>
+                    <p>EGP150</p>
+                    <button onclick="addToCart({
+                        id: 1,
+                        name: 'Fantastic-Kids-Toys Electric Baby Nail Drill Set, Toenail Care Kit, Safe Manicure Kit for Babies and Women with LED Light and Nail Drill Heads (PINK)',
+                        price: 150,
+                        image_url: 'https://m.media-amazon.com/images/I/618reQid5kL.__AC_SX300_SY300_QL70_ML2_.jpg',
+                    })">Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="https://m.media-amazon.com/images/I/61g6PP8swoL.__AC_SX300_SY300_QL70_ML2_.jpg" alt="Product 1" >
+                    <p>SPTwj 6PCS Baby Care Kit with Hair </p>
+                    <p>EGP99</p>
+                    <button onclick="addToCart({
+                        id: 1,
+                        name: 'SPTwj 6PCS Baby Care Kit with Hair Brush Manicure Professional Care Series Accessorie Kit Newborn Care Health Baby Safety Grooming Healthcare Kit (Pink)',
+                        price: 99,
+                        image_url: 'https://m.media-amazon.com/images/I/61g6PP8swoL.__AC_SX300_SY300_QL70_ML2_.jpg',
+                    })">Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="https://m.media-amazon.com/images/I/51YuyH65OtL.__AC_SX300_SY300_QL70_ML2_.jpg" alt="Product 1" >
+                    <p>Fantastic-Kids-Toys Electric Baby </p>
+                    <p>EGP150</p>
+                    <button onclick="addToCart({
+                        id: 1,
+                        name: 'Fantastic-Kids-Toys Electric Baby Nail Drill Set, Toenail Care Kit, Safe Manicure Kit for Babies and Women with LED Light and Nail Drill Heads (PINK)',
+                        price: 150,
+                        image_url: 'https://m.media-amazon.com/images/I/51YuyH65OtL.__AC_SX300_SY300_QL70_ML2_.jpg',
+                    })">Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="https://m.media-amazon.com/images/I/61bcQXUEcuL._AC_SX679_.jpg" alt="Product 1" >
+                    <p>R for Rabbit Stylo Teddy new born Baby </p>
+                    <p>EGP230</p>
+                    <button onclick="addToCart({
+                        id: 1,
+                        name: 'R for Rabbit Stylo Teddy new born Baby 5 in1 Nail Grooming Kit for Baby Manicure Set with Kids Nail Cutter,Tweezer, Nail Filer, Ear Pick, and Scissors(Blue)',
+                        price: 230,
+                        image_url: 'https://m.media-amazon.com/images/I/61bcQXUEcuL._AC_SX679_.jpg',
+                    })">Add to Cart</button>
+                </div>
+            <div class="product">
+                <img src="https://m.media-amazon.com/images/I/51YuyH65OtL.__AC_SX300_SY300_QL70_ML2_.jpg" alt="Product 1" >
+                <p>Fantastic-Kids-Toys Electric Baby </p>
+                <p>EGP150</p>
+                <button onclick="addToCart({
+                    id: 1,
+                    name: 'Fantastic-Kids-Toys Electric Baby Nail Drill Set, Toenail Care Kit, Safe Manicure Kit for Babies and Women with LED Light and Nail Drill Heads (PINK)',
+                    price: 150,
+                    image_url: 'https://m.media-amazon.com/images/I/51YuyH65OtL.__AC_SX300_SY300_QL70_ML2_.jpg',
+                })">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="https://m.media-amazon.com/images/I/61TUM1HVcoL.__AC_SY300_SX300_QL70_ML2_.jpg" alt="Product 2">
+                <p>Baby Nail Trimmer Electrically</p>
+                <p>EGP 215</p>
+                <button onclick="addToCart({
+                    id: 1,
+                    name: 'Baby Nail Trimmer Electrically safe Baby nail clippers, Newborn and Kids Nail Kit, also available for adults - blue',
+                    price: 215,
+                    image_url: 'https://m.media-amazon.com/images/I/61TUM1HVcoL.__AC_SY300_SX300_QL70_ML2_.jpg',
+                })">Add to Cart</button>
+            </div>
+  
+    <div class="product">
+        <img src="https://m.media-amazon.com/images/I/51USCraDRJL._AC_SX425_.jpg" alt="Product 2">
+        <p>Safari Baby Dolphin</p>
+        <p>EGP 98</p>
+        <button onclick="addToCart({
+            id: 1,
+            name: 'Safari Baby Dolphin Nail Clipper - Safari Baby ',
+            price: 98,
+            image_url: 'https://m.media-amazon.com/images/I/51USCraDRJL._AC_SX425_.jpg',
+        })">Add to Cart</button>
+    </div>
+    <!-- Add more product divs as needed -->
+    <div class="product">
+        <img src="https://m.media-amazon.com/images/I/61sEU+0LP2L._AC_SY355_.jpg" alt="Product 2">
+        <p>hanso Manicure Set</p>
+        <p>EGP 230</p>
+        <button onclick="addToCart({
+            id: 1,
+            name: 'hanso Manicure Set, Manicure Pedicure Set, Professional Pedicure Kit for Men & Women, Stainless Steel Nail Clippers, Scissors & Grooming Tools with Luxury Leather Case, 16 in 1 (Blue) ',
+            price: 230,
+            image_url: 'https://m.media-amazon.com/images/I/61sEU+0LP2L._AC_SY355_.jpg',
+        })">Add to Cart</button>
+    </div>
+
+     <div class="product">
+        <img src="https://m.media-amazon.com/images/I/61nC1APrn5L.__AC_SY300_SX300_QL70_ML2_.jpg" alt="Product 2">
+        <p>Chicco Care</p>
+        <p>EGP 925</p>
+        <button onclick="addToCart({
+            id: 1,
+            name: ' Chicco Care Set 9 Pieces',
+            price: 925,
+            image_url: 'https://m.media-amazon.com/images/I/61nC1APrn5L.__AC_SY300_SX300_QL70_ML2_.jpg',
+        })">Add to Cart</button>
+    </div>
+
+     <div class="product">
+        <img src="https://m.media-amazon.com/images/I/61fqtD6if9L._AC_SY355_.jpg" alt="Product 2">
+        <p>Baby Nail Trimmer</p>
+        <p>EGP 189</p>
+        <button onclick="addToCart({
+            id: 1,
+            name: 'Baby Nail Trimmer, Electric Safe Baby Nail Clippers, Newborn Baby Nail Kit, Also Available For Adults (Bink)',
+            price: 189,
+            image_url: 'https://m.media-amazon.com/images/I/61fqtD6if9L._AC_SY355_.jpg',
+        })">Add to Cart</button>
+    </div>
+            </section>
+             <!-- Add more product divs as needed3 -->
+             <section>
+                <h5>Wipes and Accessories</h5>
+                <div class="product">
+                    <img src="https://m.media-amazon.com/images/I/71FMedGiObL.__AC_SY300_SX300_QL70_ML2_.jpg" alt="Product 1" >
+                    <p>Easy Care Baby Wipes, Chamomile Scent</p>
+                    <p>EGP 25</p>
+                    <button onclick="addToCart({
+                        id: 1,
+                        name: 'Easy Care Baby Wipes, Chamomile Scent, 72 Wipes',
+                        price: 25,
+                        image_url: 'https://m.media-amazon.com/images/I/71FMedGiObL.__AC_SY300_SX300_QL70_ML2_.jpg',
+                    })">Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="https://m.media-amazon.com/images/I/71l1u4QxEoL.__AC_SY300_SX300_QL70_ML2_.jpg" alt="Product 1" >
+                    <p>White baby wipes</p>
+                    <p>EGP 35</p>
+                    <button onclick="addToCart({
+                        id: 1,
+                        name: 'Easy Care Baby Wipes, Chamomile Scent, 72 Wipes',
+                        price: 35,
+                        image_url: 'https://m.media-amazon.com/images/I/71l1u4QxEoL.__AC_SY300_SX300_QL70_ML2_.jpg',
+                    })">Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="https://m.media-amazon.com/images/I/71GiAFkzcCL.__AC_SX300_SY300_QL70_ML2_.jpg" alt="Product 1" >
+                    <p>Sanita Charm Cotton Balls </p>
+                    <p>EGP 72</p>
+                    <button onclick="addToCart({
+                        id: 1,
+                        name: 'Sanita Charm Cotton Balls 100 Pieces',
+                        price: 72,
+                        image_url: 'https://m.media-amazon.com/images/I/71GiAFkzcCL.__AC_SX300_SY300_QL70_ML2_.jpg',
+                    })">Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="https://m.media-amazon.com/images/I/51Wz6cCbIIL._AC_SY355_.jpg" alt="Product 1" >
+                    <p>Tupperware Box for Wet Wipes Make-Up Baby Children</p>
+                    <p>EGP 250</p>
+                    <button onclick="addToCart({
+                        id: 1,
+                        name: 'Tupperware Box for Wet Wipes Make-Up Baby Children',
+                        price: 250,
+                        image_url: 'https://m.media-amazon.com/images/I/51Wz6cCbIIL._AC_SY355_.jpg',
+                    })">Add to Cart</button>
+                </div>
+            <div class="product">
+                <img src="https://m.media-amazon.com/images/I/715GcQzr0fL._AC_SY355_.jpg" alt="Product 1" >
+                <p>Arix Migo's</p>
+                <p>EGP 25</p>
+                <button onclick="addToCart({
+                    id: 1,
+                    name: 'Arix Migos Cotton Buds 100 Pieces Set, White',
+                    price: 25,
+                    image_url: 'https://m.media-amazon.com/images/I/715GcQzr0fL._AC_SY355_.jpg',
+                })">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="https://m.media-amazon.com/images/I/71YvTVvwFqL.__AC_SY300_SX300_QL70_ML2_.jpg" alt="Product 2">
+                <p>Fe Cotton Swabs Baby</p>
+                <p>EGP 79</p>
+                <button onclick="addToCart({
+                    id: 1,
+                    name: 'Fe Cotton Swabs Baby 60 Pcs',
+                    price: 79,
+                    image_url: 'https://m.media-amazon.com/images/I/71YvTVvwFqL.__AC_SY300_SX300_QL70_ML2_.jpg',
+                })">Add to Cart</button>
+            </div>
+
+    <div class="product">
+        <img src="https://m.media-amazon.com/images/I/71l1u4QxEoL.__AC_SY300_SX300_QL70_ML2_.jpg" alt="Product 2">
+        <p>White baby wipes</p>
+        <p>EGP 35</p>
+        <button onclick="addToCart({
+            id: 1,
+            name: 'White baby wipes, 72 wipes',
+            price: 35,
+            image_url: 'https://m.media-amazon.com/images/I/71l1u4QxEoL.__AC_SY300_SX300_QL70_ML2_.jpg',
+        })">Add to Cart</button>
+    </div>
+
+    <div class="product">
+        <img src="https://m.media-amazon.com/images/I/61gQlTF135L.__AC_SY300_SX300_QL70_ML2_.jpg" alt="Product 2">
+        <p>Superkids Water</p>
+        <p>EGP 72</p>
+        <button onclick="addToCart({
+            id: 1,
+            name: 'Superkids Water Wipes 72 Pieces',
+            price: 72,
+            image_url: 'https://m.media-amazon.com/images/I/61gQlTF135L.__AC_SY300_SX300_QL70_ML2_.jpg',
+        })">Add to Cart</button>
+    </div>
+ 
+      <div class="product">
+        <img src="https://m.media-amazon.com/images/I/61NJTpZJUoL._AC_SX425_.jpg" alt="Product 2">
+        <p>FOMIYES 1 Set Wet Wipe Warmer </p>
+        <p>EGP 1,400</p>
+        <button onclick="addToCart({
+            id: 1,
+            name: 'FOMIYES 1 Set Wet Wipe Warmer Bottle Warmer Portable Baby Wipes Portable Heater Portable Heating Wet Wipe Device Wet Wipe Warming Machine Wet Tissue Machine Cotton Towel Charge White',
+            price: 1.400,
+            image_url: 'https://m.media-amazon.com/images/I/61NJTpZJUoL._AC_SX425_.jpg',
+        })">Add to Cart</button>
+    </div>
+  
+      <div class="product">
+        <img src="https://m.media-amazon.com/images/I/61J58amZAhL.__AC_SY300_SX300_QL70_ML2_.jpg" alt="Product 2">
+        <p>Johnson's Gentle</p>
+        <p>EGP 239</p>
+        <button onclick="addToCart({
+            id: 1,
+            name: 'Johnsons Gentle All Over Baby Wipe (72 Wipes, Set of 3)',
+            price: 239,
+            image_url: 'https://m.media-amazon.com/images/I/61J58amZAhL.__AC_SY300_SX300_QL70_ML2_.jpg',
+        })">Add to Cart</button>
+    </div>
+            </section>
+            <section>
+                <h5>Diaper Changing Supplies</h5>
+            <div class="product">
+                <img src="https://m.media-amazon.com/images/I/71-+GMINUkL._AC_SY300_SX300_.jpg" alt="Product 1" >
+                <p>Moro Moro 3 75X120Cm Layers Baby </p>
+                <p>EGP 220</p>
+                <button onclick="addToCart({
+                    id: 1,
+                    name: 'Moro Moro 3 75X120Cm Layers Baby Urine Pad Large Breathable Nappy Waterproof Infant Liner Diaper Changing Cotton Bed Cover Cartoon Newborn Diaper Changing Mat(Beige Deer)',
+                    price: 220,
+                    image_url: 'https://m.media-amazon.com/images/I/71-+GMINUkL._AC_SY300_SX300_.jpg',
+                })">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="https://m.media-amazon.com/images/I/71w1sQ0vNcS.__AC_SX300_SY300_QL70_ML2_.jpg" alt="Product 2">
+                <p>SVTEOKO Travel</p>
+                <p>EGP 148</p>
+                <button onclick="addToCart({
+                    id: 2,
+                    name: 'SVTEOKO Travel Changing Mats | Portable Changing Mat Foldable Infant Baby Urinal Pad Waterproof for Home Travel Outside 60cm x 35cm - (Pink)',
+                    price:148,
+                    image_url: 'https://m.media-amazon.com/images/I/71w1sQ0vNcS.__AC_SX300_SY300_QL70_ML2_.jpg',
+                })">Add to Cart</button>
+            </div>
+
+    <div class="product">
+        <img src="https://m.media-amazon.com/images/I/61FBDqHSOuL._AC_SX425_.jpg" alt="Product 2">
+        <p>Entyle Waterproof Diaper Changing Pad</p>
+        <p>EGP 166</p>
+        <button onclick="addToCart({
+            id: 3,
+            name: 'Entyle Waterproof Diaper Changing Pad , Washable Reusable Breathable Leak Proof Infant Mattress Pad Portable Travel Baby Changing Mat (Black Stars',
+            price: 166,
+            image_url: 'https://m.media-amazon.com/images/I/61FBDqHSOuL._AC_SX425_.jpg',
+        })">Add to Cart</button>
+    </div>
+   
+    <div class="product">
+        <img src="https://m.media-amazon.com/images/I/71m0txWMwBL._AC_SX425_.jpg" alt="Product 2">
+        <p>Moro Moro 3 My Little Zone Baby</p>
+        <p>EGP 370</p>
+        <button onclick="addToCart({
+            id: 4,
+            name: 'Moro Moro 3 My Little Zone Baby Changing Pad Covers Jungle Flamingo - Cotton Changing Table Mattress Pad For Baby Girls, 2 Pack',
+            price: 370,
+            image_url: 'https://m.media-amazon.com/images/I/71m0txWMwBL._AC_SX425_.jpg',
+        })">Add to Cart</button>
+    </div>
+       <!-- Add more product divs as needed -->
+    <div class="product">
+        <img src="https://m.media-amazon.com/images/I/41UBf99X98L._AC_SX425_.jpg" alt="Product 2">
+        <p>Moro Moro 3 Pink Floral</p>
+        <p>EGP 220</p>
+        <button onclick="addToCart({
+            id: 5,
+            name: 'Moro Moro 3 Pink Floral Changing Pad Cover Set For Baby Girls | 2 Pack Set | Pink Roses & Ditsy Floral',
+            price: 220,
+            image_url: 'https://m.media-amazon.com/images/I/41UBf99X98L._AC_SX425_.jpg',
+        })">Add to Cart</button>
+    </div>
+
+     <div class="product">
+        <img src="https://m.media-amazon.com/images/I/81YvHZcm4IL._AC_SX425_.jpg" alt="Product 2">
+        <p>Moro Moro 3 3Pk </p>
+        <p>EGP 109</p>
+        <button onclick="addToCart({
+            id: 6,
+            name: 'Moro Moro 3 3Pk Larger Softer Changing Pad Liners Waterproof,Washable Reusable Flannel Cotton Changing Table Cover Liners Leakproof, Portable Baby Changing Mat For Boys Girls, Gray',
+            price: 109,
+            image_url: 'https://m.media-amazon.com/images/I/81YvHZcm4IL._AC_SX425_.jpg',
+        })">Add to Cart</button>
+    </div>
+  
+     <div class="product">
+        <img src="https://m.media-amazon.com/images/I/61Lz5yDPINL.__AC_SX300_SY300_QL70_ML2_.jpg" alt="Product 2">
+        <p>Moro Moro Portable Baby </p>
+        <p>EGP 220</p>
+        <button onclick="addToCart({
+            id: 7,
+            name: 'Moro Moro Portable Baby Changing Pad Foldable Waterproof Diaper Blue',
+            price: 220,
+            image_url: 'https://m.media-amazon.com/images/I/61Lz5yDPINL.__AC_SX300_SY300_QL70_ML2_.jpg',
+        })">Add to Cart</button>
+    </div>
+    
+
+<div class="product">
+    <img src="https://m.media-amazon.com/images/I/71NtHY5Q36L._AC_SX679_.jpg" alt="Product 2">
+    <p>Komkom baby </p>
+    <p>EGP 519</p>
+    <button onclick="addToCart({
+        id: 8,
+        name: 'Komkom baby changing mat patterned/unicorn 1 piece',
+        price: 519,
+        image_url: 'https://m.media-amazon.com/images/I/71NtHY5Q36L._AC_SX679_.jpg',
+    })">Add to Cart</button>
+</div>
+
+<div class="product">
+    <img src="https://m.media-amazon.com/images/I/610wdp+xPRL._AC_SY300_SX300_.jpg" alt="Product 2">
+    <p>Mix&Max Fiber </p>
+    <p>EGP 200</p>
+    <button onclick="addToCart({
+        id: 9,
+        name: 'Mix&Max Fiber Changing Diapers Mat Printed Shapes For Unisex-Multicolor',
+        price: 200,
+        image_url: 'https://m.media-amazon.com/images/I/610wdp+xPRL._AC_SY300_SX300_.jpg',
+    })">Add to Cart</button>
+</div>
+<div class="product">
+    <img src="https://m.media-amazon.com/images/I/614DhQ2mZ6L._AC_SX522_.jpg" alt="Product 2">
+    <p>Molfix - Baby Diapers </p>
+    <p>EGP 313</p>
+    <button onclick="addToCart({
+        id: 9,
+        name: 'Molfix - Baby Diapers - Jumbo Pack - New Born Size 1 - 60 Pieces',
+        price: 313,
+        image_url: 'https://m.media-amazon.com/images/I/614DhQ2mZ6L._AC_SX522_.jpg',
+    })">Add to Cart</button>
+</div>
+
+</section>
+
+    </main>
+
+    <script>
+    function addToCart(product) {
+    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+    cart.push({
+        id: product.id,
+        name: product.name,
+        price: product.price,
+        image: product.image_url || product.url 
+    });
+
+    localStorage.setItem('cart', JSON.stringify(cart));
+}
+function addToCart(product) {
+            const button = event.target;
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            if (button.innerHTML === 'Add to Cart') {
+            
+                button.innerHTML = 'Added to Cart';
+                button.style.backgroundColor = 'green';
+                button.style.color = 'white';
+
+                console.log('Product added to cart:', product);
+            }
+            cart.push({
+        id: product.id,
+        name: product.name,
+        price: product.price,
+        image: product.image_url || product.url 
+    });
+
+    localStorage.setItem('cart', JSON.stringify(cart));
+        }
+
+    function nextSlide() {
+        currentIndex = (currentIndex + 1) % slides.length; 
+        showSlide(currentIndex);
+    }
+
+    setInterval(nextSlide, 1000); 
+    </script>
+</body>
+</html>
