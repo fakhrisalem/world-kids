@@ -3,257 +3,148 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us</title>
-    <link rel="stylesheet" href="about.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>About Us - Kids World</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playball&display=swap');
+        .font-cursive {
+            font-family: 'Playball', cursive;
+        }
         body {
-    margin: 0;
-    padding-top: 70px; 
-}
-
-header {
-    position: fixed; 
-    top: 0;
-    left: 0;
-    right: 0;
-    background-color: #d9f7f5;
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0px 30px;
-    z-index: 10;
-    font-size: 15px;
-
-}
-
-header a {
-    color: rgb(17, 16, 16);
-    text-decoration: none;
-    margin: 0 50px;
-    position: relative; 
-    padding: 1px; 
-    transition: background-color 0.3s, color 0.3s; 
-}
-
-header a::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-  
-    transition: border-color 0.3s; 
-}
-
-header a:hover::after, 
-header a:focus::after, 
-header a:active::after { 
-    border-color: rgba(255, 255, 255, 0.8); 
-}
-
-header a:hover {
-    background-color: rgba(247, 13, 13, 0.2); 
-    border-radius: 25px;
-    color: white; 
-  padding: 10px;
-}
-
-.search-input {
-    padding: 5px;
-    margin-right: 10px;
-    border-radius: 50px;
-}
-
-.icon {
-    width: 20px;
-    height: 20px; 
-}
-
-        .image-container {
-            position: relative;
-            width: 100%;
-            height: 320px;
-            overflow: visible;
-            margin-bottom: 100px; 
+            background-color: #f7fafc;
         }
-
-        .background-image, .background-image1 {
-            background-size: cover;
-            background-position: center;
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 400px;
-            z-index: 1;
-            border-radius: 25px;
-        }
-
-        .background-image {
-            background-image: url("https://i.pinimg.com/564x/7f/eb/c8/7febc8c3d4314ad66f8865bb7f6d31be.jpg");
-        }
-
-        .background-image1 {
-            background-image: url("https://i.pinimg.com/564x/7f/eb/c8/7febc8c3d4314ad66f8865bb7f6d31be.jpg");
-        }
-
-        .overlay-content {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            color: rgb(255, 253, 253);
-            text-align: center;
-            z-index: 2;
-            font-size: 16px;
-            margin: 30px;
-            padding: 10px;
-        }
-
-        .overlay-image {
-            position: absolute;
-            width: 30%;
-            height: auto;
-            z-index: 9;
-            opacity: 0.9;
-            border-radius: 50px;
-            transition: transform 0.3s ease; 
-        }
-
-        .overlay-image:hover {
-            transform: scale(1.1); 
-        }
-
-        .left-image {
-            top: 20%;
-            left: -13%;
-        }
-
-        .right-image {
-            top: 1%;
-            right: -18%;
-        }
-
-        button {
-            color: #f8f6f6;
-        border-radius: 25px;
-        background-color: #5e3e06;
-        }
-
-        @media (max-width: 600px) {
-            .flex-container {
-                flex-direction: column;
-                align-items: center;
-            }
-            .side-image {
-                max-width: 80%;
-                margin-bottom: 20px;
-            }
-        }
-
-        .left-image1 {
-            top: 50%;
-            left: -19%;
-        }
-
-        .right-image2 {
-            top: 20%;
-            right: -12%;
-        }
-
-        p {
-            font-size: 12px;
-            margin-bottom: 2px;
-        }
-
-        h1 {
-            margin-bottom: 10px;  
-            margin-top: 30px; 
-            margin: 10px;
-        }
-        .logo {
-            height: 50px; 
-            margin-right: 10px;
-            border-radius: 50px; 
-        }
-
-        .site-title {
-            font-size: 24px; 
-            color: rgb(19, 19, 19); 
-            font-family: 'Lucida Calligraphy', cursive; 
-        }
-       .search{
-        color: #f8f6f6;
-        border-radius: 25px;
-        background-color: #5e3e06;
-       }
     </style>
 </head>
-<body>
-    <header>
-        <img src="https://i.pinimg.com/736x/6b/90/b5/6b90b55c618ab58f09c2e38151b708e7.jpg" alt="Logo" class="logo">
-        <span class="site-title">Kids World</span> 
-       </a>
-        <div class="left-links">
-            <a href="home.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="products.html">Products</a>
+<body class="bg-gray-50 text-gray-800">
+
+    <header class="bg-teal-100/80 backdrop-blur-sm shadow-md fixed top-0 left-0 right-0 z-50">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="#" class="flex items-center gap-3">
+                <img src="https://i.pinimg.com/736x/6b/90/b5/6b90b55c618ab58f09c2e38151b708e7.jpg" alt="Logo" class="h-12 w-12 rounded-full border-2 border-teal-500">
+                <span class="text-3xl font-cursive text-teal-800">Kids World</span>
+            </a>
+
+            <nav class="hidden md:flex items-center space-x-6">
+                <a href="home.html" class="text-gray-700 hover:text-teal-600 transition duration-300">Home</a>
+                <a href="about.html" class="text-teal-600 font-bold border-b-2 border-teal-600 pb-1">About</a>
+                <a href="products.html" class="text-gray-700 hover:text-teal-600 transition duration-300">Products</a>
+            </nav>
+
+            <div class="hidden md:flex items-center gap-4">
+                <div class="relative">
+                    <input type="text" placeholder="Search..." class="rounded-full py-1.5 px-4 w-40 focus:outline-none focus:ring-2 focus:ring-teal-400 transition">
+                    <i class="fa fa-search absolute right-3 top-1/2 -translate-y-1/2 text-gray-400"></i>
+                </div>
+                <a href="#" class="text-gray-700 hover:text-teal-600 transition duration-300"><i class="fas fa-user-circle fa-lg"></i></a>
+                <a href="#" class="text-gray-700 hover:text-teal-600 transition duration-300"><i class="fas fa-shopping-cart fa-lg"></i></a>
+            </div>
+
+            <div class="md:hidden">
+                <button id="menu-btn" class="text-gray-700 focus:outline-none">
+                    <i class="fas fa-bars fa-lg"></i>
+                </button>
+            </div>
         </div>
-        <div class="center-link">
-            <form action="search.html" method="get">
-                <input type="text" name="search" class="search-input" placeholder="Search...">
-                <button type="submit">Search</button>
-            </form>
-        </div>
-        <div class="right-links">
-            <a href="login.html"><img src="login_logo.png" alt="Login" class="icon"></a>
-            <a href="cart.html"><img src="cart_logo.png" alt="Cart" class="icon"></a>
+
+        <div id="mobile-menu" class="hidden md:hidden px-6 pt-2 pb-4 space-y-3">
+            <a href="#" class="block text-gray-700 hover:text-teal-600 transition duration-300">Home</a>
+            <a href="#" class="block text-teal-600 font-bold">About</a>
+            <a href="#" class="block text-gray-700 hover:text-teal-600 transition duration-300">Products</a>
+            <div class="relative pt-4">
+                <input type="text" placeholder="Search..." class="rounded-full py-1.5 px-4 w-full focus:outline-none focus:ring-2 focus:ring-teal-400 transition">
+                <i class="fa fa-search absolute right-4 top-1/2 text-gray-400"></i>
+            </div>
+             <div class="flex items-center justify-center gap-6 pt-4">
+                <a href="#" class="text-gray-700 hover:text-teal-600 transition duration-300"><i class="fas fa-user-circle fa-lg"></i> Login</a>
+                <a href="#" class="text-gray-700 hover:text-teal-600 transition duration-300"><i class="fas fa-shopping-cart fa-lg"></i> Cart</a>
+            </div>
         </div>
     </header>
-    <main>
-        <section>
-            <div class="container">
-                <div class="image-container">
-                    <div class="background-image"></div>
-                    <div class="overlay-content">
-                        <h1>About us</h1>
-                        <b>We offer you a variety of wonderful products that meet the needs of children at 
-                            all stages of their development. From clothing and toys to educational supplies, we are here to help you provide your children with everything they need to grow up healthy and happy. 
-                        Discover with us a world full of distinctive options that will make your journey as a parent a special and 
-                        enjoyable experience!
-                    </b>
+
+    <main class="pt-24">
+        
+        <section class="container mx-auto px-6 py-16">
+            <div class="relative rounded-3xl overflow-hidden shadow-2xl">
+                <img src="https://i.pinimg.com/564x/7f/eb/c8/7febc8c3d4314ad66f8865bb7f6d31be.jpg" class="absolute inset-0 w-full h-full object-cover z-0" alt="Fun background for kids products">
+                <div class="absolute inset-0 bg-teal-900/60 z-10"></div>
+                
+                <div class="relative z-20 grid grid-cols-1 md:grid-cols-3 items-center gap-8 p-8 md:p-12 text-white">
+                    <div class="hidden md:block">
+                        <img src="https://i.pinimg.com/564x/4c/9c/ad/4c9cad37982a30ae78bae76e9676af67.jpg" alt="Happy Kid" class="rounded-3xl shadow-lg transform hover:scale-105 transition-transform duration-300">
                     </div>
-                    <img src="https://i.pinimg.com/564x/4c/9c/ad/4c9cad37982a30ae78bae76e9676af67.jpg" alt="Left Image" class="overlay-image left-image">
-                    <img src="https://i.pinimg.com/564x/14/fb/79/14fb791dd310cb8cfa3a90fc9eb0789b.jpg" alt="Right Image" class="overlay-image right-image" height="900px">
+                    <div class="text-center space-y-4">
+                        <h1 class="text-4xl md:text-5xl font-bold font-cursive">About Us</h1>
+                        <p class="text-lg text-teal-100">
+                            We offer a variety of wonderful products for children at all stages of development. From clothing and toys to educational supplies, we are here to help you provide everything they need to grow up healthy and happy.
+                        </p>
+                    </div>
+                    <div class="hidden md:block">
+                        <img src="https://i.pinimg.com/564x/14/fb/79/14fb791dd310cb8cfa3a90fc9eb0789b.jpg" alt="Kids playing" class="rounded-3xl shadow-lg transform hover:scale-105 transition-transform duration-300">
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section id="na">
-            <div class="container">
-                <div class="image-container">
-                    <div class="background-image1"></div>
-                    <div class="overlay-content">
-                        <h1>Our Services</h1>
-                        <p>
-                            <b>1. Wide Range of Products:</b> We offer a comprehensive range of supplies for children aged 1 to 12 years, including clothing, toys, books, and educational supplies.<br>
-                            <b>2. Express Delivery:</b> We understand the importance of time, so we offer fast and reliable shipping options to ensure your orders arrive as quickly as possible.<br>
-                            <b>3. Free Consultations:</b> We are here to help! Our customers can get free consultations on choosing the right products for their children's needs.<br>
-                            <b>4. Special Offers and Discounts:</b> Follow us to get the latest offers and discounts, making your shopping more fun and affordable.<br>
-                            <b>5. Customer Support:</b> Our dedicated team is always available to answer your questions and help you solve any problems you may encounter while shopping.<br>
-                        </p>
-                        <b>We strive to provide a comprehensive and enjoyable shopping experience, and we look forward to helping you meet your children's needs!</b>
-                    </div>
-                    <img src="https://i.pinimg.com/564x/1b/94/3b/1b943bafff2caa13c9ba1d6c414ebfa3.jpg" alt="Left Image1" class="overlay-image left-image1">
-                    <img src="https://i.pinimg.com/564x/b5/74/2d/b5742d8d644c9a10cc5558ba9f51f9b3.jpg" alt="Right Image2" class="overlay-image right-image2">
+        <section class="container mx-auto px-6 py-16">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-teal-800 font-cursive">Our Services</h2>
+                <p class="text-gray-600 mt-2">Everything you need for a great shopping experience.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 text-center">
+                    <div class="text-teal-500 mb-4"><i class="fas fa-box-open fa-3x"></i></div>
+                    <h3 class="text-xl font-semibold mb-2">Wide Range of Products</h3>
+                    <p class="text-gray-600">Supplies for children aged 1 to 12 years, including clothing, toys, books, and educational supplies.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 text-center">
+                    <div class="text-teal-500 mb-4"><i class="fas fa-shipping-fast fa-3x"></i></div>
+                    <h3 class="text-xl font-semibold mb-2">Express Delivery</h3>
+                    <p class="text-gray-600">Fast and reliable shipping options to ensure your orders arrive as quickly as possible.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 text-center">
+                    <div class="text-teal-500 mb-4"><i class="fas fa-headset fa-3x"></i></div>
+                    <h3 class="text-xl font-semibold mb-2">Free Consultations</h3>
+                    <p class="text-gray-600">Get free advice on choosing the right products for your children's needs.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 text-center">
+                    <div class="text-teal-500 mb-4"><i class="fas fa-tags fa-3x"></i></div>
+                    <h3 class="text-xl font-semibold mb-2">Special Offers</h3>
+                    <p class="text-gray-600">Follow us for the latest offers and discounts, making your shopping more affordable.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 text-center">
+                    <div class="text-teal-500 mb-4"><i class="fas fa-life-ring fa-3x"></i></div>
+                    <h3 class="text-xl font-semibold mb-2">Customer Support</h3>
+                    <p class="text-gray-600">Our dedicated team is always available to answer your questions and help you solve any problems.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 text-center">
+                    <div class="text-teal-500 mb-4"><i class="fas fa-gift fa-3x"></i></div>
+                    <h3 class="text-xl font-semibold mb-2">Gift Wrapping</h3>
+                    <p class="text-gray-600">We offer beautiful gift wrapping options for your special occasions.</p>
                 </div>
             </div>
         </section>
     </main>
-    <script src="script.js"></script>
+
+    <footer class="bg-teal-800 text-white mt-16">
+        <div class="container mx-auto px-6 py-8 text-center">
+            <p>&copy; 2024 Kids World. All Rights Reserved.</p>
+            <div class="flex justify-center gap-6 mt-4">
+                <a href="#" class="hover:text-teal-300 transition"><i class="fab fa-facebook-f fa-lg"></i></a>
+                <a href="#" class="hover:text-teal-300 transition"><i class="fab fa-instagram fa-lg"></i></a>
+                <a href="#" class="hover:text-teal-300 transition"><i class="fab fa-twitter fa-lg"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
 </body>
 </html>
