@@ -3,377 +3,197 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us</title>
-    <link rel="stylesheet" href="home.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <title>Home - Kids World</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
-      body {
-    margin: 0;
-    padding-top: 40px; 
-}
-
-header {
-    position: fixed; 
-    top: 0;
-    left: 0;
-    right: 0;
-    background-color: #d9f7f5;
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0px 30px;
-    z-index: 10;
-    font-size: 15px;
-
-}
-
-header a {
-    color: rgb(17, 16, 16);
-    text-decoration: none;
-    margin: 0 50px;
-    position: relative; 
-    padding: 1px; 
-    transition: background-color 0.3s, color 0.3s; 
-}
-
-header a::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-  
-    transition: border-color 0.3s; 
-}
-
-header a:hover::after, 
-header a:focus::after, 
-header a:active::after { 
-    border-color: rgba(255, 255, 255, 0.8); 
-}
-
-header a:hover {
-    background-color: rgba(247, 13, 13, 0.2); 
-    border-radius: 25px;
-    color: white; 
-  padding: 10px;
-}
-
-.search-input {
-    padding: 5px;
-    margin-right: 10px;
-    border-radius: 50px;
-}
-
-.icon {
-    width: 20px;
-    height: 20px; 
-}
-        .background-slider {
-    position: relative;
-    background-image: url('https://i.pinimg.com/564x/fe/ff/e8/feffe8a3438bdec63ed0e46cffcbb0ff.jpg');
-    background-size: cover;
-    background-position: center;
-    height: 300px;
-    display: flex;
-    justify-content: space-between; 
-    align-items: center; 
-    text-align: left;
-    color: white;
-    animation: fadeIn 2s; 
-  
-}
-#productImage {
-        border-radius: 50%;
-        width: 400px; 
-        height: 400px; 
-        object-fit: cover;
-        transition: opacity 0.3s;
-        padding: 0px; 
-       margin: 100px;
-       transition: transform 0.3s ease;
-    }
-    #productImage.background-slider:hover {
-    transform: scale(1.3); 
-}
-
-.overlay-image {
-    position: relative; 
-    width: 10px;
-    animation: rotate 2s; 
-    margin: 10px;
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-
-@keyframes rotate {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
-}
-#productImage1 {
-        border-radius: 50%;
-        width: 400px; 
-        height: 400px; 
-        object-fit: cover;
-        transition: opacity 0.3s; 
-        margin: 100px;
-    }
-    #productImage2 {
-        border-radius: 50%;
-        width: 400px;
-        height: 400px; 
-        object-fit: cover;
-        transition: opacity 0.3s; 
-        margin: 100px;
-    }
-    
-    h1{
-        font-size: 35px;
-        color: rgb(255, 255, 255);
-        font-family: 'Lucida Calligraphy', cursive;
-        
-    }
-    b{
-        font-size: 19px;
-        color: #f79f06;
-        font-family: 'Lucida Calligraphy', cursive;
-        margin: 0px;
-    }
-    .logo {
-            height: 50px; 
-            margin-right: 10px;
-            border-radius: 50px; 
+        @import url('https://fonts.googleapis.com/css2?family=Playball&display=swap');
+        .font-cursive {
+            font-family: 'Playball', cursive;
         }
-
-        .site-title {
-            font-size: 24px; 
-            color: rgb(19, 19, 19); 
-            font-family: 'Lucida Calligraphy', cursive; 
+        .hero-text-shadow {
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
         }
-       .search{
-        color: #f8f6f6;
-        border-radius: 25px;
-        background-color: #5e3e06;
-       }
-       .product {
-            position: relative; 
-            cursor: pointer; 
-            text-align: center; 
-            margin: 90px; 
-        }
-
-        .product img {
-        
-            border-radius: 50px; 
-            transition: transform 0.3s ease; 
-        }
-
-        .product:hover img {
-            transform: scale(1.05); 
-        }
-
-        .overlay {
-            position: absolute; 
-            top: 100px; 
-            left: 0; 
-            width: 100%; 
-            height: 100%; 
-            background-color: rgba(17, 16, 16, 0.5); 
-            display: flex; 
-            justify-content: center; 
-            align-items: center; 
-            opacity: 0; 
-            transition: opacity 0.3s ease; 
-            border-radius: 25px; 
-        }
-        .overlay-text {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            color: white;
-            text-align: center;
-        }
-
-        .product:hover .overlay {
-            opacity: 1; 
-        }
-
-        .overlay p {
-            color: rgb(249, 246, 246); 
-            font-size: 30px; 
-            margin: 700; 
-            font-family: 'Lucida Calligraphy', cursive;
-        }
-       
-    
     </style>
 </head>
-<body>
-    <header>
-        <img src="https://i.pinimg.com/736x/6b/90/b5/6b90b55c618ab58f09c2e38151b708e7.jpg" alt="Logo" class="logo">
-             <span class="site-title">Kids World</span> 
+<body class="bg-gray-50 text-gray-800">
+
+    <header class="bg-teal-100/80 backdrop-blur-sm shadow-md fixed top-0 left-0 right-0 z-50">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="home.html" class="flex items-center gap-3">
+                <img src="https://i.pinimg.com/736x/6b/90/b5/6b90b55c618ab58f09c2e38151b708e7.jpg" alt="Logo" class="h-12 w-12 rounded-full border-2 border-teal-500">
+                <span class="text-3xl font-cursive text-teal-800">Kids World</span>
             </a>
-        <div class="left-links">
-            <a href="home.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="products.html">Products</a>
+            <nav class="hidden md:flex items-center space-x-6">
+                <a href="home.html" class="text-teal-600 font-bold border-b-2 border-teal-600 pb-1">Home</a>
+                <a href="about.html" class="text-gray-700 hover:text-teal-600 transition duration-300">About</a>
+                <a href="products.html" class="text-gray-700 hover:text-teal-600 transition duration-300">Products</a>
+            </nav>
+            <div class="hidden md:flex items-center gap-4">
+                <form action="search.html" method="get" class="relative">
+                    <input type="text" name="search" placeholder="Search..." class="rounded-full py-1.5 px-4 w-40 focus:outline-none focus:ring-2 focus:ring-teal-400 transition">
+                    <button type="submit" class="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400">
+                        <i class="fa fa-search"></i>
+                    </button>
+                </form>
+                <a href="login.html" class="text-gray-700 hover:text-teal-600 transition duration-300"><i class="fas fa-user-circle fa-lg"></i></a>
+                <a href="cart.html" class="text-gray-700 hover:text-teal-600 transition duration-300"><i class="fas fa-shopping-cart fa-lg"></i></a>
+            </div>
+            <div class="md:hidden">
+                <button id="menu-btn" class="text-gray-700 focus:outline-none">
+                    <i class="fas fa-bars fa-lg"></i>
+                </button>
+            </div>
         </div>
-        <div class="center-link">
-            <form action="search.html" method="get">
-                <input type="text" name="search" class="search-input" placeholder="Search...">
-                <button type="submit" class="search">Search</button>
+        <div id="mobile-menu" class="hidden md:hidden px-6 pt-2 pb-4 space-y-3">
+            <a href="home.html" class="block text-teal-600 font-bold">Home</a>
+            <a href="about.html" class="block text-gray-700 hover:text-teal-600 transition duration-300">About</a>
+            <a href="products.html" class="block text-gray-700 hover:text-teal-600 transition duration-300">Products</a>
+            <form action="search.html" method="get" class="relative pt-4">
+                <input type="text" name="search" placeholder="Search..." class="rounded-full py-1.5 px-4 w-full focus:outline-none focus:ring-2 focus:ring-teal-400 transition">
+                 <button type="submit" class="absolute right-4 top-1/2 text-gray-400">
+                    <i class="fa fa-search"></i>
+                </button>
             </form>
-        </div>
-        <div class="right-links">
-            <a href="login.html"><img src="login_logo.png" alt="Login" class="icon" width="20px"></a>
-            <a href="cart.html"><img src="cart_logo.png" alt="Cart" class="icon" width="20px"></a>
+             <div class="flex items-center justify-center gap-6 pt-4">
+                <a href="login.html" class="text-gray-700 hover:text-teal-600 transition duration-300"><i class="fas fa-user-circle fa-lg"></i> Login</a>
+                <a href="cart.html" class="text-gray-700 hover:text-teal-600 transition duration-300"><i class="fas fa-shopping-cart fa-lg"></i> Cart</a>
+            </div>
         </div>
     </header>
+
     <main>
-       
-        <style>
-          
-        </style>
-        </head>
-        <body>
-            <section>
-                <div class="video-container">
-                    <video autoplay muted loop class="full-width-video" >
-                        <source src="https://cdn.pixabay.com/video/2020/02/22/32693-393659801_large.mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                    <div class="overlay-text">
-                        <h1>Welcome to your one-stop destination for everything related to children </h1>
-                          
+        <section class="relative h-screen flex items-center justify-center text-white">
+            <video autoplay muted loop class="absolute inset-0 w-full h-full object-cover z-0">
+                <source src="https://cdn.pixabay.com/video/2020/02/22/32693-393659801_large.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="absolute inset-0 bg-black/50 z-10"></div>
+            <div class="relative z-20 text-center px-6">
+                <h1 class="text-4xl md:text-6xl font-bold font-cursive hero-text-shadow">Welcome to your one-stop destination for everything related to children</h1>
+            </div>
+        </section>
+
+        <section class="container mx-auto px-6 py-16">
+            <h2 class="text-4xl font-bold text-center text-teal-800 font-cursive mb-12">Baby Products</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+                <a href="book1.html" class="group block bg-white rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 overflow-hidden">
+                    <div class="relative">
+                        <img src="https://images-eu.ssl-images-amazon.com/images/G/42/consumables/stores22/baby/1461463_EG_L2_Nav_CL_BathingSkinCare_Bathing_440x440_0ae15f99-1ca7-43f5-9e48-3ba8fc7066e0.jpg" alt="Baby Care" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <p class="text-white text-lg font-semibold">View All Products</p>
+                        </div>
                     </div>
-                </div>
-            </section>
-        
-            <section>
-                <div class="background-slider">
-                    <h2 style="color: black; font-size: 50px;">Baby Products</h2>
-                    <img src="https://i.pinimg.com/564x/97/05/84/970584d3b68033337e5c6b49efa69256.jpg" id="productImage" width="300px" height="400px">
-                </div>
-                <div class="product" onclick="location.href='book1.html';">
-                    <img src="https://images-eu.ssl-images-amazon.com/images/G/42/consumables/stores22/baby/1461463_EG_L2_Nav_CL_BathingSkinCare_Bathing_440x440_0ae15f99-1ca7-43f5-9e48-3ba8fc7066e0.jpg" alt="Nursing & Feeding" width="300px">
-                    <div class="overlay">
-                        <p>View All Products</p>
+                    <p class="p-4 text-center text-lg font-semibold text-gray-700">Baby Care</p>
+                </a>
+                <a href="book2.html" class="group block bg-white rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 overflow-hidden">
+                    <div class="relative">
+                        <img src="https://i.pinimg.com/564x/16/bb/47/16bb47d597170985f5c20706abd0d9f0.jpg" alt="Baby Transport" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <p class="text-white text-lg font-semibold">View All Products</p>
+                        </div>
                     </div>
-                    <p>Baby Care</p>
-                </div>
-                <div class="product" onclick="location.href='book2.html';">
-                    <img src="https://i.pinimg.com/564x/16/bb/47/16bb47d597170985f5c20706abd0d9f0.jpg" alt="Nursing & Feeding" width="300">
-                    <div class="overlay">
-                        <p>View All Products</p>
+                    <p class="p-4 text-center text-lg font-semibold text-gray-700">For your baby's transport</p>
+                </a>
+                <a href="book3.html" class="group block bg-white rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 overflow-hidden">
+                    <div class="relative">
+                        <img src="https://images-eu.ssl-images-amazon.com/images/G/42/consumables/stores22/baby/1461463_EG_L2_Nav_CL_DiaperBags_440x440_faff243e-e4a8-489c-94e6-59a5ba4d069f.jpg" alt="Diaper Bags" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                           <p class="text-white text-lg font-semibold">View All Products</p>
+                        </div>
                     </div>
-                    <p>For your baby's transport</p>
+                    <p class="p-4 text-center text-lg font-semibold text-gray-700">Baby Diaper Bags</p>
+                </a>
+            </div>
+        </section>
+
+        <section class="bg-teal-50 py-16">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-bold text-center text-teal-800 font-cursive mb-12">Girls & Boys Fashion</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+                     <a href="moo1.html" class="group block bg-white rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 overflow-hidden">
+                        <div class="relative">
+                            <img src="https://i.pinimg.com/enabled_lo/564x/7b/b8/9c/7bb89c1721f54f134f06d4e52c6cbc41.jpg" alt="Boys Fashion" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110">
+                            <div class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <p class="text-white text-lg font-semibold">View All Products</p>
+                            </div>
+                        </div>
+                        <p class="p-4 text-center text-lg font-semibold text-gray-700">Boys Fashion</p>
+                    </a>
+                    <a href="moo2.html" class="group block bg-white rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 overflow-hidden">
+                        <div class="relative">
+                            <img src="https://i.pinimg.com/enabled_lo/564x/0a/10/e9/0a10e9fca1278e76310361b6be79531d.jpg" alt="Girls Fashion" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110">
+                            <div class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <p class="text-white text-lg font-semibold">View All Products</p>
+                            </div>
+                        </div>
+                        <p class="p-4 text-center text-lg font-semibold text-gray-700">Girls Fashion</p>
+                    </a>
+                    <a href="moo3.html" class="group block bg-white rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 overflow-hidden">
+                        <div class="relative">
+                            <img src="https://i.pinimg.com/564x/0f/1b/bb/0f1bbb5c0afa152595d49f288ba46acb.jpg" alt="Shoes" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110">
+                            <div class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <p class="text-white text-lg font-semibold">View All Products</p>
+                            </div>
+                        </div>
+                        <p class="p-4 text-center text-lg font-semibold text-gray-700">Girls & Boys Shoes</p>
+                    </a>
                 </div>
-                <div class="product" onclick="location.href='book3.html';">
-                    <img src="https://images-eu.ssl-images-amazon.com/images/G/42/consumables/stores22/baby/1461463_EG_L2_Nav_CL_DiaperBags_440x440_faff243e-e4a8-489c-94e6-59a5ba4d069f.jpg" alt="Nursing & Feeding" width="300" height="300px">
-                    <div class="overlay">
-                        <p>View All Products</p>
+            </div>
+        </section>
+
+        <section class="container mx-auto px-6 py-16">
+            <h2 class="text-4xl font-bold text-center text-teal-800 font-cursive mb-12">Other Essentials</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+                <a href="yo1.html" class="group block bg-white rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 overflow-hidden">
+                    <div class="relative">
+                        <img src="https://i.pinimg.com/564x/9e/34/2b/9e342bec8e59217d1423db4f71de4cd0.jpg" alt="School Bags" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <p class="text-white text-lg font-semibold">View All Products</p>
+                        </div>
                     </div>
-                    <p>Baby Diaper Bags</p>
-                </div>
-            </section>
-        
-            <section id="pro">
-                <div class="background-slider">
-                    <h2 style="color: black; font-size: 50px;">Girls & Boys Fashion</h2>
-                    <img src="https://i.pinimg.com/564x/3c/b2/97/3cb297ae45883f4535dfcabaed5b25c9.jpg" id="productImage1" width="200px" height="300px">
-                </div>
-              
-                <div class="product" onclick="location.href='moo1.html';">
-                    <img src="https://i.pinimg.com/enabled_lo/564x/7b/b8/9c/7bb89c1721f54f134f06d4e52c6cbc41.jpg" alt="Other Essentials" width="300px">
-                    <div class="overlay">
-                        <p>View All Products</p>
+                    <p class="p-4 text-center text-lg font-semibold text-gray-700">All Kids School Bags</p>
+                </a>
+                <a href="yo2.html" class="group block bg-white rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 overflow-hidden">
+                    <div class="relative">
+                        <img src="https://i.pinimg.com/564x/e4/80/fa/e480fa5f3c068a3eff928cbc9064486d.jpg" alt="Sportswear" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <p class="text-white text-lg font-semibold">View All Products</p>
+                        </div>
                     </div>
-                    <p>Boys Fashion</p>
-                </div>
-                <div class="product" onclick="location.href='moo2.html';">
-                    <img src="https://i.pinimg.com/enabled_lo/564x/0a/10/e9/0a10e9fca1278e76310361b6be79531d.jpg" alt="Other Essentials" width="300px">
-                    <div class="overlay">
-                        <p>View All Products</p>
+                    <p class="p-4 text-center text-lg font-semibold text-gray-700">Sportswear</p>
+                </a>
+                <a href="yo3.html" class="group block bg-white rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 overflow-hidden">
+                    <div class="relative">
+                        <img src="https://i.pinimg.com/564x/5d/09/e8/5d09e8053a95a661e2ded6259fb8523a.jpg" alt="Books" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <p class="text-white text-lg font-semibold">View All Products</p>
+                        </div>
                     </div>
-                    <p>Girls Fashion</p>
-                </div>
-                <div class="product" onclick="location.href='moo3.html';">
-                    <img src="https://i.pinimg.com/564x/0f/1b/bb/0f1bbb5c0afa152595d49f288ba46acb.jpg" alt="Other Essentials" width="300px">
-                    <div class="overlay">
-                        <p>View All Products</p>
-                    </div>
-                    <p>Girls & Boys Shoes</p>
-                </div>
-            </section>
-        
-            <section id="yo">
-                <div class="background-slider">
-                    <h4 style="color: black; font-size: 50px;">Other Essentials </h4>
-                    <img src="https://i.pinimg.com/564x/5c/25/a8/5c25a84d1660842fe50ebb8fe4bcf2a7.jpg" id="productImage2" width="200px" height="300px">
-                </div>
-              
-                <div class="product" onclick="location.href='yo1.html';">
-                    <img src="https://i.pinimg.com/564x/9e/34/2b/9e342bec8e59217d1423db4f71de4cd0.jpg" alt="For Your Baby's Transport" width="300px" height="300px">
-                    <div class="overlay">
-                        <p>View All Products</p>
-                    </div>
-                    <p>All Kids School Bags
-                  
-                    </p>
-                </div>
-                <div class="product" onclick="location.href='yo2.html';">
-                    <img src="https://i.pinimg.com/564x/e4/80/fa/e480fa5f3c068a3eff928cbc9064486d.jpg" width="300" height="300px">
-                    <div class="overlay">
-                        <p>View All Products</p>
-                    </div>
-                    <p>Sportswear</p>
-                </div>
-                <div class="product" onclick="location.href='yo3.html';">
-                    <img src="https://i.pinimg.com/564x/5d/09/e8/5d09e8053a95a661e2ded6259fb8523a.jpg" alt="For Your Baby's Transport" width="300px" >
-                    <div class="overlay">
-                        <p>View All Products</p>
-                    </div>
-                    <p>BOOKS</p>
-                </div>
-            </section>
-      
+                    <p class="p-4 text-center text-lg font-semibold text-gray-700">BOOKS</p>
+                </a>
+            </div>
+        </section>
     </main>
-    <script >
-         const productImage = document.getElementById('productImage');
 
-productImage.addEventListener('mouseenter', function() {
-    this.src = 'https://i.pinimg.com/736x/18/2d/21/182d21873db132565f3ae302ab9b2e7b.jpg'; 
-});
+    <footer class="bg-teal-800 text-white mt-16">
+        <div class="container mx-auto px-6 py-8 text-center">
+            <p>&copy; 2024 Kids World. All Rights Reserved.</p>
+            <div class="flex justify-center gap-6 mt-4">
+                <a href="#" class="hover:text-teal-300 transition"><i class="fab fa-facebook-f fa-lg"></i></a>
+                <a href="#" class="hover:text-teal-300 transition"><i class="fab fa-instagram fa-lg"></i></a>
+                <a href="#" class="hover:text-teal-300 transition"><i class="fab fa-twitter fa-lg"></i></a>
+            </div>
+        </div>
+    </footer>
 
-productImage.addEventListener('mouseleave', function() {
-    this.src = 'https://i.pinimg.com/564x/b7/e1/6d/b7e16d7c9a932ad388ec4662f2101fe0.jpg'; 
-});
-const productImage1 = document.getElementById('productImage1');
-
-productImage1.addEventListener('mouseenter', function() {
-    this.src = 'https://i.pinimg.com/564x/dd/71/06/dd71060c7b5e918f01ab5c3172bc81b8.jpg'; 
-});
-
-productImage1.addEventListener('mouseleave', function() {
-    this.src = 'https://i.pinimg.com/564x/01/76/8f/01768fbaecedad4d09fecdb53925ba08.jpg'; 
-});
-
-const productImage2 = document.getElementById('productImage2');
-
-productImage2.addEventListener('mouseenter', function() {
-    this.src = 'https://i.pinimg.com/564x/6f/2a/09/6f2a09ae52f7d02588d4a12ce3388819.jpg'; 
-});
-
-productImage2.addEventListener('mouseleave', function() {
-    this.src = 'https://i.pinimg.com/564x/4d/de/22/4dde22122f33ee90a85103d23e10080f.jpg'; 
-});
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
     </script>
-   
 </body>
+</html>
 </html>
