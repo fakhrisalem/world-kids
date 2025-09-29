@@ -1,1623 +1,687 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us</title>
-  
-    <link rel="stylesheet" href="products.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <title>Products - Kids World</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="products.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
-   
-   body {
-    margin: 0;
-    padding-top: 70px; 
-}
-
-header {
-    position: fixed; 
-    top: 0;
-    left: 0;
-    right: 0;
-    background-color: #d9f7f5;
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0px 30px;
-    z-index: 10;
-    font-size: 15px;
-
-}
-
-header a {
-    color: rgb(17, 16, 16);
-    text-decoration: none;
-    margin: 0 50px;
-    position: relative; 
-    padding: 1px; 
-    transition: background-color 0.3s, color 0.3s; 
-}
-
-header a::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-  
-    transition: border-color 0.3s; 
-}
-
-header a:hover::after, 
-header a:focus::after, 
-header a:active::after { 
-    border-color: rgba(255, 255, 255, 0.8); 
-}
-
-header a:hover {
-    background-color: rgba(247, 13, 13, 0.2); 
-    border-radius: 25px;
-    color: white; 
-  padding: 10px;
-}
-
-.search-input {
-    padding: 5px;
-    margin-right: 10px;
-    border-radius: 50px;
-}
-
-.icon {
-    width: 20px;
-    height: 20px; 
-}
-.container {
-    display: flex;
-    flex-direction: column;
-    padding: 20px;
-}
-.product-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-.product {
-    flex: 1 0 calc(25% - 20px);
-    box-sizing: border-box;
-    margin-bottom: 20px;
-    text-align: center;
-    border: 1px solid #ccc;
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeInUp 0.6s forwards;
-    animation-delay: 0.2s;
-    background-color: #e9fcfb;
-    border-radius: 50px;
-}
-
-@keyframes fadeInUp {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.product img {
-    height: 180px;
-    width: 190px;
-    padding-top: 10px;
-    transition: transform 0.3s;
-    border-radius: 25px;
-}
-
-.product img:hover {
-    transform: scale(1.1);
-}
-
-.product p {
-    font-size: 15px;
-    margin: 5px 0;
-}
-.navbar {
-    display: flex;
-    justify-content: space-around;
-    background-color: #f6f1f1;
-    padding: 1px 0;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    box-shadow: 0 -2px 5px rgba(238, 2, 2, 0.1);
-    border: 1px solid;
-    border-radius: 25px;
-}
-.navbar-item {
-    cursor: pointer;
-    padding: 10px;
-    text-align: center;
-}
-.navbar-item:hover {
-    background-color: rgb(241, 252, 34);
-    border: 1PX solid sienna;
-    border-radius: 25PX;
-    padding: 2PX;
-}
-@media (max-width: 800px) {
-    .product {
-        flex: 1 0 calc(33.333% - 20px); 
-    }
-}
-@media (max-width: 600px) {
-    .product {
-        flex: 1 0 calc(50% - 20px); 
-    }
-}
-@media (max-width: 400px) {
-    .product {
-        flex: 1 0 100%; 
-    }
-}
-button {
-background-color: rgb(255, 140, 0);
-border: 1px solid rgb(24, 24, 24);
-border-radius: 10px;
-padding: 5px; 
-margin-top: 0px; 
-cursor: pointer; 
-color: #0f0e0e;
-}
-.product {
-    position: relative; 
-}
-
-.product .content {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background-color: rgba(250, 247, 247, 0.7); 
-    color: white;
-    padding: 10px;
-    box-sizing: border-box;
-}
-
-.product .content p {
-    margin: 0; 
-    font-size: 14px; 
-    text-align: center; 
-}
-.logo {
-            height: 50px; 
-            margin-right: 10px;
-            border-radius: 50px; 
+        @import url('https://fonts.googleapis.com/css2?family=Playball&display=swap');
+        .font-cursive {
+            font-family: 'Playball', cursive;
         }
-
-        .site-title {
-            font-size: 24px;
-            color: rgb(19, 19, 19); 
-            font-family: 'Lucida Calligraphy', cursive; 
-        }
-       .search{
-        color: #f8f6f6;
-        border-radius: 25px;
-        background-color: #5e3e06;
-       }
     </style>
 </head>
-<body>
-    <header>
-        <img src="https://i.pinimg.com/736x/6b/90/b5/6b90b55c618ab58f09c2e38151b708e7.jpg" alt="Logo" class="logo">
-        <span class="site-title">Kids World</span> 
-       </a>
-        <div class="left-links">
-            <a href="home.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="products.html">Products</a>
+<body class="bg-gray-50 text-gray-800">
+
+    <header class="bg-teal-100/80 backdrop-blur-sm shadow-md fixed top-0 left-0 right-0 z-50">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="home.html" class="flex items-center gap-3">
+                <img src="https://i.pinimg.com/736x/6b/90/b5/6b90b55c618ab58f09c2e38151b708e7.jpg" alt="Logo" class="h-12 w-12 rounded-full border-2 border-teal-500">
+                <span class="text-3xl font-cursive text-teal-800">Kids World</span>
+            </a>
+            <nav class="hidden md:flex items-center space-x-6">
+                <a href="home.html" class="text-gray-700 hover:text-teal-600 transition duration-300">Home</a>
+                <a href="about.html" class="text-gray-700 hover:text-teal-600 transition duration-300">About</a>
+                <a href="products.html" class="text-teal-600 font-bold border-b-2 border-teal-600 pb-1">Products</a>
+            </nav>
+            <div class="hidden md:flex items-center gap-4">
+                 <form action="search.html" method="get" class="relative">
+                    <input type="text" name="search" placeholder="Search..." class="rounded-full py-1.5 px-4 w-40 focus:outline-none focus:ring-2 focus:ring-teal-400 transition">
+                    <button type="submit" class="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400">
+                        <i class="fa fa-search"></i>
+                    </button>
+                </form>
+                <a href="login.html" class="text-gray-700 hover:text-teal-600 transition duration-300"><i class="fas fa-user-circle fa-lg"></i></a>
+                <a href="cart.html" class="text-gray-700 hover:text-teal-600 transition duration-300"><i class="fas fa-shopping-cart fa-lg"></i></a>
+            </div>
+            <div class="md:hidden">
+                <button id="menu-btn" class="text-gray-700 focus:outline-none">
+                    <i class="fas fa-bars fa-lg"></i>
+                </button>
+            </div>
         </div>
-        <div class="center-link">
-            <form action="search.html" method="get">
-                <input type="text" name="search" class="search-input" placeholder="Search...">
-                <button type="submit" class="search">Search</button>
+        <div id="mobile-menu" class="hidden md:hidden px-6 pt-2 pb-4 space-y-3">
+            <a href="home.html" class="block text-gray-700 hover:text-teal-600 transition duration-300">Home</a>
+            <a href="about.html" class="block text-gray-700 hover:text-teal-600 transition duration-300">About</a>
+            <a href="products.html" class="block text-teal-600 font-bold">Products</a>
+            <form action="search.html" method="get" class="relative pt-4">
+                <input type="text" name="search" placeholder="Search..." class="rounded-full py-1.5 px-4 w-full focus:outline-none focus:ring-2 focus:ring-teal-400 transition">
+                 <button type="submit" class="absolute right-4 top-1/2 text-gray-400">
+                    <i class="fa fa-search"></i>
+                </button>
             </form>
-        </div>
-        <div class="right-links">
-            <a href="login.html"><img src="login_logo.png" alt="Login" class="icon"></a>
-            <a href="cart.html"><img src="cart_logo.png" alt="Cart" class="icon"></a>
+             <div class="flex items-center justify-center gap-6 pt-4">
+                <a href="login.html" class="text-gray-700 hover:text-teal-600 transition duration-300"><i class="fas fa-user-circle fa-lg"></i> Login</a>
+                <a href="cart.html" class="text-gray-700 hover:text-teal-600 transition duration-300"><i class="fas fa-shopping-cart fa-lg"></i> Cart</a>
+            </div>
         </div>
     </header>
-    
-    <main>
-        <div class="container">
-            <h1>Baby Products</h1>
-            <div class="product-list" id="product-list">
-                <!-- Product 1 -->
-                <div class="product" data-section="قسم 1" data-price="625" data-gender="ولد" data-age="2">
-                    <img src="https://m.media-amazon.com/images/I/41CEzifPSqL._AC_SX425_.jpg"   alt="Product Image 1">
-                    <p>TOYS-EGYPT Baby Play Mat</p>
-                    <p>Price: 625 pounds</p>
-                    <p>Category: Boy</p>
-                    <p>Age: 0-9-12 months</p>
-                    <button onclick="addToCart({ id: 1, name: 'TOYS-EGYPT Baby Play Mat', price: 625,
-                     image_url: 'https://m.media-amazon.com/images/I/41CEzifPSqL._AC_SX425_.jpg' })">Add to Cart</button>
-                </div>
-                <!-- Product 2 -->
-                <div class="product" data-section="قسم 1" data-price="750" data-gender="ولد" data-age="2">
-                    <img src="https://m.media-amazon.com/images/I/51ZDqE3lYhL.__AC_SX300_SY300_QL70_ML2_.jpg"  alt="Product Image 2">
-                    <p>Fantastic-Kids-Toys Sit and Stand Learning Walker</p>
-                    <p>Price: 620. pounds</p>
-                    <p>Category: ALL</p>
-                    <p>Age: 2 years</p>
-                    <button onclick="addToCart({ id: 2, name: 'Baby Walker', price: 750,
-                     image_url: 'https://m.media-amazon.com/images/I/51ZDqE3lYhL.__AC_SX300_SY300_QL70_ML2_.jpg' })">Add to Cart</button>
-                </div>
-                 <!-- Product 2 -->
-                 <div class="product" data-section="قسم 2" data-price="750" data-gender="ولد" data-age="2">
-                    <img src="https://m.media-amazon.com/images/I/71AUBlUzHIL._AC_SX675_.jpg"  alt="Product Image 2">
-                    <p>JINJA Infant Baby BOY</p>
-                    <p>Price: 349. pounds</p>
-                    <p>Category: Boys</p>
-                    <p>Age: 2 years</p>
-                    <button onclick="addToCart({ id: 2, name: 'JINJA Infant Baby BOY SNEAKERS Premium Comfort Newborn Toddler Prewalker First Walking C-3627',
-                     price: 349,
-                     image_url: 'https://m.media-amazon.com/images/I/71AUBlUzHIL._AC_SX675_.jpg' })">Add to Cart</button>
-                </div>
-                <!-- Product 3 -->
-                <div class="product" data-section="قسم 1" data-price="500" data-gender="ولد" data-age="1">
-                    <img src="https://m.media-amazon.com/images/I/61-E+C-xKcL._AC_SY300_SX300_.jpg"  alt="Product Image 3">
-                    <p>TOYS-EGYPT Baby Music Rocking Chair</p>
-                    <p>Price: 1,449. pounds</p>
-                    <p>Category: ALL</p>
-                    <p>Age: 1 year</p>
-                    <button onclick="addToCart({ id: 3, name: 'Baby Clothes Set', 
-                    price: 500, image_url: 'https://m.media-amazon.com/images/I/61-E+C-xKcL._AC_SY300_SX300_.jpg' })">Add to Cart</button>
-                </div>
-                <!-- Product 4 -->
-                <div class="product" data-section="قسم 1" data-price="650" data-gender="ولد" data-age="1">
-                    <img src="https://m.media-amazon.com/images/I/61nQ3sxybBL.__AC_SY300_SX300_QL70_ML2_.jpg"  alt="Product Image 4">
-                    <p>Bouncer Sky Baby Rocker/p>
-                    <p>Price: 450 pounds</p>
-                    <p>Category: ALL</p>
-                    <p>Age: 1-4 year</p>
-                    <button onclick="addToCart({ id: 4, name: 'Baby Shoes', price: 650, 
-                    image_url: 'https://m.media-amazon.com/images/I/61nQ3sxybBL.__AC_SY300_SX300_QL70_ML2_.jpg' })">Add to Cart</button>
-                </div>
-                <!-- Product 5 -->
-                <div class="product" data-section="قسم 1" data-price="700" data-gender="ولد" data-age="3">
-                    <img src="https://m.media-amazon.com/images/I/51SCiSarzAL.__AC_SX300_SY300_QL70_ML2_.jpg" alt="Product Image 5">
-                    <p>Fantastic-Kids-Toys</p>
-                    <p>Price: 450 pounds</p>
-                    <p>Category: ALL</p>
-                    <p>Age: 1-3 years</p>
-                    <button onclick="addToCart({ id: 5, 
-                        name: 'Fantastic-Kids-Toys Baby Play Mat, Fun Piano Play Mat for Tummy Time', price: 450, 
-                        image_url: 'https://m.media-amazon.com/images/I/51SCiSarzAL.__AC_SX300_SY300_QL70_ML2_.jpg' })">Add to Cart</button>
-                </div>
-                <!-- Product 6 -->
-                <div class="product" data-section="قسم 1" data-price="800" data-gender="بنت" data-age="3">
-                    <img src="https://m.media-amazon.com/images/I/413jc5p-XSL.__AC_SX300_SY300_QL70_ML2_.jpg" alt="Product Image 6">
-                    <p>Baby Push Walker</p>
-                    <p>Price: 999 pounds</p>
-                    <p>Category: ALL</p>
-                    <p>Age: 1-3 years</p>
-                    <button onclick="addToCart({ id: 6, name: 'TOYS-EGYPT Baby Learning Sit and Stand Walker, Baby Push Walker', price: 800, image_url: 'https://m.media-amazon.com/images/I/413jc5p-XSL.__AC_SX300_SY300_QL70_ML2_.jpg' })">Add to Cart</button>
-                </div>
-                <!-- Product 7 -->
-                <div class="product" data-section="قسم 2" data-price="400" data-gender="بنت" data-age="1">
-                    <img src="https://m.media-amazon.com/images/I/51dtFpDwEML._AC_SY741_.jpg" alt="Product Image 7">
-                    <p>Silicone Baby Food/p>
-                    <p>Price: 82 pounds</p>
-                    <p>Category: ALL</p>
-                    <p>Age: 1-4 year</p>
-                    <button onclick="addToCart({ id: 7,
-                         name: 'Silicone Baby Food Bibs with Pocket – Waterproof, Washable, and Suitable for Boys and Girls – Multicolor', 
-                         price: 400, image_url: 'https://m.media-amazon.com/images/I/51dtFpDwEML._AC_SY741_.jpg' })">Add to Cart</button>
-                </div>
-                <!-- Product 8 -->
-                <div class="product" data-section="قسم 2" data-price="450" data-gender="بنت" data-age="1">
-                    <img src="https://m.media-amazon.com/images/I/71UHoDj5WeL._AC_SY679_.jpg" alt="Product Image 8">
-                    <p>junior Baby Boys</p>
-                    <p>Price: 350 pounds</p>
-                    <p>Category: Boys</p>
-                    <p>Age: 1-3 year</p>
-                    <button onclick="addToCart({ id: 8, name: 'junior Baby Boys Patterned Romper Baby and Toddler Sleepers', price: 350,
-                     image_url: 'https://m.media-amazon.com/images/I/71UHoDj5WeL._AC_SY679_.jpg' })">Add to Cart</button>
-                </div>
-                <!-- Product 9 -->
-                <div class="product" data-section="قسم 2" data-price="600" data-gender="بنت" data-age="2">
-                    <img src="https://m.media-amazon.com/images/I/41jzNRq2XtL.__AC_SX300_SY300_QL70_ML2_.jpg" alt="Product Image 9">
-                    <p>Girl Dress</p>
-                    <p>Price: 350 pounds</p>
-                    <p>Category: Girl</p>
-                    <p>Age: 2 years</p>
-                    <button onclick="addToCart({ id: 9, name: 'Baby Clothing Set For Girls', price: 350, 
-                image_url: 'https://m.media-amazon.com/images/I/41jzNRq2XtL._AC_SX425_.jpg' })">Add to Cart</button>
-                </div>
-                 <!-- Product 9 -->
-                 <div class="product" data-section="قسم 2" data-price="600" data-gender="بنت" data-age="2">
-                    <img src="https://m.media-amazon.com/images/I/71VVBKnCjAL._AC_SX425_.jpg" alt="Product Image 9">
-                    <p>Junior printed accessories for boy</p>
-                    <p>Price: 150 pounds</p>
-                    <p>Category: Boys</p>
-                    <p>Age: 1-2 years</p>
-                    <button onclick="addToCart({ id: 9, 
-                    name: 'Junior printed accessories for boy, pistage, 9 months', 
-                    price: 150, 
-                image_url: 'https://m.media-amazon.com/images/I/71VVBKnCjAL._AC_SX425_.jpg' })">Add to Cart</button>
-                </div>
-                <!-- Product 10 -->
-                <div class="product" data-section="قسم 2" data-price="550" data-gender="بنت" data-age="3">
-                    <img src="https://m.media-amazon.com/images/I/41bbOFKBGyL._AC_SX569_.jpg" alt="Product Image 10">
-                    <p>boy set cotton of half-sleeved t-shirt and short </p>
-                    <p>Price:270 pounds</p>
-                    <p>Category: Girl</p>
-                    <p>Age: 3 years</p>
-                    <button onclick="addToCart({ id: 10,
-                     name: 'boy set cotton of half-sleeved t-shirt and short with pockets with embroidered car', price: 250,
-                     image_url: 'https://m.media-amazon.com/images/I/41bbOFKBGyL._AC_SX569_.jpg' })">Add to Cart</button>
-                </div>
-                  <!-- Product 11 -->
-                <div class="product" data-section="قسم 1" data-price="800" data-gender="بنت" data-age="3">
-                    <img src="https://m.media-amazon.com/images/I/71E5sP+WfpS._AC_SY300_SX300_.jpg" alt="Product Image 6">
-                    <p>Moro stainless chair and bed</p>
-                    <p>Price: 748 pounds</p>
-                    <p>Category: ALL</p>
-                    <p>Age: 1-3 years</p>
-                    <button onclick="addToCart({ id: 11, name: 'Moro stainless chair and bed', price: 800,
-                     image_url: 'https://m.media-amazon.com/images/I/71E5sP+WfpS._AC_SY300_SX300_.jpg' })">Add to Cart</button>
-                </div>
-                 <!-- Product 14 -->
-                 <div class="product" data-section="قسم 2" data-price="550" data-gender="بنت" data-age="3">
-                    <img src="https://i.pinimg.com/564x/9f/7e/08/9f7e084ffa3fa03f301378e602cc03c1.jpg" alt="Product Image 10">
-                    <p>Baby Shoora baby </p>
-                    <p>Price:150 pounds</p>
-                    <p>Category: Girl</p>
-                    <p>Age: 3 years</p>
-                    <button onclick="addToCart({ id: 14,
-                     name: 'Baby Shoora baby-boys Ballerina Shoes Shoes', price: 150,
-                     image_url: 'https://i.pinimg.com/564x/9f/7e/08/9f7e084ffa3fa03f301378e602cc03c1.jpg' })">Add to Cart</button>
-                </div>
-                  <!-- Product 12 -->
-                  <div class="product" data-section="قسم 1" data-price="800" data-gender="بنت" data-age="3">
-                    <img src="https://m.media-amazon.com/images/I/61XV86CB5xL.__AC_SX300_SY300_QL70_ML2_.jpg" alt="Product Image 6">
-                    <p>Blue Baby Bouncer Hanging in Ceiling</p>
-                    <p>Price: EGP 3,200. </p>
-                    <p>Category: ALL</p>
-                    <p>Age: 1-3 years</p>
-                    <button onclick="addToCart({ id: 12, name: 'Blue Baby Bouncer Hanging in Ceiling', price:3200.,
-                     image_url: 'https://m.media-amazon.com/images/I/61XV86CB5xL.__AC_SX300_SY300_QL70_ML2_.jpg' })">Add to Cart</button>
-                </div>
-                  <!-- Product 13 -->
-                  <div class="product" data-section="قسم 1" data-price="800" data-gender="بنت" data-age="3">
-                    <img src="https://m.media-amazon.com/images/I/51BjxYXtTPL._AC_SX679_.jpg" alt="Product Image 6">
-                    <p>SKADE Baby Activity Jumper & Bouncer/p>
-                    <p>Price: 294 pounds</p>
-                    <p>Category: ALL</p>
-                    <p>Age: 1-3 years</p>
-                    <button onclick="addToCart({ id: 13, name: 'SKADE Baby Activity Jumper & Bouncer, Infant Activity Center with Music, Lights & Sounds -3 Adjustable Heights, 360° Rotation', price: 294,
-                     image_url: 'https://m.media-amazon.com/images/I/51BjxYXtTPL._AC_SX679_.jpg' })">Add to Cart</button>
-                </div>
-                   <!-- Product 14 -->
-                   <div class="product" data-section="قسم 2" data-price="550" data-gender="بنت" data-age="3">
-                    <img src="https://m.media-amazon.com/images/I/61SZ1z+m1-L._AC_SX522_.jpg" alt="Product Image 10">
-                    <p>Elsayaad  </p>
-                    <p>Price:120 pounds</p>
-                    <p>Category: Girl</p>
-                    <p>Age: 3 years</p>
-                    <button onclick="addToCart({ id: 14,
-                     name: 'Elsayaad Unisex Kids Baby And Toddler Underwear Set', price: 250,
-                     image_url: 'https://m.media-amazon.com/images/I/61SZ1z+m1-L._AC_SX522_.jpg' })">Add to Cart</button>
-                </div>
-                 <!-- Product 15 -->
-                 <div class="product" data-section="قسم 2" data-price="550" data-gender="بنت" data-age="3">
-                    <img src="https://m.media-amazon.com/images/I/61fMGjRfWfL._AC_SX679_.jpg" alt="Product Image 10">
-                    <p>Tyuodna Baby Helmet from 6 Months  </p>
-                    <p>Price:210 pounds</p>
-                    <p>Category: ALL</p>
-                    <p>Age: 3 years</p>
-                    <button onclick="addToCart({ id: 15,
-                     name: 'Tyuodna Baby Helmet from 6 Months, Breathable Baby Head Protection Helmet, 360° Anti-Collision Baby Helmet, Adjustable Head Protection Hat, Baby Helmet for Toddlers, Learning, Running and Crawling', price: 250,
-                     image_url: 'https://m.media-amazon.com/images/I/61fMGjRfWfL._AC_SX679_.jpg' })">Add to Cart</button>
-                </div>
-                 <!-- Product 16 -->
-                 <div class="product" data-section="قسم 3" data-price="550" data-gender="بنت" data-age="3">
-                    <img src="https://m.media-amazon.com/images/I/618nSpUuHXL.__AC_SX300_SY300_QL70_ML2_.jpg" alt="Product Image 10">
-                    <p>Montessori Toys for 1 Year Old  </p>
-                    <p>Price:399 pounds</p>
-                    <p>Category: ALL</p>
-                    <p>Age:1 -2 years</p>
-                    <button onclick="addToCart({ id: 16,
-                     name: 'Montessori Toys for 1 Year Old,Baby Sorter Toy Colorful Cube and 6 Pcs Multi Sensory Shape, Toddler Developmental Learning Toys Birthday Gifts',
-                      price: 399,
-                     image_url: 'https://m.media-amazon.com/images/I/618nSpUuHXL.__AC_SX300_SY300_QL70_ML2_.jpg' })">Add to Cart</button>
-                </div>
-                 <!-- Product 17 -->
-                 <div class="product" data-section="قسم 3" data-price="550" data-gender="بنت" data-age="3">
-                    <img src="https://m.media-amazon.com/images/I/41eAK830MGL.__AC_SY300_SX300_QL70_ML2_.jpg" alt="Product Image 10">
-                    <p>TOYS-EGYPT Baby Car Seat Toys with Mirror </p>
-                    <p>Price:874 pounds</p>
-                    <p>Category: ALL</p>
-                    <p>Age:1 -2 years</p>
-                    <button onclick="addToCart({ id: 17,
-                     name: 'TOYS-EGYPT Baby Car Seat Toys with Mirror, Car Seat Toys with Steering Wheel with Musical Lights and Driving Sounds',
-                      price: 847,
-                     image_url: 'https://m.media-amazon.com/images/I/41eAK830MGL.__AC_SY300_SX300_QL70_ML2_.jpg' })">Add to Cart</button>
-                </div>
-                   <!-- Product 14 -->
-                   <div class="product" data-section="قسم 2" data-price="550" data-gender="بنت" data-age="3">
-                    <img src="https://i.pinimg.com/564x/ee/4c/d0/ee4cd03eb173ba1f92c49c62a628b1f9.jpg" alt="Product Image 10">
-                    <p>JINJA Infant Baby GIRL SNEAKERS Premium Comfort</p>
-                    <p>Price:399 pounds</p>
-                    <p>Category: Girl</p>
-                    <p>Age: 3 years</p>
-                    <button onclick="addToCart({ id: 14,
-                     name: 'JINJA Infant Baby GIRL SNEAKERS Premium Comfort Newborn Toddler Prewalker First Walking Shoes C-3615', price: 399,
-                     image_url: 'https://i.pinimg.com/564x/ee/4c/d0/ee4cd03eb173ba1f92c49c62a628b1f9.jpg' })">Add to Cart</button>
-                </div>
-                 <!-- Product 18 -->
-                 <div class="product" data-section="قسم 3" data-price="550" data-gender="بنت" data-age="3">
-                    <img src="https://m.media-amazon.com/images/I/51zeMKpsMOL.__AC_SX300_SY300_QL70_ML2_.jpg" alt="Product Image 10">
-                    <p>Play-Doh Happytoys </p>
-                    <p>Price:40 pounds</p>
-                    <p>Category: ALL</p>
-                    <p>Age:1 -2 years</p>
-                    <button onclick="addToCart({ id: 18,
-                     name: 'Play-Doh Happytoys 4pcs Baby Sounding Rubber Duck Toy Lovely Yellow Ducks Children Bath Toys',
-                      price: 40,
-                     image_url: 'https://m.media-amazon.com/images/I/41eAK830MGL.__AC_SY300_SX300_QL70_ML2_.jpg' })">Add to Cart</button>
-                </div>
-                  <!-- Product 19 -->
-                  <div class="product" data-section="قسم 2" data-price="550" data-gender="بنت" data-age="3">
-                    <img src="https://m.media-amazon.com/images/I/31IcqTbcFHL._AC_SX425_.jpg" alt="Product Image 10">
-                    <p>cotton tassels  </p>
-                    <p>Price:139 pounds</p>
-                    <p>Category: ALL</p>
-                    <p>Age: 1-3 years</p>
-                    <button onclick="addToCart({ id: 19,
-                     name: 'Unique and varied designs of cotton tassels make them perfect for kids. Set contains five different pieces that provide comfort and style for little ones',
-                      price: 139,
-                     image_url: 'https://m.media-amazon.com/images/I/31IcqTbcFHL._AC_SX425_.jpg' })">Add to Cart</button>
-                </div>
-                 <!-- Product 20 -->
-                 <div class="product" data-section="قسم 2" data-price="550" data-gender="بنت" data-age="3">
-                    <img src="https://m.media-amazon.com/images/I/618bdb3Wc+L._AC_SY741_.jpg" alt="Product Image 10">
-                    <p>junior Baby Girls  </p>
-                    <p>Price:339 pounds</p>
-                    <p>Category: Girl</p>
-                    <p>Age: 1-3 years</p>
-                    <button onclick="addToCart({ id: 20,
-                     name: 'junior Baby Girls Patterned Romper Baby and Toddler Sleepers',
-                      price: 339,
-                     image_url: 'https://m.media-amazon.com/images/I/618bdb3Wc+L._AC_SY741_.jpg' })">Add to Cart</button>
-                </div>
-                 <!-- Product 21 -->
-                 <div class="product" data-section="قسم 2" data-price="550" data-gender="بنت" data-age="3">
-                    <img src="https://m.media-amazon.com/images/I/71EDNpBLoEL._AC_SY550_.jpg" alt="Product Image 10">
-                    <p>DeFacto Baby Boys  </p>
-                    <p>Price:779 pounds</p>
-                    <p>Category: Boys</p>
-                    <p>Age: 1-3 years</p>
-                    <button onclick="addToCart({ id: 21,
-                     name: 'DeFacto Baby Boys Regular Fit Apache Neck B9260A5 Woven Set',
-                      price: 779,
-                     image_url: 'https://m.media-amazon.com/images/I/71EDNpBLoEL._AC_SY550_.jpg' })">Add to Cart</button>
-                </div>
-                   <!-- Product 22 -->
-                   <div class="product" data-section="قسم 2" data-price="550" data-gender="بنت" data-age="3">
-                    <img src="https://m.media-amazon.com/images/I/71WIA-Wl6hL._AC_SX679_.jpg" alt="Product Image 10">
-                    <p>Baby Shoora Unisex  </p>
-                    <p>Price:433 pounds</p>
-                    <p>Category: ALL</p>
-                    <p>Age: 1-3 years</p>
-                    <button onclick="addToCart({ id: 22,
-                     name: 'Baby Shoora Unisex WIN24-6202 LEOTARD',
-                      price: 433,
-                     image_url: 'https://m.media-amazon.com/images/I/71WIA-Wl6hL._AC_SX679_.jpg' })">Add to Cart</button>
-                </div>
-                   <!-- Product 23 -->
-                   <div class="product" data-section="قسم 2" data-price="550" data-gender="بنت" data-age="3">
-                    <img src="https://m.media-amazon.com/images/I/61fazqhD9pL._AC_SX679_.jpg" alt="Product Image 10">
-                    <p>Baby Shoora Boys   </p>
-                    <p>Price:679 pounds</p>
-                    <p>Category: Boys</p>
-                    <p>Age: 1-3 years</p>
-                    <button onclick="addToCart({ id: 23,
-                     name: 'Baby Shoora Boys Set Of 6 Pieces Long Sleeves T-Shirt,Pants,Bib,Gloves,Hat&Blanket Baby and Toddler Sleepers',
-                      price: 679,
-                     image_url: 'https://m.media-amazon.com/images/I/61fazqhD9pL._AC_SX679_.jpg' })">Add to Cart</button>
-                </div>
-                 <!-- Product 24 -->
-                 <div class="product" data-section="قسم 3" data-price="550" data-gender="بنت" data-age="3">
-                    <img src="https://m.media-amazon.com/images/I/61bN5We7-xL._AC_SX679_.jpg" alt="Product Image 10">
-                    <p>Other Baby Rattles </p>
-                    <p>Price:113 pounds</p>
-                    <p>Category: ALL</p>
-                    <p>Age:1-3 years</p>
-                    <button onclick="addToCart({ id: 24,
-                     name: 'Other Baby Rattles Bag Set For Babies, Multicolor, With Different Shapes',
-                      price: 113,
-                     image_url: 'https://m.media-amazon.com/images/I/61bN5We7-xL._AC_SX679_.jpg' })">Add to Cart</button>
-                </div>
-                        <!-- Product 25 -->
-                        <div class="product" data-section="قسم 3" data-price="550" data-gender="بنت" data-age="3">
-                            <img src="https://m.media-amazon.com/images/I/51lj6QBR95L.__AC_SY300_SX300_QL70_ML2_.jpg" alt="Product Image 10">
-                            <p>QiaoWa Small </p>
-                            <p>Price:98 pounds</p>
-                            <p>Category: ALL</p>
-                            <p>Age:1-3 years</p>
-                            <button onclick="addToCart({ id: 25,
-                             name: 'QiaoWa Small Hammer Box Educational Toys',
-                              price: 98,
-                             image_url: 'https://m.media-amazon.com/images/I/51lj6QBR95L.__AC_SY300_SX300_QL70_ML2_.jpg' })">Add to Cart</button>
-                        </div>
-                      <!-- Product 26 -->
-                      <div class="product" data-section="قسم 3" data-price="550" data-gender="بنت" data-age="3">
-                        <img src="https://m.media-amazon.com/images/I/51iv7QuK3iL.__AC_SX300_SY300_QL70_ML2_.jpg" alt="Product Image 10">
-                        <p>Toy Imagine Ramp Roll</p>
-                        <p>Price:190 pounds</p>
-                        <p>Category: ALL</p>
-                        <p>Age:1-3 years</p>
-                        <button onclick="addToCart({ id: 26,
-                         name: 'Toy Imagine Ramp Roll, Ball Drop and Roll Swirling Tower for Toddler|3 Puzzle Rattle Balls Non Toxic Material| StackToy for Kids Ages 3+: Interactive Fun Excitement',
-                          price: 190,
-                         image_url: 'https://m.media-amazon.com/images/I/51iv7QuK3iL.__AC_SX300_SY300_QL70_ML2_.jpg' })">Add to Cart</button>
-                    </div>   
-                    <!-- Product 27 -->
-                    <div class="product" data-section="قسم 4" data-price="550" data-gender="بنت" data-age="3">
-                        <img src="https://m.media-amazon.com/images/I/81m+HTPf4pL._AC_SX425_.jpg" alt="Product Image 10">
-                        <p>Safari Baby Water</p>
-                        <p>Price:91 pounds</p>
-                        <p>Category: ALL</p>
-                        <p>Age:1-3 years</p>
-                        <button onclick="addToCart({ id: 27,
-                         name: 'Safari Baby Water Teether With plastic handle Bottle shape green',
-                          price: 91,
-                         image_url: 'https://m.media-amazon.com/images/I/81m+HTPf4pL._AC_SX425_.jpg' })">Add to Cart</button>
-                    </div>  
-                     <!-- Product 14 -->
-                   <div class="product" data-section="قسم 2" data-price="550" data-gender="بنت" data-age="3">
-                    <img src="https://m.media-amazon.com/images/I/611KB-KNDgL._AC_SX569_.jpg" alt="Product Image 10">
-                    <p>Maeau 2 Packs Waterproof Diaper Skirt </p>
-                    <p>Price:500 pounds</p>
-                    <p>Category: Girl</p>
-                    <p>Age: 1-4 years</p>
-                    <button onclick="addToCart({ id: 14,
-                     name: 'Maeau 2 Packs Waterproof Diaper Skirt Potty Training Skirts Night Time Traning Underwear for Boys Girls Traning Skirt-1 0-4 Y, Traning Skirt-1, 1-4 Years', price: 500,
-                     image_url: 'https://m.media-amazon.com/images/I/611KB-KNDgL._AC_SX569_.jpg' })">Add to Cart</button>
-                </div>
-                     <!-- Product 28 -->
-                     <div class="product" data-section="قسم 4" data-price="550" data-gender="بنت" data-age="3">
-                        <img src="https://m.media-amazon.com/images/I/61AfxrDvWiL._AC_SX425_.jpg" alt="Product Image 10">
-                        <p>Bubbles Tatinah, pacifier</p>
-                        <p>Price:75 pounds</p>
-                        <p>Category: ALL</p>
-                        <p>Age:1-3 years</p>
-                        <button onclick="addToCart({ id: 28,
-                         name: 'Bubbles Tatinah, pacifier, beveled soother for children, boys and girls, starting from newborn, 3 months, 6 months, 9 months and above, different colors and shapes, free BBA (Rose)',
-                          price: 75,
-                         image_url: 'https://m.media-amazon.com/images/I/61AfxrDvWiL._AC_SX425_.jpg' })">Add to Cart</button>
-                    </div> 
-                     <!-- Product 29 -->
-                     <div class="product" data-section="قسم 5" data-price="550" data-gender="بنت" data-age="3">
-                        <img src="https://m.media-amazon.com/images/I/714i9+LOt-L._AC_SY355_.jpg" alt="Product Image 10">
-                        <p>NAN Optipro Stage 3</p>
-                        <p>Price:545 pounds</p>
-                        <p>Category: ALL</p>
-                        <p>Age:1-3 years</p>
-                        <button onclick="addToCart({ id: 29,
-                         name: 'NAN Optipro Stage 3 (1 - 3 years), 800g ',
-                          price: 545,
-                         image_url: 'https://m.media-amazon.com/images/I/714i9+LOt-L._AC_SY355_.jpg' })">Add to Cart</button>
-                    </div> 
-                     <!-- Product 30 -->
-                     <div class="product" data-section="قسم 5" data-price="550" data-gender="بنت" data-age="3">
-                        <img src="https://m.media-amazon.com/images/I/717HMQicfnL._AC_SX522_.jpg" alt="Product Image 10">
-                        <p>Nesquik Chocolate</p>
-                        <p>Price:225 pounds</p>
-                        <p>Category: ALL</p>
-                        <p>Age:1-3 years</p>
-                        <button onclick="addToCart({ id: 30,
-                         name: 'Nesquik Chocolate Powder 950g',
-                          price: 225,
-                         image_url: 'https://m.media-amazon.com/images/I/717HMQicfnL._AC_SX522_.jpg' })">Add to Cart</button>
-                    </div> 
-                      <!-- Product 14 -->
-                   <div class="product" data-section="قسم 2" data-price="550" data-gender="بنت" data-age="3">
-                    <img src="https://m.media-amazon.com/images/I/61ObhEPSpsL._AC_SX625_.jpg" alt="Product Image 10">
-                    <p>JINJA Infant Baby BOY SNEAKERS Premium Comfort with Anti Slip </p>
-                    <p>Price:399 pounds</p>
-                    <p>Category: Boys</p>
-                    <p>Age: 1-4 years</p>
-                    <button onclick="addToCart({ id: 14,
-                     name: 'JINJA Infant Baby BOY SNEAKERS Premium Comfort with Anti Slip Rubber Sole Newborn Toddler Prewalker First Walking C-3625', price: 399,
-                     image_url: 'https://m.media-amazon.com/images/I/61ObhEPSpsL._AC_SX625_.jpg' })">Add to Cart</button>
-                </div>
-                     <!-- Product 31 -->
-                     <div class="product" data-section="قسم 5" data-price="550" data-gender="بنت" data-age="3">
-                        <img src="https://m.media-amazon.com/images/I/71D21ZriMRL.__AC_SX300_SY300_QL70_ML2_.jpg" alt="Product Image 10">
-                        <p>Nido Fiber Milk</p>
-                        <p>Price:400 pounds</p>
-                        <p>Category: ALL</p>
-                        <p>Age:1-3 years</p>
-                        <button onclick="addToCart({ id: 31,
-                         name: 'Nido Fiber Milk Powder 1200g',
-                          price: 400,
-                         image_url: 'https://m.media-amazon.com/images/I/71D21ZriMRL.__AC_SX300_SY300_QL70_ML2_.jpg' })">Add to Cart</button>
-                    </div> 
-                     <!-- Product 32 -->
-                     <div class="product" data-section="قسم 5" data-price="550" data-gender="بنت" data-age="3">
-                        <img src="https://m.media-amazon.com/images/I/818WfAj9qLL._AC_SX679_.jpg" alt="Product Image 10">
-                        <p>Hero Baby Mandarin</p>
-                        <p>Price:45 pounds</p>
-                        <p>Category: ALL</p>
-                        <p>Age:1-3 years</p>
-                        <button onclick="addToCart({ id: 32,
-                         name: 'Hero Baby Mandarin And Banana With Pear jar, 125 gm',
-                          price: 45,
-                         image_url: 'https://m.media-amazon.com/images/I/818WfAj9qLL._AC_SX679_.jpg' })">Add to Cart</button>
-                    </div>
-                       <!-- Product 14 -->
-                   <div class="product" data-section="قسم 2" data-price="550" data-gender="بنت" data-age="3">
-                    <img src="https://m.media-amazon.com/images/I/21FCF3BnF-L._AC_SY625_.jpg" alt="Product Image 10">
-                    <p>Onda Speed Safari Sandal For Babies </p>
-                    <p>Price:174 pounds</p>
-                    <p>Category: ALL</p>
-                    <p>Age: 1-4 years</p>
-                    <button onclick="addToCart({ id: 14,
-                     name: 'Onda Speed Safari Sandal For Babies', price: 174,
-                     image_url: 'https://m.media-amazon.com/images/I/21FCF3BnF-L._AC_SY625_.jpg' })">Add to Cart</button>
-                </div> 
-                     <!-- Product 34 -->
-                <div class="product" data-section="قسم 1" data-price="625" data-gender="ولد" data-age="2">
-                    <img src="https://m.media-amazon.com/images/I/61wYKmGtWxL._AC_SY450_.jpg"   alt="Product Image 1">
-                    <p>Petit Bebe Printed Baby Bouncer</p>
-                    <p>Price: 625 pounds</p>
-                    <p>Category: ALL</p>
-                    <p>Age: 1-4 Year</p>
-                    <button onclick="addToCart({ id: 34, 
-                        name: 'Petit Bebe Printed Baby Bouncer', 
-                        price: 625, 
-                        image_url: 'https://m.media-amazon.com/images/I/61wYKmGtWxL._AC_SY450_.jpg' })">Add to Cart</button>
-                </div>
-                <!-- Product 35 -->
-                <div class="product" data-section="قسم 1" data-price="750" data-gender="ولد" data-age="2">
-                    <img src="https://m.media-amazon.com/images/I/61k6SjicGWL.__AC_SX300_SY300_QL70_ML2_.jpg"  alt="Product Image 2">
-                    <p>Baby Rocking Chair</p>
-                    <p>Price: 291. pounds</p>
-                    <p>Category: ALL</p>
-                    <p>Age: 2 years</p>
-                    <button onclick="addToCart({ id: 35, name: 'Baby Rocking Chair', price: 291,
-                    image_url: 'https://m.media-amazon.com/images/I/61k6SjicGWL.__AC_SX300_SY300_QL70_ML2_.jpg' })">Add to Cart</button>
-                </div>
-                <div class="product" data-section="قسم 2" data-price="550" data-gender="بنت" data-age="3">
-                    <img src="https://i.pinimg.com/564x/89/5f/81/895f81a2cde02a8b51f881fe9710f3ae.jpg" alt="Product Image 10">
-                    <p>Little girls coach </p>
-                    <p>Price:194 pounds</p>
-                    <p>Category: ALL</p>
-                    <p>Age: 1-4 years</p>
-                    <button onclick="addToCart({ id: 14,
-                     name: 'Onda Speed Safari Sandal For Babies', price: 194,
-                     image_url: 'https://i.pinimg.com/564x/89/5f/81/895f81a2cde02a8b51f881fe9710f3ae.jpg' })">Add to Cart</button>
-                </div> 
-                <!-- Product 36 -->
-                <div class="product" data-section="قسم 1" data-price="500" data-gender="ولد" data-age="1">
-                    <img src="https://m.media-amazon.com/images/I/61fhq0RCPNL._AC_SX569_.jpg"  alt="Product Image 3">
-                    <p>Karol</p>
-                    <p>Price: 265. pounds</p>
-                    <p>Category: ALL</p>
-                    <p>Age: 1-4 year</p>
-                    <button onclick="addToCart({ id: 36,
-                     name: 'Karol طقم دكتور شنطه 19 قطعه +3 سنوات -TB977-82', 
-                    price: 265, image_url: 'https://m.media-amazon.com/images/I/61fhq0RCPNL._AC_SX569_.jpg' })">Add to Cart</button>
-                </div>
-                <!-- Product 37 -->
-                <div class="product" data-section="قسم 1" data-price="650" data-gender="ولد" data-age="1">
-                    <img src="https://m.media-amazon.com/images/I/71YpZYgNt4L._AC_SX425_.jpg"  alt="Product Image 4">
-                    <p>Cushion Pillow</p>
-                    <p>Price: 450 pounds</p>
-                    <p>Category: ALL</p>
-                    <p>Age: 1-4 year</p>
-                    <button onclick="addToCart({ id: 37, 
-                        name: 'Cushion Pillow for Teaching The Child To Sit', 
-                        price: 450, image_url: 'https://m.media-amazon.com/images/I/71YpZYgNt4L._AC_SX425_.jpg' })">Add to Cart</button>
-                </div>
-                <!-- Product 38 -->
-                <div class="product" data-section="قسم 1" data-price="700" data-gender="ولد" data-age="3">
-                    <img src="https://m.media-amazon.com/images/I/51MzkXwpPsL._AC_SX425_.jpg" alt="Product Image 5">
-                    <p>Baby Rocker</p>
-                    <p>Price: 459 pounds</p>
-                    <p>Category: ALL</p>
-                    <p>Age: 1-4 years</p>
-                    <button onclick="addToCart({ id: 38, 
-                        name: 'Baby Rocker with Bouncer Playset Red', price: 459, 
-                        image_url: 'https://m.media-amazon.com/images/I/51MzkXwpPsL._AC_SX425_.jpg' })">Add to Cart</button>
-                </div>
-               
-                <!-- Product 39 -->
-                <div class="product" data-section="قسم 2" data-price="400" data-gender="بنت" data-age="1">
-                    <img src="https://m.media-amazon.com/images/I/71UtlXvGplL._AC_SX466_.jpg" alt="Product Image 7">
-                    <p>Baby Shoora Girls</p>
-                    <p>Price: 370 pounds</p>
-                    <p>Category: Girls</p>
-                    <p>Age: 1-4 year</p>
-                    <button onclick="addToCart({ id: 39, 
-                        name: 'Baby Shoora Girls WIN24-7014 Jacket ', 
-                        price: 370, image_url: 'https://m.media-amazon.com/images/I/71UtlXvGplL._AC_SX466_.jpg' })">Add to Cart</button>
-                </div>
-                <!-- Product 40 -->
-                <div class="product" data-section="قسم 2" data-price="450" data-gender="بنت" data-age="1">
-                    <img src="https://m.media-amazon.com/images/I/71WmhB0o8tL._AC_SY445_.jpg" alt="Product Image 8">
-                    <p>KOTON Babygirl's Knitted</p>
-                    <p>Price: 670 pounds</p>
-                    <p>Category: Girls</p>
-                    <p>Age: 1-6 year</p>
-                    <button onclick="addToCart({ id: 40, name: 'KOTON Babygirs Knitted Oversized Long-Sleeves Button Closure Round Collar Cardigan', price: 679,
-                     image_url: 'https://m.media-amazon.com/images/I/71WmhB0o8tL._AC_SY445_.jpg' })">Add to Cart</button>
-                </div>
-                <!-- Product 41 -->
-                <div class="product" data-section="قسم 5" data-price="600" data-gender="بنت" data-age="2">
-                    <img src="https://m.media-amazon.com/images/I/71+paKzFYaL._AC_SY300_SX300_.jpg" alt="Product Image 9">
-                    <p>Cerelac Apple</p>
-                    <p>Price: 50 pounds</p>
-                    <p>Category: All</p>
-                    <p>Age: 1-3 years</p>
-                    <button onclick="addToCart({ id: 41, name: 'Cerelac Apple without Milk 125g', price: 50, 
-                image_url: 'https://m.media-amazon.com/images/I/71+paKzFYaL._AC_SY300_SX300_.jpg' })">Add to Cart</button>
-                </div>
-                <!-- Product 42 -->
-                <div class="product" data-section="قسم 4" data-price="550" data-gender="بنت" data-age="3">
-                    <img src="https://m.media-amazon.com/images/I/41kCeGCCSnL._AC_SX425_.jpg" alt="Product Image 10">
-                    <p>boy set cotton of half-sleeved t-shirt and short </p>
-                    <p>Price:116 pounds</p>
-                    <p>Category: ALL</p>
-                    <p>Age: 1-3 years</p>
-                    <button onclick="addToCart({ id: 42,
-                     name: 'Baby Silicone Banana Soothing, Teething Teether Aid', price: 116,
-                     image_url: 'https://m.media-amazon.com/images/I/41kCeGCCSnL._AC_SX425_.jpg' })">Add to Cart</button>
-                </div>
-                <div class="product" data-section="قسم 2" data-price="550" data-gender="بنت" data-age="3">
-                    <img src="https://i.pinimg.com/564x/a7/1a/b1/a71ab150bcfd2ce68234b2530a64fd5b.jpg" alt="Product Image 10">
-                    <p>Little girls coach </p>
-                    <p>Price:294 pounds</p>
-                    <p>Category: Girl</p>
-                    <p>Age: 1-4 years</p>
-                    <button onclick="addToCart({ id: 14,
-                     name: 'Onda Speed Safari Sandal For Babies', price: 294,
-                     image_url: 'https://i.pinimg.com/564x/a7/1a/b1/a71ab150bcfd2ce68234b2530a64fd5b.jpg' })">Add to Cart</button>
-                </div> 
-                  <!-- Product 43 -->
-                <div class="product" data-section="قسم 5" data-price="800" data-gender="بنت" data-age="3">
-                    <img src="https://m.media-amazon.com/images/I/91riBOSmK4L._AC_SY741_.jpg" alt="Product Image 6">
-                    <p>Riri rice </p>
-                    <p>Price: 48 pounds</p>
-                    <p>Category: ALL</p>
-                    <p>Age: 1-3 years</p>
-                    <button onclick="addToCart({ id: 43, 
-                    name: 'Riri rice with vegetables infant cereal, 200 gm', price: 48,
-                     image_url: 'https://m.media-amazon.com/images/I/91riBOSmK4L._AC_SY741_.jpg' })">Add to Cart</button>
-                </div>
-                  <!-- Product 44 -->
-                  <div class="product" data-section="قسم 4" data-price="800" data-gender="بنت" data-age="3">
-                    <img src="https://m.media-amazon.com/images/I/51BINfljAgL._AC_SX425_.jpg" alt="Product Image 6">
-                    <p>Wee Baby Soother Protector Case - Pink</p>
-                    <p>Price: EGP 174. </p>
-                    <p>Category: ALL</p>
-                    <p>Age: 1-3 years</p>
-                    <button onclick="addToCart({ id: 44, name: 'Wee Baby Soother Protector Case - Pink', 
-                    price:174.,
-                     image_url: 'https://m.media-amazon.com/images/I/51BINfljAgL._AC_SX425_.jpg' })">Add to Cart</button>
-                </div>
-                <div class="product" data-section="قسم 2" data-price="550" data-gender="بنت" data-age="3">
-                    <img src="https://i.pinimg.com/564x/3c/3d/17/3c3d1796acb47cf1e7a33efbcfaaa057.jpg" alt="Product Image 10">
-                    <p>Children Shoes Girls  </p>
-                    <p>Price:394 pounds</p>
-                    <p>Category: Girl</p>
-                    <p>Age: 1-4 years</p>
-                    <button onclick="addToCart({ id: 14,
-                     name: 'Children Shoes Girls ', price: 394,
-                     image_url: 'https://i.pinimg.com/564x/3c/3d/17/3c3d1796acb47cf1e7a33efbcfaaa057.jpg' })">Add to Cart</button>
-                </div>
-                  <!-- Product 45 -->
-                  <div class="product" data-section="قسم 3" data-price="800" data-gender="بنت" data-age="3">
-                    <img src="https://m.media-amazon.com/images/I/61QlDkp+PoL._AC_SY300_SX300_.jpg" alt="Product Image 6">
-                    <p>Generic 1 Piece Mini</p>
-                    <p>Price: 294 pounds</p>
-                    <p>Category: ALL</p>
-                    <p>Age: 1-3 years</p>
-                    <button onclick="addToCart({ id: 45,
-                     name: 'SKADE Baby Activity Jumper & Bouncer, Infant Activity Center with Music, Lights & Sounds -3 Adjustable Heights, 360° Rotation', price: 294,
-                     image_url: 'https://m.media-amazon.com/images/I/51h6LXr7ghL._AC_.jpg' })">Add to Cart</button>
-                </div>
-                   <!-- Product 46 -->
-                   <div class="product" data-section="قسم 2" data-price="550" data-gender="بنت" data-age="3">
-                    <img src="https://m.media-amazon.com/images/I/71hCcscpizL._AC_SX385_.jpg" alt="Product Image 10">
-                    <p>Summer Orange T-shirt  </p>
-                    <p>Price:199 pounds</p>
-                    <p>Category: Girl</p>
-                    <p>Age: 1-5 years</p>
-                    <button onclick="addToCart({ id: 46,
-                     name: 'Summer Orange T-shirt', price: 199,
-                     image_url: 'https://m.media-amazon.com/images/I/71hCcscpizL._AC_SX385_.jpg' })">Add to Cart</button>
-                </div>
-                 <!-- Product 47 -->
-                 <div class="product" data-section="قسم 3" data-price="550" data-gender="بنت" data-age="3">
-                    <img src="https://m.media-amazon.com/images/I/61Xv17VzYZL.__AC_SX300_SY300_QL70_ML2_.jpg" alt="Product Image 10">
-                    <p>Kidology Electric Stair Climbing Track Toy for Kids </p>
-                    <p>Price:210 pounds</p>
-                    <p>Category: ALL</p>
-                    <p>Age: 1-3 years</p>
-                    <button onclick="addToCart({ id: 47,
-                     name: 'Roll over image to zoom in Kidology Electric Stair Climbing Track Toy for Kids, Duck Roller Coaster Toys with Flashing Lights and Music for Toddlers Boys and Girls (3 Duck Slide)', price: 250,
-                     image_url: 'https://m.media-amazon.com/images/I/61Xv17VzYZL.__AC_SX300_SY300_QL70_ML2_.jpg' })">Add to Cart</button>
-                </div>
-                 <!-- Product 48 -->
-                 <div class="product" data-section="قسم 3" data-price="550" data-gender="بنت" data-age="3">
-                    <img src="https://m.media-amazon.com/images/I/71AsMP1wWsL.__AC_SX300_SY300_QL70_ML2_.jpg" alt="Product Image 10">
-                    <p>Smart tree Happy bed  </p>
-                    <p>Price:580 pounds</p>
-                    <p>Category: ALL</p>
-                    <p>Age:1 -3 years</p>
-                    <button onclick="addToCart({ id: 48,
-                     name: 'Smart tree Happy bed bell coloring and music box for baby - 2725611344739',
-                      price: 580,
-                     image_url: 'https://m.media-amazon.com/images/I/71AsMP1wWsL.__AC_SX300_SY300_QL70_ML2_.jpg' })">Add to Cart</button>
-                </div>
-                 <!-- Product 49 -->
-                 <div class="product" data-section="قسم 3" data-price="550" data-gender="بنت" data-age="3">
-                    <img src="https://m.media-amazon.com/images/I/51F2LuczBPL.__AC_SX300_SY300_QL70_ML2_.jpg" alt="Product Image 10">
-                    <p>VILHOZ Smart Phone</p>
-                    <p>Price:128 pounds</p>
-                    <p>Category: ALL</p>
-                    <p>Age:1 -4 years</p>
-                    <button onclick="addToCart({ id: 49,
-                     name: 'VILHOZ Smart Phone Cordless Feature Musical Toy For Kids - Multi Color',
-                      price: 128,
-                     image_url: 'https://m.media-amazon.com/images/I/51F2LuczBPL.__AC_SX300_SY300_QL70_ML2_.jpg' })">Add to Cart</button>
-                </div>
-                 <!-- Product 50 -->
-                 <div class="product" data-section="قسم 5" data-price="550" data-gender="بنت" data-age="3">
-                    <img src="https://m.media-amazon.com/images/I/81eq+UeLfgL._AC_SY300_SX300_.jpg" alt="Product Image 10">
-                    <p>ZARY Fenugreek </p>
-                    <p>Price:40 pounds</p>
-                    <p>Category: ALL</p>
-                    <p>Age:1 -4 years</p>
-                    <button onclick="addToCart({ id: 50,
-                     name: 'ZARY Fenugreek 150 gm',
-                      price: 40,
-                     image_url: 'https://m.media-amazon.com/images/I/81eq+UeLfgL._AC_SY300_SX300_.jpg' })">Add to Cart</button>
-                </div>
-                  <!-- Product 51 -->
-                  <div class="product" data-section="قسم 5" data-price="550" data-gender="بنت" data-age="3">
-                    <img src="https://m.media-amazon.com/images/I/71yyr-hP8OL.__AC_SY300_SX300_QL70_ML2_.jpg" alt="Product Image 10">
-                    <p>Nestogen  </p>
-                    <p>Price:245 pounds</p>
-                    <p>Category: ALL</p>
-                    <p>Age: 1-3 years</p>
-                    <button onclick="addToCart({ id: 51,
-                     name: 'Nestogen Stage 2 400g',
-                      price: 245,
-                     image_url: 'https://m.media-amazon.com/images/I/71yyr-hP8OL.__AC_SY300_SX300_QL70_ML2_.jpg' })">Add to Cart</button>
-                </div>
-                 <!-- Product 52 -->
-                 <div class="product" data-section="قسم 2" data-price="550" data-gender="بنت" data-age="3">
-                    <img src="https://m.media-amazon.com/images/I/71QwQVwRXML._AC_SX679_.jpg" alt="Product Image 10">
-                    <p>junior Baby Girls  </p>
-                    <p>Price:199 pounds</p>
-                    <p>Category: Girl</p>
-                    <p>Age: 1-5 years</p>
-                    <button onclick="addToCart({ id: 52,
-                     name: 'Butterfly Graphic White Cotton T-shirt',
-                      price: 199,
-                     image_url: 'https://m.media-amazon.com/images/I/71QwQVwRXML._AC_SX679_.jpg' })">Add to Cart</button>
-                </div>
-                 <!-- Product 53 -->
-                 <div class="product" data-section="قسم 2" data-price="550" data-gender="بنت" data-age="3">
-                    <img src="https://m.media-amazon.com/images/I/71S0D6kkTVL._AC_SX522_.jpg" alt="Product Image 10">
-                    <p> Dress With Headband </p>
-                    <p>Price:449 pounds</p>
-                    <p>Category: Girls</p>
-                    <p>Age: 1-5 years</p>
-                    <button onclick="addToCart({ id: 53,
-                     name: 'Blue Stars Printed Dress With Headband',
-                      price: 449,
-                     image_url: 'https://m.media-amazon.com/images/I/71EDNpBLoEL._AC_SY550_.jpg' })">Add to Cart</button>
-                </div>
-                   <!-- Product 54 -->
-                   <div class="product" data-section="قسم 2" data-price="550" data-gender="بنت" data-age="3">
-                    <img src="https://m.media-amazon.com/images/I/71YJzIoJ1cL._AC_SX466_.jpg" alt="Product Image 10">
-                    <p> Papillon Boys Sleeveless </p>
-                    <p>Price:66 pounds</p>
-                    <p>Category: Boys</p>
-                    <p>Age: 1-3 years</p>
-                    <button onclick="addToCart({ id: 54,
-                     name: 'Papillon Boys Sleeveless Bodysuit Underwear Printed Boat Base Layer',
-                      price: 66,
-                     image_url: 'https://m.media-amazon.com/images/I/71YJzIoJ1cL._AC_SX466_.jpg' })">Add to Cart</button>
-                </div>
-                   <!-- Product 55 -->
-                   <div class="product" data-section="قسم 2" data-price="550" data-gender="بنت" data-age="3">
-                    <img src="https://m.media-amazon.com/images/I/71-5vBG4VnL._AC_SX679_.jpg" alt="Product Image 10">
-                    <p> Baby Bodysuit  </p>
-                    <p>Price:199 pounds</p>
-                    <p>Category: Boys</p>
-                    <p>Age: 1-3 years</p>
-                    <button onclick="addToCart({ id: 55,
-                     name: 'Funny Bunny Printed Baby Bodysuit',
-                      price: 199,
-                     image_url: 'https://m.media-amazon.com/images/I/71-5vBG4VnL._AC_SX679_.jpg' })">Add to Cart</button>
-                </div>
-                 <!-- Product 56 -->
-                 <div class="product" data-section="قسم 2" data-price="550" data-gender="بنت" data-age="3">
-                    <img src="https://m.media-amazon.com/images/I/51Ti39F2RiL._AC_SX385_.jpg" alt="Product Image 10">
-                    <p> Kids Town Unisex Baby Boys</p>
-                    <p>Price:299 pounds</p>
-                    <p>Category: Boys</p>
-                    <p>Age:1-6 years</p>
-                    <button onclick="addToCart({ id: 56,
-                     name: 'Kids Town Unisex Baby Boys Girls Autumn Winter Warm Cotton Pajamas - Comfortable and Colorful',
-                      price: 299,
-                     image_url: 'https://m.media-amazon.com/images/I/51Ti39F2RiL._AC_SX385_.jpg' })">Add to Cart</button>
-                </div>
-                        <!-- Product 57 -->
-                        <div class="product" data-section="قسم 4" data-price="550" data-gender="بنت" data-age="3">
-                            <img src="https://m.media-amazon.com/images/I/41-vb2HpCCL.__AC_SX300_SY300_QL70_ML2_.jpg" alt="Product Image 10">
-                            <p>QiaoWa Small </p>
-                            <p>Price:98 pounds</p>
-                            <p>Category: ALL</p>
-                            <p>Age:1-3 years</p>
-                            <button onclick="addToCart({ id: 57,
-                             name: 'Roll over image to zoom in Arabest Baby Food Feeder, Pacifier Fruit- Fresh Silicone Bottle Squeeze Spoon Frozen Fruit Pacifiers Nibbler Cover Newborn',
-                              price: 97,
-                             image_url: 'https://m.media-amazon.com/images/I/41-vb2HpCCL.__AC_SX300_SY300_QL70_ML2_.jpg' })">Add to Cart</button>
-                        </div>
-                      <!-- Product 58 -->
-                      <div class="product" data-section="قسم 4" data-price="550" data-gender="بنت" data-age="3">
-                        <img src="https://m.media-amazon.com/images/I/51QekI1P5LL.__AC_SX300_SY300_QL70_ML2_.jpg" alt="Product Image 10">
-                        <p>Safe silicone baby</p>
-                        <p>Price:90 pounds</p>
-                        <p>Category: ALL</p>
-                        <p>Age:1-3 years</p>
-                        <button onclick="addToCart({ id: 58,
-                         name: 'Safe silicone baby gum nipple newborn teething toy ring fruit food supplement baby silicone',
-                          price: 80,
-                         image_url: 'https://m.media-amazon.com/images/I/51QekI1P5LL.__AC_SX300_SY300_QL70_ML2_.jpg' })">Add to Cart</button>
-                    </div>   
-                    <!-- Product 59 -->
-                    <div class="product" data-section="قسم 4" data-price="550" data-gender="بنت" data-age="3">
-                        <img src="https://m.media-amazon.com/images/I/51l9NlaL2IL.__AC_SY300_SX300_QL70_ML2_.jpg" alt="Product Image 10">
-                        <p>Baby Time Baby Accessories </p>
-                        <p>Price:95 pounds</p>
-                        <p>Category: ALL</p>
-                        <p>Age:1-3 years</p>
-                        <button onclick="addToCart({ id: 59,
-                         name: 'Baby Time Baby Accessories BT201 Soother Protector Case pink 1.0 Piece',
-                          price: 95,
-                         image_url: 'https://m.media-amazon.com/images/I/51l9NlaL2IL.__AC_SY300_SX300_QL70_ML2_.jpg' })">Add to Cart</button>
-                    </div>  
-                     <!-- Product 60 -->
-                     <div class="product" data-section="قسم 2" data-price="550" data-gender="بنت" data-age="3">
-                        <img src="https://m.media-amazon.com/images/I/71AGWOFhl5L._AC_SX342_.jpg" alt="Product Image 10">
-                        <p>Lumex Girls Set Of 2 Pieces Sleeveless </p>
-                        <p>Price:370 pounds</p>
-                        <p>Category: Girls</p>
-                        <p>Age:1-6 years</p>
-                        <button onclick="addToCart({ id: 60,
-                         name: 'Lumex Girls Set Of 2 Pieces Sleeveless T-Shirt&Short Printed Hearts Set Of 2 Pieces',
-                          price: 370,
-                         image_url: 'https://m.media-amazon.com/images/I/71AGWOFhl5L._AC_SX342_.jpg' })">Add to Cart</button>
-                    </div> 
-                     <!-- Product 61 -->
-                     <div class="product" data-section="قسم 4" data-price="550" data-gender="بنت" data-age="3">
-                        <img src="https://m.media-amazon.com/images/I/71c4BxzPbUL.__AC_SX300_SY300_QL70_ML2_.jpg" alt="Product Image 10">
-                        <p>Icare sillcone pacifier</p>
-                        <p>Price:20 pounds</p>
-                        <p>Category: ALL</p>
-                        <p>Age:1-3 years</p>
-                        <button onclick="addToCart({ id: 61,
-                         name: ' Icare sillcone pacifier - green',
-                          price: 20,
-                         image_url: 'https://m.media-amazon.com/images/I/71c4BxzPbUL.__AC_SX300_SY300_QL70_ML2_.jpg' })">Add to Cart</button>
-                    </div> 
-                     <!-- Product 62 -->
-                     <div class="product" data-section="قسم 4" data-price="550" data-gender="بنت" data-age="3">
-                        <img src="https://m.media-amazon.com/images/I/61D+zkt0zpL._AC_SY879_.jpg" alt="Product Image 10">
-                        <p>La frutta Pacifier /p>
-                        <p>Price:149 pounds</p>
-                        <p>Category: ALL</p>
-                        <p>Age:1-3 years</p>
-                        <button onclick="addToCart({ id: 62,
-                         name: 'La frutta Pacifier Holder',
-                          price: 149,
-                         image_url: 'https://m.media-amazon.com/images/I/61D+zkt0zpL._AC_SY879_.jpg' })">Add to Cart</button>
-                    </div> 
-                     <!-- Product 63 -->
-                     <div class="product" data-section="قسم 3" data-price="550" data-gender="بنت" data-age="3">
-                        <img src="https://m.media-amazon.com/images/I/61s9BTowavL._AC_SX425_.jpg" alt="Product Image 10">
-                        <p>Jovicos Crab Baby Toy from 1 2 3 Years, Crawling Crab Toy</p>
-                        <p>Price:400 pounds</p>
-                        <p>Category: ALL</p>
-                        <p>Age:1-3 years</p>
-                        <button onclick="addToCart({ id: 63,
-                         name: 'Jovicos Crab Baby Toy from 1 2 3 Years, Crawling Crab Toy from 6 7 8 9 10 Months, Childrens Toy from 1-3 Years Boy Girl Gift for Children Tummy Time Toys (Orange)',
-                          price: 400,
-                         image_url: 'https://m.media-amazon.com/images/I/61s9BTowavL._AC_SX425_.jpg' })">Add to Cart</button>
-                    </div> 
-                     <!-- Product 64 -->
-                     <div class="product" data-section="قسم 5" data-price="550" data-gender="بنت" data-age="3">
-                        <img src="https://m.media-amazon.com/images/I/61fRALe4o7L.__AC_SX300_SY300_QL70_ML2_.jpg" alt="Product Image 10">
-                        <p>Riri Infant Cereals Rice with Orange</p>
-                        <p>Price:61 pounds</p>
-                        <p>Category: ALL</p>
-                        <p>Age:1-3 years</p>
-                        <button onclick="addToCart({ id: 64,
-                         name: 'Riri Infant Cereals Rice with Orange, Milk and Vitamins, 200g',
-                          price: 61,
-                         image_url: 'https://m.media-amazon.com/images/I/61fRALe4o7L.__AC_SX300_SY300_QL70_ML2_.jpg' })">Add to Cart</button>
-                    </div>
-                      <!-- Product 65 -->
-                <div class="product" data-section="قسم 5" data-price="625" data-gender="ولد" data-age="2">
-                    <img src="https://m.media-amazon.com/images/I/617-olLrv6L.__AC_SX300_SY300_QL70_ML2_.jpg"   alt="Product Image 1">
-                    <p>Growth Formula for kids</p>
-                    <p>Price: 250 pounds</p>
-                    <p>Category: All</p>
-                    <p>Age: 0-9-12 months</p>
-                    <button onclick="addToCart({ id: 65, 
-                        name: 'Growth Formula for kids - Complete Supplement With Balanced Nutrition - 6.3G protein to Help Kids Catch Up on Growth and Help Fill Nutrient Gaps from age 1 to 12 years - Vanilla 400g -10 sachets', 
-                        price: 250, image_url: 'https://m.media-amazon.com/images/I/617-olLrv6L.__AC_SX300_SY300_QL70_ML2_.jpg' })">Add to Cart</button>
-                </div>
-                <!-- Product 66 -->
-                <div class="product" data-section="قسم 5" data-price="750" data-gender="ولد" data-age="2">
-                    <img src="https://m.media-amazon.com/images/I/91R8dGUiEYL.__AC_SX300_SY300_QL70_ML2_.jpg"  alt="Product Image 2">
-                    <p>Kellogg's Frosties</p>
-                    <p>Price: 206. pounds</p>
-                    <p>Category: ALL</p>
-                    <p>Age: 1-4 years</p>
-                    <button onclick="addToCart({ id: 66, 
-                        name: 'Kelloggs Frosties Cereal, 500 gm', 
-                        price: 250, image_url: 'https://m.media-amazon.com/images/I/91R8dGUiEYL.__AC_SX300_SY300_QL70_ML2_.jpg' })">Add to Cart</button>
-                </div>
-                <!-- Product 67 -->
-                <div class="product" data-section="قسم 4" data-price="500" data-gender="ولد" data-age="1">
-                    <img src="https://m.media-amazon.com/images/I/61Dg+HzQG8L._AC_SY300_SX300_.jpg"  alt="Product Image 3">
-                    <p>La frutta water teether</p>
-                    <p>Price: 90 pounds</p>
-                    <p>Category: ALL</p>
-                    <p>Age: 1 year</p>
-                    <button onclick="addToCart({ id: 67, 
-                        name: 'La frutta water teether multiple shapes and colors', price: 90, image_url: 'https://m.media-amazon.com/images/I/61Dg+HzQG8L._AC_SY300_SX300_.jpg' })">Add to Cart</button>
-                </div>
-                <!-- Product 68 -->
-                <div class="product" data-section="قسم 4" data-price="650" data-gender="ولد" data-age="1">
-                    <img src="https://m.media-amazon.com/images/I/51I4vtzW8KL.__AC_SX300_SY300_QL70_ML2_.jpg"  alt="Product Image 4">
-                    <p>Bubbles fruits teether</p>
-                    <p>Price: 115 pounds</p>
-                    <p>Category: ALL</p>
-                    <p>Age: 1-4 year</p>
-                    <button onclick="addToCart({ id: 68,
-                         name: 'Baby Shoes', price: 115, image_url: 'https://m.media-amazon.com/images/I/51I4vtzW8KL.__AC_SX300_SY300_QL70_ML2_.jpg' })">Add to Cart</button>
-                </div>
-                <!-- Product 69 -->
-                <div class="product" data-section="قسم 3" data-price="700" data-gender="ولد" data-age="3">
-                    <img src="https://m.media-amazon.com/images/I/61-8oo3Ow7L.__AC_SX300_SY300_QL70_ML2_.jpg" alt="Product Image 5">
-                    <p>Fantastic-Kids-Toys</p>
-                    <p>Price: 350 pounds</p>
-                    <p>Category: ALL</p>
-                    <p>Age: 1-6 years</p>
-                    <button onclick="addToCart({ id: 69, 
-                        name: ' لعبه جيتار تاتش للاطفال ', price: 350, 
-                        image_url: 'https://m.media-amazon.com/images/I/61-8oo3Ow7L.__AC_SX300_SY300_QL70_ML2_.jpg' })">Add to Cart</button>
-                </div>
-               
-                <!-- Product 70 -->
-                <div class="product" data-section="قسم 3" data-price="400" data-gender="بنت" data-age="1">
-                    <img src="https://m.media-amazon.com/images/I/61izPvowvyL.__AC_SX300_SY300_QL70_ML2_.jpg" alt="Product Image 7">
-                    <p>BABA FAB Scrap</p>
-                    <p>Price: 241 pounds</p>
-                    <p>Category: ALL</p>
-                    <p>Age: 1-4 year</p>
-                    <button onclick="addToCart({ id: 70, 
-                        name: 'BABA FAB Scrap Babys First Blocks, Shape sorter, Colors, ABCD (My 1st Shapes)'
-                        , price: 241, 
-                        image_url: 'https://m.media-amazon.com/images/I/61izPvowvyL.__AC_SX300_SY300_QL70_ML2_.jpg' })">Add to Cart</button>
-                </div>
-                <!-- Product 71 -->
-                <div class="product" data-section="قسم 3" data-price="450" data-gender="بنت" data-age="1">
-                    <img src="https://m.media-amazon.com/images/I/61ESRCglgfL.__AC_SX300_SY300_QL70_ML2_.jpg" alt="Product Image 8">
-                    <p>MOSU Touch Sensory Ball</p>
-                    <p>Price: 129 pounds</p>
-                    <p>Category: ALL</p>
-                    <p>Age: 1-5 year</p>
-                    <button onclick="addToCart({ id: 71, 
-                    name: 'MOSU Touch Sensory Ball', price: 129,
-                     image_url: 'https://m.media-amazon.com/images/I/61ESRCglgfL.__AC_SX300_SY300_QL70_ML2_.jpg' })">Add to Cart</button>
-                </div>
-                <!-- Product 72 -->
-                <div class="product" data-section="قسم 5" data-price="600" data-gender="بنت" data-age="2">
-                    <img src="https://m.media-amazon.com/images/I/81VUyR0Fu9L.__AC_SX300_SY300_QL70_ML2_.jpg" alt="Product Image 9">
-                    <p>Hero baby Wheat</p>
-                    <p>Price: 191 pounds</p>
-                    <p>Category: ALL</p>
-                    <p>Age: 1-4 years</p>
-                    <button onclick="addToCart({ id: 72,
-                     name: 'Hero baby Wheat & Oat cereal with Milk 300 gm', price: 191, 
-                image_url: 'https://m.media-amazon.com/images/I/81VUyR0Fu9L.__AC_SX300_SY300_QL70_ML2_.jpg' })">Add to Cart</button>
-                </div>
-                <!-- Product 73 -->
-                <div class="product" data-section="قسم 2" data-price="550" data-gender="بنت" data-age="3">
-                    <img src="https://m.media-amazon.com/images/I/61t0+ZO1NDL._AC_SX679_.jpg" alt="Product Image 10">
-                    <p>Baby Girls Dress Out </p>
-                    <p>Price:430 pounds</p>
-                    <p>Category: Girl</p>
-                    <p>Age: 1-6 years</p>
-                    <button onclick="addToCart({ id: 73,
-                     name: 'Baby Girls Dress Out', price: 430,
-                     image_url: 'https://m.media-amazon.com/images/I/61t0+ZO1NDL._AC_SX679_.jpg' })">Add to Cart</button>
-                </div>
-                  <!-- Product 74 -->
-                <div class="product" data-section="قسم 5" data-price="800" data-gender="بنت" data-age="3">
-                    <img src="https://m.media-amazon.com/images/I/71VjxjLwB4L.__AC_SX300_SY300_QL70_ML2_.jpg" alt="Product Image 6">
-                    <p>Nestle Nido</p>
-                    <p>Price: 350 pounds</p>
-                    <p>Category: ALL</p>
-                    <p>Age: 1-4 years</p>
-                    <button onclick="addToCart({ id: 74, 
-                    name: 'Nestle Nido Fortigrow, 125g', price: 350,
-                     image_url: 'https://m.media-amazon.com/images/I/71VjxjLwB4L.__AC_SX300_SY300_QL70_ML2_.jpg' })">Add to Cart</button>
-                </div>
-                  <!-- Product 75-->
-                  <div class="product" data-section="قسم 4" data-price="800" data-gender="بنت" data-age="3">
-                    <img src="https://m.media-amazon.com/images/I/51QekI1P5LL.__AC_SX300_SY300_QL70_ML2_.jpg" alt="Product Image 6">
-                    <p>Safe silicone baby</p>
-                    <p>Price: EGP 80. </p>
-                    <p>Category: ALL</p>
-                    <p>Age: 1-3 years</p>
-                    <button onclick="addToCart({ id: 75,
-                     name: 'Safe silicone baby gum nipple newborn teething toy ring fruit food supplement baby silicone', price:80.,
-                     image_url: 'https://m.media-amazon.com/images/I/51QekI1P5LL.__AC_SX300_SY300_QL70_ML2_.jpg' })">Add to Cart</button>
-                </div>
-                  <!-- Product 76 -->
-                  <div class="product" data-section="قسم 3" data-price="800" data-gender="بنت" data-age="3">
-                    <img src="https://m.media-amazon.com/images/I/61A47ouEzgL._AC_SX425_.jpg" alt="Product Image 6">
-                    <p>Fantastic-Kids-Toys Infant Rattles</p>
-                    <p>Price: 300 pounds</p>
-                    <p>Category: ALL</p>
-                    <p>Age: 1-3 years</p>
-                    <button onclick="addToCart({ id: 76,
-                     name: 'Fantastic-Kids-Toys Infant Rattles Teething Toys for 3-12 Months, Silicone Newborn Baby Early Educational Toys, Baby Teether Toy (11pcs) (Blue)', 
-                     price: 300,
-                     image_url: 'https://m.media-amazon.com/images/I/61A47ouEzgL._AC_SX425_.jpg' })">Add to Cart</button>
-                </div>
-                   <!-- Product 77 -->
-                   <div class="product" data-section="قسم 5" data-price="550" data-gender="بنت" data-age="3">
-                    <img src="https://m.media-amazon.com/images/I/71R-b9FfGQL.__AC_SX300_SY300_QL70_ML2_.jpg" alt="Product Image 10">
-                    <p>Growing-Up Milk </p>
-                    <p>Price:850 pounds</p>
-                    <p>Category: ALL</p>
-                    <p>Age: 1-4 years</p>
-                    <button onclick="addToCart({ id: 77,
-                     name: 'Growing-Up Milk from 1-3 years - 800 grams', price: 850,
-                     image_url: 'https://m.media-amazon.com/images/I/71R-b9FfGQL.__AC_SX300_SY300_QL70_ML2_.jpg' })">Add to Cart</button>
-                </div>
-                 <!-- Product 78 -->
-                 <div class="product" data-section="قسم 2" data-price="550" data-gender="بنت" data-age="3">
-                    <img src="https://m.media-amazon.com/images/I/51II1JeoVoL._AC_SX466_.jpg" alt="Product Image 10">
-                    <p>cotton dress  </p>
-                    <p>Price:250 pounds</p>
-                    <p>Category: Girls</p>
-                    <p>Age:1-4 years</p>
-                    <button onclick="addToCart({ id: 78,
-                     name: 'Printed cotton dress with bodysuit with two buttons', price: 250,
-                     image_url: 'https://m.media-amazon.com/images/I/51II1JeoVoL._AC_SX466_.jpg' })">Add to Cart</button>
-                </div>
-                 <!-- Product 79 -->
-                 <div class="product" data-section="قسم 1" data-price="550" data-gender="بنت" data-age="3">
-                    <img src="https://m.media-amazon.com/images/I/61OGBka1laL._AC_SX425_.jpg" alt="Product Image 10">
-                    <p>Mastela Baby </p>
-                    <p>Price:1,149 pounds</p>
-                    <p>Category: ALL</p>
-                    <p>Age:1 -2 years</p>
-                    <button onclick="addToCart({ id: 79,
-                     name: 'Mastela Baby Bouncers Adjustable backrest Baby 6 in 1 Bassinet Beside Sleeper Cradle Soothing Vibration Suitable for Baby',
-                      price: 399,
-                     image_url: 'https://m.media-amazon.com/images/I/61OGBka1laL._AC_SX425_.jpg' })">Add to Cart</button>
-                </div>
-                 <!-- Product 80 -->
-                 <div class="product" data-section="قسم 2" data-price="550" data-gender="بنت" data-age="3">
-                    <img src="https://m.media-amazon.com/images/I/51eocKWuDCL._AC_SX679_.jpg" alt="Product Image 10">
-                    <p>Cottonwoods </p>
-                    <p>Price:325 pounds</p>
-                    <p>Category: Girls</p>
-                    <p>Age:1 -4 years</p>
-                    <button onclick="addToCart({ id: 80,
-                     name: 'Cottonwoods Teddys Face Print Baby Girl Sleepsuit',
-                      price: 325,
-                     image_url: 'https://m.media-amazon.com/images/I/51eocKWuDCL._AC_SX679_.jpg' })">Add to Cart</button>
-                </div>
-                 <!-- Product 81 -->
-                 <div class="product" data-section="قسم 5" data-price="550" data-gender="بنت" data-age="3">
-                    <img src="https://m.media-amazon.com/images/I/61PHqBcPVLL._AC_SX425_.jpg" alt="Product Image 10">
-                    <p>BEBEJUNIOR </p>
-                    <p>Price:200 pounds</p>
-                    <p>Category: ALL</p>
-                    <p>Age:1 -3 years</p>
-                    <button onclick="addToCart({ id: 81,
-                     name: 'BEBEJUNIOR 3-400GM',
-                      price: 200,
-                     image_url: 'https://m.media-amazon.com/images/I/61PHqBcPVLL._AC_SX425_.jpg' })">Add to Cart</button>
-                </div>
-                  <!-- Product 82 -->
-                  <div class="product" data-section="قسم 5" data-price="550" data-gender="بنت" data-age="3">
-                    <img src="https://m.media-amazon.com/images/I/71GRoYvsawL._AC_SX425_.jpg" alt="Product Image 10">
-                    <p>Hero Baby  </p>
-                    <p>Price:202 pounds</p>
-                    <p>Category: ALL</p>
-                    <p>Age: 1-3 years</p>
-                    <button onclick="addToCart({ id: 82,
-                     name: 'Hero Baby good night 8 cereal & apple with milk & Good Night 8 Cereal & Fennel with Milk',
-                      price: 202,
-                     image_url: 'https://m.media-amazon.com/images/I/71GRoYvsawL._AC_SX425_.jpg' })">Add to Cart</button>
-                </div>
-                 <!-- Product 83 -->
-                 <div class="product" data-section="قسم 2" data-price="550" data-gender="بنت" data-age="3">
-                    <img src="https://m.media-amazon.com/images/I/610PQ-r9L7L._AC_SX679_.jpg" alt="Product Image 10">
-                    <p>Baby Girls Set   </p>
-                    <p>Price:199 pounds</p>
-                    <p>Category: Girl</p>
-                    <p>Age: 1-4 years</p>
-                    <button onclick="addToCart({ id: 83,
-                     name: 'Baby Girls Set - Body with Lace and Headband - Jumpsuit Dress from Mizah for Kids',
-                      price: 199,
-                     image_url: 'https://m.media-amazon.com/images/I/610PQ-r9L7L._AC_SX679_.jpg' })">Add to Cart</button>
-                </div>
-                 <!-- Product 84 -->
-                 <div class="product" data-section="قسم 4" data-price="550" data-gender="بنت" data-age="3">
-                    <img src="https://m.media-amazon.com/images/I/41OnfZ9MFaL.__AC_SX300_SY300_QL70_ML2_.jpg" alt="Product Image 10">
-                    <p> Bubbles fruits teether rose </p>
-                    <p>Price:104 pounds</p>
-                    <p>Category:ALL</p>
-                    <p>Age: 1-3 years</p>
-                    <button onclick="addToCart({ id: 84,
-                     name: 'Bubbles fruits teether rose',
-                      price: 104,
-                     image_url: 'https://m.media-amazon.com/images/I/41OnfZ9MFaL.__AC_SX300_SY300_QL70_ML2_.jpg' })">Add to Cart</button>
-                </div>
-                   <!-- Product 85 -->
-                   <div class="product" data-section="قسم 2" data-price="550" data-gender="بنت" data-age="3">
-                    <img src="https://m.media-amazon.com/images/I/511gwWELjPL._AC_SX522_.jpg" alt="Product Image 10">
-                    <p>Zercon Baby Girls  </p>
-                    <p>Price:415 pounds</p>
-                    <p>Category: Girls</p>
-                    <p>Age: 1-4 years</p>
-                    <button onclick="addToCart({ id: 85,
-                     name: 'Zercon Baby Girls Winter Pajama Set',
-                      price: 415,
-                     image_url: 'https://m.media-amazon.com/images/I/511gwWELjPL._AC_SX522_.jpg' })">Add to Cart</button>
-                </div>
-                   <!-- Product 86 -->
-                   <div class="product" data-section="قسم 2" data-price="550" data-gender="بنت" data-age="3">
-                    <img src="https://m.media-amazon.com/images/I/411ABJ6eZNL._AC_SX466_.jpg" alt="Product Image 10">
-                    <p>baby club Baby Girl   </p>
-                    <p>Price:162 pounds</p>
-                    <p>Category: Girls</p>
-                    <p>Age: 1-3 years</p>
-                    <button onclick="addToCart({ id: 86,
-                     name: 'baby club Baby Girl Embriodered Baby Dress',
-                      price: 162,
-                     image_url: 'https://m.media-amazon.com/images/I/411ABJ6eZNL._AC_SX466_.jpg' })">Add to Cart</button>
-                </div>
-                 <!-- Product 87 -->
-                 <div class="product" data-section="قسم 4" data-price="550" data-gender="بنت" data-age="3">
-                    <img src="https://m.media-amazon.com/images/I/61D-rEMAIZL.__AC_SX300_SY300_QL70_ML2_.jpg" alt="Product Image 10">
-                    <p>Nice Baby Fruits Teether Green</p>
-                    <p>Price:76 pounds</p>
-                    <p>Category: ALL</p>
-                    <p>Age:1-3 years</p>
-                    <button onclick="addToCart({ id: 87,
-                     name: 'Nice Baby Fruits Teether Green',
-                      price: 76,
-                     image_url: 'https://m.media-amazon.com/images/I/61D-rEMAIZL.__AC_SX300_SY300_QL70_ML2_.jpg '})">Add to Cart</button>
-                </div>
-                        <!-- Product 88 -->
-                        <div class="product" data-section="قسم 4" data-price="550" data-gender="بنت" data-age="3">
-                            <img src="https://m.media-amazon.com/images/I/51SqKZ6cXIL._AC_SX425_.jpg" alt="Product Image 10">
-                            <p>Bibs Colour Baby Pacifier </p>
-                            <p>Price: 328 pounds</p>
-                            <p>Category: ALL</p>
-                            <p>Age:1-3 years</p>
-                            <button onclick="addToCart({ id: 88,
-                             name: 'Bibs Colour Baby Pacifier Size 1 - Baby 0-6M (1pc) - Baby Blue',
-                              price: 328,
-                             image_url: 'https://m.media-amazon.com/images/I/61+7nnqrukL._AC_SY300_SX300_.jpg' })">Add to Cart</button>
-                        </div>
-                        <div class="product" data-section="قسم 2" data-price="550" data-gender="بنت" data-age="3">
-                            <img src="https://i.pinimg.com/564x/83/75/9d/83759d4fe08249c24868c9879cfb3f45.jpg" alt="Product Image 10">
-                            <p>Children Shoes Girls  </p>
-                            <p>Price:394 pounds</p>
-                            <p>Category: Girl</p>
-                            <p>Age: 1-4 years</p>
-                            <button onclick="addToCart({ id: 14,
-                             name: 'Children Shoes Girls ', price: 394,
-                             image_url: 'https://i.pinimg.com/564x/83/75/9d/83759d4fe08249c24868c9879cfb3f45.jpg' })">Add to Cart</button>
-                        </div>
-                      <!-- Product 89 -->
-                      <div class="product" data-section="قسم 4" data-price="550" data-gender="بنت" data-age="3">
-                        <img src="https://m.media-amazon.com/images/I/61drsr371ML._AC_SY606_.jpg" alt="Product Image 10">
-                        <p>Bubbles pacifier beveled with chain - blue</p>
-                        <p>Price:92 pounds</p>
-                        <p>Category: ALL</p>
-                        <p>Age:1-3 years</p>
-                        <button onclick="addToCart({ id: 89,
-                         name: 'Bubbles pacifier beveled with chain - blue',
-                          price: 92,
-                         image_url: 'https://m.media-amazon.com/images/I/61drsr371ML._AC_SY606_.jpg' })">Add to Cart</button>
-                    </div>   
-                    <!-- Product 90 -->
-                    <div class="product" data-section="قسم 2" data-price="550" data-gender="بنت" data-age="3">
-                        <img src="https://m.media-amazon.com/images/I/61X038LZkmL._AC_SX679_.jpg" alt="Product Image 10">
-                        <p>Mesery Set Of (3) Basic Bodysuit</p>
-                        <p>Price:149.00 pounds</p>
-                        <p>Category: Girls</p>
-                        <p>Age:1-3 years</p>
-                        <button onclick="addToCart({ id: 90,
-                         name: 'Mesery Set Of (3) Basic Bodysuit For Newborn Girls ',
-                          price: 149,
-                         image_url: 'https://m.media-amazon.com/images/I/61X038LZkmL._AC_SX679_.jpg' })">Add to Cart</button>
-                    </div>  
-                     <!-- Product 91 -->
-                     <div class="product" data-section="قسم 2" data-price="550" data-gender="بنت" data-age="3">
-                        <img src="https://m.media-amazon.com/images/I/71a9IdsEWbL._AC_SX522_.jpg" alt="Product Image 10">
-                        <p>Newborn Baby Girls</p>
-                        <p>Price:421.63 pounds</p>
-                        <p>Category: Girls</p>
-                        <p>Age:1-3 years</p>
-                        <button onclick="addToCart({ id: 91,
-                         name: 'Newborn Baby Girls Jumpsuit Stylish Design With Unbeatable Comfort',
-                          price: 421.63,
-                         image_url: 'https://m.media-amazon.com/images/I/71a9IdsEWbL._AC_SX522_.jpg' })">Add to Cart</button>
-                    </div> 
-                     <!-- Product 92 -->
-                     <div class="product" data-section="قسم 3" data-price="550" data-gender="بنت" data-age="3">
-                        <img src="https://m.media-amazon.com/images/I/71qaKOMEiOL.__AC_SY300_SX300_QL70_ML2_.jpg" alt="Product Image 10">
-                        <p>DUNGRANI</p>
-                        <p>Price:280 pounds</p>
-                        <p>Category: ALL</p>
-                        <p>Age:1-3 years</p>
-                        <button onclick="addToCart({ id: 92,
-                         name: 'DUNGRANI ENTERPRISE DIY 216 Pcs Ball Toys for Kids Girls Boys Toddlers Age 5 6 7 8 9 Years Educational Stem Learning Balls Game Set New Trending 6X6 Cube of 6 Colors 5mm Balls',
 
-                          price: 280,
-                         image_url: 'https://m.media-amazon.com/images/I/71qaKOMEiOL.__AC_SY300_SX300_QL70_ML2_.jpg' })">Add to Cart</button>
-                    </div> 
-                    <div class="product" data-section="قسم 2" data-price="550" data-gender="بنت" data-age="3">
-                        <img src="https://i.pinimg.com/564x/79/3b/43/793b4365f20cda00860a7b018916b691.jpg" alt="Product Image 10">
-                        <p> Sandália Infantil Menina Basica Casual  </p>
-                        <p>Price:394 pounds</p>
-                        <p>Category: Girl</p>
-                        <p>Age: 1-4 years</p>
-                        <button onclick="addToCart({ id: 14,
-                         name: 'Sandália Infantil Menina Basica Casual ', price: 394,
-                         image_url: 'https://i.pinimg.com/564x/79/3b/43/793b4365f20cda00860a7b018916b691.jpg' })">Add to Cart</button>
+    <main class="pt-24">
+        <div class="container mx-auto px-6 py-12">
+            <h1 class="text-4xl font-bold text-center text-teal-800 font-cursive mb-12">Our Products</h1>
+
+            <!-- Filter Section -->
+            <div class="bg-white p-4 rounded-xl shadow-md mb-12 flex flex-col sm:flex-row gap-4 items-center">
+                <div class="flex-grow w-full sm:w-auto">
+                    <label for="category-filter" class="sr-only">Category</label>
+                    <select id="category-filter" class="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-400">
+                        <option value="all">All Categories</option>
+                        <option value="Baby Products">Baby Products</option>
+                        <option value="Fashion">Fashion</option>
+                        <option value="Toys & Learning">Toys & Learning</option>
+                        <option value="Safety & Care">Safety & Care</option>
+                        <option value="Feeding">Feeding</option>
+                    </select>
+                </div>
+                 <div class="flex-grow w-full sm:w-auto">
+                    <label for="gender-filter" class="sr-only">Gender</label>
+                    <select id="gender-filter" class="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-400">
+                        <option value="all">All Genders</option>
+                        <option value="Boy">Boys</option>
+                        <option value="Girl">Girls</option>
+                        <option value="ALL">Unisex</option>
+                    </select>
+                </div>
+                <div class="flex-grow w-full sm:w-auto">
+                     <label for="sort-filter" class="sr-only">Sort by</label>
+                    <select id="sort-filter" class="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-400">
+                        <option value="default">Sort by</option>
+                        <option value="price-asc">Price: Low to High</option>
+                        <option value="price-desc">Price: High to Low</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Product Grid -->
+            <div id="product-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+                
+                <div class="product-card" data-category="Baby Products" data-price="625" data-gender="Boy">
+                    <div class="group block bg-white rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 overflow-hidden">
+                        <img src="https://m.media-amazon.com/images/I/41CEzifPSqL._AC_SX425_.jpg" alt="TOYS-EGYPT Baby Play Mat" class="w-full h-56 object-cover">
+                        <div class="p-4">
+                            <h3 class="text-lg font-semibold text-gray-800 truncate">TOYS-EGYPT Baby Play Mat</h3>
+                            <p class="text-gray-500 text-sm">Age: 0-12 months</p>
+                            <div class="flex justify-between items-center mt-4">
+                                <p class="text-xl font-bold text-teal-600">EGP 625</p>
+                                <button onclick="addToCart({ id: 1, name: 'TOYS-EGYPT Baby Play Mat', price: 625, image_url: 'https://m.media-amazon.com/images/I/41CEzifPSqL._AC_SX425_.jpg' })" class="bg-teal-500 text-white px-4 py-2 rounded-full hover:bg-teal-600 transition-colors">Add to Cart</button>
+                            </div>
+                        </div>
                     </div>
-                     <!-- Product 93 -->
-                     <div class="product" data-section="قسم 2" data-price="550" data-gender="بنت" data-age="3">
-                        <img src="https://m.media-amazon.com/images/I/51TcnzdAIgL._AC_SX679_.jpg" alt="Product Image 10">
-                        <p>Papillon Cotton</p>
-                        <p>Price:225 pounds</p>
-                        <p>Category: Boys</p>
-                        <p>Age:6-12 Months</p>
-                        <button onclick="addToCart({ id: 93,
-                         name: 'Papillon Cotton Set of 3 Pieces Half Sleeves Bodysuit Printed Shapes For Boys-Multicolor-9-12Month',
-                          price: 225,
-                         image_url: 'https://m.media-amazon.com/images/I/51TcnzdAIgL._AC_SX679_.jpg' })">Add to Cart</button>
-                    </div> 
-                     <!-- Product 94 -->
-                     <div class="product" data-section="قسم 2" data-price="550" data-gender="بنت" data-age="3">
-                        <img src="https://m.media-amazon.com/images/I/71bgrqyPwRL._AC_SX466_.jpg" alt="Product Image 10">
-                        <p>Access Unisex WIN24-94 Jacket</p>
-                        <p>Price:660 pounds</p>
-                        <p>Category: Boys</p>
-                        <p>Age:6-12 Months</p>
-                        <button onclick="addToCart({ id: 94,
-                         name: 'Access Unisex WIN24-94 Jacket',
-                          price: 660,
-                         image_url: 'https://m.media-amazon.com/images/I/71bgrqyPwRL._AC_SX466_.jpg' })">Add to Cart</button>
-                    </div> 
-                     <!-- Product 95 -->
-                     <div class="product" data-section="قسم 2" data-price="550" data-gender="بنت" data-age="3">
-                        <img src="https://m.media-amazon.com/images/I/71fxoPPs1ML._AC_SX679_.jpg" alt="Product Image 10">
-                        <p>Baby Shoora Boys</p>
-                        <p>Price:460 pounds</p>
-                        <p>Category: Boys</p>
-                        <p>Age:3-9 Months</p>
-                        <button onclick="addToCart({ id: 95,
-                         name: 'Baby Shoora Boys Long Sleeves Hooded Bodysuit Printed Animals Bodysuit',
-                          price: 45,
-                         image_url: 'https://m.media-amazon.com/images/I/71fxoPPs1ML._AC_SX679_.jpg' })">Add to Cart</button>
+                </div>
+
+                <div class="product-card" data-category="Baby Products" data-price="620" data-gender="ALL">
+                     <div class="group block bg-white rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 overflow-hidden">
+                        <img src="https://m.media-amazon.com/images/I/51ZDqE3lYhL.__AC_SX300_SY300_QL70_ML2_.jpg" alt="Learning Walker" class="w-full h-56 object-cover">
+                        <div class="p-4">
+                            <h3 class="text-lg font-semibold text-gray-800 truncate">Sit and Stand Learning Walker</h3>
+                            <p class="text-gray-500 text-sm">Age: 2 years</p>
+                            <div class="flex justify-between items-center mt-4">
+                                <p class="text-xl font-bold text-teal-600">EGP 620</p>
+                                <button onclick="addToCart({ id: 2, name: 'Sit and Stand Learning Walker', price: 620, image_url: 'https://m.media-amazon.com/images/I/51ZDqE3lYhL.__AC_SX300_SY300_QL70_ML2_.jpg' })" class="bg-teal-500 text-white px-4 py-2 rounded-full hover:bg-teal-600 transition-colors">Add to Cart</button>
+                            </div>
+                        </div>
                     </div>
-                    <div class="product" data-section="قسم 2" data-price="550" data-gender="بنت" data-age="3">
-                        <img src="https://i.pinimg.com/564x/6a/5b/75/6a5b754544357c6cee73475208f1172d.jpg" alt="Product Image 10">
-                        <p> Babuche Infantil Menina Girafinha - Sandália Papete Infantil </p>
-                        <p>Price:194 pounds</p>
-                        <p>Category: Girl</p>
-                        <p>Age: 1-4 years</p>
-                        <button onclick="addToCart({ id: 14,
-                         name: 'Babuche Infantil Menina Girafinha - Sandália Papete Infantill ', price: 194,
-                         image_url: 'https://i.pinimg.com/564x/6a/5b/75/6a5b754544357c6cee73475208f1172d.jpg' })">Add to Cart</button>
+                </div>
+                
+                <div class="product-card" data-category="Fashion" data-price="349" data-gender="Boy">
+                     <div class="group block bg-white rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 overflow-hidden">
+                        <img src="https://m.media-amazon.com/images/I/71AUBlUzHIL._AC_SX675_.jpg" alt="JINJA Infant Baby BOY SNEAKERS" class="w-full h-56 object-cover">
+                        <div class="p-4">
+                            <h3 class="text-lg font-semibold text-gray-800 truncate">JINJA Infant Baby BOY SNEAKERS</h3>
+                            <p class="text-gray-500 text-sm">Age: 2 years</p>
+                            <div class="flex justify-between items-center mt-4">
+                                <p class="text-xl font-bold text-teal-600">EGP 349</p>
+                                <button onclick="addToCart({ id: 3, name: 'JINJA Infant Baby BOY SNEAKERS', price: 349, image_url: 'https://m.media-amazon.com/images/I/71AUBlUzHIL._AC_SX675_.jpg' })" class="bg-teal-500 text-white px-4 py-2 rounded-full hover:bg-teal-600 transition-colors">Add to Cart</button>
+                            </div>
+                        </div>
                     </div>
-                      <!-- Product 96 -->
-                      <div class="product" data-section="قسم 2" data-price="550" data-gender="بنت" data-age="3">
-                        <img src="https://m.media-amazon.com/images/I/61mgVEG6DjL._AC_SY550_.jpg" alt="Product Image 10">
-                        <p>junior Unisex Baby</p>
-                        <p>Price: 285pounds</p>
-                        <p>Category: Boys</p>
-                        <p>Age:3-9 Months</p>
-                        <button onclick="addToCart({ id: 96,
-                         name: 'junior Unisex Baby Baby Bodysuit Shapewear Bodysuit',
-                          price: 285,
-                         image_url: 'https://m.media-amazon.com/images/I/61mgVEG6DjL._AC_SY550_.jpg' })">Add to Cart</button>
+                </div>
+
+                <div class="product-card" data-category="Baby Products" data-price="1449" data-gender="ALL">
+                     <div class="group block bg-white rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 overflow-hidden">
+                        <img src="https://m.media-amazon.com/images/I/61-E+C-xKcL._AC_SY300_SX300_.jpg" alt="Baby Music Rocking Chair" class="w-full h-56 object-cover">
+                        <div class="p-4">
+                            <h3 class="text-lg font-semibold text-gray-800 truncate">TOYS-EGYPT Baby Music Rocking Chair</h3>
+                            <p class="text-gray-500 text-sm">Age: 1 year</p>
+                            <div class="flex justify-between items-center mt-4">
+                                <p class="text-xl font-bold text-teal-600">EGP 1,449</p>
+                                <button onclick="addToCart({ id: 4, name: 'TOYS-EGYPT Baby Music Rocking Chair', price: 1449, image_url: 'https://m.media-amazon.com/images/I/61-E+C-xKcL._AC_SY300_SX300_.jpg' })" class="bg-teal-500 text-white px-4 py-2 rounded-full hover:bg-teal-600 transition-colors">Add to Cart</button>
+                            </div>
+                        </div>
                     </div>
-                      <!-- Product 97 -->
-                      <div class="product" data-section="قسم 1" data-price="550" data-gender="بنت" data-age="3">
-                        <img src="https://m.media-amazon.com/images/I/51wiwbEi0BL._AC_SX425_.jpg" alt="Product Image 10">
-                        <p>baby bouncer</p>
-                        <p>Price:700 pounds</p>
-                        <p>Category: ALL</p>
-                        <p>Age:1-3 years</p>
-                        <button onclick="addToCart({ id: 97,
-                         name: 'baby bouncer',
-                          price: 700,
-                         image_url: 'https://m.media-amazon.com/images/I/51wiwbEi0BL._AC_SX425_.jpg' })">Add to Cart</button>
+                </div>
+
+                <div class="product-card" data-category="Baby Products" data-price="450" data-gender="ALL">
+                     <div class="group block bg-white rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 overflow-hidden">
+                        <img src="https://m.media-amazon.com/images/I/61nQ3sxybBL.__AC_SY300_SX300_QL70_ML2_.jpg" alt="Bouncer Sky Baby Rocker" class="w-full h-56 object-cover">
+                        <div class="p-4">
+                            <h3 class="text-lg font-semibold text-gray-800 truncate">Bouncer Sky Baby Rocker</h3>
+                            <p class="text-gray-500 text-sm">Age: 1-4 year</p>
+                            <div class="flex justify-between items-center mt-4">
+                                <p class="text-xl font-bold text-teal-600">EGP 450</p>
+                                <button onclick="addToCart({ id: 5, name: 'Bouncer Sky Baby Rocker', price: 450, image_url: 'https://m.media-amazon.com/images/I/61nQ3sxybBL.__AC_SY300_SX300_QL70_ML2_.jpg' })" class="bg-teal-500 text-white px-4 py-2 rounded-full hover:bg-teal-600 transition-colors">Add to Cart</button>
+                            </div>
+                        </div>
                     </div>
-                      <!-- Product 98 -->
-                      <div class="product" data-section="قسم 2" data-price="550" data-gender="بنت" data-age="3">
-                        <img src="https://m.media-amazon.com/images/I/81GdX3OHpGL._AC_SX385_.jpg" alt="Product Image 10">
-                        <p>Cottonwoods Boats</p>
-                        <p>Price:455 pounds</p>
-                        <p>Category: Boys</p>
-                        <p>Age:3-6 Months</p>
-                        <button onclick="addToCart({ id: 98,
-                         name: 'Cottonwoods Boats & Sailor Print Jeans Baby Romper - Nautical Chic',
-                          price: 455,
-                         image_url: 'https://m.media-amazon.com/images/I/81GdX3OHpGL._AC_SX385_.jpg' })">Add to Cart</button>
+                </div>
+
+                <div class="product-card" data-category="Toys & Learning" data-price="450" data-gender="ALL">
+                    <div class="group block bg-white rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 overflow-hidden">
+                        <img src="https://m.media-amazon.com/images/I/51SCiSarzAL.__AC_SX300_SY300_QL70_ML2_.jpg" alt="Fantastic-Kids-Toys" class="w-full h-56 object-cover">
+                        <div class="p-4">
+                            <h3 class="text-lg font-semibold text-gray-800 truncate">Fantastic-Kids-Toys Piano Play Mat</h3>
+                            <p class="text-gray-500 text-sm">Age: 1-3 years</p>
+                            <div class="flex justify-between items-center mt-4">
+                                <p class="text-xl font-bold text-teal-600">EGP 450</p>
+                                <button onclick="addToCart({ id: 6, name: 'Fantastic-Kids-Toys Piano Play Mat', price: 450, image_url: 'https://m.media-amazon.com/images/I/51SCiSarzAL.__AC_SX300_SY300_QL70_ML2_.jpg' })" class="bg-teal-500 text-white px-4 py-2 rounded-full hover:bg-teal-600 transition-colors">Add to Cart</button>
+                            </div>
+                        </div>
                     </div>
-                      <!-- Product 99 -->
-                      <div class="product" data-section="قسم 2" data-price="550" data-gender="بنت" data-age="3">
-                        <img src="https://m.media-amazon.com/images/I/51o1Rhz2qsL._AC_SY445_.jpg" alt="Product Image 10">
-                        <p>Baby Overalls </p>
-                        <p>Price:230 pounds</p>
-                        <p>Category: Boys</p>
-                        <p>Age:New born</p>
-                        <button onclick="addToCart({ id: 99,
-                         name: 'Baby Overalls Newborn to 4 Months - Winter - Boys and Girls - Milton - Navy - Round Neck - Buttons',
-                          price: 230,
-                         image_url: 'https://m.media-amazon.com/images/I/51o1Rhz2qsL._AC_SY445_.jpg' })">Add to Cart</button>
+                </div>
+
+                <div class="product-card" data-category="Baby Products" data-price="999" data-gender="ALL">
+                     <div class="group block bg-white rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 overflow-hidden">
+                        <img src="https://m.media-amazon.com/images/I/413jc5p-XSL.__AC_SX300_SY300_QL70_ML2_.jpg" alt="Baby Push Walker" class="w-full h-56 object-cover">
+                        <div class="p-4">
+                            <h3 class="text-lg font-semibold text-gray-800 truncate">Baby Push Walker</h3>
+                            <p class="text-gray-500 text-sm">Age: 1-3 years</p>
+                            <div class="flex justify-between items-center mt-4">
+                                <p class="text-xl font-bold text-teal-600">EGP 999</p>
+                                <button onclick="addToCart({ id: 7, name: 'Baby Push Walker', price: 999, image_url: 'https://m.media-amazon.com/images/I/413jc5p-XSL.__AC_SX300_SY300_QL70_ML2_.jpg' })" class="bg-teal-500 text-white px-4 py-2 rounded-full hover:bg-teal-600 transition-colors">Add to Cart</button>
+                            </div>
+                        </div>
                     </div>
-                     <!-- Product 100 -->
-                     <div class="product" data-section="قسم 2" data-price="550" data-gender="بنت" data-age="3">
-                        <img src="https://m.media-amazon.com/images/I/71mZkrEty0L._AC_SX679_.jpg" alt="Product Image 10">
-                        <p>Cottonwoods Baby</p>
-                        <p>Price:300 pounds</p>
-                        <p>Category: Boys</p>
-                        <p>Age:New born</p>
-                        <button onclick="addToCart({ id: 100,
-                         name: 'Cottonwoods Baby Short Striped Onesie - Cute And Comfortable Loungewear',
-                          price: 300,
-                         image_url: 'https://m.media-amazon.com/images/I/71mZkrEty0L._AC_SX679_.jpg' })">Add to Cart</button>
+                </div>
+
+                <div class="product-card" data-category="Feeding" data-price="82" data-gender="ALL">
+                     <div class="group block bg-white rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 overflow-hidden">
+                        <img src="https://m.media-amazon.com/images/I/51dtFpDwEML._AC_SY741_.jpg" alt="Silicone Baby Food Bibs" class="w-full h-56 object-cover">
+                        <div class="p-4">
+                            <h3 class="text-lg font-semibold text-gray-800 truncate">Silicone Baby Food Bibs</h3>
+                            <p class="text-gray-500 text-sm">Age: 1-4 year</p>
+                            <div class="flex justify-between items-center mt-4">
+                                <p class="text-xl font-bold text-teal-600">EGP 82</p>
+                                <button onclick="addToCart({ id: 8, name: 'Silicone Baby Food Bibs', price: 82, image_url: 'https://m.media-amazon.com/images/I/51dtFpDwEML._AC_SY741_.jpg' })" class="bg-teal-500 text-white px-4 py-2 rounded-full hover:bg-teal-600 transition-colors">Add to Cart</button>
+                            </div>
+                        </div>
                     </div>
+                </div>
+
+                <div class="product-card" data-category="Fashion" data-price="350" data-gender="Boy">
+                     <div class="group block bg-white rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 overflow-hidden">
+                        <img src="https://m.media-amazon.com/images/I/71UHoDj5WeL._AC_SY679_.jpg" alt="junior Baby Boys Patterned Romper" class="w-full h-56 object-cover">
+                        <div class="p-4">
+                            <h3 class="text-lg font-semibold text-gray-800 truncate">junior Baby Boys Patterned Romper</h3>
+                            <p class="text-gray-500 text-sm">Age: 1-3 year</p>
+                            <div class="flex justify-between items-center mt-4">
+                                <p class="text-xl font-bold text-teal-600">EGP 350</p>
+                                <button onclick="addToCart({ id: 9, name: 'junior Baby Boys Patterned Romper', price: 350, image_url: 'https://m.media-amazon.com/images/I/71UHoDj5WeL._AC_SY679_.jpg' })" class="bg-teal-500 text-white px-4 py-2 rounded-full hover:bg-teal-600 transition-colors">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                 <div class="product-card" data-category="Fashion" data-price="350" data-gender="Girl">
+                     <div class="group block bg-white rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 overflow-hidden">
+                        <img src="https://m.media-amazon.com/images/I/41jzNRq2XtL.__AC_SX300_SY300_QL70_ML2_.jpg" alt="Girl Dress" class="w-full h-56 object-cover">
+                        <div class="p-4">
+                            <h3 class="text-lg font-semibold text-gray-800 truncate">Girl Dress</h3>
+                            <p class="text-gray-500 text-sm">Age: 2 years</p>
+                            <div class="flex justify-between items-center mt-4">
+                                <p class="text-xl font-bold text-teal-600">EGP 350</p>
+                                <button onclick="addToCart({ id: 10, name: 'Girl Dress', price: 350, image_url: 'https://m.media-amazon.com/images/I/41jzNRq2XtL.__AC_SX300_SY300_QL70_ML2_.jpg' })" class="bg-teal-500 text-white px-4 py-2 rounded-full hover:bg-teal-600 transition-colors">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                 <div class="product-card" data-category="Fashion" data-price="150" data-gender="Boy">
+                     <div class="group block bg-white rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 overflow-hidden">
+                        <img src="https://m.media-amazon.com/images/I/71VVBKnCjAL._AC_SX425_.jpg" alt="Junior printed accessories" class="w-full h-56 object-cover">
+                        <div class="p-4">
+                            <h3 class="text-lg font-semibold text-gray-800 truncate">Junior printed accessories for boy</h3>
+                            <p class="text-gray-500 text-sm">Age: 1-2 years</p>
+                            <div class="flex justify-between items-center mt-4">
+                                <p class="text-xl font-bold text-teal-600">EGP 150</p>
+                                <button onclick="addToCart({ id: 11, name: 'Junior printed accessories for boy', price: 150, image_url: 'https://m.media-amazon.com/images/I/71VVBKnCjAL._AC_SX425_.jpg' })" class="bg-teal-500 text-white px-4 py-2 rounded-full hover:bg-teal-600 transition-colors">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                 <div class="product-card" data-category="Fashion" data-price="270" data-gender="Boy">
+                     <div class="group block bg-white rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 overflow-hidden">
+                        <img src="https://m.media-amazon.com/images/I/41bbOFKBGyL._AC_SX569_.jpg" alt="boy set cotton" class="w-full h-56 object-cover">
+                        <div class="p-4">
+                            <h3 class="text-lg font-semibold text-gray-800 truncate">Boy set cotton of half-sleeved t-shirt</h3>
+                            <p class="text-gray-500 text-sm">Age: 3 years</p>
+                            <div class="flex justify-between items-center mt-4">
+                                <p class="text-xl font-bold text-teal-600">EGP 270</p>
+                                <button onclick="addToCart({ id: 12, name: 'Boy set cotton of half-sleeved t-shirt', price: 270, image_url: 'https://m.media-amazon.com/images/I/41bbOFKBGyL._AC_SX569_.jpg' })" class="bg-teal-500 text-white px-4 py-2 rounded-full hover:bg-teal-600 transition-colors">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="Baby Products" data-price="748" data-gender="ALL">
+                    <div class="group block bg-white rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 overflow-hidden">
+                        <img src="https://m.media-amazon.com/images/I/71E5sP+WfpS._AC_SY300_SX300_.jpg" alt="Moro stainless chair and bed" class="w-full h-56 object-cover">
+                        <div class="p-4">
+                            <h3 class="text-lg font-semibold text-gray-800 truncate">Moro stainless chair and bed</h3>
+                            <p class="text-gray-500 text-sm">Age: 1-3 years</p>
+                            <div class="flex justify-between items-center mt-4">
+                                <p class="text-xl font-bold text-teal-600">EGP 748</p>
+                                <button onclick="addToCart({ id: 13, name: 'Moro stainless chair and bed', price: 748, image_url: 'https://m.media-amazon.com/images/I/71E5sP+WfpS._AC_SY300_SX300_.jpg' })" class="bg-teal-500 text-white px-4 py-2 rounded-full hover:bg-teal-600 transition-colors">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                 <div class="product-card" data-category="Fashion" data-price="150" data-gender="Girl">
+                    <div class="group block bg-white rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 overflow-hidden">
+                        <img src="https://i.pinimg.com/564x/9f/7e/08/9f7e084ffa3fa03f301378e602cc03c1.jpg" alt="Baby Shoora baby Ballerina Shoes" class="w-full h-56 object-cover">
+                        <div class="p-4">
+                            <h3 class="text-lg font-semibold text-gray-800 truncate">Baby Shoora Ballerina Shoes</h3>
+                            <p class="text-gray-500 text-sm">Age: 3 years</p>
+                            <div class="flex justify-between items-center mt-4">
+                                <p class="text-xl font-bold text-teal-600">EGP 150</p>
+                                <button onclick="addToCart({ id: 14, name: 'Baby Shoora Ballerina Shoes', price: 150, image_url: 'https://i.pinimg.com/564x/9f/7e/08/9f7e084ffa3fa03f301378e602cc03c1.jpg' })" class="bg-teal-500 text-white px-4 py-2 rounded-full hover:bg-teal-600 transition-colors">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                 <div class="product-card" data-category="Baby Products" data-price="3200" data-gender="ALL">
+                    <div class="group block bg-white rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 overflow-hidden">
+                        <img src="https://m.media-amazon.com/images/I/61XV86CB5xL.__AC_SX300_SY300_QL70_ML2_.jpg" alt="Blue Baby Bouncer" class="w-full h-56 object-cover">
+                        <div class="p-4">
+                            <h3 class="text-lg font-semibold text-gray-800 truncate">Blue Baby Bouncer Hanging in Ceiling</h3>
+                            <p class="text-gray-500 text-sm">Age: 1-3 years</p>
+                            <div class="flex justify-between items-center mt-4">
+                                <p class="text-xl font-bold text-teal-600">EGP 3,200</p>
+                                <button onclick="addToCart({ id: 15, name: 'Blue Baby Bouncer Hanging in Ceiling', price: 3200, image_url: 'https://m.media-amazon.com/images/I/61XV86CB5xL.__AC_SX300_SY300_QL70_ML2_.jpg' })" class="bg-teal-500 text-white px-4 py-2 rounded-full hover:bg-teal-600 transition-colors">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                 <div class="product-card" data-category="Baby Products" data-price="294" data-gender="ALL">
+                    <div class="group block bg-white rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 overflow-hidden">
+                        <img src="https://m.media-amazon.com/images/I/51BjxYXtTPL._AC_SX679_.jpg" alt="SKADE Baby Activity Jumper" class="w-full h-56 object-cover">
+                        <div class="p-4">
+                            <h3 class="text-lg font-semibold text-gray-800 truncate">SKADE Baby Activity Jumper & Bouncer</h3>
+                            <p class="text-gray-500 text-sm">Age: 1-3 years</p>
+                            <div class="flex justify-between items-center mt-4">
+                                <p class="text-xl font-bold text-teal-600">EGP 294</p>
+                                <button onclick="addToCart({ id: 16, name: 'SKADE Baby Activity Jumper & Bouncer', price: 294, image_url: 'https://m.media-amazon.com/images/I/51BjxYXtTPL._AC_SX679_.jpg' })" class="bg-teal-500 text-white px-4 py-2 rounded-full hover:bg-teal-600 transition-colors">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="Fashion" data-price="120" data-gender="ALL">
+                     <div class="group block bg-white rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 overflow-hidden">
+                        <img src="https://m.media-amazon.com/images/I/61SZ1z+m1-L._AC_SX522_.jpg" alt="Elsayaad Unisex Kids Underwear Set" class="w-full h-56 object-cover">
+                        <div class="p-4">
+                            <h3 class="text-lg font-semibold text-gray-800 truncate">Elsayaad Unisex Kids Underwear Set</h3>
+                            <p class="text-gray-500 text-sm">Age: 3 years</p>
+                            <div class="flex justify-between items-center mt-4">
+                                <p class="text-xl font-bold text-teal-600">EGP 120</p>
+                                <button onclick="addToCart({ id: 17, name: 'Elsayaad Unisex Kids Underwear Set', price: 120, image_url: 'https://m.media-amazon.com/images/I/61SZ1z+m1-L._AC_SX522_.jpg' })" class="bg-teal-500 text-white px-4 py-2 rounded-full hover:bg-teal-600 transition-colors">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="Safety & Care" data-price="210" data-gender="ALL">
+                     <div class="group block bg-white rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 overflow-hidden">
+                        <img src="https://m.media-amazon.com/images/I/61fMGjRfWfL._AC_SX679_.jpg" alt="Tyuodna Baby Helmet" class="w-full h-56 object-cover">
+                        <div class="p-4">
+                            <h3 class="text-lg font-semibold text-gray-800 truncate">Tyuodna Baby Helmet from 6 Months</h3>
+                            <p class="text-gray-500 text-sm">Age: 3 years</p>
+                            <div class="flex justify-between items-center mt-4">
+                                <p class="text-xl font-bold text-teal-600">EGP 210</p>
+                                <button onclick="addToCart({ id: 18, name: 'Tyuodna Baby Helmet from 6 Months', price: 210, image_url: 'https://m.media-amazon.com/images/I/61fMGjRfWfL._AC_SX679_.jpg' })" class="bg-teal-500 text-white px-4 py-2 rounded-full hover:bg-teal-600 transition-colors">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                 <div class="product-card" data-category="Toys & Learning" data-price="399" data-gender="ALL">
+                    <div class="group block bg-white rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 overflow-hidden">
+                        <img src="https://m.media-amazon.com/images/I/618nSpUuHXL.__AC_SX300_SY300_QL70_ML2_.jpg" alt="Montessori Toys" class="w-full h-56 object-cover">
+                        <div class="p-4">
+                            <h3 class="text-lg font-semibold text-gray-800 truncate">Montessori Toys for 1 Year Old</h3>
+                            <p class="text-gray-500 text-sm">Age: 1-2 years</p>
+                            <div class="flex justify-between items-center mt-4">
+                                <p class="text-xl font-bold text-teal-600">EGP 399</p>
+                                <button onclick="addToCart({ id: 19, name: 'Montessori Toys for 1 Year Old', price: 399, image_url: 'https://m.media-amazon.com/images/I/618nSpUuHXL.__AC_SX300_SY300_QL70_ML2_.jpg' })" class="bg-teal-500 text-white px-4 py-2 rounded-full hover:bg-teal-600 transition-colors">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="Toys & Learning" data-price="874" data-gender="ALL">
+                     <div class="group block bg-white rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 overflow-hidden">
+                        <img src="https://m.media-amazon.com/images/I/41eAK830MGL.__AC_SY300_SX300_QL70_ML2_.jpg" alt="Baby Car Seat Toys" class="w-full h-56 object-cover">
+                        <div class="p-4">
+                            <h3 class="text-lg font-semibold text-gray-800 truncate">TOYS-EGYPT Baby Car Seat Toys</h3>
+                            <p class="text-gray-500 text-sm">Age: 1-2 years</p>
+                            <div class="flex justify-between items-center mt-4">
+                                <p class="text-xl font-bold text-teal-600">EGP 874</p>
+                                <button onclick="addToCart({ id: 20, name: 'TOYS-EGYPT Baby Car Seat Toys', price: 874, image_url: 'https://m.media-amazon.com/images/I/41eAK830MGL.__AC_SY300_SX300_QL70_ML2_.jpg' })" class="bg-teal-500 text-white px-4 py-2 rounded-full hover:bg-teal-600 transition-colors">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="Fashion" data-price="399" data-gender="Girl">
+                    <div class="group block bg-white rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 overflow-hidden">
+                        <img src="https://i.pinimg.com/564x/ee/4c/d0/ee4cd03eb173ba1f92c49c62a628b1f9.jpg" alt="JINJA Infant Baby GIRL SNEAKERS" class="w-full h-56 object-cover">
+                        <div class="p-4">
+                            <h3 class="text-lg font-semibold text-gray-800 truncate">JINJA Infant Baby GIRL SNEAKERS</h3>
+                            <p class="text-gray-500 text-sm">Age: 3 years</p>
+                            <div class="flex justify-between items-center mt-4">
+                                <p class="text-xl font-bold text-teal-600">EGP 399</p>
+                                <button onclick="addToCart({ id: 21, name: 'JINJA Infant Baby GIRL SNEAKERS', price: 399, image_url: 'https://i.pinimg.com/564x/ee/4c/d0/ee4cd03eb173ba1f92c49c62a628b1f9.jpg' })" class="bg-teal-500 text-white px-4 py-2 rounded-full hover:bg-teal-600 transition-colors">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                 <div class="product-card" data-category="Toys & Learning" data-price="40" data-gender="ALL">
+                    <div class="group block bg-white rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 overflow-hidden">
+                        <img src="https://m.media-amazon.com/images/I/51zeMKpsMOL.__AC_SX300_SY300_QL70_ML2_.jpg" alt="Play-Doh Happytoys" class="w-full h-56 object-cover">
+                        <div class="p-4">
+                            <h3 class="text-lg font-semibold text-gray-800 truncate">Play-Doh Happytoys Rubber Duck</h3>
+                            <p class="text-gray-500 text-sm">Age: 1-2 years</p>
+                            <div class="flex justify-between items-center mt-4">
+                                <p class="text-xl font-bold text-teal-600">EGP 40</p>
+                                <button onclick="addToCart({ id: 22, name: 'Play-Doh Happytoys Rubber Duck', price: 40, image_url: 'https://m.media-amazon.com/images/I/51zeMKpsMOL.__AC_SX300_SY300_QL70_ML2_.jpg' })" class="bg-teal-500 text-white px-4 py-2 rounded-full hover:bg-teal-600 transition-colors">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                 <div class="product-card" data-category="Fashion" data-price="139" data-gender="ALL">
+                    <div class="group block bg-white rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 overflow-hidden">
+                        <img src="https://m.media-amazon.com/images/I/31IcqTbcFHL._AC_SX425_.jpg" alt="cotton tassels" class="w-full h-56 object-cover">
+                        <div class="p-4">
+                            <h3 class="text-lg font-semibold text-gray-800 truncate">Cotton tassels set for kids</h3>
+                            <p class="text-gray-500 text-sm">Age: 1-3 years</p>
+                            <div class="flex justify-between items-center mt-4">
+                                <p class="text-xl font-bold text-teal-600">EGP 139</p>
+                                <button onclick="addToCart({ id: 23, name: 'Cotton tassels set for kids', price: 139, image_url: 'https://m.media-amazon.com/images/I/31IcqTbcFHL._AC_SX425_.jpg' })" class="bg-teal-500 text-white px-4 py-2 rounded-full hover:bg-teal-600 transition-colors">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="Fashion" data-price="339" data-gender="Girl">
+                    <div class="group block bg-white rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 overflow-hidden">
+                        <img src="https://m.media-amazon.com/images/I/618bdb3Wc+L._AC_SY741_.jpg" alt="junior Baby Girls Patterned Romper" class="w-full h-56 object-cover">
+                        <div class="p-4">
+                            <h3 class="text-lg font-semibold text-gray-800 truncate">junior Baby Girls Patterned Romper</h3>
+                            <p class="text-gray-500 text-sm">Age: 1-3 years</p>
+                            <div class="flex justify-between items-center mt-4">
+                                <p class="text-xl font-bold text-teal-600">EGP 339</p>
+                                <button onclick="addToCart({ id: 24, name: 'junior Baby Girls Patterned Romper', price: 339, image_url: 'https://m.media-amazon.com/images/I/618bdb3Wc+L._AC_SY741_.jpg' })" class="bg-teal-500 text-white px-4 py-2 rounded-full hover:bg-teal-600 transition-colors">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                 <div class="product-card" data-category="Fashion" data-price="779" data-gender="Boy">
+                    <div class="group block bg-white rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 overflow-hidden">
+                        <img src="https://m.media-amazon.com/images/I/71EDNpBLoEL._AC_SY550_.jpg" alt="DeFacto Baby Boys Regular Fit Set" class="w-full h-56 object-cover">
+                        <div class="p-4">
+                            <h3 class="text-lg font-semibold text-gray-800 truncate">DeFacto Baby Boys Regular Fit Set</h3>
+                            <p class="text-gray-500 text-sm">Age: 1-3 years</p>
+                            <div class="flex justify-between items-center mt-4">
+                                <p class="text-xl font-bold text-teal-600">EGP 779</p>
+                                <button onclick="addToCart({ id: 25, name: 'DeFacto Baby Boys Regular Fit Set', price: 779, image_url: 'https://m.media-amazon.com/images/I/71EDNpBLoEL._AC_SY550_.jpg' })" class="bg-teal-500 text-white px-4 py-2 rounded-full hover:bg-teal-600 transition-colors">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                 <div class="product-card" data-category="Fashion" data-price="433" data-gender="ALL">
+                    <div class="group block bg-white rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 overflow-hidden">
+                        <img src="https://m.media-amazon.com/images/I/71WIA-Wl6hL._AC_SX679_.jpg" alt="Baby Shoora Unisex LEOTARD" class="w-full h-56 object-cover">
+                        <div class="p-4">
+                            <h3 class="text-lg font-semibold text-gray-800 truncate">Baby Shoora Unisex LEOTARD</h3>
+                            <p class="text-gray-500 text-sm">Age: 1-3 years</p>
+                            <div class="flex justify-between items-center mt-4">
+                                <p class="text-xl font-bold text-teal-600">EGP 433</p>
+                                <button onclick="addToCart({ id: 26, name: 'Baby Shoora Unisex LEOTARD', price: 433, image_url: 'https://m.media-amazon.com/images/I/71WIA-Wl6hL._AC_SX679_.jpg' })" class="bg-teal-500 text-white px-4 py-2 rounded-full hover:bg-teal-600 transition-colors">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                 <div class="product-card" data-category="Fashion" data-price="679" data-gender="Boy">
+                    <div class="group block bg-white rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 overflow-hidden">
+                        <img src="https://m.media-amazon.com/images/I/61fazqhD9pL._AC_SX679_.jpg" alt="Baby Shoora Boys Set Of 6 Pieces" class="w-full h-56 object-cover">
+                        <div class="p-4">
+                            <h3 class="text-lg font-semibold text-gray-800 truncate">Baby Shoora Boys Set Of 6 Pieces</h3>
+                            <p class="text-gray-500 text-sm">Age: 1-3 years</p>
+                            <div class="flex justify-between items-center mt-4">
+                                <p class="text-xl font-bold text-teal-600">EGP 679</p>
+                                <button onclick="addToCart({ id: 27, name: 'Baby Shoora Boys Set Of 6 Pieces', price: 679, image_url: 'https://m.media-amazon.com/images/I/61fazqhD9pL._AC_SX679_.jpg' })" class="bg-teal-500 text-white px-4 py-2 rounded-full hover:bg-teal-600 transition-colors">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                 <div class="product-card" data-category="Toys & Learning" data-price="113" data-gender="ALL">
+                    <div class="group block bg-white rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 overflow-hidden">
+                        <img src="https://m.media-amazon.com/images/I/61bN5We7-xL._AC_SX679_.jpg" alt="Other Baby Rattles Bag Set" class="w-full h-56 object-cover">
+                        <div class="p-4">
+                            <h3 class="text-lg font-semibold text-gray-800 truncate">Other Baby Rattles Bag Set</h3>
+                            <p class="text-gray-500 text-sm">Age: 1-3 years</p>
+                            <div class="flex justify-between items-center mt-4">
+                                <p class="text-xl font-bold text-teal-600">EGP 113</p>
+                                <button onclick="addToCart({ id: 28, name: 'Other Baby Rattles Bag Set', price: 113, image_url: 'https://m.media-amazon.com/images/I/61bN5We7-xL._AC_SX679_.jpg' })" class="bg-teal-500 text-white px-4 py-2 rounded-full hover:bg-teal-600 transition-colors">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                 <div class="product-card" data-category="Toys & Learning" data-price="98" data-gender="ALL">
+                    <div class="group block bg-white rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 overflow-hidden">
+                        <img src="https://m.media-amazon.com/images/I/51lj6QBR95L.__AC_SY300_SX300_QL70_ML2_.jpg" alt="QiaoWa Small Hammer Box" class="w-full h-56 object-cover">
+                        <div class="p-4">
+                            <h3 class="text-lg font-semibold text-gray-800 truncate">QiaoWa Small Hammer Box</h3>
+                            <p class="text-gray-500 text-sm">Age: 1-3 years</p>
+                            <div class="flex justify-between items-center mt-4">
+                                <p class="text-xl font-bold text-teal-600">EGP 98</p>
+                                <button onclick="addToCart({ id: 29, name: 'QiaoWa Small Hammer Box', price: 98, image_url: 'https://m.media-amazon.com/images/I/51lj6QBR95L.__AC_SY300_SX300_QL70_ML2_.jpg' })" class="bg-teal-500 text-white px-4 py-2 rounded-full hover:bg-teal-600 transition-colors">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="Toys & Learning" data-price="190" data-gender="ALL">
+                     <div class="group block bg-white rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 overflow-hidden">
+                        <img src="https://m.media-amazon.com/images/I/51iv7QuK3iL.__AC_SX300_SY300_QL70_ML2_.jpg" alt="Toy Imagine Ramp Roll" class="w-full h-56 object-cover">
+                        <div class="p-4">
+                            <h3 class="text-lg font-semibold text-gray-800 truncate">Toy Imagine Ramp Roll</h3>
+                            <p class="text-gray-500 text-sm">Age: 1-3 years</p>
+                            <div class="flex justify-between items-center mt-4">
+                                <p class="text-xl font-bold text-teal-600">EGP 190</p>
+                                <button onclick="addToCart({ id: 30, name: 'Toy Imagine Ramp Roll', price: 190, image_url: 'https://m.media-amazon.com/images/I/51iv7QuK3iL.__AC_SX300_SY300_QL70_ML2_.jpg' })" class="bg-teal-500 text-white px-4 py-2 rounded-full hover:bg-teal-600 transition-colors">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="Safety & Care" data-price="91" data-gender="ALL">
+                    <div class="group block bg-white rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 overflow-hidden">
+                        <img src="https://m.media-amazon.com/images/I/81m+HTPf4pL._AC_SX425_.jpg" alt="Safari Baby Water Teether" class="w-full h-56 object-cover">
+                        <div class="p-4">
+                            <h3 class="text-lg font-semibold text-gray-800 truncate">Safari Baby Water Teether</h3>
+                            <p class="text-gray-500 text-sm">Age: 1-3 years</p>
+                            <div class="flex justify-between items-center mt-4">
+                                <p class="text-xl font-bold text-teal-600">EGP 91</p>
+                                <button onclick="addToCart({ id: 31, name: 'Safari Baby Water Teether', price: 91, image_url: 'https://m.media-amazon.com/images/I/81m+HTPf4pL._AC_SX425_.jpg' })" class="bg-teal-500 text-white px-4 py-2 rounded-full hover:bg-teal-600 transition-colors">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                 <div class="product-card" data-category="Fashion" data-price="500" data-gender="Girl">
+                    <div class="group block bg-white rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 overflow-hidden">
+                        <img src="https://m.media-amazon.com/images/I/611KB-KNDgL._AC_SX569_.jpg" alt="Waterproof Diaper Skirt" class="w-full h-56 object-cover">
+                        <div class="p-4">
+                            <h3 class="text-lg font-semibold text-gray-800 truncate">Maeau Waterproof Diaper Skirt</h3>
+                            <p class="text-gray-500 text-sm">Age: 1-4 years</p>
+                            <div class="flex justify-between items-center mt-4">
+                                <p class="text-xl font-bold text-teal-600">EGP 500</p>
+                                <button onclick="addToCart({ id: 32, name: 'Maeau Waterproof Diaper Skirt', price: 500, image_url: 'https://m.media-amazon.com/images/I/611KB-KNDgL._AC_SX569_.jpg' })" class="bg-teal-500 text-white px-4 py-2 rounded-full hover:bg-teal-600 transition-colors">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-card" data-category="Safety & Care" data-price="75" data-gender="ALL">
+                    <div class="group block bg-white rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 overflow-hidden">
+                        <img src="https://m.media-amazon.com/images/I/61AfxrDvWiL._AC_SX425_.jpg" alt="Bubbles Tatinah, pacifier" class="w-full h-56 object-cover">
+                        <div class="p-4">
+                            <h3 class="text-lg font-semibold text-gray-800 truncate">Bubbles Tatinah, pacifier</h3>
+                            <p class="text-gray-500 text-sm">Age: 1-3 years</p>
+                            <div class="flex justify-between items-center mt-4">
+                                <p class="text-xl font-bold text-teal-600">EGP 75</p>
+                                <button onclick="addToCart({ id: 33, name: 'Bubbles Tatinah, pacifier', price: 75, image_url: 'https://m.media-amazon.com/images/I/61AfxrDvWiL._AC_SX425_.jpg' })" class="bg-teal-500 text-white px-4 py-2 rounded-full hover:bg-teal-600 transition-colors">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="Feeding" data-price="545" data-gender="ALL">
+                    <div class="group block bg-white rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 overflow-hidden">
+                        <img src="https://m.media-amazon.com/images/I/714i9+LOt-L._AC_SY355_.jpg" alt="NAN Optipro Stage 3" class="w-full h-56 object-cover">
+                        <div class="p-4">
+                            <h3 class="text-lg font-semibold text-gray-800 truncate">NAN Optipro Stage 3 (800g)</h3>
+                            <p class="text-gray-500 text-sm">Age: 1-3 years</p>
+                            <div class="flex justify-between items-center mt-4">
+                                <p class="text-xl font-bold text-teal-600">EGP 545</p>
+                                <button onclick="addToCart({ id: 34, name: 'NAN Optipro Stage 3 (800g)', price: 545, image_url: 'https://m.media-amazon.com/images/I/714i9+LOt-L._AC_SY355_.jpg' })" class="bg-teal-500 text-white px-4 py-2 rounded-full hover:bg-teal-600 transition-colors">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+               
+                <div class="product-card" data-category="Feeding" data-price="250" data-gender="ALL">
+                    <div class="group block bg-white rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 overflow-hidden">
+                        <img src="https://m.media-amazon.com/images/I/81k5f2n0S8L._AC_SX679_.jpg" alt="Hero Baby Nutradefense Stage 3" class="w-full h-56 object-cover">
+                        <div class="p-4">
+                            <h3 class="text-lg font-semibold text-gray-800 truncate">Hero Baby Nutradefense Stage 3 (800g)</h3>
+                            <p class="text-gray-500 text-sm">Age: 1-3 years</p>
+                            <div class="flex justify-between items-center mt-4">
+                                <p class="text-xl font-bold text-teal-600">EGP 250</p>
+                                <button onclick="addToCart({ id: 35, name: 'Hero Baby Nutradefense Stage 3 (800g)', price: 250, image_url: 'https://m.media-amazon.com/images/I/81k5f2n0S8L._AC_SX679_.jpg' })" class="bg-teal-500 text-white px-4 py-2 rounded-full hover:bg-teal-600 transition-colors">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </main>
 
-    <div class="navbar">
-        <div class="navbar-item" onclick="filterProducts('قسم 1')">Activity & Entertainment</div>
-        <div class="navbar-item" onclick="filterProducts('قسم 2')">Baby Clothing & Shoes</div>
-        <div class="navbar-item" onclick="filterProducts('قسم 3')">Baby & Toddler Toys</div>
-        <div class="navbar-item" onclick="filterProducts('قسم 4')">Pacifiers & Teethers</div>
-        <div class="navbar-item" onclick="filterProducts('قسم 5')">Baby Foods</div>
+    <footer class="bg-teal-800 text-white mt-16">
+        <div class="container mx-auto px-6 py-8 text-center">
+            <p>&copy; 2024 Kids World. All Rights Reserved.</p>
+            <div class="flex justify-center gap-6 mt-4">
+                <a href="#" class="hover:text-teal-300 transition"><i class="fab fa-facebook-f fa-lg"></i></a>
+                <a href="#" class="hover:text-teal-300 transition"><i class="fab fa-instagram fa-lg"></i></a>
+                <a href="#" class="hover:text-teal-300 transition"><i class="fab fa-twitter fa-lg"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <div id="toast-notification" class="fixed bottom-5 right-5 bg-green-500 text-white py-2 px-5 rounded-lg shadow-lg transform translate-y-20 opacity-0 transition-all duration-300">
+        Item added to cart!
     </div>
 
     <script>
-        function addToCart(product) {
-    const cart = JSON.parse(localStorage.getItem('cart')) || [];
-
-  
-    cart.push({
-        id: product.id,
-        name: product.name,
-        price: product.price,
-        image: product.image_url || product.url 
-    });
-
-    localStorage.setItem('cart', JSON.stringify(cart));
-}
-//
-
-    document.addEventListener("DOMContentLoaded", function() {
-        const products = document.querySelectorAll('.product');
-        products.forEach((product, index) => {
-            product.style.animationDelay = `${index * 0.0}s`; 
-            product.classList.add('fadeIn'); 
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
         });
-    });
-    function filterProducts(section) {
-        const products = document.querySelectorAll('.product');
-        products.forEach(product => {
-            const productSection = product.getAttribute('data-section');
-            product.style.display = (section === productSection || section === undefined) ? 'block' : 'none';
-        });
-    }
 
-    function addToCart(product) {
-        const cart = JSON.parse(localStorage.getItem('cart')) || [];
-        cart.push({
-            id: product.id,
-            name: product.name,
-            price: product.price,
-            image: product.image_url
-        });
-        localStorage.setItem('cart', JSON.stringify(cart));
-    }
-    function addToCart(product) {
-    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+       
+        const categoryFilter = document.getElementById('category-filter');
+        const genderFilter = document.getElementById('gender-filter');
+        const sortFilter = document.getElementById('sort-filter');
+        const productGrid = document.getElementById('product-grid');
+        const productCards = Array.from(productGrid.getElementsByClassName('product-card'));
 
+        function applyFiltersAndSort() {
+            const categoryValue = categoryFilter.value;
+            const genderValue = genderFilter.value;
+            const sortValue = sortFilter.value;
 
-    cart.push({
-        id: product.id,
-        name: product.name,
-        price: product.price,
-        image: product.image_url || product.url 
-    });
+            let filteredCards = productCards.filter(card => {
+                const cardCategory = card.dataset.category;
+                const cardGender = card.dataset.gender;
+                
+                const categoryMatch = categoryValue === 'all' || cardCategory === categoryValue;
+                const genderMatch = genderValue === 'all' || cardGender === genderValue;
 
-    localStorage.setItem('cart', JSON.stringify(cart));
-}
-const images = document.querySelectorAll('.image-container');
-        let currentIndex = 0;
+                return categoryMatch && genderMatch;
+            });
 
-        function showNextImage() {
-          
-            images[currentIndex].classList.remove('active');
-         
-            currentIndex = (currentIndex + 1) % images.length;
-        
-            images[currentIndex].classList.add('active');
-        }
-
-   
-        setInterval(showNextImage, 3000);
-        function addToCart(product) {
-    const cart = JSON.parse(localStorage.getItem('cart')) || [];
-
-   
-    cart.push({
-        id: product.id,
-        name: product.name,
-        price: product.price,
-        image: product.image_url || product.url 
-    });
-
-    localStorage.setItem('cart', JSON.stringify(cart));
-}
-function addToCart(product) {
-            const button = event.target;
-            const cart = JSON.parse(localStorage.getItem('cart')) || [];
-            if (button.innerHTML === 'Add to Cart') {
-             
-                button.innerHTML = 'Added to Cart';
-                button.style.backgroundColor = 'green';
-                button.style.color = 'white';
-
-            
-                console.log('Product added to cart:', product);
+            if (sortValue === 'price-asc') {
+                filteredCards.sort((a, b) => parseFloat(a.dataset.price) - parseFloat(b.dataset.price));
+            } else if (sortValue === 'price-desc') {
+                filteredCards.sort((a, b) => parseFloat(b.dataset.price) - parseFloat(a.dataset.price));
             }
-            cart.push({
-        id: product.id,
-        name: product.name,
-        price: product.price,
-        image: product.image_url || product.url 
-    });
 
-    localStorage.setItem('cart', JSON.stringify(cart));
+            productGrid.innerHTML = '';
+            filteredCards.forEach(card => {
+                productGrid.appendChild(card);
+            });
         }
+
+        categoryFilter.addEventListener('change', applyFiltersAndSort);
+        genderFilter.addEventListener('change', applyFiltersAndSort);
+        sortFilter.addEventListener('change', applyFiltersAndSort);
+
+        // Add to Cart Logic
+        function addToCart(product) {
+            let cart = JSON.parse(localStorage.getItem('kidsWorldCart')) || [];
+            const existingProductIndex = cart.findIndex(item => item.id === product.id);
+
+            if (existingProductIndex > -1) {
+                cart[existingProductIndex].quantity += 1;
+            } else {
+                cart.push({ ...product, quantity: 1 });
+            }
+
+            localStorage.setItem('kidsWorldCart', JSON.stringify(cart));
+            showToast(product.name);
+        }
+
+        function showToast(productName) {
+            const toast = document.getElementById('toast-notification');
+            toast.textContent = `"${productName}" added to cart!`;
+            toast.classList.remove('translate-y-20', 'opacity-0');
+            toast.classList.add('translate-y-0', 'opacity-100');
+
+            setTimeout(() => {
+                toast.classList.add('translate-y-20', 'opacity-0');
+                toast.classList.remove('translate-y-0', 'opacity-100');
+            }, 3000);
+        }
+
     </script>
 </body>
 </html>
