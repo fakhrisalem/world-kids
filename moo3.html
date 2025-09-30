@@ -1,1 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kids Shoes - Kids World</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Playball&display=swap" rel="stylesheet">
+    <style>
+        .font-cursive {
+            font-family: 'Playball', cursive;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #fdfaf5;
+        }
+        .slideshow-container {
+            max-width: 600px;
+            position: relative;
+            margin: auto;
+            height: 400px; 
+        }
+        .slide-image {
+            display: none;
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 1rem;
+            animation: fade 1.5s;
+        }
+        .slide-image.active {
+            display: block;
+        }
+        @keyframes fade {
+            from {opacity: .4}
+            to {opacity: 1}
+        }
+    </style>
+</head>
+<body class="text-gray-800">
 
+    <header class="bg-teal-100/80 backdrop-blur-sm shadow-md fixed top-0 left-0 right-0 z-50">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="home.html" class="flex items-center gap-3">
+                <img src="https://i.pinimg.com/736x/6b/90/b5/6b90b55c618ab58f09c2e38151b708e7.jpg" alt="Logo" class="h-12 w-12 rounded-full border-2 border-teal-500">
+                <span class="text-3xl font-cursive text-teal-800">Kids World</span>
+            </a>
+            
+            <nav class="hidden md:flex items-center space-x-6">
+                <a href="home.html" class="text-gray-700 hover:text-teal-600 transition duration-300">Home</a>
+                <a href="about.html" class="text-gray-700 hover:text-teal-600 transition duration-300">About</a>
+                <a href="products.html" class="text-teal-600 font-semibold transition duration-300">Products</a>
+            </nav>
+
+            <div class="flex items-center gap-4">
+                 <form action="search.html" method="get" class="hidden md:block relative">
+                    <input type="text" name="search" placeholder="Search..." class="rounded-full py-1.5 px-4 w-40 focus:outline-none focus:ring-2 focus:ring-teal-400 transition">
+                    <button type="submit" class="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400">
+                        <i class="fa fa-search"></i>
+                    </button>
+                </form>
+                <a href="login.html" class="text-gray-700 hover:text-teal-600 transition duration-300"><i class="fas fa-user-circle fa-lg"></i></a>
+                <a href="cart.html" class="relative text-gray-700 hover:text-teal-600">
+                    <i class="fas fa-shopping-cart fa-lg"></i>
+                </a>
+                <button id="menu-btn" class="md:hidden text-gray-700 focus:outline-none">
+                    <i class="fas fa-bars fa-lg"></i>
+                </button>
+            </div>
+        </div>
+        
+        <div id="mobile-menu" class="hidden md:hidden px-6 pt-2 pb-4 space-y-3">
+            <a href="home.html" class="block text-gray-700 hover:text-teal-600">Home</a>
+            <a href="about.html" class="block text-gray-700 hover:text-teal-600">About</a>
+            <a href="products.html" class="block text-teal-600 font-semibold">Products</a>
+            <form action="search.html" method="get" class="relative pt-4">
+                <input type="text" name="search" placeholder="Search..." class="rounded-full py-1.5 px-4 w-full focus:outline-none focus:ring-2 focus:ring-teal-400">
+                 <button type="submit" class="absolute right-4 top-1/2 text-gray-400">
+                    <i class="fa fa-search"></i>
+                </button>
+            </form>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 sm:px-6 lg:px-8 pt-24">
+
+        <section class="slideshow-container mb-12">
+            <img class="slide-image active" src="https://i.pinimg.com/564x/d1/83/25/d18325cd61ca8fc9aa90848b5e6280ae.jpg" alt="Image 1" />
+            <img class="slide-image" src="https://i.pinimg.com/564x/f5/5b/68/f55b68c49a94f670b678e2190d42b9dc.jpg" alt="Image 2" />
+            <img class="slide-image" src="https://i.pinimg.com/564x/b4/f5/38/b4f5380c1e9b9af110283a0a49e8133a.jpg" alt="Image 3" />
+        </section>
+
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold text-center text-teal-800 mb-8">Girls Shoes</h2>
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
+                <div class="bg-white rounded-lg shadow-md p-4 flex flex-col items-center text-center transition-transform transform hover:-translate-y-2">
+                    <img src="https://m.media-amazon.com/images/I/71NedIH7krL._AC_SY500_.jpg" alt="PUMA Unisex Baby Sneaker" class="h-48 object-contain mb-4">
+                    <h3 class="font-semibold text-sm flex-grow">PUMA Unisex Baby Graviton AC Inf Sneaker</h3>
+                    <p class="text-teal-600 font-bold my-2">EGP 2,620</p>
+                    <button onclick="addToCart({id: 801, name: 'PUMA unisex-baby Graviton AC Inf Frosty Pink', price: 2620, image_url: 'https://m.media-amazon.com/images/I/71NedIH7krL._AC_SY500_.jpg'}, event)" class="mt-auto w-full bg-teal-500 text-white py-2 px-4 rounded-full font-semibold hover:bg-teal-600 transition-colors">Add to Cart</button>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-4 flex flex-col items-center text-center transition-transform transform hover:-translate-y-2">
+                    <img src="https://m.media-amazon.com/images/I/61dDNumB71L._AC_SX500_.jpg" alt="Montero Girls Canvas Shoes" class="h-48 object-contain mb-4">
+                    <h3 class="font-semibold text-sm flex-grow">Montero Girls Canvas Casual Shoes 223</h3>
+                    <p class="text-teal-600 font-bold my-2">EGP 419</p>
+                    <button onclick="addToCart({id: 802, name: 'Montero Girls Canvas Casual Shoes 223', price: 419, image_url: 'https://m.media-amazon.com/images/I/61dDNumB71L._AC_SX500_.jpg'}, event)" class="mt-auto w-full bg-teal-500 text-white py-2 px-4 rounded-full font-semibold hover:bg-teal-600 transition-colors">Add to Cart</button>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-4 flex flex-col items-center text-center transition-transform transform hover:-translate-y-2">
+                    <img src="https://m.media-amazon.com/images/I/61HX169ZOSL._AC_SY500_.jpg" alt="Zelda Girls Sneaker" class="h-48 object-contain mb-4">
+                    <h3 class="font-semibold text-sm flex-grow">Zelda girls Zelda 506 Sneaker</h3>
+                    <p class="text-teal-600 font-bold my-2">EGP 499</p>
+                    <button onclick="addToCart({id: 803, name: 'Zelda girls Zelda 506 Sneaker', price: 499, image_url: 'https://m.media-amazon.com/images/I/61HX169ZOSL._AC_SY500_.jpg'}, event)" class="mt-auto w-full bg-teal-500 text-white py-2 px-4 rounded-full font-semibold hover:bg-teal-600 transition-colors">Add to Cart</button>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-4 flex flex-col items-center text-center transition-transform transform hover:-translate-y-2">
+                    <img src="https://m.media-amazon.com/images/I/71QiedmNnML._AC_SY500_.jpg" alt="Jellies Girl Mini Boots" class="h-48 object-contain mb-4">
+                    <h3 class="font-semibold text-sm flex-grow">Jellies Girl Mini Children Boots</h3>
+                    <p class="text-teal-600 font-bold my-2">EGP 550</p>
+                    <button onclick="addToCart({id: 804, name: 'Jellies Girl Mini Children Boots', price: 550, image_url: 'https://m.media-amazon.com/images/I/71QiedmNnML._AC_SY500_.jpg'}, event)" class="mt-auto w-full bg-teal-500 text-white py-2 px-4 rounded-full font-semibold hover:bg-teal-600 transition-colors">Add to Cart</button>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-4 flex flex-col items-center text-center transition-transform transform hover:-translate-y-2">
+                    <img src="https://m.media-amazon.com/images/I/71B1QQURi7L._AC_SY500_.jpg" alt="Generic Flat Shoes" class="h-48 object-contain mb-4">
+                    <h3 class="font-semibold text-sm flex-grow">Generic Unisex-Adult Flat Shoes</h3>
+                    <p class="text-teal-600 font-bold my-2">EGP 1,250</p>
+                    <button onclick="addToCart({id: 805, name: 'Generic Unisex-Adult Flat Shoes', price: 1250, image_url: 'https://m.media-amazon.com/images/I/71B1QQURi7L._AC_SY500_.jpg'}, event)" class="mt-auto w-full bg-teal-500 text-white py-2 px-4 rounded-full font-semibold hover:bg-teal-600 transition-colors">Add to Cart</button>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-4 flex flex-col items-center text-center transition-transform transform hover:-translate-y-2">
+                    <img src="https://i.pinimg.com/enabled/564x/49/a7/3f/49a73f1bcb5613b046e32fefd7e62f78.jpg" alt="Montero Girls Canvas Shoes" class="h-48 object-contain mb-4">
+                    <h3 class="font-semibold text-sm flex-grow">Montero Girls Canvas Casual Shoes</h3>
+                    <p class="text-teal-600 font-bold my-2">EGP 514</p>
+                    <button onclick="addToCart({id: 806, name: 'Montero Girls Canvas Casual Shoes', price: 514, image_url: 'https://i.pinimg.com/enabled/564x/49/a7/3f/49a73f1bcb5613b046e32fefd7e62f78.jpg'}, event)" class="mt-auto w-full bg-teal-500 text-white py-2 px-4 rounded-full font-semibold hover:bg-teal-600 transition-colors">Add to Cart</button>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-4 flex flex-col items-center text-center transition-transform transform hover:-translate-y-2">
+                    <img src="https://i.pinimg.com/736x/83/b8/5e/83b85e55467e73828ceea1f321f82aee.jpg" alt="Sprox Mary Jane Shoes" class="h-48 object-contain mb-4">
+                    <h3 class="font-semibold text-sm flex-grow">Sprox Velcro Closure Mary Jane Shoes</h3>
+                    <p class="text-teal-600 font-bold my-2">EGP 729</p>
+                    <button onclick="addToCart({id: 807, name: 'Sprox Velcro Closure Laser Cut Mary Jane Shoes for Girls', price: 729, image_url: 'https://i.pinimg.com/736x/83/b8/5e/83b85e55467e73828ceea1f321f82aee.jpg'}, event)" class="mt-auto w-full bg-teal-500 text-white py-2 px-4 rounded-full font-semibold hover:bg-teal-600 transition-colors">Add to Cart</button>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-4 flex flex-col items-center text-center transition-transform transform hover:-translate-y-2">
+                    <img src="https://m.media-amazon.com/images/I/41WTT6Xq-bL._AC_SY695_.jpg" alt="Adidas Ultrabounce" class="h-48 object-contain mb-4">
+                    <h3 class="font-semibold text-sm flex-grow">Adidas Unisex-Child Ultrabounce J Sneaker</h3>
+                    <p class="text-teal-600 font-bold my-2">EGP 2,018</p>
+                    <button onclick="addToCart({id: 808, name: 'adidas unisex-child ULTRABOUNCE J Sneaker', price: 2018, image_url: 'https://m.media-amazon.com/images/I/41WTT6Xq-bL._AC_SY695_.jpg'}, event)" class="mt-auto w-full bg-teal-500 text-white py-2 px-4 rounded-full font-semibold hover:bg-teal-600 transition-colors">Add to Cart</button>
+                </div>
+                 <div class="bg-white rounded-lg shadow-md p-4 flex flex-col items-center text-center transition-transform transform hover:-translate-y-2">
+                    <img src="https://i.pinimg.com/564x/99/d5/fc/99d5fcf88d6575734ffa7086501e397c.jpg" alt="Benoor Girls Shoes" class="h-48 object-contain mb-4">
+                    <h3 class="font-semibold text-sm flex-grow">Benoor High Quality Girls Shoes</h3>
+                    <p class="text-teal-600 font-bold my-2">EGP 499</p>
+                    <button onclick="addToCart({id: 809, name: 'Benoor High Quality Girls Shoes', price: 499, image_url: 'https://i.pinimg.com/564x/99/d5/fc/99d5fcf88d6575734ffa7086501e397c.jpg'}, event)" class="mt-auto w-full bg-teal-500 text-white py-2 px-4 rounded-full font-semibold hover:bg-teal-600 transition-colors">Add to Cart</button>
+                </div>
+                 <div class="bg-white rounded-lg shadow-md p-4 flex flex-col items-center text-center transition-transform transform hover:-translate-y-2">
+                    <img src="https://m.media-amazon.com/images/I/51qXaOCmtVL._AC_SY500_.jpg" alt="Amoun Kids Bazooka" class="h-48 object-contain mb-4">
+                    <h3 class="font-semibold text-sm flex-grow">Amoun Kids Bazooka</h3>
+                    <p class="text-teal-600 font-bold my-2">EGP 199</p>
+                    <button onclick="addToCart({id: 810, name: 'Amoun Kids Bazooka', price: 199, image_url: 'https://m.media-amazon.com/images/I/51qXaOCmtVL._AC_SY500_.jpg'}, event)" class="mt-auto w-full bg-teal-500 text-white py-2 px-4 rounded-full font-semibold hover:bg-teal-600 transition-colors">Add to Cart</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold text-center text-teal-800 mb-8">Boys Shoes</h2>
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
+                 <div class="bg-white rounded-lg shadow-md p-4 flex flex-col items-center text-center transition-transform transform hover:-translate-y-2">
+                    <img src="https://i.pinimg.com/564x/ac/0b/de/ac0bdeebe660ba81b48a5421b2ab74d7.jpg" alt="Adidas Tensaur Sport" class="h-48 object-contain mb-4">
+                    <h3 class="font-semibold text-sm flex-grow">Adidas Unisex Kids Tensaur Sport Sneaker</h3>
+                    <p class="text-teal-600 font-bold my-2">EGP 1,999</p>
+                    <button onclick="addToCart({id: 811, name: 'adidas Unisex Kids Tensaur Sport 2.0 Cf K Sneaker', price: 1999, image_url: 'https://i.pinimg.com/564x/ac/0b/de/ac0bdeebe660ba81b48a5421b2ab74d7.jpg'}, event)" class="mt-auto w-full bg-teal-500 text-white py-2 px-4 rounded-full font-semibold hover:bg-teal-600 transition-colors">Add to Cart</button>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-4 flex flex-col items-center text-center transition-transform transform hover:-translate-y-2">
+                    <img src="https://i.pinimg.com/enabled/564x/e8/8b/00/e88b009dd805b800d94a213cf8a19610.jpg" alt="Omega Water Shoes" class="h-48 object-contain mb-4">
+                    <h3 class="font-semibold text-sm flex-grow">Omega Toddler Boys Girls Water Shoes</h3>
+                    <p class="text-teal-600 font-bold my-2">EGP 590</p>
+                    <button onclick="addToCart({id: 812, name: 'Omega Shoes Toddler Boys Girls Water Shoes Beach Shoes', price: 590, image_url: 'https://i.pinimg.com/enabled/564x/e8/8b/00/e88b009dd805b800d94a213cf8a19610.jpg'}, event)" class="mt-auto w-full bg-teal-500 text-white py-2 px-4 rounded-full font-semibold hover:bg-teal-600 transition-colors">Add to Cart</button>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-4 flex flex-col items-center text-center transition-transform transform hover:-translate-y-2">
+                    <img src="https://m.media-amazon.com/images/I/71sif8GS3TL._AC_SY500_.jpg" alt="Youth Sport Shoes" class="h-48 object-contain mb-4">
+                    <h3 class="font-semibold text-sm flex-grow">Men's Youth Sport Shoes</h3>
+                    <p class="text-teal-600 font-bold my-2">EGP 1,450</p>
+                    <button onclick="addToCart({id: 813, name: 'Mens Youth Sport Shoes Super Chic Soft Sole', price: 1450, image_url: 'https://m.media-amazon.com/images/I/71sif8GS3TL._AC_SY500_.jpg'}, event)" class="mt-auto w-full bg-teal-500 text-white py-2 px-4 rounded-full font-semibold hover:bg-teal-600 transition-colors">Add to Cart</button>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-4 flex flex-col items-center text-center transition-transform transform hover:-translate-y-2">
+                    <img src="https://m.media-amazon.com/images/I/51qEedgYi5L._AC_SY535_.jpg" alt="Cochie Shoes" class="h-48 object-contain mb-4">
+                    <h3 class="font-semibold text-sm flex-grow">Cochie Shoes Youth Boys Sneakers</h3>
+                    <p class="text-teal-600 font-bold my-2">EGP 1,450</p>
+                    <button onclick="addToCart({id: 814, name: 'Cochie Shoes Youth Boys Sneakers Super Fashion', price: 1450, image_url: 'https://m.media-amazon.com/images/I/51qEedgYi5L._AC_SY535_.jpg'}, event)" class="mt-auto w-full bg-teal-500 text-white py-2 px-4 rounded-full font-semibold hover:bg-teal-600 transition-colors">Add to Cart</button>
+                </div>
+                 <div class="bg-white rounded-lg shadow-md p-4 flex flex-col items-center text-center transition-transform transform hover:-translate-y-2">
+                    <img src="https://m.media-amazon.com/images/I/61SxRH7iMCL._AC_SX500_.jpg" alt="Casual Sports Shoes" class="h-48 object-contain mb-4">
+                    <h3 class="font-semibold text-sm flex-grow">Men's Casual Sports Shoes</h3>
+                    <p class="text-teal-600 font-bold my-2">EGP 950</p>
+                    <button onclick="addToCart({id: 815, name: 'Mens Casual Sports Shoes', price: 950, image_url: 'https://m.media-amazon.com/images/I/61SxRH7iMCL._AC_SX500_.jpg'}, event)" class="mt-auto w-full bg-teal-500 text-white py-2 px-4 rounded-full font-semibold hover:bg-teal-600 transition-colors">Add to Cart</button>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-4 flex flex-col items-center text-center transition-transform transform hover:-translate-y-2">
+                    <img src="https://m.media-amazon.com/images/I/51suyr657tL._AC_SY625_.jpg" alt="Sandal Soft EVA Rubber" class="h-48 object-contain mb-4">
+                    <h3 class="font-semibold text-sm flex-grow">Sandal Soft EVA Rubber Unisex Kids</h3>
+                    <p class="text-teal-600 font-bold my-2">EGP 99</p>
+                    <button onclick="addToCart({id: 816, name: 'Sandal Soft EVA Rubber Unisex Kids 2024 Colors', price: 99, image_url: 'https://m.media-amazon.com/images/I/51suyr657tL._AC_SY625_.jpg'}, event)" class="mt-auto w-full bg-teal-500 text-white py-2 px-4 rounded-full font-semibold hover:bg-teal-600 transition-colors">Add to Cart</button>
+                </div>
+                 <div class="bg-white rounded-lg shadow-md p-4 flex flex-col items-center text-center transition-transform transform hover:-translate-y-2">
+                    <img src="https://m.media-amazon.com/images/I/61C1hTQLxWL._AC_SY675_.jpg" alt="QSHOP Slide Slippers" class="h-48 object-contain mb-4">
+                    <h3 class="font-semibold text-sm flex-grow">QSHOP® Premium Quality Slide Slippers</h3>
+                    <p class="text-teal-600 font-bold my-2">EGP 299</p>
+                    <button onclick="addToCart({id: 817, name: 'QSHOP® Premium Quality Slide Slippers for Girls and Boys', price: 299, image_url: 'https://m.media-amazon.com/images/I/61C1hTQLxWL._AC_SY675_.jpg'}, event)" class="mt-auto w-full bg-teal-500 text-white py-2 px-4 rounded-full font-semibold hover:bg-teal-600 transition-colors">Add to Cart</button>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-4 flex flex-col items-center text-center transition-transform transform hover:-translate-y-2">
+                    <img src="https://m.media-amazon.com/images/I/41-qzsvhiwL._AC_SY625_.jpg" alt="Adidas Advantage Shoes" class="h-48 object-contain mb-4">
+                    <h3 class="font-semibold text-sm flex-grow">Adidas Shoes Advantage CF I</h3>
+                    <p class="text-teal-600 font-bold my-2">EGP 2,450</p>
+                    <button onclick="addToCart({id: 818, name: 'adidas SHOES ADVANTAGE CF I FTWWHT/FTWWHT/GREEN', price: 2450, image_url: 'https://m.media-amazon.com/images/I/41-qzsvhiwL._AC_SY625_.jpg'}, event)" class="mt-auto w-full bg-teal-500 text-white py-2 px-4 rounded-full font-semibold hover:bg-teal-600 transition-colors">Add to Cart</button>
+                </div>
+                 <div class="bg-white rounded-lg shadow-md p-4 flex flex-col items-center text-center transition-transform transform hover:-translate-y-2">
+                    <img src="https://m.media-amazon.com/images/I/41UQE0fxduL._AC_SY500_.jpg" alt="Desert Boy Fashion sneaker" class="h-48 object-contain mb-4">
+                    <h3 class="font-semibold text-sm flex-grow">Desert Boy Fashion Sneaker</h3>
+                    <p class="text-teal-600 font-bold my-2">EGP 499</p>
+                    <button onclick="addToCart({id: 819, name: 'Desert Boy Fashion sneaker,imported material', price: 499, image_url: 'https://m.media-amazon.com/images/I/41UQE0fxduL._AC_SY500_.jpg'}, event)" class="mt-auto w-full bg-teal-500 text-white py-2 px-4 rounded-full font-semibold hover:bg-teal-600 transition-colors">Add to Cart</button>
+                </div>
+                 <div class="bg-white rounded-lg shadow-md p-4 flex flex-col items-center text-center transition-transform transform hover:-translate-y-2">
+                    <img src="https://m.media-amazon.com/images/I/61rNMg2DltL._AC_SY500_.jpg" alt="UMBRO Football Sneaker" class="h-48 object-contain mb-4">
+                    <h3 class="font-semibold text-sm flex-grow">UMBRO Boys Kids Football Sneaker</h3>
+                    <p class="text-teal-600 font-bold my-2">EGP 2,299</p>
+                    <button onclick="addToCart({id: 820, name: 'UMBRO boys KIDS UMBRO FOOTWEAR FOOTBALL Sneaker', price: 2299, image_url: 'https://m.media-amazon.com/images/I/61rNMg2DltL._AC_SY500_.jpg'}, event)" class="mt-auto w-full bg-teal-500 text-white py-2 px-4 rounded-full font-semibold hover:bg-teal-600 transition-colors">Add to Cart</button>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const menuBtn = document.getElementById('menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            menuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            const slides = document.querySelectorAll('.slide-image');
+            let currentSlide = 0;
+            function showSlide() {
+                slides.forEach((slide, index) => {
+                    slide.classList.remove('active');
+                    if (index === currentSlide) {
+                        slide.classList.add('active');
+                    }
+                });
+                currentSlide = (currentSlide + 1) % slides.length;
+            }
+            setInterval(showSlide, 3000);
+        });
+
+        function addToCart(product, event) {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            
+            cart.push({
+                id: product.id,
+                name: product.name,
+                price: product.price,
+                image_url: product.image_url
+            });
+
+            localStorage.setItem('cart', JSON.stringify(cart));
+
+            const button = event.target;
+            button.innerText = 'Added!';
+            button.style.backgroundColor = '#28a745';
+            button.disabled = true;
+
+            setTimeout(() => {
+                button.innerText = 'Add to Cart';
+                button.style.backgroundColor = '';
+                button.disabled = false;
+            }, 2000);
+        }
+    </script>
+</body>
+</html>
