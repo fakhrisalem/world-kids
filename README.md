@@ -1,2 +1,12 @@
+# Kids World 👶🌍
+A front-end website for kids clothing, toys, and educational supplies.  
+Built using HTML, CSS, JavaScript, and Bootstrap.  
 
-Welcome to Kids World – Your one-stop shop for children’s clothing, toys, and educational supplies. We help your kids grow happy, healthy, and smart
+## Live Demo
+👉 [Click Here](https://username.github.io/kids-world-frontend/)
+
+## Features
+- Responsive design
+- Kids products sections
+- Educational supplies page
+
