@@ -1,1 +1,248 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Girls Clothing - Kids World</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Playball&display=swap" rel="stylesheet">
+    <style>
+        .font-cursive {
+            font-family: 'Playball', cursive;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #fdfaf5;
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <header class="bg-teal-100/80 backdrop-blur-sm shadow-md fixed top-0 left-0 right-0 z-50">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="home.html" class="flex items-center gap-3">
+                <img src="https://i.pinimg.com/736x/6b/90/b5/6b90b55c618ab58f09c2e38151b708e7.jpg" alt="Logo" class="h-12 w-12 rounded-full border-2 border-teal-500">
+                <span class="text-3xl font-cursive text-teal-800">Kids World</span>
+            </a>
+            
+            <nav class="hidden md:flex items-center space-x-6">
+                <a href="home.html" class="text-gray-700 hover:text-teal-600 transition duration-300">Home</a>
+                <a href="about.html" class="text-gray-700 hover:text-teal-600 transition duration-300">About</a>
+                <a href="products.html" class="text-teal-600 font-semibold transition duration-300">Products</a>
+            </nav>
+
+            <div class="flex items-center gap-4">
+                 <form action="search.html" method="get" class="hidden md:block relative">
+                    <input type="text" name="search" placeholder="Search..." class="rounded-full py-1.5 px-4 w-40 focus:outline-none focus:ring-2 focus:ring-teal-400 transition">
+                    <button type="submit" class="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400">
+                        <i class="fa fa-search"></i>
+                    </button>
+                </form>
+                <a href="login.html" class="text-gray-700 hover:text-teal-600 transition duration-300"><i class="fas fa-user-circle fa-lg"></i></a>
+                <a href="cart.html" class="relative text-gray-700 hover:text-teal-600">
+                    <i class="fas fa-shopping-cart fa-lg"></i>
+                </a>
+                <button id="menu-btn" class="md:hidden text-gray-700 focus:outline-none">
+                    <i class="fas fa-bars fa-lg"></i>
+                </button>
+            </div>
+        </div>
+        
+        <div id="mobile-menu" class="hidden md:hidden px-6 pt-2 pb-4 space-y-3">
+            <a href="home.html" class="block text-gray-700 hover:text-teal-600">Home</a>
+            <a href="about.html" class="block text-gray-700 hover:text-teal-600">About</a>
+            <a href="products.html" class="block text-teal-600 font-semibold">Products</a>
+            <form action="search.html" method="get" class="relative pt-4">
+                <input type="text" name="search" placeholder="Search..." class="rounded-full py-1.5 px-4 w-full focus:outline-none focus:ring-2 focus:ring-teal-400">
+                 <button type="submit" class="absolute right-4 top-1/2 text-gray-400">
+                    <i class="fa fa-search"></i>
+                </button>
+            </form>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 sm:px-6 lg:px-8 pt-24">
+
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold text-center text-teal-800 mb-8">Girls Tops, Tees & Blouses</h2>
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
+                <div class="bg-white rounded-lg shadow-md p-4 flex flex-col items-center text-center transition-transform transform hover:-translate-y-2">
+                    <img src="https://i.pinimg.com/564x/42/53/ca/4253ca353520ec31a0377b3caa393711.jpg" alt="Carrot Girls T-shirt" class="h-48 object-contain mb-4">
+                    <h3 class="font-semibold text-sm flex-grow">Carrot Girls Printed T-shirt</h3>
+                    <p class="text-teal-600 font-bold my-2">EGP 150</p>
+                    <button onclick="addToCart({id: 1001, name: 'Carrot Girls 2415234-06-05 Printed T-shirt', price: 150, image_url: 'https://i.pinimg.com/564x/42/53/ca/4253ca353520ec31a0377b3caa393711.jpg'}, event)" class="mt-auto w-full bg-teal-500 text-white py-2 px-4 rounded-full font-semibold hover:bg-teal-600 transition-colors">Add to Cart</button>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-4 flex flex-col items-center text-center transition-transform transform hover:-translate-y-2">
+                    <img src="https://i.pinimg.com/564x/18/c3/fe/18c3fe8ce2a6776aa6ad1031da6e7109.jpg" alt="Noise Kids T-Shirt" class="h-48 object-contain mb-4">
+                    <h3 class="font-semibold text-sm flex-grow">Noise Kids Girls Cotton T-Shirt</h3>
+                    <p class="text-teal-600 font-bold my-2">EGP 195</p>
+                    <button onclick="addToCart({id: 1002, name: 'Noise Kids Girls Cotton T-Shirt', price: 195, image_url: 'https://i.pinimg.com/564x/18/c3/fe/18c3fe8ce2a6776aa6ad1031da6e7109.jpg'}, event)" class="mt-auto w-full bg-teal-500 text-white py-2 px-4 rounded-full font-semibold hover:bg-teal-600 transition-colors">Add to Cart</button>
+                </div>
+                 <div class="bg-white rounded-lg shadow-md p-4 flex flex-col items-center text-center transition-transform transform hover:-translate-y-2">
+                    <img src="https://m.media-amazon.com/images/I/71WUUHUIFvL._AC_SY741_.jpg" alt="DeFacto Girls Crop Top" class="h-48 object-contain mb-4">
+                    <h3 class="font-semibold text-sm flex-grow">DeFacto Girls Waist-Length Crop Top</h3>
+                    <p class="text-teal-600 font-bold my-2">EGP 345</p>
+                    <button onclick="addToCart({id: 1003, name: 'DeFacto Girls Waist - Lenght Crop Top', price: 345, image_url: 'https://m.media-amazon.com/images/I/71WUUHUIFvL._AC_SY741_.jpg'}, event)" class="mt-auto w-full bg-teal-500 text-white py-2 px-4 rounded-full font-semibold hover:bg-teal-600 transition-colors">Add to Cart</button>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-4 flex flex-col items-center text-center transition-transform transform hover:-translate-y-2">
+                    <img src="https://i.pinimg.com/564x/fc/1d/cc/fc1dcc18f92a3a717d95950882442e70.jpg" alt="Cute Best Tee Shirts" class="h-48 object-contain mb-4">
+                    <h3 class="font-semibold text-sm flex-grow">Cute Best Graphic Tee For Women</h3>
+                    <p class="text-teal-600 font-bold my-2">EGP 395</p>
+                    <button onclick="addToCart({id: 1004, name: 'Cute Best Tee Shirts For Women, Nice Graphic Women Tees', price: 395, image_url: 'https://i.pinimg.com/564x/fc/1d/cc/fc1dcc18f92a3a717d95950882442e70.jpg'}, event)" class="mt-auto w-full bg-teal-500 text-white py-2 px-4 rounded-full font-semibold hover:bg-teal-600 transition-colors">Add to Cart</button>
+                </div>
+                 <div class="bg-white rounded-lg shadow-md p-4 flex flex-col items-center text-center transition-transform transform hover:-translate-y-2">
+                    <img src="https://i.pinimg.com/564x/fe/5e/0a/fe5e0aff13aa8ae8afbb2e5549c55628.jpg" alt="Floral Print Blouse" class="h-48 object-contain mb-4">
+                    <h3 class="font-semibold text-sm flex-grow">Floral Print High Low Peplum Hem Blouse</h3>
+                    <p class="text-teal-600 font-bold my-2">EGP 295</p>
+                    <button onclick="addToCart({id: 1005, name: 'Floral Print High Low Peplum Hem Blouse', price: 295, image_url: 'https://i.pinimg.com/564x/fe/5e/0a/fe5e0aff13aa8ae8afbb2e5549c55628.jpg'}, event)" class="mt-auto w-full bg-teal-500 text-white py-2 px-4 rounded-full font-semibold hover:bg-teal-600 transition-colors">Add to Cart</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold text-center text-teal-800 mb-8">Girls Dresses</h2>
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
+                <div class="bg-white rounded-lg shadow-md p-4 flex flex-col items-center text-center transition-transform transform hover:-translate-y-2">
+                    <img src="https://m.media-amazon.com/images/I/61+rl5FgN-L._AC_SX679_.jpg" alt="Girls Summer Denim Dress" class="h-48 object-contain mb-4">
+                    <h3 class="font-semibold text-sm flex-grow">Girls Summer Denim Dress Button Back</h3>
+                    <p class="text-teal-600 font-bold my-2">EGP 224</p>
+                    <button onclick="addToCart({id: 1006, name: 'Girls Summer Denim Dress Short Sleeve Button Back', price: 223.75, image_url: 'https://m.media-amazon.com/images/I/61+rl5FgN-L._AC_SX679_.jpg'}, event)" class="mt-auto w-full bg-teal-500 text-white py-2 px-4 rounded-full font-semibold hover:bg-teal-600 transition-colors">Add to Cart</button>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-4 flex flex-col items-center text-center transition-transform transform hover:-translate-y-2">
+                    <img src="https://i.pinimg.com/564x/73/9b/74/739b744843a2f7846937995bd449a249.jpg" alt="Tween Girl Summer Dress" class="h-48 object-contain mb-4">
+                    <h3 class="font-semibold text-sm flex-grow">Tween Girl Casual Belted Floral Dress</h3>
+                    <p class="text-teal-600 font-bold my-2">EGP 695</p>
+                    <button onclick="addToCart({id: 1007, name: 'Tween Girl Casual Belted Floral Hem Summer Dress', price: 695, image_url: 'https://i.pinimg.com/564x/73/9b/74/739b744843a2f7846937995bd449a249.jpg'}, event)" class="mt-auto w-full bg-teal-500 text-white py-2 px-4 rounded-full font-semibold hover:bg-teal-600 transition-colors">Add to Cart</button>
+                </div>
+                 <div class="bg-white rounded-lg shadow-md p-4 flex flex-col items-center text-center transition-transform transform hover:-translate-y-2">
+                    <img src="https://m.media-amazon.com/images/I/71fflJA-h1L._AC_SX679_.jpg" alt="Andora Girls Dress" class="h-48 object-contain mb-4">
+                    <h3 class="font-semibold text-sm flex-grow">Andora Girls 33S22G30319 Dress</h3>
+                    <p class="text-teal-600 font-bold my-2">EGP 249</p>
+                    <button onclick="addToCart({id: 1008, name: 'Andora girls 33S22G30319 Dress', price: 249, image_url: 'https://m.media-amazon.com/images/I/71fflJA-h1L._AC_SX679_.jpg'}, event)" class="mt-auto w-full bg-teal-500 text-white py-2 px-4 rounded-full font-semibold hover:bg-teal-600 transition-colors">Add to Cart</button>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-4 flex flex-col items-center text-center transition-transform transform hover:-translate-y-2">
+                    <img src="https://m.media-amazon.com/images/I/71X5Y86tGeL._AC_SX679_.jpg" alt="In&Out Girls Summer Dress" class="h-48 object-contain mb-4">
+                    <h3 class="font-semibold text-sm flex-grow">In&Out Girls Colorful Cotton Dress</h3>
+                    <p class="text-teal-600 font-bold my-2">EGP 299</p>
+                    <button onclick="addToCart({id: 1009, name: 'In&Out Girls Summer Dress - Colorful Cotton Casual', price: 299, image_url: 'https://m.media-amazon.com/images/I/71X5Y86tGeL._AC_SX679_.jpg'}, event)" class="mt-auto w-full bg-teal-500 text-white py-2 px-4 rounded-full font-semibold hover:bg-teal-600 transition-colors">Add to Cart</button>
+                </div>
+                 <div class="bg-white rounded-lg shadow-md p-4 flex flex-col items-center text-center transition-transform transform hover:-translate-y-2">
+                    <img src="https://m.media-amazon.com/images/I/610f6u1NSWL._AC_SY879_.jpg" alt="2 Piece Girls Dress" class="h-48 object-contain mb-4">
+                    <h3 class="font-semibold text-sm flex-grow">Offer 2 Piece Girls Dress Plaid</h3>
+                    <p class="text-teal-600 font-bold my-2">EGP 520</p>
+                    <button onclick="addToCart({id: 1010, name: 'Offer 2 Piece Girls Dress Plaid Bright Colors', price: 520, image_url: 'https://m.media-amazon.com/images/I/610f6u1NSWL._AC_SY879_.jpg'}, event)" class="mt-auto w-full bg-teal-500 text-white py-2 px-4 rounded-full font-semibold hover:bg-teal-600 transition-colors">Add to Cart</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold text-center text-teal-800 mb-8">Pajamas & Sweatshirts</h2>
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
+                <div class="bg-white rounded-lg shadow-md p-4 flex flex-col items-center text-center transition-transform transform hover:-translate-y-2">
+                    <img src="https://m.media-amazon.com/images/I/71y0iwCYrGL._AC_SX466_.jpg" alt="Girl Sweatshirt Outfit" class="h-48 object-contain mb-4">
+                    <h3 class="font-semibold text-sm flex-grow">Toddler Girl Cotton Crewneck Sweatshirt</h3>
+                    <p class="text-teal-600 font-bold my-2">EGP 557</p>
+                    <button onclick="addToCart({id: 1011, name: 'Toddler Girl Sweatshirt Clothes Outfit,Cotton Crewneck', price: 557, image_url: 'https://m.media-amazon.com/images/I/71y0iwCYrGL._AC_SX466_.jpg'}, event)" class="mt-auto w-full bg-teal-500 text-white py-2 px-4 rounded-full font-semibold hover:bg-teal-600 transition-colors">Add to Cart</button>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-4 flex flex-col items-center text-center transition-transform transform hover:-translate-y-2">
+                    <img src="https://m.media-amazon.com/images/I/81DvgobBfnL._AC_SX385_.jpg" alt="Toddler Girl Outfit" class="h-48 object-contain mb-4">
+                    <h3 class="font-semibold text-sm flex-grow">Toddler Girl Christmas Clothing Outfit</h3>
+                    <p class="text-teal-600 font-bold my-2">EGP 599</p>
+                    <button onclick="addToCart({id: 1012, name: 'Toddler Girl Sweatshirt Clothes Outfit, Christmas Clothing', price: 599, image_url: 'https://m.media-amazon.com/images/I/81DvgobBfnL._AC_SX385_.jpg'}, event)" class="mt-auto w-full bg-teal-500 text-white py-2 px-4 rounded-full font-semibold hover:bg-teal-600 transition-colors">Add to Cart</button>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-4 flex flex-col items-center text-center transition-transform transform hover:-translate-y-2">
+                    <img src="https://m.media-amazon.com/images/I/61bKNUQC0bL._AC_SX466_.jpg" alt="Girls Summer Outfit" class="h-48 object-contain mb-4">
+                    <h3 class="font-semibold text-sm flex-grow">Bumeex Toddler Girls Summer Outfit Set</h3>
+                    <p class="text-teal-600 font-bold my-2">EGP 257</p>
+                    <button onclick="addToCart({id: 1013, name: 'Bumeex Toddler Girls Summer Outfit Cotton Top and Shorts', price: 257, image_url: 'https://m.media-amazon.com/images/I/61bKNUQC0bL._AC_SX466_.jpg'}, event)" class="mt-auto w-full bg-teal-500 text-white py-2 px-4 rounded-full font-semibold hover:bg-teal-600 transition-colors">Add to Cart</button>
+                </div>
+                 <div class="bg-white rounded-lg shadow-md p-4 flex flex-col items-center text-center transition-transform transform hover:-translate-y-2">
+                    <img src="https://m.media-amazon.com/images/I/71Vt0Nx2oSL._AC_SX342_.jpg" alt="Bumeex Outfit" class="h-48 object-contain mb-4">
+                    <h3 class="font-semibold text-sm flex-grow">Bumeex Summer Outfit Top and Shorts</h3>
+                    <p class="text-teal-600 font-bold my-2">EGP 270</p>
+                    <button onclick="addToCart({id: 1014, name: 'Bumeex Toddler Girls Summer Outfit Cotton Top and Shorts Set', price: 270, image_url: 'https://m.media-amazon.com/images/I/71Vt0Nx2oSL._AC_SX342_.jpg'}, event)" class="mt-auto w-full bg-teal-500 text-white py-2 px-4 rounded-full font-semibold hover:bg-teal-600 transition-colors">Add to Cart</button>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-4 flex flex-col items-center text-center transition-transform transform hover:-translate-y-2">
+                    <img src="https://m.media-amazon.com/images/I/61stSa-TImL._AC_SX385_.jpg" alt="Girls Summer Outfit Set" class="h-48 object-contain mb-4">
+                    <h3 class="font-semibold text-sm flex-grow">Girls Summer Cotton Outfit</h3>
+                    <p class="text-teal-600 font-bold my-2">EGP 250</p>
+                    <button onclick="addToCart({id: 1015, name: 'Bumeex Toddler Girls Summer Outfit Cotton Top and Shorts Clothing Set', price: 250, image_url: 'https://m.media-amazon.com/images/I/61stSa-TImL._AC_SX385_.jpg'}, event)" class="mt-auto w-full bg-teal-500 text-white py-2 px-4 rounded-full font-semibold hover:bg-teal-600 transition-colors">Add to Cart</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold text-center text-teal-800 mb-8">Girls Pants & Capris</h2>
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
+                <div class="bg-white rounded-lg shadow-md p-4 flex flex-col items-center text-center transition-transform transform hover:-translate-y-2">
+                    <img src="https://m.media-amazon.com/images/I/81Qocs-mKEL._AC_SX679_.jpg" alt="Noise Kids Jeans" class="h-48 object-contain mb-4">
+                    <h3 class="font-semibold text-sm flex-grow">Noise Kids Jeans Pants For Girl</h3>
+                    <p class="text-teal-600 font-bold my-2">EGP 350</p>
+                    <button onclick="addToCart({id: 1016, name: 'Noise Kids Jeans Pants For Girl', price: 350, image_url: 'https://m.media-amazon.com/images/I/81Qocs-mKEL._AC_SX679_.jpg'}, event)" class="mt-auto w-full bg-teal-500 text-white py-2 px-4 rounded-full font-semibold hover:bg-teal-600 transition-colors">Add to Cart</button>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-4 flex flex-col items-center text-center transition-transform transform hover:-translate-y-2">
+                    <img src="https://m.media-amazon.com/images/I/811FgqVXgsL._AC_SY741_.jpg" alt="Andora Girls Pants" class="h-48 object-contain mb-4">
+                    <h3 class="font-semibold text-sm flex-grow">Andora Girls 33S22G30320 Pants</h3>
+                    <p class="text-teal-600 font-bold my-2">EGP 299</p>
+                    <button onclick="addToCart({id: 1017, name: 'Andora Girls 33S22G30320 Pants', price: 299, image_url: 'https://m.media-amazon.com/images/I/811FgqVXgsL._AC_SY741_.jpg'}, event)" class="mt-auto w-full bg-teal-500 text-white py-2 px-4 rounded-full font-semibold hover:bg-teal-600 transition-colors">Add to Cart</button>
+                </div>
+                 <div class="bg-white rounded-lg shadow-md p-4 flex flex-col items-center text-center transition-transform transform hover:-translate-y-2">
+                    <img src="https://m.media-amazon.com/images/I/91-Sw2MAeZL._AC_SY741_.jpg" alt="VONKEL Sweatpants" class="h-48 object-contain mb-4">
+                    <h3 class="font-semibold text-sm flex-grow">VONKEL Girls Washed Full Length Sweatpants</h3>
+                    <p class="text-teal-600 font-bold my-2">EGP 375</p>
+                    <button onclick="addToCart({id: 1018, name: 'VONKEL Girls Washed full length Sweatpants', price: 375, image_url: 'https://m.media-amazon.com/images/I/91-Sw2MAeZL._AC_SY741_.jpg'}, event)" class="mt-auto w-full bg-teal-500 text-white py-2 px-4 rounded-full font-semibold hover:bg-teal-600 transition-colors">Add to Cart</button>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-4 flex flex-col items-center text-center transition-transform transform hover:-translate-y-2">
+                    <img src="https://m.media-amazon.com/images/I/51V2eFwSBbL._AC_SX679_.jpg" alt="Elsayaad Chino Pants" class="h-48 object-contain mb-4">
+                    <h3 class="font-semibold text-sm flex-grow">Elsayaad Unisex Chino Pants</h3>
+                    <p class="text-teal-600 font-bold my-2">EGP 155</p>
+                    <button onclick="addToCart({id: 1019, name: 'Elsayaad Unisex Chino Pants Pants', price: 155, image_url: 'https://m.media-amazon.com/images/I/51V2eFwSBbL._AC_SX679_.jpg'}, event)" class="mt-auto w-full bg-teal-500 text-white py-2 px-4 rounded-full font-semibold hover:bg-teal-600 transition-colors">Add to Cart</button>
+                </div>
+                 <div class="bg-white rounded-lg shadow-md p-4 flex flex-col items-center text-center transition-transform transform hover:-translate-y-2">
+                    <img src="https://i.pinimg.com/564x/a8/cf/59/a8cf59b28dbb173bccc4165de51d3343.jpg" alt="Girls Bottoms" class="h-48 object-contain mb-4">
+                    <h3 class="font-semibold text-sm flex-grow">Girls Bottoms Jeans</h3>
+                    <p class="text-teal-600 font-bold my-2">EGP 510</p>
+                    <button onclick="addToCart({id: 1020, name: 'Girls Bottoms - Jeans Pants', price: 510, image_url: 'https://i.pinimg.com/564x/a8/cf/59/a8cf59b28dbb173bccc4165de51d3343.jpg'}, event)" class="mt-auto w-full bg-teal-500 text-white py-2 px-4 rounded-full font-semibold hover:bg-teal-600 transition-colors">Add to Cart</button>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const menuBtn = document.getElementById('menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            menuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        });
+
+        function addToCart(product, event) {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            
+            cart.push({
+                id: product.id,
+                name: product.name,
+                price: product.price,
+                image_url: product.image_url
+            });
+
+            localStorage.setItem('cart', JSON.stringify(cart));
+
+            const button = event.target;
+            button.innerText = 'Added!';
+            button.style.backgroundColor = '#28a745';
+            button.disabled = true;
+
+            setTimeout(() => {
+                button.innerText = 'Add to Cart';
+                button.style.backgroundColor = '';
+                button.disabled = false;
+            }, 2000);
+        }
+    </script>
+</body>
+</html>
