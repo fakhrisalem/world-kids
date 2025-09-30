@@ -3,723 +3,413 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us</title>
-
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+    <title>Bags & Accessories - Kids World</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
-         body {
-    margin: 0;
-    padding-top: 40px; 
-}
-
-header {
-    position: fixed; 
-    top: 0;
-    left: 0;
-    right: 0;
-    background-color: #d9f7f5;
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0px 30px;
-    z-index: 10;
-    font-size: 15px;
-  
-}
-
-header a {
-    color: rgb(17, 16, 16);
-    text-decoration: none;
-    margin: 0 50px;
-    position: relative; 
-    padding: 1px; 
-    transition: background-color 0.3s, color 0.3s; 
-}
-
-header a::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-  
-    transition: border-color 0.3s; 
-}
-
-header a:hover::after, 
-header a:focus::after, 
-header a:active::after { 
-    border-color: rgba(255, 255, 255, 0.8); 
-}
-
-header a:hover {
-    background-color: rgba(247, 13, 13, 0.2); 
-    border-radius: 25px;
-    color: white; 
-  padding: 10px;
-}
-
-.search-input {
-    padding: 5px;
-    margin-right: 10px;
-    border-radius: 50px;
-}
-
-.icon {
-    width: 20px; 
-    height: 20px; 
-}
-        h5 {
-            color: #022105;
-            font-size: 40px;
-            text-align: center;
-            margin: 20px;
+        @import url('https://fonts.googleapis.com/css2?family=Playball&display=swap');
+        .font-cursive {
+            font-family: 'Playball', cursive;
         }
-        .carousel-item img {
-            width: 100%;
-            height: 30vh; 
-            object-fit: contain; 
-            border-radius: 50px; 
-        }
-        .testimonials {
-            margin-top: 0px;
-            background-color: rgb(250, 224, 53);
-            border: 1px solid rgb(250, 224, 53);
-            border-radius: 300px;
-         border-width: 0px;
-         border-bottom-left-radius: 50px;
-         border-top-right-radius: 50px;
-      
-         
-        }
-     
-
-        .product {
-    display: inline-block;
-    width: 250px; 
-    margin: 20px;
-    padding: 20px;
-    border: 1px solid #ccc;
-    text-align: center;
-    background-color: #f9f9f9; 
-    transition: transform 0.3s ease; 
-}
-
-.product img {
-    width: 100%; 
-    height: 200px;
-    transition: transform 0.3s ease;
-}
-
-.product:hover {
-    transform: scale(1.05); 
-}
-
-.product img:hover {
-    transform: scale(1.2); 
-}
-       
     </style>
 </head>
-<body>
-    <header>
-        <div class="left-links">
-            <a href="home.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="products.html">Products</a>
+<body class="bg-gray-50 text-gray-800">
+
+    <header class="bg-teal-100/80 backdrop-blur-sm shadow-md fixed top-0 left-0 right-0 z-50">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="home.html" class="flex items-center gap-3">
+                <img src="https://i.pinimg.com/736x/6b/90/b5/6b90/b5/6b90b55c618ab58f09c2e38151b708e7.jpg" alt="Logo" class="h-12 w-12 rounded-full border-2 border-teal-500">
+                <span class="text-3xl font-cursive text-teal-800">Kids World</span>
+            </a>
+            <nav class="hidden md:flex items-center space-x-6">
+                <a href="home.html" class="text-gray-700 hover:text-teal-600 transition duration-300">Home</a>
+                <a href="about.html" class="text-gray-700 hover:text-teal-600 transition duration-300">About</a>
+                <a href="products.html" class="text-gray-700 hover:text-teal-600 transition duration-300">Products</a>
+            </nav>
+            <div class="hidden md:flex items-center gap-4">
+                 <form action="search.html" method="get" class="relative">
+                    <input type="text" name="search" placeholder="Search..." class="rounded-full py-1.5 px-4 w-40 focus:outline-none focus:ring-2 focus:ring-teal-400 transition">
+                    <button type="submit" class="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400">
+                        <i class="fa fa-search"></i>
+                    </button>
+                </form>
+                <a href="login.html" class="text-gray-700 hover:text-teal-600 transition duration-300"><i class="fas fa-user-circle fa-lg"></i></a>
+                <a href="cart.html" class="relative text-gray-700 hover:text-teal-600 transition duration-300">
+                    <i class="fas fa-shopping-cart fa-lg"></i>
+                    <span id="cart-counter-desktop" class="hidden absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center"></span>
+                </a>
+            </div>
+            <div class="md:hidden">
+                <button id="menu-btn" class="text-gray-700 focus:outline-none">
+                    <i class="fas fa-bars fa-lg"></i>
+                </button>
+            </div>
         </div>
-        <div class="center-link">
-            <form action="search.html" method="get">
-                <input type="text" name="search" class="search-input" placeholder="Search...">
-                <button type="submit">Search</button>
+        <div id="mobile-menu" class="hidden md:hidden px-6 pt-2 pb-4 space-y-3">
+            <a href="home.html" class="block text-gray-700 hover:text-teal-600 transition duration-300">Home</a>
+            <a href="about.html" class="block text-gray-700 hover:text-teal-600 transition duration-300">About</a>
+            <a href="products.html" class="block text-gray-700 hover:text-teal-600 transition duration-300">Products</a>
+            <form action="search.html" method="get" class="relative pt-4">
+                <input type="text" name="search" placeholder="Search..." class="rounded-full py-1.5 px-4 w-full focus:outline-none focus:ring-2 focus:ring-teal-400 transition">
+                 <button type="submit" class="absolute right-4 top-1/2 text-gray-400">
+                    <i class="fa fa-search"></i>
+                </button>
             </form>
-        </div>
-        <div class="right-links">
-            <a href="login.html"><img src="login_logo.png" alt="Login" class="icon"></a>
-            <a href="cart.html"><img src="cart_logo.png" alt="Cart" class="icon"></a>
+             <div class="flex items-center justify-center gap-6 pt-4">
+                <a href="login.html" class="text-gray-700 hover:text-teal-600 transition duration-300"><i class="fas fa-user-circle fa-lg"></i> Login</a>
+                <a href="cart.html" class="flex items-center justify-center gap-2 text-gray-700 hover:text-teal-600 transition duration-300">
+                    <i class="fas fa-shopping-cart fa-lg"></i>
+                    <span id="mobile-cart-text">Cart</span>
+                </a>
+            </div>
         </div>
     </header>
 
-    <main>
-        <section id="testimonials" class="testimonials">
-            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img src="https://i.pinimg.com/564x/77/11/f0/7711f0ce4991f3b96c8df5ff57948e48.jpg" alt="صورة 1"  />
+    <main class="pt-24">
+        
+        <section class="mb-16">
+            <div class="container mx-auto px-6">
+                <div id="image-carousel" class="relative w-full max-w-4xl mx-auto shadow-2xl rounded-2xl overflow-hidden" style="height: 50vh;">
+                    <div class="carousel-slide absolute w-full h-full transition-opacity duration-700 ease-in-out opacity-100">
+                        <img src="https://i.pinimg.com/564x/77/11/f0/7711f0ce4991f3b96c8df5ff57948e48.jpg" class="w-full h-full object-cover" alt="Carousel Image 1">
                     </div>
-                    <div class="carousel-item">
-                        <img src="https://i.pinimg.com/564x/69/da/fe/69dafe9751c81bc2141cc2fd0236a29d.jpg" alt="صورة 2" />
+                    <div class="carousel-slide absolute w-full h-full transition-opacity duration-700 ease-in-out opacity-0">
+                        <img src="https://i.pinimg.com/564x/69/da/fe/69dafe9751c81bc2141cc2fd0236a29d.jpg" class="w-full h-full object-cover" alt="Carousel Image 2">
                     </div>
-                    <div class="carousel-item">
-                        <img src="https://i.pinimg.com/564x/f7/23/9c/f7239ce8e8d916bd90f416f7c6ccb7ff.jpg" alt="صورة 3" />
+                    <div class="carousel-slide absolute w-full h-full transition-opacity duration-700 ease-in-out opacity-0">
+                        <img src="https://i.pinimg.com/564x/f7/23/9c/f7239ce8e8d916bd90f416f7c6ccb7ff.jpg" class="w-full h-full object-cover" alt="Carousel Image 3">
                     </div>
-                    <div class="carousel-item">
-                        <img src="https://i.pinimg.com/564x/6a/79/dc/6a79dc594e4d57cf3bc728afe53b22b3.jpg" alt="صورة 4" />
+                    <div class="carousel-slide absolute w-full h-full transition-opacity duration-700 ease-in-out opacity-0">
+                        <img src="https://i.pinimg.com/564x/6a/79/dc/6a79dc594e4d57cf3bc728afe53b22b3.jpg" class="w-full h-full object-cover" alt="Carousel Image 4">
+                    </div>
+                    <button id="carousel-prev" class="absolute top-1/2 left-4 transform -translate-y-1/2 bg-white/50 hover:bg-white/80 text-gray-800 rounded-full w-10 h-10 flex items-center justify-center transition">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button id="carousel-next" class="absolute top-1/2 right-4 transform -translate-y-1/2 bg-white/50 hover:bg-white/80 text-gray-800 rounded-full w-10 h-10 flex items-center justify-center transition">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <div class="container mx-auto px-6 space-y-16">
+            <section>
+                <h2 class="text-3xl font-bold text-center text-teal-800 font-cursive mb-10">Kids' Backpacks</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
+                    <div class="product-card group block bg-white rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 overflow-hidden">
+                        <img src="https://m.media-amazon.com/images/I/61ywmcqJsbL._AC_SX679_.jpg" class="w-full h-56 object-cover">
+                        <div class="p-4">
+                            <h3 class="text-lg font-semibold text-gray-800 truncate">Mintra School Backpacks</h3>
+                            <div class="flex justify-between items-center mt-4">
+                                <p class="text-xl font-bold text-teal-600">EGP 149</p>
+                                <button onclick="addToCart({id: 201, name: 'Mintra School Backpacks For Unisex', price: 149, image_url: 'https://m.media-amazon.com/images/I/61ywmcqJsbL._AC_SX679_.jpg'})" class="bg-teal-500 text-white px-3 py-1.5 rounded-full hover:bg-teal-600 transition-colors text-sm">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card group block bg-white rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 overflow-hidden">
+                        <img src="https://m.media-amazon.com/images/I/71MFhkPglhL.__AC_SX300_SY300_QL70_ML2_.jpg" class="w-full h-56 object-cover">
+                        <div class="p-4">
+                            <h3 class="text-lg font-semibold text-gray-800 truncate">Shield Unisex-Adult Two Main</h3>
+                            <div class="flex justify-between items-center mt-4">
+                                <p class="text-xl font-bold text-teal-600">EGP 550</p>
+                                <button onclick="addToCart({id: 202, name: 'Shield Unisex-Adult School Bag', price: 550, image_url: 'https://m.media-amazon.com/images/I/71MFhkPglhL.__AC_SX300_SY300_QL70_ML2_.jpg'})" class="bg-teal-500 text-white px-3 py-1.5 rounded-full hover:bg-teal-600 transition-colors text-sm">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                     <div class="product-card group block bg-white rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 overflow-hidden">
+                        <img src="https://m.media-amazon.com/images/I/61V0phSUlxL._AC_SY679_.jpg" class="w-full h-56 object-cover">
+                        <div class="p-4">
+                            <h3 class="text-lg font-semibold text-gray-800 truncate">dea bags Buzz - Backpack</h3>
+                            <div class="flex justify-between items-center mt-4">
+                                <p class="text-xl font-bold text-teal-600">EGP 259</p>
+                                <button onclick="addToCart({id: 203, name: 'dea bags Buzz - Backpack, Size 15', price: 259, image_url: 'https://m.media-amazon.com/images/I/61V0phSUlxL._AC_SY679_.jpg'})" class="bg-teal-500 text-white px-3 py-1.5 rounded-full hover:bg-teal-600 transition-colors text-sm">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                     <div class="product-card group block bg-white rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 overflow-hidden">
+                        <img src="https://m.media-amazon.com/images/I/91sDdXfNs+L._AC_SY300_SX300_.jpg" class="w-full h-56 object-cover">
+                        <div class="p-4">
+                            <h3 class="text-lg font-semibold text-gray-800 truncate">Mintra Unisex School Bags</h3>
+                            <div class="flex justify-between items-center mt-4">
+                                <p class="text-xl font-bold text-teal-600">EGP 464</p>
+                                <button onclick="addToCart({id: 204, name: 'Mintra Unisex School Bags - Mermaid', price: 464, image_url: 'https://m.media-amazon.com/images/I/91sDdXfNs+L._AC_SY300_SX300_.jpg'})" class="bg-teal-500 text-white px-3 py-1.5 rounded-full hover:bg-teal-600 transition-colors text-sm">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                     <div class="product-card group block bg-white rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 overflow-hidden">
+                        <img src="https://m.media-amazon.com/images/I/81OcjfS4L+L._AC_SY741_.jpg" class="w-full h-56 object-cover">
+                        <div class="p-4">
+                            <h3 class="text-lg font-semibold text-gray-800 truncate">DeFacto Boys BackPack</h3>
+                            <div class="flex justify-between items-center mt-4">
+                                <p class="text-xl font-bold text-teal-600">EGP 489</p>
+                                <button onclick="addToCart({id: 205, name: 'DeFacto Boys BackPack', price: 489, image_url: 'https://m.media-amazon.com/images/I/81OcjfS4L+L._AC_SY741_.jpg'})" class="bg-teal-500 text-white px-3 py-1.5 rounded-full hover:bg-teal-600 transition-colors text-sm">Add to Cart</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                </a>
-                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                </a>
-            </div>
-        </section>
+            </section>
+            
+            <section>
+                <h2 class="text-3xl font-bold text-center text-teal-800 font-cursive mb-10">Children's Luggage</h2>
+                 <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
+                     <div class="product-card group block bg-white rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 overflow-hidden">
+                        <img src="https://m.media-amazon.com/images/I/61l1H5-ifZL._AC_SX679_.jpg" class="w-full h-56 object-cover">
+                        <div class="p-4">
+                            <h3 class="text-lg font-semibold text-gray-800 truncate">kids backpack bag- Red</h3>
+                            <div class="flex justify-between items-center mt-4">
+                                <p class="text-xl font-bold text-teal-600">EGP 510</p>
+                                <button onclick="addToCart({id: 206, name: 'Frozen Disney Princess Trolly Bag', price: 510, image_url: 'https://m.media-amazon.com/images/I/61l1H5-ifZL._AC_SX679_.jpg'})" class="bg-teal-500 text-white px-3 py-1.5 rounded-full hover:bg-teal-600 transition-colors text-sm">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                     <div class="product-card group block bg-white rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 overflow-hidden">
+                        <img src="https://m.media-amazon.com/images/I/61e8YZ7q6+L._AC_SX569_.jpg" class="w-full h-56 object-cover">
+                        <div class="p-4">
+                            <h3 class="text-lg font-semibold text-gray-800 truncate">3D Cartoon School Bag</h3>
+                            <div class="flex justify-between items-center mt-4">
+                                <p class="text-xl font-bold text-teal-600">EGP 825</p>
+                                <button onclick="addToCart({id: 207, name: '3D Cartoon School Bag Large Boys', price: 825, image_url: 'https://m.media-amazon.com/images/I/61e8YZ7q6+L._AC_SX569_.jpg'})" class="bg-teal-500 text-white px-3 py-1.5 rounded-full hover:bg-teal-600 transition-colors text-sm">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                     <div class="product-card group block bg-white rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 overflow-hidden">
+                        <img src="https://m.media-amazon.com/images/I/81Vsh+6HroL._AC_SY879_.jpg" class="w-full h-56 object-cover">
+                        <div class="p-4">
+                            <h3 class="text-lg font-semibold text-gray-800 truncate">OX Unisex Kids Backpack</h3>
+                            <div class="flex justify-between items-center mt-4">
+                                <p class="text-xl font-bold text-teal-600">EGP 249</p>
+                                <button onclick="addToCart({id: 208, name: 'OX Unisex Kids Backpack (pack of 1)', price: 249, image_url: 'https://m.media-amazon.com/images/I/81Vsh+6HroL._AC_SY879_.jpg'})" class="bg-teal-500 text-white px-3 py-1.5 rounded-full hover:bg-teal-600 transition-colors text-sm">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                     <div class="product-card group block bg-white rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 overflow-hidden">
+                        <img src="https://m.media-amazon.com/images/I/81n+AusIdyL._AC_SY679_.jpg" class="w-full h-56 object-cover">
+                        <div class="p-4">
+                            <h3 class="text-lg font-semibold text-gray-800 truncate">Frozen Disney Princess Trolly Bag</h3>
+                            <div class="flex justify-between items-center mt-4">
+                                <p class="text-xl font-bold text-teal-600">EGP 3,900</p>
+                                <button onclick="addToCart({id: 209, name: 'Frozen Disney Princess Trolly Bag', price: 3900, image_url: 'https://m.media-amazon.com/images/I/81n+AusIdyL._AC_SY679_.jpg'})" class="bg-teal-500 text-white px-3 py-1.5 rounded-full hover:bg-teal-600 transition-colors text-sm">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                     <div class="product-card group block bg-white rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 overflow-hidden">
+                        <img src="https://m.media-amazon.com/images/I/61qIgV1iO5L._AC_SX679_.jpg" class="w-full h-56 object-cover">
+                        <div class="p-4">
+                            <h3 class="text-lg font-semibold text-gray-800 truncate">Coral High Kids Luggage</h3>
+                            <div class="flex justify-between items-center mt-4">
+                                <p class="text-xl font-bold text-teal-600">EGP 4,716</p>
+                                <button onclick="addToCart({id: 210, name: 'Coral High Kids Luggage suitcase', price: 4716, image_url: 'https://m.media-amazon.com/images/I/61qIgV1iO5L._AC_SX679_.jpg'})" class="bg-teal-500 text-white px-3 py-1.5 rounded-full hover:bg-teal-600 transition-colors text-sm">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-        <section style="margin-top: 60px;">
-            <h5>Kids' Backpacks</h5>
-            <div class="product">
-                <img src="https://m.media-amazon.com/images/I/61ywmcqJsbL._AC_SX679_.jpg" alt="Product 1" width="200px">
-                <p>Mintra School Backpacks</p>
-                <p>EGP 149</p>
-                <button onclick="addToCart({
-                    id: 1,
-                    name: 'Mintra School Backpacks For Unisex',
-                    price: 149,
-                    image_url: 'https://m.media-amazon.com/images/I/61ywmcqJsbL._AC_SX679_.jpg',
-                })">Add to Cart</button>
-            </div>
-            <div class="product">
-                <img src="https://m.media-amazon.com/images/I/71MFhkPglhL.__AC_SX300_SY300_QL70_ML2_.jpg" alt="Product 1" width="200px">
-                <p>Shield Unisex-Adult Two Main</p>
-                <p>EGP 550</p>
-                <button onclick="addToCart({
-                    id: 1,
-                    name: 'Shield Unisex-Adult Two Main Compartment Zipped School Bag Gray',
-                    price: 550,
-                    image_url: 'https://m.media-amazon.com/images/I/71MFhkPglhL.__AC_SX300_SY300_QL70_ML2_.jpg',
-                })">Add to Cart</button>
-            </div>
-            <div class="product">
-                <img src="https://m.media-amazon.com/images/I/61V0phSUlxL._AC_SY679_.jpg" alt="Product 1" width="200px">
-                <p>dea bags Buzz - Backpack</p>
-                <p>EGP 259</p>
-                <button onclick="addToCart({
-                    id: 1,
-                    name: 'dea bags Buzz - Backpack, Size 15',
-                    price: 259,
-                    image_url: 'https://m.media-amazon.com/images/I/61V0phSUlxL._AC_SY679_.jpg',
-                })">Add to Cart</button>
-            </div>
-            <div class="product">
-                <img src="https://m.media-amazon.com/images/I/91sDdXfNs+L._AC_SY300_SX300_.jpg" alt="Product 1" width="200px">
-                <p>Mintra Unisex School Bags </p>
-                <p>EGP 464</p>
-                <button onclick="addToCart({
-                    id: 1,
-                    name: 'Mintra Unisex School Bags 2 Pocket With Laptop Pocket - Printed Watercolour Mermaid, 18 L (29 X 12 X 42 Cm)',
-                    price: 464,
-                    image_url: 'https://m.media-amazon.com/images/I/91sDdXfNs+L._AC_SY300_SX300_.jpg',
-                })">Add to Cart</button>
-            </div>
-            <div class="product">
-                <img src="https://m.media-amazon.com/images/I/81OcjfS4L+L._AC_SY741_.jpg" alt="Product 1" width="200px">
-                <p>DeFacto Boys BackPack</p>
-                <p>EGP 489</p>
-                <button onclick="addToCart({
-                    id: 1,
-                    name: 'Mintra School Backpacks For Unisex',
-                    price: 489,
-                    image_url: 'https://m.media-amazon.com/images/I/81OcjfS4L+L._AC_SY741_.jpg',
-                })">Add to Cart</button>
-            </div>
-            <div class="product">
-                <img src="https://m.media-amazon.com/images/I/61ywmcqJsbL._AC_SX679_.jpg" alt="Product 1" width="200px">
-                <p>Mintra Unisex Printed School Bags </p>
-                <p>EGP 460</p>
-                <button onclick="addToCart({
-                    id: 1,
-                    name: 'Mintra Unisex Printed School Bags 2 Pocket With Laptop Pocket - Solar System, 18 L (29 X 12 X 42 Cm)',
-                    price: 460,
-                    image_url: 'https://m.media-amazon.com/images/I/81Uywhx4pAL.__AC_SX300_SY300_QL70_ML2_.jpg',
-                })">Add to Cart</button>
-            </div>
-            <div class="product">
-                <img src="https://m.media-amazon.com/images/I/41Em2-EbqoL._AC_SX679_.jpg" alt="Product 1" width="200px">
-                <p>Mintra School Backpacks</p>
-                <p>EGP 265</p>
-                <button onclick="addToCart({
-                    id: 1,
-                    name: 'Mintra Unisex School Backpack 3 Pocket Large, Navy Blue 20 L (50 X 30 X 16 Cm) - 04551',
-                    price: 265,
-                    image_url: 'https://m.media-amazon.com/images/I/41Em2-EbqoL._AC_SX679_.jpg',
-                })">Add to Cart</button>
-            </div>
-            <div class="product">
-                <img src="https://m.media-amazon.com/images/I/51MU4CZTBVL._AC_SY550_.jpg" alt="Product 1" width="200px">
-                <p>Mintra School Backpacks</p>
-                <p>EGP 265</p>
-                <button onclick="addToCart({
-                    id: 1,
-                    name: 'Mintra School Backpacks For Unisex',
-                    price: 265,
-                    image_url: 'https://m.media-amazon.com/images/I/51MU4CZTBVL._AC_SY550_.jpg',
-                })">Add to Cart</button>
-            </div>
-            <div class="product">
-                <img src="https://m.media-amazon.com/images/I/61mZ7HwSsJL._AC_SX425_.jpg" alt="Product 1" width="200px">
-                <p>Mintra School Backpack </p>
-                <p>EGP 193</p>
-                <button onclick="addToCart({
-                    id: 1,
-                    name: 'Mintra School Backpack For Unisex',
-                    price: 193,
-                    image_url: 'https://m.media-amazon.com/images/I/61mZ7HwSsJL._AC_SX425_.jpg',
-                })">Add to Cart</button>
-            </div>
-            <div class="product">
-                <img src="https://m.media-amazon.com/images/I/91vmOzBCiML.__AC_SX300_SY300_QL70_ML2_.jpg" alt="Product 1" width="200px">
-                <p> Mintra Unisex Printed School Bags 2 Pocket</p>
-                <p>EGP 383</p>
-                <button onclick="addToCart({
-                    id: 1,
-                    name: 'Mintra Unisex Printed School Bags 2 Pocket With Laptop Pocket - Dancing Flamingos, 18 L (29 X 12 X 42 Cm)',
-                    price: 383,
-                    image_url: 'https://m.media-amazon.com/images/I/91vmOzBCiML.__AC_SX300_SY300_QL70_ML2_.jpg',
-                })">Add to Cart</button>
-            </div>
+            <section>
+                 <h2 class="text-3xl font-bold text-center text-teal-800 font-cursive mb-10">Lesson Tote Bags</h2>
+                 <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
+                    <div class="product-card group block bg-white rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 overflow-hidden">
+                        <img src="https://m.media-amazon.com/images/I/71fkAM0mWYL._AC_SY741_.jpg" class="w-full h-56 object-cover">
+                        <div class="p-4">
+                            <h3 class="text-lg font-semibold text-gray-800 truncate">Ted Baker Roxcon Tote Bag</h3>
+                            <div class="flex justify-between items-center mt-4">
+                                <p class="text-xl font-bold text-teal-600">EGP 9,900</p>
+                                <button onclick="addToCart({id: 211, name: 'Ted Baker Roxcon Romantic Tote Bag', price: 9900, image_url: 'https://m.media-amazon.com/images/I/71fkAM0mWYL._AC_SY741_.jpg'})" class="bg-teal-500 text-white px-3 py-1.5 rounded-full hover:bg-teal-600 transition-colors text-sm">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                     <div class="product-card group block bg-white rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 overflow-hidden">
+                        <img src="https://m.media-amazon.com/images/I/415oOh0PNlL._AC_.jpg" class="w-full h-56 object-cover">
+                        <div class="p-4">
+                            <h3 class="text-lg font-semibold text-gray-800 truncate">Keetly Unicorn Plush Handbag</h3>
+                            <div class="flex justify-between items-center mt-4">
+                                <p class="text-xl font-bold text-teal-600">EGP 361</p>
+                                <button onclick="addToCart({id: 212, name: 'Keetly Unicorn Plush Handbag for Girls', price: 361, image_url: 'https://m.media-amazon.com/images/I/415oOh0PNlL._AC_.jpg'})" class="bg-teal-500 text-white px-3 py-1.5 rounded-full hover:bg-teal-600 transition-colors text-sm">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                     <div class="product-card group block bg-white rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 overflow-hidden">
+                        <img src="https://m.media-amazon.com/images/I/71yBRtlal-L._AC_SY679_.jpg" class="w-full h-56 object-cover">
+                        <div class="p-4">
+                            <h3 class="text-lg font-semibold text-gray-800 truncate">Insulated Lunch Bag</h3>
+                            <div class="flex justify-between items-center mt-4">
+                                <p class="text-xl font-bold text-teal-600">EGP 1,600</p>
+                                <button onclick="addToCart({id: 213, name: 'Insulated Lunch Bag', price: 1600, image_url: 'https://m.media-amazon.com/images/I/71yBRtlal-L._AC_SY679_.jpg'})" class="bg-teal-500 text-white px-3 py-1.5 rounded-full hover:bg-teal-600 transition-colors text-sm">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                     <div class="product-card group block bg-white rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 overflow-hidden">
+                        <img src="https://m.media-amazon.com/images/I/31+fovcu9RL._AC_SY606_.jpg" class="w-full h-56 object-cover">
+                        <div class="p-4">
+                            <h3 class="text-lg font-semibold text-gray-800 truncate">Tote bag printed</h3>
+                            <div class="flex justify-between items-center mt-4">
+                                <p class="text-xl font-bold text-teal-600">EGP 249</p>
+                                <button onclick="addToCart({id: 214, name: 'Tote bag printed - rick and morty', price: 249, image_url: 'https://m.media-amazon.com/images/I/31+fovcu9RL._AC_SY606_.jpg'})" class="bg-teal-500 text-white px-3 py-1.5 rounded-full hover:bg-teal-600 transition-colors text-sm">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                     <div class="product-card group block bg-white rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 overflow-hidden">
+                        <img src="https://m.media-amazon.com/images/I/31N84UGdclL._AC_.jpg" class="w-full h-56 object-cover">
+                        <div class="p-4">
+                            <h3 class="text-lg font-semibold text-gray-800 truncate">Tote bag printed</h3>
+                            <div class="flex justify-between items-center mt-4">
+                                <p class="text-xl font-bold text-teal-600">EGP 249</p>
+                                <button onclick="addToCart({id: 215, name: 'Tote bag printed - blue', price: 249, image_url: 'https://m.media-amazon.com/images/I/31N84UGdclL._AC_.jpg'})" class="bg-teal-500 text-white px-3 py-1.5 rounded-full hover:bg-teal-600 transition-colors text-sm">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+             <section>
+                 <h2 class="text-3xl font-bold text-center text-teal-800 font-cursive mb-10">Pencil Cases and Sets</h2>
+                 <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
+                     <div class="product-card group block bg-white rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 overflow-hidden">
+                        <img src="https://m.media-amazon.com/images/I/61Xaem0wHWL._AC_SX522_.jpg" class="w-full h-56 object-cover">
+                        <div class="p-4">
+                            <h3 class="text-lg font-semibold text-gray-800 truncate">dea bags Toon - 3-Piece Set</h3>
+                            <div class="flex justify-between items-center mt-4">
+                                <p class="text-xl font-bold text-teal-600">EGP 609</p>
+                                <button onclick="addToCart({id: 216, name: 'dea bags Toon - 3-Piece Set', price: 609, image_url: 'https://m.media-amazon.com/images/I/61Xaem0wHWL._AC_SX522_.jpg'})" class="bg-teal-500 text-white px-3 py-1.5 rounded-full hover:bg-teal-600 transition-colors text-sm">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card group block bg-white rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 overflow-hidden">
+                        <img src="https://m.media-amazon.com/images/I/71K7H7c8DIL._AC_SX679_.jpg" class="w-full h-56 object-cover">
+                        <div class="p-4">
+                            <h3 class="text-lg font-semibold text-gray-800 truncate">fashion mania Large pencil case</h3>
+                            <div class="flex justify-between items-center mt-4">
+                                <p class="text-xl font-bold text-teal-600">EGP 599</p>
+                                <button onclick="addToCart({id: 217, name: 'fashion mania Large pencil case', price: 599, image_url: 'https://m.media-amazon.com/images/I/71K7H7c8DIL._AC_SX679_.jpg'})" class="bg-teal-500 text-white px-3 py-1.5 rounded-full hover:bg-teal-600 transition-colors text-sm">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                     <div class="product-card group block bg-white rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 overflow-hidden">
+                        <img src="https://images-na.ssl-images-amazon.com/images/I/51Ns8TzrgLL.__AC_SX300_SY300_QL70_ML2_.jpg" class="w-full h-56 object-cover">
+                        <div class="p-4">
+                            <h3 class="text-lg font-semibold text-gray-800 truncate">Yiwu Plastic Pencil Case</h3>
+                            <div class="flex justify-between items-center mt-4">
+                                <p class="text-xl font-bold text-teal-600">EGP 248</p>
+                                <button onclick="addToCart({id: 218, name: 'Yiwu 2152 Plastic Pencil Case', price: 248, image_url: 'https://images-na.ssl-images-amazon.com/images/I/51Ns8TzrgLL.__AC_SX300_SY300_QL70_ML2_.jpg'})" class="bg-teal-500 text-white px-3 py-1.5 rounded-full hover:bg-teal-600 transition-colors text-sm">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                     <div class="product-card group block bg-white rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 overflow-hidden">
+                        <img src="https://m.media-amazon.com/images/I/81YY9lI4YRL._AC_SX425_.jpg" class="w-full h-56 object-cover">
+                        <div class="p-4">
+                            <h3 class="text-lg font-semibold text-gray-800 truncate">Calmleg pencil case</h3>
+                            <div class="flex justify-between items-center mt-4">
+                                <p class="text-xl font-bold text-teal-600">EGP 193</p>
+                                <button onclick="addToCart({id: 219, name: 'Calmleg pencil case with zipper', price: 193, image_url: 'https://m.media-amazon.com/images/I/81YY9lI4YRL._AC_SX425_.jpg'})" class="bg-teal-500 text-white px-3 py-1.5 rounded-full hover:bg-teal-600 transition-colors text-sm">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                     <div class="product-card group block bg-white rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 overflow-hidden">
+                        <img src="https://m.media-amazon.com/images/I/71JAA1U8A3L._AC_SX679_.jpg" class="w-full h-56 object-cover">
+                        <div class="p-4">
+                            <h3 class="text-lg font-semibold text-gray-800 truncate">HATHIYANI Document Zip Bag</h3>
+                            <div class="flex justify-between items-center mt-4">
+                                <p class="text-xl font-bold text-teal-600">EGP 199</p>
+                                <button onclick="addToCart({id: 220, name: 'HATHIYANI Large A4 Document Zip Bag', price: 199, image_url: 'https://m.media-amazon.com/images/I/71JAA1U8A3L._AC_SX679_.jpg'})" class="bg-teal-500 text-white px-3 py-1.5 rounded-full hover:bg-teal-600 transition-colors text-sm">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-            <!-- Add more product divs as needed -->
-            <h5>Children's Luggage</h5>
-            <div class="product">
-                <img src="https://m.media-amazon.com/images/I/61l1H5-ifZL._AC_SX679_.jpg" alt="Product 1" width="200px">
-                <p>kids backpack bag- Red</p>
-                <p>EGP 510</p>
-                <button onclick="addToCart({
-                    id: 1,
-                    name: 'Frozen Disney Princess Trolly Bag - Blue & Pink School Bag for Children 46 cm | Trolly Bag - 18 in - BTS-7023, Multicolour',
-                    price: 510,
-                    image_url: 'https://m.media-amazon.com/images/I/61l1H5-ifZL._AC_SX679_.jpg',
-                })">Add to Cart</button>
-            </div>
-            <div class="product">
-                <img src="https://m.media-amazon.com/images/I/61e8YZ7q6+L._AC_SX569_.jpg" alt="Product 1" width="200px">
-                <p>3D Cartoon School Bag Large Boys School</p>
-                <p>EGP 825</p>
-                <button onclick="addToCart({
-                    id: 1,
-                    name: 'Frozen Disney Princess Trolly Bag - Blue & Pink School Bag for Children 46 cm | Trolly Bag - 18 in - BTS-7023, Multicolour',
-                    price: 825,
-                    image_url: 'https://m.media-amazon.com/images/I/61e8YZ7q6+L._AC_SX569_.jpg',
-                })">Add to Cart</button>
-            </div>
-            <div class="product">
-                <img src="https://m.media-amazon.com/images/I/61D4la6xl9L._AC_SY741_.jpg" alt="Product 1" width="200px">
-                <p>3D Cartoon School Bag </p>
-                <p>EGP 825</p>
-                <button onclick="addToCart({
-                    id: 1,
-                    name: '3D Cartoon School Bag Large Boys School Bags High Capacity Waterproof with Stationery Box Kids School Bag Cartoon Bag for Boys Girls 6-15 Years Old',
-                    price: 825,
-                    image_url: 'https://m.media-amazon.com/images/I/61D4la6xl9L._AC_SY741_.jpg',
-                })">Add to Cart</button>
-            </div>
-            <div class="product">
-                <img src="https://m.media-amazon.com/images/I/81Vsh+6HroL._AC_SY879_.jpg" alt="Product 1" width="200px">
-                <p>OX Unisex Kids Backpack Backpack (pack of 1)</p>
-                <p>EGP 249</p>
-                <button onclick="addToCart({
-                    id: 1,
-                    name: 'OX Unisex Kids Backpack Backpack (pack of 1)',
-                    price: 249,
-                    image_url: 'https://m.media-amazon.com/images/I/81Vsh+6HroL._AC_SY879_.jpg',
-                })">Add to Cart</button>
-            </div>
-            <div class="product">
-                <img src="https://m.media-amazon.com/images/I/81n+AusIdyL._AC_SY679_.jpg" alt="Product 1" width="200px">
-                <p>Frozen Disney Princess Trolly Bag</p>
-                <p>EGP 3,900</p>
-                <button onclick="addToCart({
-                    id: 1,
-                    name: 'Frozen Disney Princess Trolly Bag - Blue & Pink School Bag for Children 46 cm | Trolly Bag - 18 in - BTS-7023, Multicolour',
-                    price: 3.900,
-                    image_url: 'https://m.media-amazon.com/images/I/81n+AusIdyL._AC_SY679_.jpg',
-                })">Add to Cart</button>
-            </div>
-            <div class="product">
-                <img src="https://m.media-amazon.com/images/I/71qouvuY+JL._AC_SY300_SX300_.jpg" alt="Product 1" width="200px">
-                <p>Toyshine Unicorn Plsuh Kids Backpack </p>
-                <p>EGP 350</p>
-                <button onclick="addToCart({
-                    id: 1,
-                    name: 'Toyshine Unicorn Plsuh Kids Backpack Bag 11,4 Age 3+ Unicorn Gifts Girls Boys Ideal for Birthday, Travel, Perfect Companion - Blue',
-                    price: 350,
-                    image_url: 'https://m.media-amazon.com/images/I/71qouvuY+JL._AC_SY300_SX300_.jpg',
-                })">Add to Cart</button>
-            </div>
-            <div class="product">
-                <img src="https://m.media-amazon.com/images/I/61RzUtZVxwL._AC_SY679_.jpg" alt="Product 1" width="200px">
-                <p>High Quality MAM-BAG Backpack</p>
-                <p>EGP 574</p>
-                <button onclick="addToCart({
-                    id: 1,
-                    name: 'High Quality MAM-BAG Backpack for Boys & Girls Kids, School Bag, for Elementary Back to School, 3D Graphic Cool Stylish Cool Colors, Cartoon',
-                    price: 574,
-                    image_url: 'https://m.media-amazon.com/images/I/61RzUtZVxwL._AC_SY679_.jpg',
-                })">Add to Cart</button>
-            </div>
-            <div class="product">
-                <img src="https://m.media-amazon.com/images/I/61qIgV1iO5L._AC_SX679_.jpg" alt="Product 1" width="200px">
-                <p>Coral High Kids</p>
-                <p>EGP 4,716</p>
-                <button onclick="addToCart({
-                    id: 1,
-                    name: 'Coral High Kids Luggage suitcase - Blue Pink Flamingo Patterned',
-                    price: 4.716,
-                    image_url: 'https://m.media-amazon.com/images/I/61qIgV1iO5L._AC_SX679_.jpg',
-                })">Add to Cart</button>
-            </div>
-            <div class="product">
-                <img src="https://m.media-amazon.com/images/I/81mtcJymjdL._AC_SX522_.jpg" alt="Product 1" width="200px">
-                <p>Mickey Mouse Value</p>
-                <p>EGP 2,523</p>
-                <button onclick="addToCart({
-                    id: 1,
-                    name: 'Mickey Mouse Value Pack 5 in 1- (Trolley)',
-                    price: 2.523,
-                    image_url: 'https://m.media-amazon.com/images/I/81mtcJymjdL._AC_SX522_.jpg',
-                })">Add to Cart</button>
-            </div>
-            <div class="product">
-                <img src="https://m.media-amazon.com/images/I/81Dm2769KtL._AC_SY679_.jpg" alt="Product 1" width="200px">
-                <p>Frozen Trolley Bag 16</p>
-                <p>EGP 2,149</p>
-                <button onclick="addToCart({
-                    id: 1,
-                    name: 'Frozen Trolley Bag 16',
-                    price: 2.149,
-                    image_url: 'https://m.media-amazon.com/images/I/81Dm2769KtL._AC_SY679_.jpg',
-                })">Add to Cart</button>
-            </div>
-  
-
-            <h5>Lesson Tote Bags
-            </h5>
-            <div class="product">
-                <img src="https://m.media-amazon.com/images/I/71fkAM0mWYL._AC_SY741_.jpg" alt="Product 2">
-                <p>Ted Baker Roxcon Romantic Small Printed </p>
-                <p>EGP 9,900.</p>
-                <button onclick="addToCart({
-                    id: 1,
-                    name: 'Ted Baker Roxcon Romantic Small Printed Icon Tote Bag Grab Bag PVC, White, S',
-                    price: 9.900,
-                    image_url: 'https://m.media-amazon.com/images/I/71fkAM0mWYL._AC_SY741_.jpg',
-                })">Add to Cart</button>
-            </div>
-            <div class="product">
-                <img src="https://m.media-amazon.com/images/I/415oOh0PNlL._AC_.jpg" alt="Product 2">
-                <p>Keetly Unicorn Plush Handbag for Girls</p>
-                <p>EGP 361</p>
-                <button onclick="addToCart({
-                    id: 1,
-                    name: 'unch Bag - Insulated, Kids zagzige',
-                    price: 361,
-                    image_url: 'https://m.media-amazon.com/images/I/415oOh0PNlL._AC_.jpg',
-                })">Add to Cart</button>
-            </div>
-            <div class="product">
-                <img src="https://m.media-amazon.com/images/I/71yBRtlal-L._AC_SY679_.jpg" alt="Product 2">
-                <p>unch Bag</p>
-                <p>EGP1,600</p>
-                <button onclick="addToCart({
-                    id: 1,
-                    name: 'unch Bag - Insulated, Kids zagzige',
-                    price: 1.600,
-                    image_url: 'https://m.media-amazon.com/images/I/71yBRtlal-L._AC_SY679_.jpg',
-                })">Add to Cart</button>
-            </div>
-
-            <div class="product">
-                <img src="https://m.media-amazon.com/images/I/31+fovcu9RL._AC_SY606_.jpg" alt="Product 2">
-                <p> Tote bag printed </p>
-                <p>EGP 249</p>
-                <button onclick="addToCart({
-                    id: 1,
-                    name: 'Tote bag printed - for woman-eick and morty-9',
-                    price: 249,
-                    image_url: 'https://m.media-amazon.com/images/I/31+fovcu9RL._AC_SY606_.jpg',
-                })">Add to Cart</button>
-            </div>
-            <div class="product">
-                <img src="https://m.media-amazon.com/images/I/31XTMwDiJVL._AC_SY606_.jpg" alt="Product 2">
-                <p>Tote bag printed </p>
-                <p>EGP 249</p>
-                <button onclick="addToCart({
-                    id: 1,
-                    name: 'Tote bag printed - for woman-blue',
-                    price: 249,
-                    image_url: 'https://m.media-amazon.com/images/I/31XTMwDiJVL._AC_SY606_.jpg',
-                })">Add to Cart</button>
-            </div>
-            <div class="product">
-                <img src="https://m.media-amazon.com/images/I/31bVRsh-J2L._AC_SY741_.jpg" alt="Product 2">
-                <p>Tote bag printed </p>
-                <p>EGP 249</p>
-                <button onclick="addToCart({
-                    id: 1,
-                    name: 'Tote bag printed - for woman-blue',
-                    price: 249,
-                    image_url: 'https://m.media-amazon.com/images/I/31bVRsh-J2L._AC_SY741_.jpg',
-                })">Add to Cart</button>
-            </div>
-            <div class="product">
-                <img src="https://m.media-amazon.com/images/I/31N84UGdclL._AC_.jpg" alt="Product 2">
-                <p>Tote bag printed </p>
-                <p>EGP 249</p>
-                <button onclick="addToCart({
-                    id: 1,
-                    name: 'Tote bag printed - for woman-blue',
-                    price: 249,
-                    image_url: 'https://m.media-amazon.com/images/I/31N84UGdclL._AC_.jpg',
-                })">Add to Cart</button>
-            </div>
-            <div class="product">
-                <img src="https://m.media-amazon.com/images/I/412-WqcsgxL._AC_.jpg" alt="Product 2">
-                <p>Tote bag printed </p>
-                <p>EGP 249</p>
-                <button onclick="addToCart({
-                    id: 1,
-                    name: 'Tote bag printed - for woman-blue',
-                    price: 249,
-                    image_url: 'https://m.media-amazon.com/images/I/412-WqcsgxL._AC_.jpg',
-                })">Add to Cart</button>
-            </div>
-           
-            <div class="product">
-                <img src="https://m.media-amazon.com/images/I/41iyarEtgoL._AC_SX679_.jpg" alt="Product 2">
-                <p>Tote bag printed - for woman-we bare bear-3</p>
-                <p>EGP 249</p>
-                <button onclick="addToCart({
-                    id: 1,
-                    name: 'Tote bag printed - for woman-we bare bear-3',
-                    price: 249,
-                    image_url: 'https://m.media-amazon.com/images/I/41iyarEtgoL._AC_SX679_.jpg',
-                })">Add to Cart</button>
-            </div>
-            <div class="product">
-                <img src="https://m.media-amazon.com/images/I/31WXfQSQ18L._AC_.jpg" alt="Product 2">
-                <p>Tote bag printed - for woman-red-2</p>
-                <p>EGP 249</p>
-                <button onclick="addToCart({
-                    id: 1,
-                    name: 'Tote bag printed - for woman-red-2',
-                    price: 249,
-                    image_url: 'https://m.media-amazon.com/images/I/31WXfQSQ18L._AC_.jpg',
-                })">Add to Cart</button>
-            </div>
-          
-             <h5>Schoolbags Pencil Cases and Sets
-            </h5>
-            <div class="product">
-                <img src="https://m.media-amazon.com/images/I/513nRo6fO2L._AC_SX679_.jpg" alt="Product 2">
-                <p>شنطه كروس و باك </p>
-                <p>EGP 300</p> 
-                <button onclick="addToCart({
-                    id: 1,
-                    name: 'شنطه حريمي كروس و باك',
-                    price: 300,
-                    image_url: 'https://m.media-amazon.com/images/I/513nRo6fO2L._AC_SX679_.jpg',
-                })">Add to Cart</button>
-            </div>
-            <div class="product">
-                <img src="https://m.media-amazon.com/images/I/51rE9MfHuOL._AC_SX679_.jpg" alt="Product 2">
-                <p>18 Inch Unisex Waterproof Backpack</p>
-                <p>EGP 850</p>
-                <button onclick="addToCart({
-                    id: 1,
-                    name: '18 Inch Unisex Waterproof Backpack For School Or Club (ML136)',
-                    price: 850,
-                    image_url: 'https://m.media-amazon.com/images/I/51rE9MfHuOL._AC_SX679_.jpg',
-                })">Add to Cart</button>
-            </div>
-            <div class="product">
-                <img src="https://m.media-amazon.com/images/I/61bVQomx0nL._AC_SX679_.jpg" alt="Product 2">
-                <p> 18 Inch Unisex Waterproof</p>
-                <p>EGP 850</p>
-                <button onclick="addToCart({
-                    id: 1,
-                    name: '18 Inch Unisex Waterproof Camouflage Backpack For School Or Club (ML172)',
-                    price: 850,
-                    image_url: 'https://m.media-amazon.com/images/I/61bVQomx0nL._AC_SX679_.jpg',
-                })">Add to Cart</button>
-            </div>
-            <div class="product">
-                <img src="https://m.media-amazon.com/images/I/51KgdvQrotL._AC_SX679_.jpg" alt="Product 2">
-                <p>18 Inch Unisex Waterproof Multicolor</p>
-                <p>EGP 850</p>
-                <button onclick="addToCart({
-                    id: 1,
-                    name: '18 Inch Unisex Waterproof Multicolor Backpack For School Or Club (ML176)',
-                    price: 850,
-                    image_url: 'https://m.media-amazon.com/images/I/51KgdvQrotL._AC_SX679_.jpg',
-                })">Add to Cart</button>
-            </div>
-            <div class="product">
-                <img src="https://m.media-amazon.com/images/I/51KqfCLsABL._AC_SY679_.jpg" alt="Product 2">
-                <p>Water Proof School</p>
-                <p>EGP 550</p>
-                <button onclick="addToCart({
-                    id: 1,
-                    name: 'Water Proof School Bag',
-                    price: 550,
-                    image_url: 'https://m.media-amazon.com/images/I/51KqfCLsABL._AC_SY679_.jpg',
-                })">Add to Cart</button>
-            </div>
-            <div class="product">
-                <img src="https://m.media-amazon.com/images/I/616ieTQc7NL._AC_.jpg" alt="Product 2">
-                <p> High School Backpack</p>
-                <p>EGP 1,750</p>
-                <button onclick="addToCart({
-                    id: 1,
-                    name: 'High School Backpack in Beige color',
-                    price: 1.750,
-                    image_url: 'https://m.media-amazon.com/images/I/616ieTQc7NL._AC_.jpg',
-                })">Add to Cart</button>
-            </div>
-            <div class="product">
-                <img src="https://m.media-amazon.com/images/I/71K7H7c8DIL._AC_SX679_.jpg" alt="Product 2">
-                <p> fashion mania Large pencil case</p>
-                <p>EGP 599</p>
-                <button onclick="addToCart({
-                    id: 1,
-                    name: 'fashion mania Large pencil case, large zipper pencil case, multi-compartment office stationery cosmetic case, Pressure relief pencil case (pink)',
-                    price: 599,
-                    image_url: 'https://m.media-amazon.com/images/I/71K7H7c8DIL._AC_SX679_.jpg',
-                })">Add to Cart</button>
-            </div>
-            <div class="product">
-                <img src="https://images-na.ssl-images-amazon.com/images/I/51Ns8TzrgLL.__AC_SX300_SY300_QL70_ML2_.jpg" alt="Product 2">
-                <p>Yiwu 2152 Plastic Pencil Case</p>
-                <p>EGP 248</p>
-                <button onclick="addToCart({
-                    id: 1,
-                    name: 'Yiwu 2152 Plastic Pencil Case with Leather, Brown',
-                    price: 248,
-                    image_url: 'https://images-na.ssl-images-amazon.com/images/I/51Ns8TzrgLL.__AC_SX300_SY300_QL70_ML2_.jpg',
-                })">Add to Cart</button>
-            </div>
-            <div class="product">
-                <img src="https://m.media-amazon.com/images/I/81YY9lI4YRL._AC_SX425_.jpg" alt="Product 2">
-                <p>Calmleg pencil case</p>
-                <p>EGP193</p>
-                <button onclick="addToCart({
-                    id: 1,
-                    name: 'Calmleg pencil case with zipper, 20 x 10 x 5 cm - multi color, 2725605537840',
-                    price:193,
-                    image_url: 'https://m.media-amazon.com/images/I/81YY9lI4YRL._AC_SX425_.jpg',
-                })">Add to Cart</button>
-            </div>
-            <div class="product">
-                <img src="https://m.media-amazon.com/images/I/61lNzEr4iGL._AC_SY679_.jpg" alt="Product 2">
-                <p>Pencil Case for Kids</p>
-                <p>EGP 150</p>
-                <button onclick="addToCart({
-                    id: 1,
-                    name: 'Pencil Case for Kids with Large Storage and 2 Zipper Organizer',
-                    price:150,
-                    image_url: 'https://m.media-amazon.com/images/I/61lNzEr4iGL._AC_SY679_.jpg',
-                })">Add to Cart</button>
-            </div>
-            <div class="product">
-                <img src="https://m.media-amazon.com/images/I/61Xaem0wHWL._AC_SX522_.jpg" alt="Product 2">
-                <p>dea bags Toon - School Bag</p>
-                <p>EGP 609</p>
-                <button onclick="addToCart({
-                    id: 1,
-                    name: 'dea bags Toon - School Bag, Lunch Bag and Pencil Case 3-Piece Set, Size 18',
-                    price:609,
-                    image_url: 'https://m.media-amazon.com/images/I/61Xaem0wHWL._AC_SX522_.jpg',
-                })">Add to Cart</button>
-            </div>
-            <div class="product">
-                <img src="https://m.media-amazon.com/images/I/71WT6S2VMvL._AC_SX679_.jpg" alt="Product 2">
-                <p>Premium Multi-Pocket Student School</p>
-                <p>EGP 599</p>
-                <button onclick="addToCart({
-                    id: 1,
-                    name: 'Premium Multi-Pocket Student School Backpack Set - Anti-Theft Bags with Large Capacity and Stylish Design, Perfect for Daily Use and Travel',
-                    price: 599,
-                    image_url: 'https://m.media-amazon.com/images/I/71WT6S2VMvL._AC_SX679_.jpg',
-                })">Add to Cart</button>
-            </div>
-            <div class="product">
-                <img src="https://m.media-amazon.com/images/I/41I0DQtqEgL._AC_SX679_.jpg" alt="Product 2">
-                <p>Mintra Polyester Top-Zip Adjustable</p>
-                <p>EGP 354</p>
-                <button onclick="addToCart({
-                    id: 1,
-                    name: 'Mintra Polyester Top-Zip Adjustable Shoulder Strap Unisex Backpack',
-                    price: 354,
-                    image_url: 'https://m.media-amazon.com/images/I/41I0DQtqEgL._AC_SX679_.jpg',
-                })">Add to Cart</button>
-            </div>
-            <div class="product">
-                <img src="https://m.media-amazon.com/images/I/71qh5sg1MoL.__AC_SY300_SX300_QL70_ML2_.jpg" alt="Product 2">
-                <p>Mintra Pencil Case </p>
-                <p>EGP 44</p>
-                <button onclick="addToCart({
-                    id: 1,
-                    name: 'Mintra Pencil Case 20.5x4x5 cm - Printed yellow zigzag',
-                    price: 44,
-                    image_url: 'https://m.media-amazon.com/images/I/71qh5sg1MoL.__AC_SY300_SX300_QL70_ML2_.jpg',
-                })">Add to Cart</button>
-            </div>
-            <div class="product">
-                <img src="https://m.media-amazon.com/images/I/71JAA1U8A3L._AC_SX679_.jpg" alt="Product 2">
-                <p>HATHIYANI Large A4 Size Document Zip Bag</p>
-                <p>EGP 199</p>
-                <button onclick="addToCart({
-                    id: 1,
-                    name: 'HATHIYANI Large A4 Size Document Zip Bag/Pouch Waterproof Zipper Pouches Document Holder/Pen Pencil Case/Stationery Storage Bags/Cosmetic Pouch/Travel Organizer Multicolour (Pack of 5)',
-                    price: 199,
-                    image_url: 'https://m.media-amazon.com/images/I/71JAA1U8A3L._AC_SX679_.jpg',
-                })">Add to Cart</button>
-            </div>
-        </section>
+        </div>
     </main>
 
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+    <footer class="bg-teal-800 text-white mt-16">
+        <div class="container mx-auto px-6 py-8 text-center">
+            <p>&copy; 2024 Kids World. All Rights Reserved.</p>
+            <div class="flex justify-center gap-6 mt-4">
+                <a href="#" class="hover:text-teal-300 transition"><i class="fab fa-facebook-f fa-lg"></i></a>
+                <a href="#" class="hover:text-teal-300 transition"><i class="fab fa-instagram fa-lg"></i></a>
+                <a href="#" class="hover:text-teal-300 transition"><i class="fab fa-twitter fa-lg"></i></a>
+            </div>
+        </div>
+    </footer>
+    
+    <div id="toast-notification" class="fixed bottom-5 right-5 bg-green-500 text-white py-2 px-5 rounded-lg shadow-lg transform translate-y-20 opacity-0 transition-all duration-300">
+        Item added to cart!
+    </div>
 
     <script>
-       function addToCart(product) {
-    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+        document.addEventListener('DOMContentLoaded', () => {
+            const menuBtn = document.getElementById('menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            menuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
 
- 
-    cart.push({
-        id: product.id,
-        name: product.name,
-        price: product.price,
-        image: product.image_url || product.url 
-    });
+            const slides = document.querySelectorAll('.carousel-slide');
+            const prevBtn = document.getElementById('carousel-prev');
+            const nextBtn = document.getElementById('carousel-next');
+            let currentSlide = 0;
 
-    localStorage.setItem('cart', JSON.stringify(cart));
-}
-function addToCart(product) {
-            const button = event.target;
-            const cart = JSON.parse(localStorage.getItem('cart')) || [];
-            if (button.innerHTML === 'Add to Cart') {
-            
-                button.innerHTML = 'Added to Cart';
-                button.style.backgroundColor = 'green';
-                button.style.color = 'white';
-
-             
-                console.log('Product added to cart:', product);
+            function showSlide(index) {
+                slides.forEach((slide, i) => {
+                    slide.classList.toggle('opacity-100', i === index);
+                    slide.classList.toggle('opacity-0', i !== index);
+                });
             }
-            cart.push({
-        id: product.id,
-        name: product.name,
-        price: product.price,
-        image: product.image_url || product.url 
-    });
 
-    localStorage.setItem('cart', JSON.stringify(cart));
+            if(nextBtn && prevBtn) {
+                nextBtn.addEventListener('click', () => {
+                    currentSlide = (currentSlide + 1) % slides.length;
+                    showSlide(currentSlide);
+                });
+
+                prevBtn.addEventListener('click', () => {
+                    currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+                    showSlide(currentSlide);
+                });
+
+                 setInterval(() => {
+                    nextBtn.click();
+                }, 5000);
+            }
+            updateCartCounter();
+        });
+
+        function addToCart(product) {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            cart.push(product);
+            localStorage.setItem('cart', JSON.stringify(cart));
+            showToast(product.name);
+            updateCartCounter();
+        }
+
+        function showToast(productName) {
+            const toast = document.getElementById('toast-notification');
+            toast.textContent = `"${productName}" added to cart!`;
+            toast.classList.remove('translate-y-20', 'opacity-0');
+            toast.classList.add('translate-y-0', 'opacity-100');
+
+            setTimeout(() => {
+                toast.classList.add('translate-y-20', 'opacity-0');
+                toast.classList.remove('translate-y-0', 'opacity-100');
+            }, 3000);
+        }
+
+        function updateCartCounter() {
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            const totalItems = cart.length;
+            
+            const counterDesktop = document.getElementById('cart-counter-desktop');
+            const mobileCartText = document.getElementById('mobile-cart-text');
+            const mobileIconSpan = document.querySelector('#mobile-menu .fa-shopping-cart + span');
+
+            if (totalItems > 0) {
+                counterDesktop.textContent = totalItems;
+                counterDesktop.classList.remove('hidden');
+                if (mobileCartText) mobileCartText.textContent = `Cart (${totalItems})`;
+                
+            } else {
+                counterDesktop.classList.add('hidden');
+                if (mobileCartText) mobileCartText.textContent = 'Cart';
+            }
         }
     </script>
 </body>
