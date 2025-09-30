@@ -1,1 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diaper Bags - Kids World</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Playball&display=swap" rel="stylesheet">
+    <style>
+        .font-cursive {
+            font-family: 'Playball', cursive;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #fdfaf5;
+        }
+    </style>
+</head>
+<body class="text-gray-800">
 
+    <header class="bg-teal-100/80 backdrop-blur-sm shadow-md fixed top-0 left-0 right-0 z-50">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="home.html" class="flex items-center gap-3">
+                <img src="https://i.pinimg.com/736x/6b/90/b5/6b90b55c618ab58f09c2e38151b708e7.jpg" alt="Logo" class="h-12 w-12 rounded-full border-2 border-teal-500">
+                <span class="text-3xl font-cursive text-teal-800">Kids World</span>
+            </a>
+            
+            <nav class="hidden md:flex items-center space-x-6">
+                <a href="home.html" class="text-gray-700 hover:text-teal-600 transition duration-300">Home</a>
+                <a href="about.html" class="text-gray-700 hover:text-teal-600 transition duration-300">About</a>
+                <a href="products.html" class="text-teal-600 font-semibold transition duration-300">Products</a>
+            </nav>
+
+            <div class="flex items-center gap-4">
+                 <form action="search.html" method="get" class="hidden md:block relative">
+                    <input type="text" name="search" placeholder="Search..." class="rounded-full py-1.5 px-4 w-40 focus:outline-none focus:ring-2 focus:ring-teal-400 transition">
+                    <button type="submit" class="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400">
+                        <i class="fa fa-search"></i>
+                    </button>
+                </form>
+                <a href="login.html" class="text-gray-700 hover:text-teal-600 transition duration-300"><i class="fas fa-user-circle fa-lg"></i></a>
+                <a href="cart.html" class="relative text-gray-700 hover:text-teal-600">
+                    <i class="fas fa-shopping-cart fa-lg"></i>
+                </a>
+                <button id="menu-btn" class="md:hidden text-gray-700 focus:outline-none">
+                    <i class="fas fa-bars fa-lg"></i>
+                </button>
+            </div>
+        </div>
+        
+        <div id="mobile-menu" class="hidden md:hidden px-6 pt-2 pb-4 space-y-3">
+            <a href="home.html" class="block text-gray-700 hover:text-teal-600">Home</a>
+            <a href="about.html" class="block text-gray-700 hover:text-teal-600">About</a>
+            <a href="products.html" class="block text-teal-600 font-semibold">Products</a>
+            <form action="search.html" method="get" class="relative pt-4">
+                <input type="text" name="search" placeholder="Search..." class="rounded-full py-1.5 px-4 w-full focus:outline-none focus:ring-2 focus:ring-teal-400">
+                 <button type="submit" class="absolute right-4 top-1/2 text-gray-400">
+                    <i class="fa fa-search"></i>
+                </button>
+            </form>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 sm:px-6 lg:px-8 pt-24">
+
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold text-center text-teal-800 mb-8">Baby Diaper Bags</h2>
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
+                <div class="bg-white rounded-lg shadow-md p-4 flex flex-col items-center text-center transition-transform transform hover:-translate-y-2">
+                    <img src="https://m.media-amazon.com/images/I/51sd2GVyl3L._AC_.jpg" alt="Diaper Bag with Bed" class="h-48 object-contain mb-4">
+                    <h3 class="font-semibold text-md flex-grow">Diaper Bag with Bed Backpack</h3>
+                    <p class="text-teal-600 font-bold my-2">EGP 950</p>
+                    <button onclick="addToCart({id: 701, name: 'Diaper Bag with Bed Backpack Travel Baby Bed', price: 950, image_url: 'https://m.media-amazon.com/images/I/51sd2GVyl3L._AC_.jpg'}, event)" class="mt-auto w-full bg-teal-500 text-white py-2 px-4 rounded-full font-semibold hover:bg-teal-600 transition-colors">Add to Cart</button>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-4 flex flex-col items-center text-center transition-transform transform hover:-translate-y-2">
+                    <img src="https://m.media-amazon.com/images/I/514mJMIdB7L._AC_SX679_.jpg" alt="LEZOY Travel Diaper Bag" class="h-48 object-contain mb-4">
+                    <h3 class="font-semibold text-md flex-grow">LEZOY Travel Diaper Bag for Mom</h3>
+                    <p class="text-teal-600 font-bold my-2">EGP 250</p>
+                    <button onclick="addToCart({id: 702, name: 'LEZOY Travel Diaper Bag for Mom', price: 250, image_url: 'https://m.media-amazon.com/images/I/514mJMIdB7L._AC_SX679_.jpg'}, event)" class="mt-auto w-full bg-teal-500 text-white py-2 px-4 rounded-full font-semibold hover:bg-teal-600 transition-colors">Add to Cart</button>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-4 flex flex-col items-center text-center transition-transform transform hover:-translate-y-2">
+                    <img src="https://m.media-amazon.com/images/I/71OUHdKJhVL.__AC_SX300_SY300_QL70_ML2_.jpg" alt="3 in 1 Diaper Bag" class="h-48 object-contain mb-4">
+                    <h3 class="font-semibold text-md flex-grow">3 in 1 Diaper Bag Travel Bassinet</h3>
+                    <p class="text-teal-600 font-bold my-2">EGP 1,200</p>
+                    <button onclick="addToCart({id: 703, name: '3 in 1 Diaper Bag Travel Bassinet', price: 1200, image_url: 'https://m.media-amazon.com/images/I/71OUHdKJhVL.__AC_SX300_SY300_QL70_ML2_.jpg'}, event)" class="mt-auto w-full bg-teal-500 text-white py-2 px-4 rounded-full font-semibold hover:bg-teal-600 transition-colors">Add to Cart</button>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-4 flex flex-col items-center text-center transition-transform transform hover:-translate-y-2">
+                    <img src="https://m.media-amazon.com/images/I/518hKcJj2cL._AC_.jpg" alt="Diaper Bag with Bed" class="h-48 object-contain mb-4">
+                    <h3 class="font-semibold text-md flex-grow">Waterproof Diaper Bag with Bed</h3>
+                    <p class="text-teal-600 font-bold my-2">EGP 950</p>
+                    <button onclick="addToCart({id: 704, name: 'Diaper Bag with Bed - Waterproof', price: 950, image_url: 'https://m.media-amazon.com/images/I/518hKcJj2cL._AC_.jpg'}, event)" class="mt-auto w-full bg-teal-500 text-white py-2 px-4 rounded-full font-semibold hover:bg-teal-600 transition-colors">Add to Cart</button>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-4 flex flex-col items-center text-center transition-transform transform hover:-translate-y-2">
+                    <img src="https://m.media-amazon.com/images/I/713z2PyG6TL._AC_SX679_.jpg" alt="BabbleRoo Baby Diaper Backpack" class="h-48 object-contain mb-4">
+                    <h3 class="font-semibold text-md flex-grow">BabbleRoo Baby Diaper Backpack</h3>
+                    <p class="text-teal-600 font-bold my-2">EGP 6,300</p>
+                    <button onclick="addToCart({id: 705, name: 'BabbleRoo Baby Diaper Backpack with Changing Mat', price: 6300, image_url: 'https://m.media-amazon.com/images/I/713z2PyG6TL._AC_SX679_.jpg'}, event)" class="mt-auto w-full bg-teal-500 text-white py-2 px-4 rounded-full font-semibold hover:bg-teal-600 transition-colors">Add to Cart</button>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-4 flex flex-col items-center text-center transition-transform transform hover:-translate-y-2">
+                    <img src="https://m.media-amazon.com/images/I/51fl6T0oKqL._AC_SX679_.jpg" alt="Diaper Bag Backpack" class="h-48 object-contain mb-4">
+                    <h3 class="font-semibold text-md flex-grow">Waterproof Stylish Diaper Backpack</h3>
+                    <p class="text-teal-600 font-bold my-2">EGP 1,257</p>
+                    <button onclick="addToCart({id: 706, name: 'Diaper Bag Backpack, Waterproof Stylish Multi-function', price: 1257, image_url: 'https://m.media-amazon.com/images/I/51fl6T0oKqL._AC_SX679_.jpg'}, event)" class="mt-auto w-full bg-teal-500 text-white py-2 px-4 rounded-full font-semibold hover:bg-teal-600 transition-colors">Add to Cart</button>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-4 flex flex-col items-center text-center transition-transform transform hover:-translate-y-2">
+                    <img src="https://m.media-amazon.com/images/I/61XnPG25ALL._AC_SX679_.jpg" alt="Hello Baby Tote Bag" class="h-48 object-contain mb-4">
+                    <h3 class="font-semibold text-md flex-grow">Hello Baby Tote Bag For Unisex</h3>
+                    <p class="text-teal-600 font-bold my-2">EGP 693</p>
+                    <button onclick="addToCart({id: 707, name: 'Hello Baby Tote Bag For Unisex - Red Brown', price: 693, image_url: 'https://m.media-amazon.com/images/I/61XnPG25ALL._AC_SX679_.jpg'}, event)" class="mt-auto w-full bg-teal-500 text-white py-2 px-4 rounded-full font-semibold hover:bg-teal-600 transition-colors">Add to Cart</button>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-4 flex flex-col items-center text-center transition-transform transform hover:-translate-y-2">
+                    <img src="https://m.media-amazon.com/images/I/7131lceCeLL.__AC_SX300_SY300_QL70_ML2_.jpg" alt="Universal Diaper Bag" class="h-48 object-contain mb-4">
+                    <h3 class="font-semibold text-md flex-grow">Universal Baby Supplies Diaper Bag</h3>
+                    <p class="text-teal-600 font-bold my-2">EGP 624</p>
+                    <button onclick="addToCart({id: 708, name: 'Universal Baby Supplies Diaper Bag For Boys, Multi Color', price: 624, image_url: 'https://m.media-amazon.com/images/I/7131lceCeLL.__AC_SX300_SY300_QL70_ML2_.jpg'}, event)" class="mt-auto w-full bg-teal-500 text-white py-2 px-4 rounded-full font-semibold hover:bg-teal-600 transition-colors">Add to Cart</button>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-4 flex flex-col items-center text-center transition-transform transform hover:-translate-y-2">
+                    <img src="https://m.media-amazon.com/images/I/91nuMfWW6+L._AC_SY300_SX300_.jpg" alt="Mix & Max Shoulder Bag" class="h-48 object-contain mb-4">
+                    <h3 class="font-semibold text-md flex-grow">Mix & Max Embroidered Shoulder Bag</h3>
+                    <p class="text-teal-600 font-bold my-2">EGP 866</p>
+                    <button onclick="addToCart({id: 709, name: 'Mix & Max Embroidered Shoulder Bag - Beige & Red', price: 866, image_url: 'https://m.media-amazon.com/images/I/91nuMfWW6+L._AC_SY300_SX300_.jpg'}, event)" class="mt-auto w-full bg-teal-500 text-white py-2 px-4 rounded-full font-semibold hover:bg-teal-600 transition-colors">Add to Cart</button>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-4 flex flex-col items-center text-center transition-transform transform hover:-translate-y-2">
+                    <img src="https://m.media-amazon.com/images/I/A150UYVsseL._AC_SX425_.jpg" alt="Okiedog MONDO Changing Bag" class="h-48 object-contain mb-4">
+                    <h3 class="font-semibold text-md flex-grow">Okiedog MONDO Lightweight Changing Bag</h3>
+                    <p class="text-teal-600 font-bold my-2">EGP 2,300</p>
+                    <button onclick="addToCart({id: 710, name: 'okiedog MONDO Lightweight Spacious Changing Bag', price: 2300, image_url: 'https://m.media-amazon.com/images/I/A150UYVsseL._AC_SX425_.jpg'}, event)" class="mt-auto w-full bg-teal-500 text-white py-2 px-4 rounded-full font-semibold hover:bg-teal-600 transition-colors">Add to Cart</button>
+                </div>
+                 <div class="bg-white rounded-lg shadow-md p-4 flex flex-col items-center text-center transition-transform transform hover:-translate-y-2">
+                    <img src="https://m.media-amazon.com/images/I/91I4c2nNmHL._AC_SX679_.jpg" alt="Komkom baby changing bag" class="h-48 object-contain mb-4">
+                    <h3 class="font-semibold text-md flex-grow">Komkom Baby Changing Bag Black</h3>
+                    <p class="text-teal-600 font-bold my-2">EGP 706</p>
+                    <button onclick="addToCart({id: 711, name: 'Komkom baby changing bag black', price: 706, image_url: 'https://m.media-amazon.com/images/I/91I4c2nNmHL._AC_SX679_.jpg'}, event)" class="mt-auto w-full bg-teal-500 text-white py-2 px-4 rounded-full font-semibold hover:bg-teal-600 transition-colors">Add to Cart</button>
+                </div>
+                 <div class="bg-white rounded-lg shadow-md p-4 flex flex-col items-center text-center transition-transform transform hover:-translate-y-2">
+                    <img src="https://m.media-amazon.com/images/I/81Pk2q5b40L._AC_SX679_.jpg" alt="Komkom baby changing bag pink" class="h-48 object-contain mb-4">
+                    <h3 class="font-semibold text-md flex-grow">Komkom Baby Changing Bag Pink</h3>
+                    <p class="text-teal-600 font-bold my-2">EGP 658</p>
+                    <button onclick="addToCart({id: 712, name: 'Komkom baby changing bag - pink', price: 658, image_url: 'https://m.media-amazon.com/images/I/81Pk2q5b40L._AC_SX679_.jpg'}, event)" class="mt-auto w-full bg-teal-500 text-white py-2 px-4 rounded-full font-semibold hover:bg-teal-600 transition-colors">Add to Cart</button>
+                </div>
+                 <div class="bg-white rounded-lg shadow-md p-4 flex flex-col items-center text-center transition-transform transform hover:-translate-y-2">
+                    <img src="https://m.media-amazon.com/images/I/51nq6O-J-bS.__AC_SX300_SY300_QL70_ML2_.jpg" alt="Skip Hop Duo Diaper Bag" class="h-48 object-contain mb-4">
+                    <h3 class="font-semibold text-md flex-grow">Skip Hop Duo Signature Diaper Bag</h3>
+                    <p class="text-teal-600 font-bold my-2">EGP 7,299</p>
+                    <button onclick="addToCart({id: 713, name: 'Skip Hop Duo Signature Diaper Bag (Black)', price: 7299, image_url: 'https://m.media-amazon.com/images/I/51nq6O-J-bS.__AC_SX300_SY300_QL70_ML2_.jpg'}, event)" class="mt-auto w-full bg-teal-500 text-white py-2 px-4 rounded-full font-semibold hover:bg-teal-600 transition-colors">Add to Cart</button>
+                </div>
+                 <div class="bg-white rounded-lg shadow-md p-4 flex flex-col items-center text-center transition-transform transform hover:-translate-y-2">
+                    <img src="https://m.media-amazon.com/images/I/71Cfl5iSVmL._AC_SX679_.jpg" alt="Mommy Care Diaper Bag" class="h-48 object-contain mb-4">
+                    <h3 class="font-semibold text-md flex-grow">Mommy Care Multifunctional Diaper Bag</h3>
+                    <p class="text-teal-600 font-bold my-2">EGP 549</p>
+                    <button onclick="addToCart({id: 714, name: 'Mommy Care Multifunctional Waterproof Diaper Bag Backpack', price: 549, image_url: 'https://m.media-amazon.com/images/I/71Cfl5iSVmL._AC_SX679_.jpg'}, event)" class="mt-auto w-full bg-teal-500 text-white py-2 px-4 rounded-full font-semibold hover:bg-teal-600 transition-colors">Add to Cart</button>
+                </div>
+                 <div class="bg-white rounded-lg shadow-md p-4 flex flex-col items-center text-center transition-transform transform hover:-translate-y-2">
+                    <img src="https://m.media-amazon.com/images/I/6187x9y6-KL._AC_SX679_.jpg" alt="Portable Baby Bags" class="h-48 object-contain mb-4">
+                    <h3 class="font-semibold text-md flex-grow">Portable Baby Bags (Blue)</h3>
+                    <p class="text-teal-600 font-bold my-2">EGP 475</p>
+                    <button onclick="addToCart({id: 715, name: 'Portable Baby Bags with Adjustable Shoulder Straps (Blue)', price: 475, image_url: 'https://m.media-amazon.com/images/I/6187x9y6-KL._AC_SX679_.jpg'}, event)" class="mt-auto w-full bg-teal-500 text-white py-2 px-4 rounded-full font-semibold hover:bg-teal-600 transition-colors">Add to Cart</button>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const menuBtn = document.getElementById('menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            menuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        });
+
+        function addToCart(product, event) {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            
+            cart.push({
+                id: product.id,
+                name: product.name,
+                price: product.price,
+                image_url: product.image_url
+            });
+
+            localStorage.setItem('cart', JSON.stringify(cart));
+
+            const button = event.target;
+            button.innerText = 'Added!';
+            button.style.backgroundColor = '#28a745';
+            button.disabled = true;
+
+            setTimeout(() => {
+                button.innerText = 'Add to Cart';
+                button.style.backgroundColor = '';
+                button.disabled = false;
+            }, 2000);
+        }
+    </script>
+</body>
+</html>
