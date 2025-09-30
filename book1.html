@@ -1,1 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baby Care - Kids World</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Playball&display=swap" rel="stylesheet">
+    <style>
+        .font-cursive {
+            font-family: 'Playball', cursive;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #fdfaf5;
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <header class="bg-teal-100/80 backdrop-blur-sm shadow-md fixed top-0 left-0 right-0 z-50">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="home.html" class="flex items-center gap-3">
+                <img src="https://i.pinimg.com/736x/6b/90/b5/6b90b55c618ab58f09c2e38151b708e7.jpg" alt="Logo" class="h-12 w-12 rounded-full border-2 border-teal-500">
+                <span class="text-3xl font-cursive text-teal-800">Kids World</span>
+            </a>
+            
+            <nav class="hidden md:flex items-center space-x-6">
+                <a href="home.html" class="text-gray-700 hover:text-teal-600 transition duration-300">Home</a>
+                <a href="about.html" class="text-gray-700 hover:text-teal-600 transition duration-300">About</a>
+                <a href="products.html" class="text-teal-600 font-semibold transition duration-300">Products</a>
+            </nav>
+
+            <div class="flex items-center gap-4">
+                 <form action="search.html" method="get" class="hidden md:block relative">
+                    <input type="text" name="search" placeholder="Search..." class="rounded-full py-1.5 px-4 w-40 focus:outline-none focus:ring-2 focus:ring-teal-400 transition">
+                    <button type="submit" class="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400">
+                        <i class="fa fa-search"></i>
+                    </button>
+                </form>
+                <a href="login.html" class="text-gray-700 hover:text-teal-600 transition duration-300"><i class="fas fa-user-circle fa-lg"></i></a>
+                <a href="cart.html" class="relative text-gray-700 hover:text-teal-600">
+                    <i class="fas fa-shopping-cart fa-lg"></i>
+                </a>
+                <button id="menu-btn" class="md:hidden text-gray-700 focus:outline-none">
+                    <i class="fas fa-bars fa-lg"></i>
+                </button>
+            </div>
+        </div>
+        
+        <div id="mobile-menu" class="hidden md:hidden px-6 pt-2 pb-4 space-y-3">
+            <a href="home.html" class="block text-gray-700 hover:text-teal-600">Home</a>
+            <a href="about.html" class="block text-gray-700 hover:text-teal-600">About</a>
+            <a href="products.html" class="block text-teal-600 font-semibold">Products</a>
+            <form action="search.html" method="get" class="relative pt-4">
+                <input type="text" name="search" placeholder="Search..." class="rounded-full py-1.5 px-4 w-full focus:outline-none focus:ring-2 focus:ring-teal-400">
+                 <button type="submit" class="absolute right-4 top-1/2 text-gray-400">
+                    <i class="fa fa-search"></i>
+                </button>
+            </form>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 sm:px-6 lg:px-8 pt-24">
+
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold text-center text-teal-800 mb-8">Baby Hair Care</h2>
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
+                <div class="bg-white rounded-lg shadow-md p-4 flex flex-col items-center text-center transition-transform transform hover:-translate-y-2">
+                    <img src="https://m.media-amazon.com/images/I/514E62p-C2L._AC._SR240,240.jpg" alt="Little B baby" class="h-48 object-contain mb-4">
+                    <h3 class="font-semibold text-md flex-grow">Little B baby Headband Bows</h3>
+                    <p class="text-teal-600 font-bold my-2">EGP 180</p>
+                    <button onclick="addToCart({id: 501, name: 'Little B baby Headband Bows set of 4', price: 180, image_url: 'https://m.media-amazon.com/images/I/514E62p-C2L._AC._SR240,240.jpg'}, event)" class="mt-auto w-full bg-teal-500 text-white py-2 px-4 rounded-full font-semibold hover:bg-teal-600 transition-colors">Add to Cart</button>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-4 flex flex-col items-center text-center transition-transform transform hover:-translate-y-2">
+                    <img src="https://m.media-amazon.com/images/I/61+PLeO4btL._AC_SY355_.jpg" alt="Cetaphil shampoo" class="h-48 object-contain mb-4">
+                    <h3 class="font-semibold text-md flex-grow">Cetaphil Shampoo & Wash</h3>
+                    <p class="text-teal-600 font-bold my-2">EGP 1570</p>
+                    <button onclick="addToCart({id: 502, name: 'Cetaphil shampoo and wash for children 339 ml', price: 1570, image_url: 'https://m.media-amazon.com/images/I/61+PLeO4btL._AC_SY355_.jpg'}, event)" class="mt-auto w-full bg-teal-500 text-white py-2 px-4 rounded-full font-semibold hover:bg-teal-600 transition-colors">Add to Cart</button>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-4 flex flex-col items-center text-center transition-transform transform hover:-translate-y-2">
+                    <img src="https://m.media-amazon.com/images/I/61A7EAwTFfL._AC_SY355_.jpg" alt="HUAYINGMEI Baby" class="h-48 object-contain mb-4">
+                    <h3 class="font-semibold text-md flex-grow">HUAYINGMEI Baby Hair Brush Set</h3>
+                    <p class="text-teal-600 font-bold my-2">EGP 129</p>
+                    <button onclick="addToCart({id: 503, name: 'HUAYINGMEI Baby Hair Brush and Comb Set', price: 129, image_url: 'https://m.media-amazon.com/images/I/61A7EAwTFfL._AC_SY355_.jpg'}, event)" class="mt-auto w-full bg-teal-500 text-white py-2 px-4 rounded-full font-semibold hover:bg-teal-600 transition-colors">Add to Cart</button>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-4 flex flex-col items-center text-center transition-transform transform hover:-translate-y-2">
+                    <img src="https://m.media-amazon.com/images/I/71vaqHyR+KL._AC_SY741_.jpg" alt="Brush and comb set" class="h-48 object-contain mb-4">
+                    <h3 class="font-semibold text-md flex-grow">Brush and Comb Set</h3>
+                    <p class="text-teal-600 font-bold my-2">EGP 225</p>
+                    <button onclick="addToCart({id: 504, name: 'Brush and comb set', price: 225, image_url: 'https://m.media-amazon.com/images/I/71vaqHyR+KL._AC_SY741_.jpg'}, event)" class="mt-auto w-full bg-teal-500 text-white py-2 px-4 rounded-full font-semibold hover:bg-teal-600 transition-colors">Add to Cart</button>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-4 flex flex-col items-center text-center transition-transform transform hover:-translate-y-2">
+                    <img src="https://m.media-amazon.com/images/I/51bOc1Wc5CL._AC_SX425_.jpg" alt="Divol Shampoo" class="h-48 object-contain mb-4">
+                    <h3 class="font-semibold text-md flex-grow">Divol Shampoo for Newborns</h3>
+                    <p class="text-teal-600 font-bold my-2">EGP 140</p>
+                    <button onclick="addToCart({id: 505, name: 'Divol Shampoo Safe From Day One 450ml', price: 140, image_url: 'https://m.media-amazon.com/images/I/51bOc1Wc5CL._AC_SX425_.jpg'}, event)" class="mt-auto w-full bg-teal-500 text-white py-2 px-4 rounded-full font-semibold hover:bg-teal-600 transition-colors">Add to Cart</button>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-4 flex flex-col items-center text-center transition-transform transform hover:-translate-y-2">
+                    <img src="https://m.media-amazon.com/images/I/61ht0gGP7TL._AC_SY679_.jpg" alt="Passion Baby Hair Cream" class="h-48 object-contain mb-4">
+                    <h3 class="font-semibold text-md flex-grow">Passion Baby Hair Cream</h3>
+                    <p class="text-teal-600 font-bold my-2">EGP 120</p>
+                    <button onclick="addToCart({id: 506, name: 'Passion Baby Hair Cream 120Gm', price: 120, image_url: 'https://m.media-amazon.com/images/I/61ht0gGP7TL._AC_SY679_.jpg'}, event)" class="mt-auto w-full bg-teal-500 text-white py-2 px-4 rounded-full font-semibold hover:bg-teal-600 transition-colors">Add to Cart</button>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-4 flex flex-col items-center text-center transition-transform transform hover:-translate-y-2">
+                    <img src="https://m.media-amazon.com/images/I/61wG6oThdcL._AC_SX425_.jpg" alt="Penduline Hair Mask" class="h-48 object-contain mb-4">
+                    <h3 class="font-semibold text-md flex-grow">Penduline Hair Mask with Shea Butter</h3>
+                    <p class="text-teal-600 font-bold my-2">EGP 96</p>
+                    <button onclick="addToCart({id: 507, name: 'Penduline Hair Mask with Shea Butter - 300g', price: 96, image_url: 'https://m.media-amazon.com/images/I/61wG6oThdcL._AC_SX425_.jpg'}, event)" class="mt-auto w-full bg-teal-500 text-white py-2 px-4 rounded-full font-semibold hover:bg-teal-600 transition-colors">Add to Cart</button>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-4 flex flex-col items-center text-center transition-transform transform hover:-translate-y-2">
+                    <img src="https://m.media-amazon.com/images/I/41U6dm-yKmL._AC_SX679_.jpg" alt="Dermactive Baby Wash" class="h-48 object-contain mb-4">
+                    <h3 class="font-semibold text-md flex-grow">Dermactive Baby Head to Toe Wash</h3>
+                    <p class="text-teal-600 font-bold my-2">EGP 220</p>
+                    <button onclick="addToCart({id: 508, name: 'Dermactive Baby Head to Toe Wash 250 ml', price: 220, image_url: 'https://m.media-amazon.com/images/I/41U6dm-yKmL._AC_SX679_.jpg'}, event)" class="mt-auto w-full bg-teal-500 text-white py-2 px-4 rounded-full font-semibold hover:bg-teal-600 transition-colors">Add to Cart</button>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-4 flex flex-col items-center text-center transition-transform transform hover:-translate-y-2">
+                    <img src="https://m.media-amazon.com/images/I/51JqVAYuIUL._AC_SX425_.jpg" alt="TRESemmé Conditioner" class="h-48 object-contain mb-4">
+                    <h3 class="font-semibold text-md flex-grow">TRESemmé Botanix Conditioner</h3>
+                    <p class="text-teal-600 font-bold my-2">EGP 120</p>
+                    <button onclick="addToCart({id: 509, name: 'TRESemmé Botanix Conditioner Nourish & Relenish 600ML', price: 120, image_url: 'https://m.media-amazon.com/images/I/51JqVAYuIUL._AC_SX425_.jpg'}, event)" class="mt-auto w-full bg-teal-500 text-white py-2 px-4 rounded-full font-semibold hover:bg-teal-600 transition-colors">Add to Cart</button>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-4 flex flex-col items-center text-center transition-transform transform hover:-translate-y-2">
+                    <img src="https://m.media-amazon.com/images/I/41JPTMaOPoL._AC_SY879_.jpg" alt="Bunny Bound Baby Hair Oil" class="h-48 object-contain mb-4">
+                    <h3 class="font-semibold text-md flex-grow">Bunny Bound Baby Hair Oil</h3>
+                    <p class="text-teal-600 font-bold my-2">EGP 80</p>
+                    <button onclick="addToCart({id: 510, name: 'Bunny Bound Baby Hair Oil, Advanced Formula - 100ML', price: 80, image_url: 'https://m.media-amazon.com/images/I/41JPTMaOPoL._AC_SY879_.jpg'}, event)" class="mt-auto w-full bg-teal-500 text-white py-2 px-4 rounded-full font-semibold hover:bg-teal-600 transition-colors">Add to Cart</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold text-center text-teal-800 mb-8">Baby Bathing</h2>
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
+                <div class="bg-white rounded-lg shadow-md p-4 flex flex-col items-center text-center transition-transform transform hover:-translate-y-2">
+                    <img src="https://m.media-amazon.com/images/I/61miS3E2yXL.__AC_SX300_SY300_QL70_ML2_.jpg" alt="Johnson's Baby" class="h-48 object-contain mb-4">
+                    <h3 class="font-semibold text-md flex-grow">Johnson's Baby Shampoo, Sleep Time</h3>
+                    <p class="text-teal-600 font-bold my-2">EGP 69</p>
+                    <button onclick="addToCart({id: 511, name: 'Johnsons Baby Shampoo, Sleep Time, 200ml', price: 69, image_url: 'https://m.media-amazon.com/images/I/61miS3E2yXL.__AC_SX300_SY300_QL70_ML2_.jpg'}, event)" class="mt-auto w-full bg-teal-500 text-white py-2 px-4 rounded-full font-semibold hover:bg-teal-600 transition-colors">Add to Cart</button>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-4 flex flex-col items-center text-center transition-transform transform hover:-translate-y-2">
+                    <img src="https://m.media-amazon.com/images/I/41FYwG1UFXL.__AC_SY300_SX300_QL70_ML2_.jpg" alt="ORA Lines Douche" class="h-48 object-contain mb-4">
+                    <h3 class="font-semibold text-md flex-grow">ORA Lines Hyalo-Fem Feminine Douche</h3>
+                    <p class="text-teal-600 font-bold my-2">EGP 120</p>
+                    <button onclick="addToCart({id: 512, name: 'ORA Lines Hyalo-Fem Feminine Douche', price: 120, image_url: 'https://m.media-amazon.com/images/I/41FYwG1UFXL.__AC_SY300_SX300_QL70_ML2_.jpg'}, event)" class="mt-auto w-full bg-teal-500 text-white py-2 px-4 rounded-full font-semibold hover:bg-teal-600 transition-colors">Add to Cart</button>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-4 flex flex-col items-center text-center transition-transform transform hover:-translate-y-2">
+                    <img src="https://m.media-amazon.com/images/I/61P53yuKmmL.__AC_SX300_SY300_QL70_ML2_.jpg" alt="Chicco Bath Glove" class="h-48 object-contain mb-4">
+                    <h3 class="font-semibold text-md flex-grow">Chicco Baby Moments Sponge Bath Glove</h3>
+                    <p class="text-teal-600 font-bold my-2">EGP 242</p>
+                    <button onclick="addToCart({id: 513, name: 'Chicco Baby Moments Sponge Bath Glove', price: 242, image_url: 'https://m.media-amazon.com/images/I/61P53yuKmmL.__AC_SX300_SY300_QL70_ML2_.jpg'}, event)" class="mt-auto w-full bg-teal-500 text-white py-2 px-4 rounded-full font-semibold hover:bg-teal-600 transition-colors">Add to Cart</button>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-4 flex flex-col items-center text-center transition-transform transform hover:-translate-y-2">
+                    <img src="https://m.media-amazon.com/images/I/41FRe9xSciL.__AC_SX300_SY300_QL70_ML2_.jpg" alt="Nunu Baby Shampoo" class="h-48 object-contain mb-4">
+                    <h3 class="font-semibold text-md flex-grow">Nunu Baby Special Offer Shampoo 1L</h3>
+                    <p class="text-teal-600 font-bold my-2">EGP 169</p>
+                    <button onclick="addToCart({id: 514, name: 'Nunu Baby Special Offer Shampoo 1L + Nunu Baby Shampoo Plus 200ML', price: 169, image_url: 'https://m.media-amazon.com/images/I/41FRe9xSciL.__AC_SX300_SY300_QL70_ML2_.jpg'}, event)" class="mt-auto w-full bg-teal-500 text-white py-2 px-4 rounded-full font-semibold hover:bg-teal-600 transition-colors">Add to Cart</button>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-4 flex flex-col items-center text-center transition-transform transform hover:-translate-y-2">
+                    <img src="https://m.media-amazon.com/images/I/51cq9lBpbiL.__AC_SX300_SY300_QL70_ML2_.jpg" alt="Penduline Shower Gel" class="h-48 object-contain mb-4">
+                    <h3 class="font-semibold text-md flex-grow">Penduline Shower Gel Banana</h3>
+                    <p class="text-teal-600 font-bold my-2">EGP 69</p>
+                    <button onclick="addToCart({id: 515, name: 'Penduline Shower Gel Banana 300 ml', price: 69, image_url: 'https://m.media-amazon.com/images/I/51cq9lBpbiL.__AC_SX300_SY300_QL70_ML2_.jpg'}, event)" class="mt-auto w-full bg-teal-500 text-white py-2 px-4 rounded-full font-semibold hover:bg-teal-600 transition-colors">Add to Cart</button>
+                </div>
+                 <div class="bg-white rounded-lg shadow-md p-4 flex flex-col items-center text-center transition-transform transform hover:-translate-y-2">
+                    <img src="https://m.media-amazon.com/images/I/61exF84FrEL.__AC_SX300_SY300_QL70_ML2_.jpg" alt="Sanosan baby soap" class="h-48 object-contain mb-4">
+                    <h3 class="font-semibold text-md flex-grow">Sanosan Baby Soap</h3>
+                    <p class="text-teal-600 font-bold my-2">EGP 139</p>
+                    <button onclick="addToCart({id: 516, name: 'Sanosan baby soap, 100 gm', price: 139, image_url: 'https://m.media-amazon.com/images/I/61exF84FrEL.__AC_SX300_SY300_QL70_ML2_.jpg'}, event)" class="mt-auto w-full bg-teal-500 text-white py-2 px-4 rounded-full font-semibold hover:bg-teal-600 transition-colors">Add to Cart</button>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-4 flex flex-col items-center text-center transition-transform transform hover:-translate-y-2">
+                    <img src="https://m.media-amazon.com/images/I/61yLSmn330L.__AC_SX300_SY300_QL70_ML2_.jpg" alt="Primabobo Folding Baby" class="h-48 object-contain mb-4">
+                    <h3 class="font-semibold text-md flex-grow">Primabobo Folding Baby Bathtub</h3>
+                    <p class="text-teal-600 font-bold my-2">EGP 1650</p>
+                    <button onclick="addToCart({id: 517, name: 'Primabobo Folding Baby Bathtub 85cm with Cushion', price: 1650, image_url: 'https://m.media-amazon.com/images/I/61yLSmn330L.__AC_SX300_SY300_QL70_ML2_.jpg'}, event)" class="mt-auto w-full bg-teal-500 text-white py-2 px-4 rounded-full font-semibold hover:bg-teal-600 transition-colors">Add to Cart</button>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-4 flex flex-col items-center text-center transition-transform transform hover:-translate-y-2">
+                    <img src="https://m.media-amazon.com/images/I/71vIt4JEZFL.__AC_SY300_SX300_QL70_ML2_.jpg" alt="Candy baby sponge" class="h-48 object-contain mb-4">
+                    <h3 class="font-semibold text-md flex-grow">Candy Baby Bathtub Sponge</h3>
+                    <p class="text-teal-600 font-bold my-2">EGP 206</p>
+                    <button onclick="addToCart({id: 518, name: 'Candy baby bathtub sponge 4 pieces for unisex', price: 206, image_url: 'https://m.media-amazon.com/images/I/71vIt4JEZFL.__AC_SY300_SX300_QL70_ML2_.jpg'}, event)" class="mt-auto w-full bg-teal-500 text-white py-2 px-4 rounded-full font-semibold hover:bg-teal-600 transition-colors">Add to Cart</button>
+                </div>
+                 <div class="bg-white rounded-lg shadow-md p-4 flex flex-col items-center text-center transition-transform transform hover:-translate-y-2">
+                    <img src="https://m.media-amazon.com/images/I/41YupKZ4vDL._AC_SX425_.jpg" alt="Moro Moro Bath Tub" class="h-48 object-contain mb-4">
+                    <h3 class="font-semibold text-md flex-grow">Moro Moro Foldable Toddler Bath Tub</h3>
+                    <p class="text-teal-600 font-bold my-2">EGP 250</p>
+                    <button onclick="addToCart({id: 519, name: 'Moro Moro 3 Icome Foldable Toddler Soft Petal Bath Tub', price: 250, image_url: 'https://m.media-amazon.com/images/I/41YupKZ4vDL._AC_SX425_.jpg'}, event)" class="mt-auto w-full bg-teal-500 text-white py-2 px-4 rounded-full font-semibold hover:bg-teal-600 transition-colors">Add to Cart</button>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-4 flex flex-col items-center text-center transition-transform transform hover:-translate-y-2">
+                    <img src="https://m.media-amazon.com/images/I/61gh-92qTgL.__AC_SX300_SY300_QL70_ML2_.jpg" alt="Rubber Ducks" class="h-48 object-contain mb-4">
+                    <h3 class="font-semibold text-md flex-grow">Ynanimery Rubber Ducks Bath Toys</h3>
+                    <p class="text-teal-600 font-bold my-2">EGP 100</p>
+                    <button onclick="addToCart({id: 520, name: 'Ynanimery Rubber Ducks, Bath Toys for Toddlers', price: 100, image_url: 'https://m.media-amazon.com/images/I/61gh-92qTgL.__AC_SX300_SY300_QL70_ML2_.jpg'}, event)" class="mt-auto w-full bg-teal-500 text-white py-2 px-4 rounded-full font-semibold hover:bg-teal-600 transition-colors">Add to Cart</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold text-center text-teal-800 mb-8">Baby Skin Care</h2>
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
+                <div class="bg-white rounded-lg shadow-md p-4 flex flex-col items-center text-center transition-transform transform hover:-translate-y-2">
+                    <img src="https://m.media-amazon.com/images/I/61AMjgAkffL.__AC_SX300_SY300_QL70_ML2_.jpg" alt="EvaClinic Bébé" class="h-48 object-contain mb-4">
+                    <h3 class="font-semibold text-md flex-grow">EvaClinic Bébé - Diaper Rash Cream</h3>
+                    <p class="text-teal-600 font-bold my-2">EGP 94</p>
+                    <button onclick="addToCart({id: 521, name: 'EvaClinic Bébé - Diaper Rash Cream, 100gm', price: 94, image_url: 'https://m.media-amazon.com/images/I/61AMjgAkffL.__AC_SX300_SY300_QL70_ML2_.jpg'}, event)" class="mt-auto w-full bg-teal-500 text-white py-2 px-4 rounded-full font-semibold hover:bg-teal-600 transition-colors">Add to Cart</button>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-4 flex flex-col items-center text-center transition-transform transform hover:-translate-y-2">
+                    <img src="https://m.media-amazon.com/images/I/61vawraWgEL.__AC_SX300_SY300_QL70_ML2_.jpg" alt="sanosan Nappy Rash" class="h-48 object-contain mb-4">
+                    <h3 class="font-semibold text-md flex-grow">Sanosan Nappy Rash Cream</h3>
+                    <p class="text-teal-600 font-bold my-2">EGP 330</p>
+                    <button onclick="addToCart({id: 522, name: 'sanosan Nappy Rash cream 150 ml', price: 330, image_url: 'https://m.media-amazon.com/images/I/61vawraWgEL.__AC_SX300_SY300_QL70_ML2_.jpg'}, event)" class="mt-auto w-full bg-teal-500 text-white py-2 px-4 rounded-full font-semibold hover:bg-teal-600 transition-colors">Add to Cart</button>
+                </div>
+                 <div class="bg-white rounded-lg shadow-md p-4 flex flex-col items-center text-center transition-transform transform hover:-translate-y-2">
+                    <img src="https://m.media-amazon.com/images/I/51mwmuxWdhL.__AC_SX300_SY300_QL70_ML2_.jpg" alt="Chicco Rich Cream" class="h-48 object-contain mb-4">
+                    <h3 class="font-semibold text-md flex-grow">Chicco Baby Moments Rich Cream</h3>
+                    <p class="text-teal-600 font-bold my-2">EGP 420</p>
+                    <button onclick="addToCart({id: 523, name: 'Chicco Baby Moments Rich Cream for Baby Skin 100ml', price: 420, image_url: 'https://m.media-amazon.com/images/I/51mwmuxWdhL.__AC_SX300_SY300_QL70_ML2_.jpg'}, event)" class="mt-auto w-full bg-teal-500 text-white py-2 px-4 rounded-full font-semibold hover:bg-teal-600 transition-colors">Add to Cart</button>
+                </div>
+                 <div class="bg-white rounded-lg shadow-md p-4 flex flex-col items-center text-center transition-transform transform hover:-translate-y-2">
+                    <img src="https://m.media-amazon.com/images/I/61cTo7rxw6L.__AC_SY300_SX300_QL70_ML2_.jpg" alt="Skinzza Dr. Zinc" class="h-48 object-contain mb-4">
+                    <h3 class="font-semibold text-md flex-grow">Skinzza Dr. Zinc Diaper Rash Cream</h3>
+                    <p class="text-teal-600 font-bold my-2">EGP 94</p>
+                    <button onclick="addToCart({id: 524, name: 'Skinzza Dr. Zinc: Natural, Effective Relief Soothing Diaper Rash Cream', price: 94, image_url: 'https://m.media-amazon.com/images/I/61cTo7rxw6L.__AC_SY300_SX300_QL70_ML2_.jpg'}, event)" class="mt-auto w-full bg-teal-500 text-white py-2 px-4 rounded-full font-semibold hover:bg-teal-600 transition-colors">Add to Cart</button>
+                </div>
+                 <div class="bg-white rounded-lg shadow-md p-4 flex flex-col items-center text-center transition-transform transform hover:-translate-y-2">
+                    <img src="https://m.media-amazon.com/images/I/21LUOyu94aL.__AC_QL70_ML2_.jpg" alt="Penduline Baby Body Lotion" class="h-48 object-contain mb-4">
+                    <h3 class="font-semibold text-md flex-grow">Penduline Baby Body Lotion 200 ml</h3>
+                    <p class="text-teal-600 font-bold my-2">EGP 159</p>
+                    <button onclick="addToCart({id: 525, name: 'Penduline Baby Body Lotion 200 ml', price: 159, image_url: 'https://m.media-amazon.com/images/I/21LUOyu94aL.__AC_QL70_ML2_.jpg'}, event)" class="mt-auto w-full bg-teal-500 text-white py-2 px-4 rounded-full font-semibold hover:bg-teal-600 transition-colors">Add to Cart</button>
+                </div>
+            </div>
+        </section>
+        
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold text-center text-teal-800 mb-8">Baby Nail Care</h2>
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
+                <div class="bg-white rounded-lg shadow-md p-4 flex flex-col items-center text-center transition-transform transform hover:-translate-y-2">
+                    <img src="https://m.media-amazon.com/images/I/618reQid5kL.__AC_SX300_SY300_QL70_ML2_.jpg" alt="Baby Manicure Set" class="h-48 object-contain mb-4">
+                    <h3 class="font-semibold text-md flex-grow">Electric Baby Nail Drill Set</h3>
+                    <p class="text-teal-600 font-bold my-2">EGP 150</p>
+                    <button onclick="addToCart({id: 526, name: 'Electric Baby Nail Drill Set, Safe Manicure Kit', price: 150, image_url: 'https://m.media-amazon.com/images/I/618reQid5kL.__AC_SX300_SY300_QL70_ML2_.jpg'}, event)" class="mt-auto w-full bg-teal-500 text-white py-2 px-4 rounded-full font-semibold hover:bg-teal-600 transition-colors">Add to Cart</button>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-4 flex flex-col items-center text-center transition-transform transform hover:-translate-y-2">
+                    <img src="https://m.media-amazon.com/images/I/61g6PP8swoL.__AC_SX300_SY300_QL70_ML2_.jpg" alt="SPTwj 6PCS Baby Care Kit" class="h-48 object-contain mb-4">
+                    <h3 class="font-semibold text-md flex-grow">SPTwj 6PCS Baby Care Kit</h3>
+                    <p class="text-teal-600 font-bold my-2">EGP 99</p>
+                    <button onclick="addToCart({id: 527, name: 'SPTwj 6PCS Baby Care Kit with Hair Brush', price: 99, image_url: 'https://m.media-amazon.com/images/I/61g6PP8swoL.__AC_SX300_SY300_QL70_ML2_.jpg'}, event)" class="mt-auto w-full bg-teal-500 text-white py-2 px-4 rounded-full font-semibold hover:bg-teal-600 transition-colors">Add to Cart</button>
+                </div>
+                 <div class="bg-white rounded-lg shadow-md p-4 flex flex-col items-center text-center transition-transform transform hover:-translate-y-2">
+                    <img src="https://m.media-amazon.com/images/I/61bcQXUEcuL._AC_SX679_.jpg" alt="R for Rabbit Nail Kit" class="h-48 object-contain mb-4">
+                    <h3 class="font-semibold text-md flex-grow">R for Rabbit Stylo Teddy Nail Kit</h3>
+                    <p class="text-teal-600 font-bold my-2">EGP 230</p>
+                    <button onclick="addToCart({id: 528, name: 'R for Rabbit Stylo Teddy new born Baby 5 in1 Nail Grooming Kit', price: 230, image_url: 'https://m.media-amazon.com/images/I/61bcQXUEcuL._AC_SX679_.jpg'}, event)" class="mt-auto w-full bg-teal-500 text-white py-2 px-4 rounded-full font-semibold hover:bg-teal-600 transition-colors">Add to Cart</button>
+                </div>
+                 <div class="bg-white rounded-lg shadow-md p-4 flex flex-col items-center text-center transition-transform transform hover:-translate-y-2">
+                    <img src="https://m.media-amazon.com/images/I/61TUM1HVcoL.__AC_SY300_SX300_QL70_ML2_.jpg" alt="Baby Nail Trimmer" class="h-48 object-contain mb-4">
+                    <h3 class="font-semibold text-md flex-grow">Baby Nail Trimmer Electrically Safe</h3>
+                    <p class="text-teal-600 font-bold my-2">EGP 215</p>
+                    <button onclick="addToCart({id: 529, name: 'Baby Nail Trimmer Electrically safe Baby nail clippers', price: 215, image_url: 'https://m.media-amazon.com/images/I/61TUM1HVcoL.__AC_SY300_SX300_QL70_ML2_.jpg'}, event)" class="mt-auto w-full bg-teal-500 text-white py-2 px-4 rounded-full font-semibold hover:bg-teal-600 transition-colors">Add to Cart</button>
+                </div>
+                 <div class="bg-white rounded-lg shadow-md p-4 flex flex-col items-center text-center transition-transform transform hover:-translate-y-2">
+                    <img src="https://m.media-amazon.com/images/I/51USCraDRJL._AC_SX425_.jpg" alt="Safari Baby Dolphin" class="h-48 object-contain mb-4">
+                    <h3 class="font-semibold text-md flex-grow">Safari Baby Dolphin Nail Clipper</h3>
+                    <p class="text-teal-600 font-bold my-2">EGP 98</p>
+                    <button onclick="addToCart({id: 530, name: 'Safari Baby Dolphin Nail Clipper', price: 98, image_url: 'https://m.media-amazon.com/images/I/51USCraDRJL._AC_SX425_.jpg'}, event)" class="mt-auto w-full bg-teal-500 text-white py-2 px-4 rounded-full font-semibold hover:bg-teal-600 transition-colors">Add to Cart</button>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const menuBtn = document.getElementById('menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            menuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        });
+
+        function addToCart(product, event) {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            
+            cart.push({
+                id: product.id,
+                name: product.name,
+                price: product.price,
+                image_url: product.image_url
+            });
+
+            localStorage.setItem('cart', JSON.stringify(cart));
+
+            const button = event.target;
+            button.innerText = 'Added!';
+            button.style.backgroundColor = '#28a745';
+            button.disabled = true;
+
+            setTimeout(() => {
+                button.innerText = 'Add to Cart';
+                button.style.backgroundColor = '';
+                button.disabled = false;
+            }, 2000);
+        }
+    </script>
+</body>
+</html>
+
 
