@@ -1,1 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strollers & Carriers - Kids World</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Playball&display=swap" rel="stylesheet">
+    <style>
+        .font-cursive {
+            font-family: 'Playball', cursive;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #fdfaf5;
+        }
+    </style>
+</head>
+<body class="text-gray-800">
 
+    <header class="bg-teal-100/80 backdrop-blur-sm shadow-md fixed top-0 left-0 right-0 z-50">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="home.html" class="flex items-center gap-3">
+                <img src="https://i.pinimg.com/736x/6b/90/b5/6b90b55c618ab58f09c2e38151b708e7.jpg" alt="Logo" class="h-12 w-12 rounded-full border-2 border-teal-500">
+                <span class="text-3xl font-cursive text-teal-800">Kids World</span>
+            </a>
+            
+            <nav class="hidden md:flex items-center space-x-6">
+                <a href="home.html" class="text-gray-700 hover:text-teal-600 transition duration-300">Home</a>
+                <a href="about.html" class="text-gray-700 hover:text-teal-600 transition duration-300">About</a>
+                <a href="products.html" class="text-teal-600 font-semibold transition duration-300">Products</a>
+            </nav>
+
+            <div class="flex items-center gap-4">
+                 <form action="search.html" method="get" class="hidden md:block relative">
+                    <input type="text" name="search" placeholder="Search..." class="rounded-full py-1.5 px-4 w-40 focus:outline-none focus:ring-2 focus:ring-teal-400 transition">
+                    <button type="submit" class="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400">
+                        <i class="fa fa-search"></i>
+                    </button>
+                </form>
+                <a href="login.html" class="text-gray-700 hover:text-teal-600 transition duration-300"><i class="fas fa-user-circle fa-lg"></i></a>
+                <a href="cart.html" class="relative text-gray-700 hover:text-teal-600">
+                    <i class="fas fa-shopping-cart fa-lg"></i>
+                </a>
+                <button id="menu-btn" class="md:hidden text-gray-700 focus:outline-none">
+                    <i class="fas fa-bars fa-lg"></i>
+                </button>
+            </div>
+        </div>
+        
+        <div id="mobile-menu" class="hidden md:hidden px-6 pt-2 pb-4 space-y-3">
+            <a href="home.html" class="block text-gray-700 hover:text-teal-600">Home</a>
+            <a href="about.html" class="block text-gray-700 hover:text-teal-600">About</a>
+            <a href="products.html" class="block text-teal-600 font-semibold">Products</a>
+            <form action="search.html" method="get" class="relative pt-4">
+                <input type="text" name="search" placeholder="Search..." class="rounded-full py-1.5 px-4 w-full focus:outline-none focus:ring-2 focus:ring-teal-400">
+                 <button type="submit" class="absolute right-4 top-1/2 text-gray-400">
+                    <i class="fa fa-search"></i>
+                </button>
+            </form>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 sm:px-6 lg:px-8 pt-24">
+
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold text-center text-teal-800 mb-8">Strollers, Prams and Accessories</h2>
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
+                <div class="bg-white rounded-lg shadow-md p-4 flex flex-col items-center text-center transition-transform transform hover:-translate-y-2">
+                    <img src="https://m.media-amazon.com/images/I/51TpburNVoL._AC_SX425_.jpg" alt="Moro Moro Stroller Seat" class="h-48 object-contain mb-4">
+                    <h3 class="font-semibold text-md flex-grow">Moro Moro 2-Piece Baby Stroller Car Seat</h3>
+                    <p class="text-teal-600 font-bold my-2">EGP 110</p>
+                    <button onclick="addToCart({id: 601, name: 'Moro Moro 2-Piece Baby Stroller Car Seat Strap Covers', price: 110, image_url: 'https://m.media-amazon.com/images/I/51TpburNVoL._AC_SX425_.jpg'}, event)" class="mt-auto w-full bg-teal-500 text-white py-2 px-4 rounded-full font-semibold hover:bg-teal-600 transition-colors">Add to Cart</button>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-4 flex flex-col items-center text-center transition-transform transform hover:-translate-y-2">
+                    <img src="https://m.media-amazon.com/images/I/51TTp0HcP+L._AC_SY606_.jpg" alt="Lorelli Luxury Baby Stroller" class="h-48 object-contain mb-4">
+                    <h3 class="font-semibold text-md flex-grow">Lorelli Luxury Baby Stroller</h3>
+                    <p class="text-teal-600 font-bold my-2">EGP 2,690</p>
+                    <button onclick="addToCart({id: 602, name: 'Lorelli Luxury Baby Stroller with Winter Cover', price: 2690, image_url: 'https://m.media-amazon.com/images/I/51TTp0HcP+L._AC_SY606_.jpg'}, event)" class="mt-auto w-full bg-teal-500 text-white py-2 px-4 rounded-full font-semibold hover:bg-teal-600 transition-colors">Add to Cart</button>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-4 flex flex-col items-center text-center transition-transform transform hover:-translate-y-2">
+                    <img src="https://m.media-amazon.com/images/I/510UGr9YO1L._AC_SX425_.jpg" alt="Mosquito Net Universal Stroller" class="h-48 object-contain mb-4">
+                    <h3 class="font-semibold text-md flex-grow">Mosquito Net Universal Stroller</h3>
+                    <p class="text-teal-600 font-bold my-2">EGP 134</p>
+                    <button onclick="addToCart({id: 603, name: 'Mosquito Net Universal Stroller and Prams Mesh Fabric', price: 134, image_url: 'https://m.media-amazon.com/images/I/510UGr9YO1L._AC_SX425_.jpg'}, event)" class="mt-auto w-full bg-teal-500 text-white py-2 px-4 rounded-full font-semibold hover:bg-teal-600 transition-colors">Add to Cart</button>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-4 flex flex-col items-center text-center transition-transform transform hover:-translate-y-2">
+                    <img src="https://m.media-amazon.com/images/I/410NBzbMRgL._AC_SX679_.jpg" alt="Foldable baby mosquito net" class="h-48 object-contain mb-4">
+                    <h3 class="font-semibold text-md flex-grow">Foldable Baby Mosquito Net</h3>
+                    <p class="text-teal-600 font-bold my-2">EGP 499</p>
+                    <button onclick="addToCart({id: 604, name: 'Foldable baby mosquito net for safe and easy use', price: 499, image_url: 'https://m.media-amazon.com/images/I/410NBzbMRgL._AC_SX679_.jpg'}, event)" class="mt-auto w-full bg-teal-500 text-white py-2 px-4 rounded-full font-semibold hover:bg-teal-600 transition-colors">Add to Cart</button>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-4 flex flex-col items-center text-center transition-transform transform hover:-translate-y-2">
+                    <img src="https://m.media-amazon.com/images/I/61pP9YME9zL._AC_SY741_.jpg" alt="Double Cup Holder Car" class="h-48 object-contain mb-4">
+                    <h3 class="font-semibold text-md flex-grow">2 in 1 Double Cup Holder Car</h3>
+                    <p class="text-teal-600 font-bold my-2">EGP 242</p>
+                    <button onclick="addToCart({id: 605, name: '2 in 1 Multifunctional Double Cup Holder', price: 242, image_url: 'https://m.media-amazon.com/images/I/61pP9YME9zL._AC_SY741_.jpg'}, event)" class="mt-auto w-full bg-teal-500 text-white py-2 px-4 rounded-full font-semibold hover:bg-teal-600 transition-colors">Add to Cart</button>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-4 flex flex-col items-center text-center transition-transform transform hover:-translate-y-2">
+                    <img src="https://m.media-amazon.com/images/I/617a2xeg55L.__AC_SX300_SY300_QL70_ML2_.jpg" alt="Moro Moro Baby Stroller Cushion" class="h-48 object-contain mb-4">
+                    <h3 class="font-semibold text-md flex-grow">Moro Moro Baby Stroller Cushion</h3>
+                    <p class="text-teal-600 font-bold my-2">EGP 280</p>
+                    <button onclick="addToCart({id: 606, name: 'Moro Moro 3 Baby Stroller Cushion, Soft Head And Neck Support', price: 280, image_url: 'https://m.media-amazon.com/images/I/617a2xeg55L.__AC_SX300_SY300_QL70_ML2_.jpg'}, event)" class="mt-auto w-full bg-teal-500 text-white py-2 px-4 rounded-full font-semibold hover:bg-teal-600 transition-colors">Add to Cart</button>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-4 flex flex-col items-center text-center transition-transform transform hover:-translate-y-2">
+                    <img src="https://m.media-amazon.com/images/I/61OoGXnCsLL.__AC_SX300_SY300_QL70_ML2_.jpg" alt="Stroller Umbrella Flip" class="h-48 object-contain mb-4">
+                    <h3 class="font-semibold text-md flex-grow">Stroller Umbrella Flip</h3>
+                    <p class="text-teal-600 font-bold my-2">EGP 5,400</p>
+                    <button onclick="addToCart({id: 607, name: 'Stroller Umbrella Flip', price: 5400, image_url: 'https://m.media-amazon.com/images/I/61OoGXnCsLL.__AC_SX300_SY300_QL70_ML2_.jpg'}, event)" class="mt-auto w-full bg-teal-500 text-white py-2 px-4 rounded-full font-semibold hover:bg-teal-600 transition-colors">Add to Cart</button>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-4 flex flex-col items-center text-center transition-transform transform hover:-translate-y-2">
+                    <img src="https://m.media-amazon.com/images/I/41g7RJI+RWL._AC_SX425_.jpg" alt="Premium Stroller" class="h-48 object-contain mb-4">
+                    <h3 class="font-semibold text-md flex-grow">Premium Stroller Tricycle Green</h3>
+                    <p class="text-teal-600 font-bold my-2">EGP 3,199</p>
+                    <button onclick="addToCart({id: 608, name: 'Premium Stroller Tricycle Green', price: 3199, image_url: 'https://m.media-amazon.com/images/I/41g7RJI+RWL._AC_SX425_.jpg'}, event)" class="mt-auto w-full bg-teal-500 text-white py-2 px-4 rounded-full font-semibold hover:bg-teal-600 transition-colors">Add to Cart</button>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-4 flex flex-col items-center text-center transition-transform transform hover:-translate-y-2">
+                    <img src="https://m.media-amazon.com/images/I/61cx7UF+wsL._AC_SX679_.jpg" alt="Universal Baby Stroller Hook" class="h-48 object-contain mb-4">
+                    <h3 class="font-semibold text-md flex-grow">Universal Baby Stroller Front Hook</h3>
+                    <p class="text-teal-600 font-bold my-2">EGP 50</p>
+                    <button onclick="addToCart({id: 609, name: 'Universal Baby Stroller Front Hook', price: 50, image_url: 'https://m.media-amazon.com/images/I/61cx7UF+wsL._AC_SX679_.jpg'}, event)" class="mt-auto w-full bg-teal-500 text-white py-2 px-4 rounded-full font-semibold hover:bg-teal-600 transition-colors">Add to Cart</button>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-4 flex flex-col items-center text-center transition-transform transform hover:-translate-y-2">
+                    <img src="https://m.media-amazon.com/images/I/8143P2YXoYL._AC_SY606_.jpg" alt="Lamaze Disney Stroller Toy" class="h-48 object-contain mb-4">
+                    <h3 class="font-semibold text-md flex-grow">Lamaze Disney/Pixar Clip & Go Toy</h3>
+                    <p class="text-teal-600 font-bold my-2">EGP 399</p>
+                    <button onclick="addToCart({id: 610, name: 'Lamaze Disney/Pixar Clip & Go, Edna Clip-On Stroller Toy', price: 399, image_url: 'https://m.media-amazon.com/images/I/8143P2YXoYL._AC_SY606_.jpg'}, event)" class="mt-auto w-full bg-teal-500 text-white py-2 px-4 rounded-full font-semibold hover:bg-teal-600 transition-colors">Add to Cart</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold text-center text-teal-800 mb-8">Baby Car Seats</h2>
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
+                <div class="bg-white rounded-lg shadow-md p-4 flex flex-col items-center text-center transition-transform transform hover:-translate-y-2">
+                    <img src="https://m.media-amazon.com/images/I/41YXl1lIaVL.__AC_SX300_SY300_QL70_ML2_.jpg" alt="HAPPY KIDDO Car Seat" class="h-48 object-contain mb-4">
+                    <h3 class="font-semibold text-md flex-grow">HAPPY KIDDO Kidilo First Stage Car Seat</h3>
+                    <p class="text-teal-600 font-bold my-2">EGP 1,900</p>
+                    <button onclick="addToCart({id: 611, name: 'HAPPY KIDDO Kidilo G101 First Stage Car Seat', price: 1900, image_url: 'https://m.media-amazon.com/images/I/41YXl1lIaVL.__AC_SX300_SY300_QL70_ML2_.jpg'}, event)" class="mt-auto w-full bg-teal-500 text-white py-2 px-4 rounded-full font-semibold hover:bg-teal-600 transition-colors">Add to Cart</button>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-4 flex flex-col items-center text-center transition-transform transform hover:-translate-y-2">
+                    <img src="https://m.media-amazon.com/images/I/71TAeoHfRNL.__AC_SY300_SX300_QL70_ML2_.jpg" alt="Thule Sleek Sibling Seat" class="h-48 object-contain mb-4">
+                    <h3 class="font-semibold text-md flex-grow">Thule Sleek Sibling Seat</h3>
+                    <p class="text-teal-600 font-bold my-2">EGP 27,900</p>
+                    <button onclick="addToCart({id: 612, name: 'Thule 11000201 Sleek Sibling Seat aluminium/midnight black', price: 27900, image_url: 'https://m.media-amazon.com/images/I/71TAeoHfRNL.__AC_SY300_SX300_QL70_ML2_.jpg'}, event)" class="mt-auto w-full bg-teal-500 text-white py-2 px-4 rounded-full font-semibold hover:bg-teal-600 transition-colors">Add to Cart</button>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-4 flex flex-col items-center text-center transition-transform transform hover:-translate-y-2">
+                    <img src="https://m.media-amazon.com/images/I/61m-pW+D8QL._AC_SY300_SX300_.jpg" alt="Nania Beone SP Car Seat" class="h-48 object-contain mb-4">
+                    <h3 class="font-semibold text-md flex-grow">Nania Beone SP Car Seat - Super Hero</h3>
+                    <p class="text-teal-600 font-bold my-2">EGP 3,900</p>
+                    <button onclick="addToCart({id: 613, name: 'Nania Beone SP Car Seat - Super Hero', price: 3900, image_url: 'https://m.media-amazon.com/images/I/61m-pW+D8QL._AC_SY300_SX300_.jpg'}, event)" class="mt-auto w-full bg-teal-500 text-white py-2 px-4 rounded-full font-semibold hover:bg-teal-600 transition-colors">Add to Cart</button>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-4 flex flex-col items-center text-center transition-transform transform hover:-translate-y-2">
+                    <img src="https://m.media-amazon.com/images/I/51fJtlAhxkL._AC_SY450_.jpg" alt="KIDILO Car Seat" class="h-48 object-contain mb-4">
+                    <h3 class="font-semibold text-md flex-grow">KIDILO Car Seat, I-Size Booster</h3>
+                    <p class="text-teal-600 font-bold my-2">EGP 4,900</p>
+                    <button onclick="addToCart({id: 614, name: 'KIDILO Car Seat, I-Size Booster Child Seat', price: 4900, image_url: 'https://m.media-amazon.com/images/I/51fJtlAhxkL._AC_SY450_.jpg'}, event)" class="mt-auto w-full bg-teal-500 text-white py-2 px-4 rounded-full font-semibold hover:bg-teal-600 transition-colors">Add to Cart</button>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-4 flex flex-col items-center text-center transition-transform transform hover:-translate-y-2">
+                    <img src="https://m.media-amazon.com/images/I/512iZ1rkJnL._AC_SX522_.jpg" alt="HAPPY KIDDO Kidilo" class="h-48 object-contain mb-4">
+                    <h3 class="font-semibold text-md flex-grow">HAPPY KIDDO Kidilo G101 Car Seat</h3>
+                    <p class="text-teal-600 font-bold my-2">EGP 1,900</p>
+                    <button onclick="addToCart({id: 615, name: 'HAPPY KIDDO Kidilo G101 First Stage Car Seat', price: 1900, image_url: 'https://m.media-amazon.com/images/I/512iZ1rkJnL._AC_SX522_.jpg'}, event)" class="mt-auto w-full bg-teal-500 text-white py-2 px-4 rounded-full font-semibold hover:bg-teal-600 transition-colors">Add to Cart</button>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-4 flex flex-col items-center text-center transition-transform transform hover:-translate-y-2">
+                    <img src="https://m.media-amazon.com/images/I/51DBVSaP91L._AC_SY355_.jpg" alt="Generic Car Seat" class="h-48 object-contain mb-4">
+                    <h3 class="font-semibold text-md flex-grow">Generic Car Seat For Unisex - Purple</h3>
+                    <p class="text-teal-600 font-bold my-2">EGP 1,699</p>
+                    <button onclick="addToCart({id: 616, name: 'Generic Car Seat For Unisex -Purple', price: 1699, image_url: 'https://m.media-amazon.com/images/I/51DBVSaP91L._AC_SY355_.jpg'}, event)" class="mt-auto w-full bg-teal-500 text-white py-2 px-4 rounded-full font-semibold hover:bg-teal-600 transition-colors">Add to Cart</button>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-4 flex flex-col items-center text-center transition-transform transform hover:-translate-y-2">
+                    <img src="https://m.media-amazon.com/images/I/61lkXmtOs3L.__AC_SX300_SY300_QL70_ML2_.jpg" alt="3 in 1 Baby Carry Cot" class="h-48 object-contain mb-4">
+                    <h3 class="font-semibold text-md flex-grow">Brand 3 in 1 Baby Carry Cot/Car Seat</h3>
+                    <p class="text-teal-600 font-bold my-2">EGP 1,450</p>
+                    <button onclick="addToCart({id: 617, name: 'Brand 3 in 1 Function Baby Carry Cot/Car Seat/Rocker', price: 1450, image_url: 'https://m.media-amazon.com/images/I/61lkXmtOs3L.__AC_SX300_SY300_QL70_ML2_.jpg'}, event)" class="mt-auto w-full bg-teal-500 text-white py-2 px-4 rounded-full font-semibold hover:bg-teal-600 transition-colors">Add to Cart</button>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-4 flex flex-col items-center text-center transition-transform transform hover:-translate-y-2">
+                    <img src="https://m.media-amazon.com/images/I/71O6xd6-tSL._AC_SY550_.jpg" alt="Car Seat with Metal Hand" class="h-48 object-contain mb-4">
+                    <h3 class="font-semibold text-md flex-grow">Car Seat with Metal Hand</h3>
+                    <p class="text-teal-600 font-bold my-2">EGP 455</p>
+                    <button onclick="addToCart({id: 618, name: 'Car Seat with Metal Hand Safe and Comfortable', price: 455, image_url: 'https://m.media-amazon.com/images/I/71O6xd6-tSL._AC_SY550_.jpg'}, event)" class="mt-auto w-full bg-teal-500 text-white py-2 px-4 rounded-full font-semibold hover:bg-teal-600 transition-colors">Add to Cart</button>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-4 flex flex-col items-center text-center transition-transform transform hover:-translate-y-2">
+                    <img src="https://m.media-amazon.com/images/I/41QklRCiztL._AC_SX425_.jpg" alt="Fantastic-Kids-Toys Car Seat" class="h-48 object-contain mb-4">
+                    <h3 class="font-semibold text-md flex-grow">Fantastic-Kids-Toys Kidilo G101 Car Seat</h3>
+                    <p class="text-teal-600 font-bold my-2">EGP 3,200</p>
+                    <button onclick="addToCart({id: 619, name: 'Fantastic-Kids-Toys Kidilo G101 First Stage Car Seat', price: 3200, image_url: 'https://m.media-amazon.com/images/I/41QklRCiztL._AC_SX425_.jpg'}, event)" class="mt-auto w-full bg-teal-500 text-white py-2 px-4 rounded-full font-semibold hover:bg-teal-600 transition-colors">Add to Cart</button>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-4 flex flex-col items-center text-center transition-transform transform hover:-translate-y-2">
+                    <img src="https://m.media-amazon.com/images/I/61lOjF+EjQS._AC_SY300_SX300_.jpg" alt="The Car Seat" class="h-48 object-contain mb-4">
+                    <h3 class="font-semibold text-md flex-grow">The Car Seat For Children Up To 13 Kg</h3>
+                    <p class="text-teal-600 font-bold my-2">EGP 1,734</p>
+                    <button onclick="addToCart({id: 620, name: 'The Car Seat For Children Can Bear Up To 13 Kg', price: 1734, image_url: 'https://m.media-amazon.com/images/I/61lOjF+EjQS._AC_SY300_SX300_.jpg'}, event)" class="mt-auto w-full bg-teal-500 text-white py-2 px-4 rounded-full font-semibold hover:bg-teal-600 transition-colors">Add to Cart</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold text-center text-teal-800 mb-8">Baby and Toddler Carriers</h2>
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
+                 <div class="bg-white rounded-lg shadow-md p-4 flex flex-col items-center text-center transition-transform transform hover:-translate-y-2">
+                    <img src="https://m.media-amazon.com/images/I/71Wkhj1SxtL.__AC_SX300_SY300_QL70_ML2_.jpg" alt="Baby Sling Carrier" class="h-48 object-contain mb-4">
+                    <h3 class="font-semibold text-md flex-grow">Baby Sling Carrier, Adjustable</h3>
+                    <p class="text-teal-600 font-bold my-2">EGP 180</p>
+                    <button onclick="addToCart({id: 621, name: 'Baby Sling Carrier, Adjustable Baby Holder Carrier', price: 180, image_url: 'https://m.media-amazon.com/images/I/71Wkhj1SxtL.__AC_SX300_SY300_QL70_ML2_.jpg'}, event)" class="mt-auto w-full bg-teal-500 text-white py-2 px-4 rounded-full font-semibold hover:bg-teal-600 transition-colors">Add to Cart</button>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-4 flex flex-col items-center text-center transition-transform transform hover:-translate-y-2">
+                    <img src="https://m.media-amazon.com/images/I/718UXrfUE9L.__AC_SY300_SX300_QL70_ML2_.jpg" alt="4-in-1 Baby Carrier" class="h-48 object-contain mb-4">
+                    <h3 class="font-semibold text-md flex-grow">4-in-1 Ergonomic Baby Carrier</h3>
+                    <p class="text-teal-600 font-bold my-2">EGP 430</p>
+                    <button onclick="addToCart({id: 622, name: 'Fantastic-Kids-Toys 4-in-1 Ergonomic Adjustable Baby Carrier', price: 430, image_url: 'https://m.media-amazon.com/images/I/718UXrfUE9L.__AC_SY300_SX300_QL70_ML2_.jpg'}, event)" class="mt-auto w-full bg-teal-500 text-white py-2 px-4 rounded-full font-semibold hover:bg-teal-600 transition-colors">Add to Cart</button>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-4 flex flex-col items-center text-center transition-transform transform hover:-translate-y-2">
+                    <img src="https://m.media-amazon.com/images/I/61FBRbYB2BS.__AC_SY300_SX300_QL70_ML2_.jpg" alt="Universal CarryCot" class="h-48 object-contain mb-4">
+                    <h3 class="font-semibold text-md flex-grow">Universal Baby Supplies CarryCot For Girls</h3>
+                    <p class="text-teal-600 font-bold my-2">EGP 780</p>
+                    <button onclick="addToCart({id: 623, name: 'Universal Baby Supplies CarryCot For Girls, Purple', price: 780, image_url: 'https://m.media-amazon.com/images/I/61FBRbYB2BS.__AC_SY300_SX300_QL70_ML2_.jpg'}, event)" class="mt-auto w-full bg-teal-500 text-white py-2 px-4 rounded-full font-semibold hover:bg-teal-600 transition-colors">Add to Cart</button>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-4 flex flex-col items-center text-center transition-transform transform hover:-translate-y-2">
+                    <img src="https://m.media-amazon.com/images/I/614sVKyajOS._AC_SY679_.jpg" alt="Mix and Max Baby Carrier" class="h-48 object-contain mb-4">
+                    <h3 class="font-semibold text-md flex-grow">Mix and Max Bear Embroidered Baby Carrier</h3>
+                    <p class="text-teal-600 font-bold my-2">EGP 480</p>
+                    <button onclick="addToCart({id: 624, name: 'Mix and Max Bear Embroidered Baby Carrier - Beige and Navy', price: 480, image_url: 'https://m.media-amazon.com/images/I/614sVKyajOS._AC_SY679_.jpg'}, event)" class="mt-auto w-full bg-teal-500 text-white py-2 px-4 rounded-full font-semibold hover:bg-teal-600 transition-colors">Add to Cart</button>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-4 flex flex-col items-center text-center transition-transform transform hover:-translate-y-2">
+                    <img src="https://m.media-amazon.com/images/I/518-hqvXBrL._AC_SX425_.jpg" alt="Chicco baby carrier" class="h-48 object-contain mb-4">
+                    <h3 class="font-semibold text-md flex-grow">Chicco Soft & Dream Baby Carrier</h3>
+                    <p class="text-teal-600 font-bold my-2">EGP 880</p>
+                    <button onclick="addToCart({id: 625, name: 'Chicco soft & dream baby carrier graphite', price: 880, image_url: 'https://m.media-amazon.com/images/I/518-hqvXBrL._AC_SX425_.jpg'}, event)" class="mt-auto w-full bg-teal-500 text-white py-2 px-4 rounded-full font-semibold hover:bg-teal-600 transition-colors">Add to Cart</button>
+                </div>
+                 <div class="bg-white rounded-lg shadow-md p-4 flex flex-col items-center text-center transition-transform transform hover:-translate-y-2">
+                    <img src="https://m.media-amazon.com/images/I/81LkHTbwZSL._AC_SY679_.jpg" alt="Feeding Bottle Bag" class="h-48 object-contain mb-4">
+                    <h3 class="font-semibold text-md flex-grow">Universal Wrap Around Feeding Bottle Bag</h3>
+                    <p class="text-teal-600 font-bold my-2">EGP 72</p>
+                    <button onclick="addToCart({id: 626, name: 'Universal Baby Supplies Wrap Around Feeding Bottle Bag, Red', price: 72, image_url: 'https://m.media-amazon.com/images/I/81LkHTbwZSL._AC_SY679_.jpg'}, event)" class="mt-auto w-full bg-teal-500 text-white py-2 px-4 rounded-full font-semibold hover:bg-teal-600 transition-colors">Add to Cart</button>
+                </div>
+                 <div class="bg-white rounded-lg shadow-md p-4 flex flex-col items-center text-center transition-transform transform hover:-translate-y-2">
+                    <img src="https://m.media-amazon.com/images/I/81V8jUnYQhL._AC_SX425_.jpg" alt="Petit Bebe Wrap" class="h-48 object-contain mb-4">
+                    <h3 class="font-semibold text-md flex-grow">Petit Bebe Wrap Carrier Grey</h3>
+                    <p class="text-teal-600 font-bold my-2">EGP 306</p>
+                    <button onclick="addToCart({id: 627, name: 'Petit Bebe Wrap carrier grey', price: 306, image_url: 'https://m.media-amazon.com/images/I/81V8jUnYQhL._AC_SX425_.jpg'}, event)" class="mt-auto w-full bg-teal-500 text-white py-2 px-4 rounded-full font-semibold hover:bg-teal-600 transition-colors">Add to Cart</button>
+                </div>
+                 <div class="bg-white rounded-lg shadow-md p-4 flex flex-col items-center text-center transition-transform transform hover:-translate-y-2">
+                    <img src="https://m.media-amazon.com/images/I/61Z3gSfUO0L._AC_SX425_.jpg" alt="Baby Sling Carrier" class="h-48 object-contain mb-4">
+                    <h3 class="font-semibold text-md flex-grow">Adjustable Baby Sling Carrier</h3>
+                    <p class="text-teal-600 font-bold my-2">EGP 132</p>
+                    <button onclick="addToCart({id: 628, name: 'Baby Sling Carrier, Adjustable Baby Holder Carrier', price: 132, image_url: 'https://m.media-amazon.com/images/I/61Z3gSfUO0L._AC_SX425_.jpg'}, event)" class="mt-auto w-full bg-teal-500 text-white py-2 px-4 rounded-full font-semibold hover:bg-teal-600 transition-colors">Add to Cart</button>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-4 flex flex-col items-center text-center transition-transform transform hover:-translate-y-2">
+                    <img src="https://m.media-amazon.com/images/I/51ce5vSS9SL._AC_SY606_.jpg" alt="Little B Ellie Wrap" class="h-48 object-contain mb-4">
+                    <h3 class="font-semibold text-md flex-grow">Little B Ellie Wrap Newborn Baby Carrier</h3>
+                    <p class="text-teal-600 font-bold my-2">EGP 720</p>
+                    <button onclick="addToCart({id: 629, name: 'Little B Ellie Wrap Newborn Baby Carrier Black', price: 720, image_url: 'https://m.media-amazon.com/images/I/51ce5vSS9SL._AC_SY606_.jpg'}, event)" class="mt-auto w-full bg-teal-500 text-white py-2 px-4 rounded-full font-semibold hover:bg-teal-600 transition-colors">Add to Cart</button>
+                </div>
+                 <div class="bg-white rounded-lg shadow-md p-4 flex flex-col items-center text-center transition-transform transform hover:-translate-y-2">
+                    <img src="https://m.media-amazon.com/images/I/71XkdZFL9eL._AC_SX425_.jpg" alt="Mini Vibes baby carrier" class="h-48 object-contain mb-4">
+                    <h3 class="font-semibold text-md flex-grow">Mini Vibes 100% Cotton Baby Carrier</h3>
+                    <p class="text-teal-600 font-bold my-2">EGP 400</p>
+                    <button onclick="addToCart({id: 630, name: 'Mini Vibes 100% Cotton baby carrier', price: 400, image_url: 'https://m.media-amazon.com/images/I/71XkdZFL9eL._AC_SX425_.jpg'}, event)" class="mt-auto w-full bg-teal-500 text-white py-2 px-4 rounded-full font-semibold hover:bg-teal-600 transition-colors">Add to Cart</button>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const menuBtn = document.getElementById('menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            menuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        });
+
+        function addToCart(product, event) {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            
+            cart.push({
+                id: product.id,
+                name: product.name,
+                price: product.price,
+                image_url: product.image_url
+            });
+
+            localStorage.setItem('cart', JSON.stringify(cart));
+
+            const button = event.target;
+            button.innerText = 'Added!';
+            button.style.backgroundColor = '#28a745';
+            button.disabled = true;
+
+            setTimeout(() => {
+                button.innerText = 'Add to Cart';
+                button.style.backgroundColor = '';
+                button.disabled = false;
+            }, 2000);
+        }
+    </script>
+</body>
+</html>
