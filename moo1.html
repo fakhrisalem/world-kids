@@ -1,1 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boys Clothing - Kids World</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Playball&display=swap" rel="stylesheet">
+    <style>
+        .font-cursive {
+            font-family: 'Playball', cursive;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #fdfaf5;
+        }
+    </style>
+</head>
+<body class="text-gray-800">
 
+    <header class="bg-teal-100/80 backdrop-blur-sm shadow-md fixed top-0 left-0 right-0 z-50">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="home.html" class="flex items-center gap-3">
+                <img src="https://i.pinimg.com/736x/6b/90/b5/6b90b55c618ab58f09c2e38151b708e7.jpg" alt="Logo" class="h-12 w-12 rounded-full border-2 border-teal-500">
+                <span class="text-3xl font-cursive text-teal-800">Kids World</span>
+            </a>
+            
+            <nav class="hidden md:flex items-center space-x-6">
+                <a href="home.html" class="text-gray-700 hover:text-teal-600 transition duration-300">Home</a>
+                <a href="about.html" class="text-gray-700 hover:text-teal-600 transition duration-300">About</a>
+                <a href="products.html" class="text-teal-600 font-semibold transition duration-300">Products</a>
+            </nav>
+
+            <div class="flex items-center gap-4">
+                 <form action="search.html" method="get" class="hidden md:block relative">
+                    <input type="text" name="search" placeholder="Search..." class="rounded-full py-1.5 px-4 w-40 focus:outline-none focus:ring-2 focus:ring-teal-400 transition">
+                    <button type="submit" class="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400">
+                        <i class="fa fa-search"></i>
+                    </button>
+                </form>
+                <a href="login.html" class="text-gray-700 hover:text-teal-600 transition duration-300"><i class="fas fa-user-circle fa-lg"></i></a>
+                <a href="cart.html" class="relative text-gray-700 hover:text-teal-600">
+                    <i class="fas fa-shopping-cart fa-lg"></i>
+                </a>
+                <button id="menu-btn" class="md:hidden text-gray-700 focus:outline-none">
+                    <i class="fas fa-bars fa-lg"></i>
+                </button>
+            </div>
+        </div>
+        
+        <div id="mobile-menu" class="hidden md:hidden px-6 pt-2 pb-4 space-y-3">
+            <a href="home.html" class="block text-gray-700 hover:text-teal-600">Home</a>
+            <a href="about.html" class="block text-gray-700 hover:text-teal-600">About</a>
+            <a href="products.html" class="block text-teal-600 font-semibold">Products</a>
+            <form action="search.html" method="get" class="relative pt-4">
+                <input type="text" name="search" placeholder="Search..." class="rounded-full py-1.5 px-4 w-full focus:outline-none focus:ring-2 focus:ring-teal-400">
+                 <button type="submit" class="absolute right-4 top-1/2 text-gray-400">
+                    <i class="fa fa-search"></i>
+                </button>
+            </form>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 sm:px-6 lg:px-8 pt-24">
+
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold text-center text-teal-800 mb-8">Boys Tops, Tees & Shirts</h2>
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
+                <div class="bg-white rounded-lg shadow-md p-4 flex flex-col items-center text-center transition-transform transform hover:-translate-y-2">
+                    <img src="https://m.media-amazon.com/images/I/510FlvQVyML._AC_SX342_.jpg" alt="Carrot Boys T-Shirt" class="h-48 object-contain mb-4">
+                    <h3 class="font-semibold text-sm flex-grow">Carrot Boys Printed T-Shirt</h3>
+                    <p class="text-teal-600 font-bold my-2">EGP 110</p>
+                    <button onclick="addToCart({id: 1101, name: '2410123-02-30-Carrot Boys Printed T-Shirt', price: 110, image_url: 'https://m.media-amazon.com/images/I/510FlvQVyML._AC_SX342_.jpg'}, event)" class="mt-auto w-full bg-teal-500 text-white py-2 px-4 rounded-full font-semibold hover:bg-teal-600 transition-colors">Add to Cart</button>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-4 flex flex-col items-center text-center transition-transform transform hover:-translate-y-2">
+                    <img src="https://i.pinimg.com/564x/9b/86/c8/9b86c8453d30ba1b09726a060b8d1ee5.jpg" alt="Baby Boy Polo Top" class="h-48 object-contain mb-4">
+                    <h3 class="font-semibold text-sm flex-grow">Baby Boy Knitted Soft Polo Top</h3>
+                    <p class="text-teal-600 font-bold my-2">EGP 210</p>
+                    <button onclick="addToCart({id: 1102, name: 'Baby Boy Solid Color Knitted Soft Polo Collar Short Sleeve Pullover Top', price: 210, image_url: 'https://i.pinimg.com/564x/9b/86/c8/9b86c8453d30ba1b09726a060b8d1ee5.jpg'}, event)" class="mt-auto w-full bg-teal-500 text-white py-2 px-4 rounded-full font-semibold hover:bg-teal-600 transition-colors">Add to Cart</button>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-4 flex flex-col items-center text-center transition-transform transform hover:-translate-y-2">
+                    <img src="https://i.pinimg.com/564x/4a/17/31/4a1731b3e5eb4277953ad26cc5bc1f09.jpg" alt="Tween Boy T-shirt" class="h-48 object-contain mb-4">
+                    <h3 class="font-semibold text-sm flex-grow">Tween Boy Casual Letter Print T-shirt</h3>
+                    <p class="text-teal-600 font-bold my-2">EGP 110</p>
+                    <button onclick="addToCart({id: 1103, name: 'Tween Boy Casual Simple Letter Print Short Sleeve T-shirt', price: 110, image_url: 'https://i.pinimg.com/564x/4a/17/31/4a1731b3e5eb4277953ad26cc5bc1f09.jpg'}, event)" class="mt-auto w-full bg-teal-500 text-white py-2 px-4 rounded-full font-semibold hover:bg-teal-600 transition-colors">Add to Cart</button>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-4 flex flex-col items-center text-center transition-transform transform hover:-translate-y-2">
+                    <img src="https://i.pinimg.com/564x/50/21/68/502168aed338ca25ede55afb603e77e9.jpg" alt="Boy's Striped T-Shirt" class="h-48 object-contain mb-4">
+                    <h3 class="font-semibold text-sm flex-grow">Boy's Casual Loose Fit Striped T-Shirt</h3>
+                    <p class="text-teal-600 font-bold my-2">EGP 310</p>
+                    <button onclick="addToCart({id: 1104, name: 'Tween Boys Casual Loose Fit Striped Knit Round Neck Pullover T-Shirt', price: 310, image_url: 'https://i.pinimg.com/564x/50/21/68/502168aed338ca25ede55afb603e77e9.jpg'}, event)" class="mt-auto w-full bg-teal-500 text-white py-2 px-4 rounded-full font-semibold hover:bg-teal-600 transition-colors">Add to Cart</button>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-4 flex flex-col items-center text-center transition-transform transform hover:-translate-y-2">
+                    <img src="https://i.pinimg.com/564x/f9/66/88/f96688706fb032ec09257eaa2585b605.jpg" alt="Tween Boys' Striped T-Shirt" class="h-48 object-contain mb-4">
+                    <h3 class="font-semibold text-sm flex-grow">Tween Boys' Striped Pocket T-Shirt</h3>
+                    <p class="text-teal-600 font-bold my-2">EGP 210</p>
+                    <button onclick="addToCart({id: 1105, name: 'Tween Boys Striped Pocket Patchwork Trim T-Shirt', price: 210, image_url: 'https://i.pinimg.com/564x/f9/66/88/f96688706fb032ec09257eaa2585b605.jpg'}, event)" class="mt-auto w-full bg-teal-500 text-white py-2 px-4 rounded-full font-semibold hover:bg-teal-600 transition-colors">Add to Cart</button>
+                </div>
+                 <div class="bg-white rounded-lg shadow-md p-4 flex flex-col items-center text-center transition-transform transform hover:-translate-y-2">
+                    <img src="https://i.pinimg.com/564x/f4/d6/9d/f4d69d8851fe0f64b4e4372489f979d8.jpg" alt="Carrot Boys Printed T-Shirt" class="h-48 object-contain mb-4">
+                    <h3 class="font-semibold text-sm flex-grow">Carrot Boys Printed T-Shirt</h3>
+                    <p class="text-teal-600 font-bold my-2">EGP 110</p>
+                    <button onclick="addToCart({id: 1106, name: 'Carrot Boys Printed T-Shirt', price: 110, image_url: 'https://i.pinimg.com/564x/f4/d6/9d/f4d69d8851fe0f64b4e4372489f979d8.jpg'}, event)" class="mt-auto w-full bg-teal-500 text-white py-2 px-4 rounded-full font-semibold hover:bg-teal-600 transition-colors">Add to Cart</button>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-4 flex flex-col items-center text-center transition-transform transform hover:-translate-y-2">
+                    <img src="https://i.pinimg.com/564x/eb/6c/64/eb6c648b961f7ceb543eb8c1f19fa71c.jpg" alt="Tween Boy Summer T-Shirt" class="h-48 object-contain mb-4">
+                    <h3 class="font-semibold text-sm flex-grow">Tween Boy Color Block T-Shirt</h3>
+                    <p class="text-teal-600 font-bold my-2">EGP 280</p>
+                    <button onclick="addToCart({id: 1107, name: 'Camiseta De Bloques De Color Gráfico De Letra De Chico Joven', price: 280, image_url: 'https://i.pinimg.com/564x/eb/6c/64/eb6c648b961f7ceb543eb8c1f19fa71c.jpg'}, event)" class="mt-auto w-full bg-teal-500 text-white py-2 px-4 rounded-full font-semibold hover:bg-teal-600 transition-colors">Add to Cart</button>
+                </div>
+                 <div class="bg-white rounded-lg shadow-md p-4 flex flex-col items-center text-center transition-transform transform hover:-translate-y-2">
+                    <img src="https://i.pinimg.com/564x/37/6f/68/376f680cbcd2fcf3bdc34e67b5c7d636.jpg" alt="Tween Boy Tie-Dye T-Shirt" class="h-48 object-contain mb-4">
+                    <h3 class="font-semibold text-sm flex-grow">Tween Boy Summer Tie-Dye T-Shirt</h3>
+                    <p class="text-teal-600 font-bold my-2">EGP 250</p>
+                    <button onclick="addToCart({id: 1108, name: 'Tween Boy Summer Leisure Knitted Short Sleeve T-Shirt', price: 250, image_url: 'https://i.pinimg.com/564x/37/6f/68/376f680cbcd2fcf3bdc34e67b5c7d636.jpg'}, event)" class="mt-auto w-full bg-teal-500 text-white py-2 px-4 rounded-full font-semibold hover:bg-teal-600 transition-colors">Add to Cart</button>
+                </div>
+                 <div class="bg-white rounded-lg shadow-md p-4 flex flex-col items-center text-center transition-transform transform hover:-translate-y-2">
+                    <img src="https://i.pinimg.com/564x/af/34/dc/af34dc05a2c37f7a6c9d98e887fc078b.jpg" alt="Carrot Boys T-Shirt" class="h-48 object-contain mb-4">
+                    <h3 class="font-semibold text-sm flex-grow">Carrot Boys Printed T-Shirt</h3>
+                    <p class="text-teal-600 font-bold my-2">EGP 210</p>
+                    <button onclick="addToCart({id: 1109, name: 'Carrot Boys Printed T-Shirt', price: 210, image_url: 'https://i.pinimg.com/564x/af/34/dc/af34dc05a2c37f7a6c9d98e887fc078b.jpg'}, event)" class="mt-auto w-full bg-teal-500 text-white py-2 px-4 rounded-full font-semibold hover:bg-teal-600 transition-colors">Add to Cart</button>
+                </div>
+                 <div class="bg-white rounded-lg shadow-md p-4 flex flex-col items-center text-center transition-transform transform hover:-translate-y-2">
+                    <img src="https://m.media-amazon.com/images/I/71Kml9X6waL._AC_SY550_.jpg" alt="DeFacto Boys Woven Top" class="h-48 object-contain mb-4">
+                    <h3 class="font-semibold text-sm flex-grow">DeFacto Boys Regular Fit Long Sleeve Shirt</h3>
+                    <p class="text-teal-600 font-bold my-2">EGP 279</p>
+                    <button onclick="addToCart({id: 1110, name: 'DeFacto Boys Woven Top Regular Fit Stand- Up Collar Long Sleeve', price: 279, image_url: 'https://m.media-amazon.com/images/I/71Kml9X6waL._AC_SY550_.jpg'}, event)" class="mt-auto w-full bg-teal-500 text-white py-2 px-4 rounded-full font-semibold hover:bg-teal-600 transition-colors">Add to Cart</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold text-center text-teal-800 mb-8">Boys Pants</h2>
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
+                <div class="bg-white rounded-lg shadow-md p-4 flex flex-col items-center text-center transition-transform transform hover:-translate-y-2">
+                    <img src="https://i.pinimg.com/enabled_lo/564x/cc/b4/e9/ccb4e992c12ef060aaee295075525c53.jpg" alt="DeFacto Boys Trousers" class="h-48 object-contain mb-4">
+                    <h3 class="font-semibold text-sm flex-grow">DeFacto Boys Regular Fit Knitted Trousers</h3>
+                    <p class="text-teal-600 font-bold my-2">EGP 799</p>
+                    <button onclick="addToCart({id: 1111, name: 'DeFacto Boys Regular Fit Knitted Bottom Trousers', price: 799, image_url: 'https://i.pinimg.com/enabled_lo/564x/cc/b4/e9/ccb4e992c12ef060aaee295075525c53.jpg'}, event)" class="mt-auto w-full bg-teal-500 text-white py-2 px-4 rounded-full font-semibold hover:bg-teal-600 transition-colors">Add to Cart</button>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-4 flex flex-col items-center text-center transition-transform transform hover:-translate-y-2">
+                    <img src="https://m.media-amazon.com/images/I/61jGQFYZsmL._AC_SY550_.jpg" alt="DeFacto Boys Pants" class="h-48 object-contain mb-4">
+                    <h3 class="font-semibold text-sm flex-grow">DeFacto Boys Knitted Regular Fit Pants</h3>
+                    <p class="text-teal-600 font-bold my-2">EGP 349</p>
+                    <button onclick="addToCart({id: 1112, name: 'DeFacto Boys Knitted Bottom Regular Fit R5970A6 Pants', price: 349, image_url: 'https://m.media-amazon.com/images/I/61jGQFYZsmL._AC_SY550_.jpg'}, event)" class="mt-auto w-full bg-teal-500 text-white py-2 px-4 rounded-full font-semibold hover:bg-teal-600 transition-colors">Add to Cart</button>
+                </div>
+                 <div class="bg-white rounded-lg shadow-md p-4 flex flex-col items-center text-center transition-transform transform hover:-translate-y-2">
+                    <img src="https://m.media-amazon.com/images/I/710goA3mh6L._AC_SY550_.jpg" alt="Plain Kids Sweatpants" class="h-48 object-contain mb-4">
+                    <h3 class="font-semibold text-sm flex-grow">Plain Kids Sweatpants</h3>
+                    <p class="text-teal-600 font-bold my-2">EGP 179</p>
+                    <button onclick="addToCart({id: 1113, name: 'plain kids sweetpants', price: 179, image_url: 'https://m.media-amazon.com/images/I/710goA3mh6L._AC_SY550_.jpg'}, event)" class="mt-auto w-full bg-teal-500 text-white py-2 px-4 rounded-full font-semibold hover:bg-teal-600 transition-colors">Add to Cart</button>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-4 flex flex-col items-center text-center transition-transform transform hover:-translate-y-2">
+                    <img src="https://m.media-amazon.com/images/I/51OmMWFCIPL._AC_SX679_.jpg" alt="Andora Boys Casual Pants" class="h-48 object-contain mb-4">
+                    <h3 class="font-semibold text-sm flex-grow">Andora Boys Elastic Waist Casual Pants</h3>
+                    <p class="text-teal-600 font-bold my-2">EGP 299</p>
+                    <button onclick="addToCart({id: 1114, name: 'Andora Boys Waist With Drawstring 36W24B30311 Casual Pants', price: 299, image_url: 'https://m.media-amazon.com/images/I/51OmMWFCIPL._AC_SX679_.jpg'}, event)" class="mt-auto w-full bg-teal-500 text-white py-2 px-4 rounded-full font-semibold hover:bg-teal-600 transition-colors">Add to Cart</button>
+                </div>
+                 <div class="bg-white rounded-lg shadow-md p-4 flex flex-col items-center text-center transition-transform transform hover:-translate-y-2">
+                    <img src="https://m.media-amazon.com/images/I/61W1+64SXHL._AC_SX385_.jpg" alt="Elsayaad Boys Chino Pants" class="h-48 object-contain mb-4">
+                    <h3 class="font-semibold text-sm flex-grow">Elsayaad Boys Chino Pants</h3>
+                    <p class="text-teal-600 font-bold my-2">EGP 155</p>
+                    <button onclick="addToCart({id: 1115, name: 'Elsayaad Boys Chino Pants Pants', price: 155, image_url: 'https://m.media-amazon.com/images/I/61W1+64SXHL._AC_SX385_.jpg'}, event)" class="mt-auto w-full bg-teal-500 text-white py-2 px-4 rounded-full font-semibold hover:bg-teal-600 transition-colors">Add to Cart</button>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-4 flex flex-col items-center text-center transition-transform transform hover:-translate-y-2">
+                    <img src="https://m.media-amazon.com/images/I/61JhJ9Jjl-L._AC_SY679_.jpg" alt="KOTON Boy's Canvas Pants" class="h-48 object-contain mb-4">
+                    <h3 class="font-semibold text-sm flex-grow">KOTON Boy's Canvas Pants</h3>
+                    <p class="text-teal-600 font-bold my-2">EGP 769</p>
+                    <button onclick="addToCart({id: 1116, name: 'KOTON Boys Canvas Pants Pockets Normal Leg Cotton Trousers', price: 769, image_url: 'https://m.media-amazon.com/images/I/61JhJ9Jjl-L._AC_SY679_.jpg'}, event)" class="mt-auto w-full bg-teal-500 text-white py-2 px-4 rounded-full font-semibold hover:bg-teal-600 transition-colors">Add to Cart</button>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-4 flex flex-col items-center text-center transition-transform transform hover:-translate-y-2">
+                    <img src="https://m.media-amazon.com/images/I/51uj+Sd350L._AC_SX522_.jpg" alt="Andora Boys Sweatpants" class="h-48 object-contain mb-4">
+                    <h3 class="font-semibold text-sm flex-grow">Andora Boys Elastic Waist Sweatpants</h3>
+                    <p class="text-teal-600 font-bold my-2">EGP 299</p>
+                    <button onclick="addToCart({id: 1117, name: 'Andora Boys Elastic Waist & Hem-33S22B30313 Sweatpants', price: 299, image_url: 'https://m.media-amazon.com/images/I/51uj+Sd350L._AC_SX522_.jpg'}, event)" class="mt-auto w-full bg-teal-500 text-white py-2 px-4 rounded-full font-semibold hover:bg-teal-600 transition-colors">Add to Cart</button>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-4 flex flex-col items-center text-center transition-transform transform hover:-translate-y-2">
+                    <img src="https://m.media-amazon.com/images/I/615qGP5oy0L._AC_SY679_.jpg" alt="Bloaizone Boys Pants" class="h-48 object-contain mb-4">
+                    <h3 class="font-semibold text-sm flex-grow">Bloaizone Boys Gabardine Pants</h3>
+                    <p class="text-teal-600 font-bold my-2">EGP 460</p>
+                    <button onclick="addToCart({id: 1118, name: 'Bloaizone Boys Gabardine Pants', price: 460, image_url: 'https://m.media-amazon.com/images/I/615qGP5oy0L._AC_SY679_.jpg'}, event)" class="mt-auto w-full bg-teal-500 text-white py-2 px-4 rounded-full font-semibold hover:bg-teal-600 transition-colors">Add to Cart</button>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-4 flex flex-col items-center text-center transition-transform transform hover:-translate-y-2">
+                    <img src="https://m.media-amazon.com/images/I/51iL03rXwsL._AC_SX679_.jpg" alt="Carrot Boy Sweatpants" class="h-48 object-contain mb-4">
+                    <h3 class="font-semibold text-sm flex-grow">Carrot Boy Sweatpants - Black</h3>
+                    <p class="text-teal-600 font-bold my-2">EGP 295</p>
+                    <button onclick="addToCart({id: 1119, name: 'Carrot 2310901-02-30 Boy Sweatpants 2 Years Black', price: 295, image_url: 'https://m.media-amazon.com/images/I/51iL03rXwsL._AC_SX679_.jpg'}, event)" class="mt-auto w-full bg-teal-500 text-white py-2 px-4 rounded-full font-semibold hover:bg-teal-600 transition-colors">Add to Cart</button>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-4 flex flex-col items-center text-center transition-transform transform hover:-translate-y-2">
+                    <img src="https://m.media-amazon.com/images/I/71R8EuIBmSL._AC_SX679_.jpg" alt="Okaidi Boys Pants" class="h-48 object-contain mb-4">
+                    <h3 class="font-semibold text-sm flex-grow">Okaidi Boys Pants - 3 Years</h3>
+                    <p class="text-teal-600 font-bold my-2">EGP 399</p>
+                    <button onclick="addToCart({id: 1120, name: 'Okaidi Boys Pants 3 Years', price: 399, image_url: 'https://m.media-amazon.com/images/I/71R8EuIBmSL._AC_SX679_.jpg'}, event)" class="mt-auto w-full bg-teal-500 text-white py-2 px-4 rounded-full font-semibold hover:bg-teal-600 transition-colors">Add to Cart</button>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const menuBtn = document.getElementById('menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            menuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        });
+
+        function addToCart(product, event) {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            
+            cart.push({
+                id: product.id,
+                name: product.name,
+                price: product.price,
+                image_url: product.image_url
+            });
+
+            localStorage.setItem('cart', JSON.stringify(cart));
+
+            const button = event.target;
+            button.innerText = 'Added!';
+            button.style.backgroundColor = '#28a745';
+            button.disabled = true;
+
+            setTimeout(() => {
+                button.innerText = 'Add to Cart';
+                button.style.backgroundColor = '';
+                button.disabled = false;
+            }, 2000);
+        }
+    </script>
+</body>
+</html>
